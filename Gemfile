@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'heroku'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.5'
