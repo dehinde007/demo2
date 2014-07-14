@@ -1,0 +1,6 @@
+<% @microposts.each do |micropost| %> 
+      
+      	
+        <%= link_to (image_tag micropost.photo.url(:medium)), micropost %>
+        
+        <% end %>

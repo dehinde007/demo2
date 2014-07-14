@@ -1,0 +1,37 @@
+<% provide(:title, @user.name) %>
+<div id="profile_bar">
+       <div id="black">
+        <p id="avi"><%= image_tag @user.avatar(:thumb) %></p>
+       </div>
+       
+       <p id="usp"> <%= link_to @user.username, @user, {:style => 'color: white; font-weight: bold; font-size: 15px; margin-left: 2px;'} %></p>
+       <p><%= @user.name %></p>
+       <%= @user.bio %></p>              
+     <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>
+     
+ 
+     <p class="vq" id="qc"> <%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: white; font-size: 15px; margin-left: 2px;'} %></p>
+
+ <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>    
+     
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+    
+  </div>
+  
+  
+  
+  <div id="main1">
+  <div id="main2">
+  	
+    <%= render 'follow_form' if signed_in? %>
+    <% if @user.microposts.any? %>
+      <ol class="microposts">
+      	
+        <p id="rr"><%= render @microposts %></p>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>

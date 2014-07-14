@@ -1,0 +1,63 @@
+// Place all the styles related to the feeds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main{
+  height: 7020px;
+  width: 52%;
+  margin: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background:  #fbf5f5;
+  min-width: 200px; 
+  position: relative;
+  margin-top: 20px;
+  
+}
+
+#profile_bar{
+  height: 330px;
+  background: #202629;
+  width: 150px;
+  float: left;
+  margin-left: -200px;
+  min-width:  3%;
+  position: fixed;
+}
+
+#black{
+  background: #202629;
+  width: 150px;
+  height: 100px;
+}
+
+#avi{
+  margin-left: 20px;
+}
+
+#usp{
+  margin-top: 10px;
+
+}
+
+.pfl hr{
+  height: 1px;
+  background: #2d2d2d;
+  border: 0px;
+  margin-top: -8px; 
+}
+
+.vq{
+  margin-top: -13px;
+  font-weight: bold;
+}
+
+#qc{
+  color: white;
+}
+
+
+
+

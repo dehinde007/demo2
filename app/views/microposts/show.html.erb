@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+ 
+ <%= image_tag @micropost.photo.url(:normal) %>
+ 
+   <% if current_user?(@micropost.user) %>
+    <%= link_to "delete", @micropost, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: @micropost.content %>                               
+  <% end %>
+
+ <strong><%= time_ago_in_words(@micropost.created_at) %> ago</strong>
+<p>
+  <%= @micropost.content %>
+</p>
+
+<%= pluralize(@micropost.comments.count, "comment") %> 
+<%= pluralize(@micropost.likes.count, "like") %> 
+<br />
+<td><%= link_to 'Show', like_path %></td>
+<br />
+  <%= render @micropost.comments %>
+
+<%= render "comments/form" %>
+
+
+<% if like = current_user.likes.find_by_micropost_id(@micropost.id) %>
+                
+<% else %>
+  <%= render "likes/form" %>
+  <% end %>
+
+
+
+

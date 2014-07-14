@@ -1,0 +1,12 @@
+<div id= "jags">
+	
+	 <div id="pm"><div id="inner"><%= link_to (image_tag micropost.photo.url(:square)), micropost %> 
+	 	 <p>
+<%= pluralize(micropost.comments.count, "comment") %> 
+<%= pluralize(micropost.likes.count, "like") %> 
+
+</p>
+	 	</div></div>
+ 
+
+</div>

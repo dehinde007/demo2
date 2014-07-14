@@ -1,0 +1,18 @@
+<%= form_for(@micropost, multipart: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  
+<div id="field">
+  	
+    <%= f.text_area :content, :class =>"ar", placeholder: "Write Details..." %>
+    
+   <p>
+    <%= f.file_field :photo %> 
+  </p>
+    
+</div>
+  
+  
+  
+ <p id="submitbt"> <%= f.submit "Hall", class: "btn btn-sm btn-primary" %></p>
+ 
+<% end %>

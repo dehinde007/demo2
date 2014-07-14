@@ -1,36 +1,22 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Ignore bundler config.
+/.bundle
 
-# Folder config file
-Desktop.ini
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# Ignore other unneeded files.
+database.yml
+doc/
+*.swp
+*~
+.project
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must ends with two \r.
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+.idea
+.rvmrc
+.ruby-*
+.secret

@@ -1,0 +1,36 @@
+<div id="head">
+     <span><%= link_to "HALLIT", home_path, id: "logo" %></span>
+    
+    <nav>
+        <ul class="nav pull-right">
+         
+          <% if signed_in? %>
+            <p id="users"><%= link_to "Users", users_path, {:style => 'text-decoration: none; margin-left: -75px; margin-bottom: 50px; font-weight: bold;'} %></p>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user, {:style => 'font-weight: bold; color: grey;'} %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user), {:style => 'font-weight: bold; color: grey;'} %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Sign in", signin_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    
+       <div><% if signed_in? %>
+  		<section id="search">
+        <%= render 'shared/search' %>
+      </section>
+      <% end %>
+      </div>
+      
+      
+</div>

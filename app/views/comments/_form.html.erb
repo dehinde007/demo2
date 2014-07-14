@@ -1,0 +1,9 @@
+<%= form_for([@micropost, @micropost.comments.build]) do |f| %>
+
+  <p>
+    <%= f.text_area :body, placeholder: "Leave a comment..." %>
+  </p>
+  <p>
+    <%= f.submit "comment", class: "btn btn-sm btn-primary" %>
+  </p>
+<% end %>
