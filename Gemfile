@@ -53,7 +53,7 @@ group :doc do
 end
 gem 'rails_12factor'
 group :production do
-
+  gem 'pg'
   
 end
 
