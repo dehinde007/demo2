@@ -14,7 +14,9 @@
     
     <div id="gg"><%= link_to (image_tag feed_item.photo.url(:normal)), feed_item %></div>
     <span id="content"><%= feed_item.content %>
-    	
+    	<%= pluralize(feed_item.comments.count, "comment") %> 
+        <%= pluralize(feed_item.likes.count, "like") %>
+        
     	<hr width="489px" /></span>
     
 </p>
