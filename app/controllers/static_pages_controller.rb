@@ -10,4 +10,17 @@ class StaticPagesController < ApplicationController
 
   def privacy
   end
+  
+  def about_us
+    
+  end
+  
+  def jobs
+    
+  end
+  
+  def contact_us
+    
+  end
+  
 end

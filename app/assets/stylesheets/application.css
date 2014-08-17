@@ -33,7 +33,7 @@
 #logo {
   font-family: Ariel;
   font-size: 2em;
-  color: black;
+  color: red;
   float: left;
   text-decoration: none;
   margin-left: 65px;
@@ -54,6 +54,18 @@
 #fat-menu .dropdown-toggle{
 	margin-top: 15px;
 	font-weight: bold;	
+}
+
+.footer{
+	margin-top: 20px;
+	margin-left: 198px;
+}
+
+.footer li{
+	display: inline;
+	list-style-type: none;
+	padding: 15px;
+	font-family: Arial;
 }
 
 

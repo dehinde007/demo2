@@ -9,7 +9,7 @@
       <%= f.label :avatar %>
       <%= f.file_field :avatar %>
       
-      <%= f.label :name %>
+      <%= f.label :fullname %>
       <%= f.text_field :name %>
       
       <%= f.label :username %>
@@ -31,7 +31,7 @@
     <% end %>
    
      <% if @current_user %>
- <%= link_to "delete", @user, method: :delete,
+ <%= link_to "Delete Account", @user, method: :delete,
                                   data: { confirm: "You sure?" } %>
     <% end %>
  

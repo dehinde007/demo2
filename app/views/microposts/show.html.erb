@@ -10,13 +10,13 @@
 
  <strong><%= time_ago_in_words(@micropost.created_at) %> ago</strong>
 <p>
-  <%= @micropost.content %>
+  <div style="word-wrap: break-word; width: 400px;"><%= @micropost.content %></div>
 </p>
 
 <%= pluralize(@micropost.comments.count, "comment") %> 
-<%= pluralize(@micropost.likes.count, "like") %> 
+<%= pluralize(@micropost.likes.count, "like") %> <td><%= link_to 'Show like', like_path %></td>
 <br />
-<td><%= link_to 'Show', like_path %></td>
+
 <br />
   <%= render @micropost.comments %>
 
