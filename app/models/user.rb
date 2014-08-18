@@ -35,8 +35,7 @@ has_attached_file :photo
   has_many :followers, through: :reverse_relationships, source: :follower
   before_save { self.email = email.downcase }
   before_create :create_remember_token
-  validates :name, presence: true, length: { maximum: 50 },
-                       uniqueness: { case_sensitive: false }
+  validates :name, presence: true, length: { maximum: 50 }
   validates :username, presence: true, length: { maximum: 50 },
                        uniqueness: { case_sensitive: false }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i

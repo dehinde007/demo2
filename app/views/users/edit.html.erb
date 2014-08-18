@@ -1,4 +1,5 @@
 <% provide(:title, "Edit user") %>
+<div id="edit">
 <h1>Update your profile</h1>
 
 <div class="row">
@@ -34,6 +35,6 @@
  <%= link_to "Delete Account", @user, method: :delete,
                                   data: { confirm: "You sure?" } %>
     <% end %>
- 
+ </div>
   </div>
 </div>
