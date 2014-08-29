@@ -12,6 +12,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem "paperclip", "~> 3.5.3"
 gem 'rmagick'
 gem 'thin'
+gem 'newrelic_rpm'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
