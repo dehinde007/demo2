@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 gem 'heroku'
-gem 'rails', '4.1.1'
 #ruby-gemset=railstutorial_rails_4_0
 gem 'aws-sdk'
+gem 'rails', '4.0.5'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
@@ -13,7 +13,6 @@ gem "paperclip", "~> 3.5.3"
 gem 'rmagick'
 gem 'thin'
 gem 'newrelic_rpm'
-gem 'browser'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'

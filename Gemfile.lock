@@ -42,7 +42,6 @@ GEM
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
-    browser (0.6.0)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -170,7 +169,7 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.1.1)
+    rails (4.0.5)
       actionmailer (= 4.0.5)
       actionpack (= 4.0.5)
       activerecord (= 4.0.5)
@@ -272,7 +271,6 @@ DEPENDENCIES
   bcrypt-ruby (= 3.1.2)
   bootstrap-sass (= 2.3.2.0)
   bootstrap-will_paginate (= 0.0.9)
-  browser
   capybara (= 2.1.0)
   childprocess (= 0.3.6)
   coffee-rails (= 4.0.1)
@@ -290,7 +288,7 @@ DEPENDENCIES
   newrelic_rpm
   paperclip (~> 3.5.3)
   pg
-  rails (= 4.1.1)
+  rails (= 4.0.5)
   rails_12factor
   rmagick
   rspec-rails (= 2.13.1)
