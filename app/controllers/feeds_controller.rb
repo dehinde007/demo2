@@ -1,5 +1,5 @@
 class FeedsController < ApplicationController
-  
+  before_action :signed_in_user
   def home
     if signed_in?
       @micropost  = current_user.microposts.build

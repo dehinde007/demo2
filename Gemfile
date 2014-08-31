@@ -13,6 +13,7 @@ gem "paperclip", "~> 3.5.3"
 gem 'rmagick'
 gem 'thin'
 gem 'newrelic_rpm'
+gem 'public_activity', github: 'pokonski/public_activity'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'

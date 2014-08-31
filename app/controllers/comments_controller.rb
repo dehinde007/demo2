@@ -15,12 +15,19 @@ class CommentsController < ApplicationController
     @comment = @micropost.comments.create!(comment_params)
      @comment.user = current_user
      if @comment.save
+       @comment.create_activity :create, owner: current_user
        flash[:success] = "Comment created!"
        redirect_to @micropost
     else
       render 'shared/_comment_form'
       end
     end
+    
+     def destroy
+    @comment.destroy
+    @comment.create_activity :destroy, owner: current_user
+    redirect_to current_user
+  end
 
 
     private

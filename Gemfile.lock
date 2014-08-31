@@ -4,6 +4,16 @@ GIT
   specs:
     database_cleaner (1.3.0)
 
+GIT
+  remote: git://github.com/pokonski/public_activity.git
+  revision: 250354d205b449471cd7e278a67acefaeb8c1b24
+  specs:
+    public_activity (2.0)
+      actionpack (>= 3.0.0)
+      activerecord (>= 3.0)
+      i18n (>= 0.5.0)
+      railties (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -288,6 +298,7 @@ DEPENDENCIES
   newrelic_rpm
   paperclip (~> 3.5.3)
   pg
+  public_activity!
   rails (= 4.0.5)
   rails_12factor
   rmagick

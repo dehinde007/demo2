@@ -16,6 +16,7 @@ def new
     @like = @micropost.likes.create!(like_params)
      @like.user = current_user
      if @like.save
+       @like.create_activity :create, owner: current_user
        flash[:success] = "you liked this post"
        redirect_to @micropost
     else
@@ -26,6 +27,7 @@ def new
     def destroy
     @like = Like.find(params[:id])
   @like.destroy  
+  @like.create_activity :destroy, owner: current_user
      redirect_to @micropost
   end
 
