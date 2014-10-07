@@ -37,14 +37,17 @@
   color: red;
   float: left;
   text-decoration: none;
-  margin-left: 65px;
+  margin-left: 625px;
   margin-top: 10px;
 }
 
 #search{
 	margin-top: 5px;
-	float: right;
-	padding-right: 140px;	
+	height: 14px;
+}
+
+#srd{
+	
 }
 
 #users{
@@ -54,7 +57,8 @@
 
 
 #fat-menu .dropdown-toggle{
-	margin-top: 15px;
+	margin-top: 0px;
+	margin-right: 80px;
 	font-weight: bold;
     color: white;
     font-size: 12px;

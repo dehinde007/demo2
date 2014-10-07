@@ -1,11 +1,20 @@
 <div id="head">
      <span><%= link_to "HALLIT", home_path, id: "logo" %></span>
     
-    <nav>
+        
+       <div id="srd"><% if signed_in? %>
+  		<div id="search">
+        <%= render 'shared/search' %>
+      </div>
+      <% end %>
+      </div>
+      
+      
+      <nav>
         <ul class="nav pull-right">
          
           <% if signed_in? %>
-            <p id="users"><%= link_to "Users", users_path, {:style => 'text-decoration: none; margin-left: -75px; margin-bottom: 50px; color: white; font-weight: bold; font-size: 12px;'} %></p>
+            
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Account <b class="caret"></b>
@@ -25,13 +34,5 @@
           <% end %>
         </ul>
       </nav>
-    
-       <div><% if signed_in? %>
-  		<section id="search">
-        <%= render 'shared/search' %>
-      </section>
-      <% end %>
-      </div>
-      
       
 </div>
