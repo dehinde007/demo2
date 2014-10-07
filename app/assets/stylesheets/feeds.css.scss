@@ -6,14 +6,13 @@
   height: 7020px;
   width: 52%;
   margin: auto;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: #E6E6E6;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-width: 40px;
+  border-color: #c20000;
+  background: white;
   min-width: 200px; 
-  position: relative;
-  margin-top: 20px;
+  margin-top: 80px;
   
 }
 
@@ -22,7 +21,7 @@
   background: #202629;
   width: 150px;
   float: left;
-  margin-left: -200px;
+  margin-left: -48px;
   min-width:  3%;
   position: fixed;
 }

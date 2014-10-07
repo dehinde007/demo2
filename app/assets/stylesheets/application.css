@@ -28,6 +28,7 @@
   min-width: 600px;
   height: 40px;
   background-color: black;
+  position: fixed;
 }
 
 #logo {

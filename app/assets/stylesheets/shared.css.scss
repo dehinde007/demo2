@@ -1,18 +1,19 @@
 
 
 #you{
- margin-left: -200px;
+ margin-right: 50px;
  margin-bottom: -73px;
 }
 
 #gg{
   margin: auto;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
+
 #content hr{
-  height: 1px;
-  background: grey;
+  height: 5px;
+  background: #c20000;
   border: 0px;
   margin-left: -25px;
 }
@@ -34,10 +35,12 @@
 
 
 .timestamp{
-  font-family: Arial;
-  font-size: 13px;
+  font-family: Helvetica;
+  font-size: 10px;
   font-weight: bold;
-  color:  #202629;
+  float: right;
+  color: black;
+  margin-top: 40px;
 }
 
 #submitbt{
@@ -46,7 +49,7 @@
 }
 
 #submitbt .btn-primary{
-  background: #47aa42;
+  background: #c20000;
   font-weight: bold;
 }
 
