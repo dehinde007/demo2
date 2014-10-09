@@ -1,34 +1,8 @@
-<div><% if signed_in? %>
-  
-  <div id="profile_bar">
-       <div id="black">
-        <p id="avi"><%= image_tag current_user.avatar(:thumb) %></p>
-       </div>
-       
-       <p id="usp"> <%= link_to current_user.username, current_user, {:style => 'color: white; font-weight: bold; font-size: 15px; margin-left: 2px;'} %></p>              
-     <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>
-     
- 
-     <p class="vq" id="qc"> <%= link_to pluralize(current_user.microposts.count, "Quote"), current_user %></p>
-
- <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>    
-     
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-      <section id="mf">
-        <%= render 'shared/micropost_form' %>
-      </section>
-  </div>
-               
-               
+<% if signed_in? %>
+         
   <div id="main">
         <section id="fd"><%= render 'shared/feed' %></section>
-       
   </div>
-  
-    
-  
   
   
 <% else %>
