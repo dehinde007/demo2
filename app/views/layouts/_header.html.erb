@@ -2,12 +2,7 @@
      <span><%= link_to "HALLIT", home_path, id: "logo" %></span>
     
         
-       <div id="srd"><% if signed_in? %>
-  		<div id="search">
-        <%= render 'shared/search' %>
-      </div>
-      <% end %>
-      </div>
+       
       
       
       <nav>
@@ -31,6 +26,14 @@
                 <li>
                   <%= link_to "Logout", signout_path, method: "delete" %>
                 </li>
+                <li class="divider"></li>
+                <li><div id="srd"><% if signed_in? %>
+  		<div id="search">
+        <%= render 'shared/search' %>
+      </div>
+      <% end %>
+      </div></li>
+                
               </ul>
             </li>
           <% else %>
