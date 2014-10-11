@@ -11,7 +11,7 @@ end
 
 #avatar
   has_attached_file :avatar, styles: {
-    mini:   '48x48', 
+    mini:   '48x48#', 
     thumb:  '100x100>',
     square: '200x200#',
     medium: '300x300>'
