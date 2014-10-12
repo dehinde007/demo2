@@ -24,8 +24,13 @@
   height: 50px;
 }
 
+#srcbar{
+  margin-top: -15px;
+}
+
 .sr{
    width: 180px;
+  
 }
 
 
@@ -37,11 +42,12 @@
 
 .timestamp{
   font-family: Helvetica;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: bold;
   float: right;
-  color: darkred;
-  margin-top: -30px;
+  color: grey;
+  margin-top: -33px;
+  margin-right: 27px;
 }
 
 #submitbt{
@@ -79,8 +85,9 @@
 #fcl{
   float: right;
   margin-right: 20px;
+  font-size: 12px;
   font-weight: bold;
-  color: grey;
+  color: darkred;
   font-family: Helvetica;
 }
 
