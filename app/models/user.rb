@@ -16,7 +16,7 @@ end
     square: '200x200#',
     medium: '300x300>'
   }
-validates_attachment_presence :avatar
+
 validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/ 
   
 #photo

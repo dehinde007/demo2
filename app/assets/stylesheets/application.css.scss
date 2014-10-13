@@ -24,30 +24,28 @@
 }
 
 #head {
+  height: 40px;
   width: 100%;
   min-width: 600px;
-  height: 40px;
+  top: 0px;
   background-color: #0A0A0A;
   position: fixed;
+}
+
+#logon{
+  text-align: center;
 }
 
 #logo {
   font-family: Ariel;
   font-size: 2em;
   color: red;
-  float: left;
   text-decoration: none;
-  margin-left: 625px;
-  margin-top: 10px;
 }
 
 #search{
 	margin-top: 5px;
 	height: 14px;
-}
-
-#srd{
-	
 }
 
 #users{

@@ -10,14 +10,17 @@
      <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>
      
  
-     <p class="vq" id="qc"> <%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: white; font-size: 15px; margin-left: 2px;'} %></p>
+     <p class="vq" id="qc"> 
+     	<ul id="xbx">
+     	<li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: white; font-size: 15px; margin-left: 2px;'} %></li>
+        <li><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
+        <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
+        </ul>
+     </p>
 
  <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>    
      
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-    
+  
   </div>
   
   

@@ -2,11 +2,10 @@
   <%= render 'shared/error_messages', object: f.object %>
   
 <div id="field">
-  	
-    <%= f.text_area :content, :class =>"ar", placeholder: "Write Details..." %>
     
-   <p>
     <%= f.file_field :photo %> 
+  <p>
+  <%= f.text_area :content, :class =>"ar", placeholder: "Write Details..." %>
   </p>
     
 </div>

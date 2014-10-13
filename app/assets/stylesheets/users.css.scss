@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#profile_bar{
+  margin-top: 45px;
+}
 
 #main2{
   height: 1920px;
@@ -21,4 +24,9 @@
 
 #edit{
   height: 600px;
+}
+
+#xbx li{
+  display: inline;
+  padding: 108px;
 }
