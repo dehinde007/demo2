@@ -1,6 +1,6 @@
 <%= form_for(@micropost, multipart: true) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  
+
 <div id="field">
     
     <%= f.file_field :photo %> 

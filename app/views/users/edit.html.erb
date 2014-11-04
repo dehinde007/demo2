@@ -1,6 +1,6 @@
 <% provide(:title, "Edit user") %>
 <div id="edit">
-<h1>Update your profile</h1>
+<h1 id="upup">Update your profile</h1>
 
 <div class="row">
   <div class="span6 offset3">
@@ -28,13 +28,14 @@
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      <p id="edsv"><%= f.submit "Save", class: "btn btn-sm btn-primary" %></p>
     <% end %>
    
-     <% if @current_user %>
- <%= link_to "Delete Account", @user, method: :delete,
+   <p class="delac"><% if @current_user %>
+   <%= link_to "Delete Account", @user, method: :delete,
                                   data: { confirm: "You sure?" } %>
-    <% end %>
+   <% end %> </p>
+    
  </div>
   </div>
 </div>
