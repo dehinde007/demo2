@@ -3,10 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #profile_bar{
-  margin-top: 45px;
+  height: 250px;
+  margin-top: -19px;
+  background: white;
+ 
+}
+
+#black{
+  margin-top: 60px;
+  text-align: center;
+}
+
+#infos{
+  text-align: center;
 }
 
 #main2{
+  margin-top: -10px;
   height: 1920px;
   width: 850px;
   background: darkred;
@@ -51,3 +64,5 @@
 .delac{
    color: green !important;
 }
+
+

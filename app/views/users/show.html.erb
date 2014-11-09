@@ -1,18 +1,21 @@
 <% provide(:title, @user.name) %>
 <div id="profile_bar">
        <div id="black">
-        <p id="avi"><%= image_tag @user.avatar(:thumb) %></p>
+        <p class="info"><%= image_tag @user.avatar(:thumb) %></p>
        </div>
        
-       <p id="usp"> <%= link_to @user.username, @user, {:style => 'color: white; font-weight: bold; font-size: 15px; margin-left: 2px;'} %></p>
+       <div id="infos">
+       <p> <%= link_to @user.username, @user, {:style => 'color: red; font-weight: bold; font-size: 15px;'} %></p>
        <p><%= @user.name %></p>
-       <%= @user.bio %></p>              
+       <p><%= @user.bio %></p>    
+       </div>
+                 
      <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>
      
  
      <p class="vq" id="qc"> 
      	<ul id="xbx">
-     	<li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: white; font-size: 15px; margin-left: 2px;'} %></li>
+     	<li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: red; font-size: 15px; margin-left: 2px;'} %></li>
         <li><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
         <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
         </ul>
