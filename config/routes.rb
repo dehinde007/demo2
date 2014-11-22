@@ -34,4 +34,5 @@ SampleApp::Application.routes.draw do
   match '/privacy', to: 'static_pages#privacy', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/home', to: 'feeds#home', via: 'get'
+  
 end
