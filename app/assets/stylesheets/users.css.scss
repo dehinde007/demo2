@@ -57,9 +57,13 @@
   color: grey; 
 }
 
-//#xbx li a:hover{
-  //color: darkred;
-//}
+#xbx li a:link {
+  color: grey; 
+}
+
+#xbx li a:hover{
+  color: darkred;
+}
 
 #edit{
   margin-top: 60px;
