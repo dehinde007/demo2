@@ -1,26 +1,5 @@
 <% provide(:title, @title) %>
-<div id="profile_bar">
-       <div id="black">
-        <p id="avi"><%= image_tag @user.avatar(:thumb) %></p>
-       </div>
-       
-       <p id="usp"> <%= link_to @user.username, @user, {:style => 'color: white; font-weight: bold; text-decoration: none; font-size: 15px; margin-left: 2px;'} %></p>              
-     <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>
-     
-     
-     <p class="vq"> <%= link_to "Profile", @user, {:style => 'color: white; text-decoration: none;'} %></p>
 
- <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>
- 
-     <p class="vq" id="qc"> <%= pluralize(@user.microposts.count, "Quote") %></p>
-
- <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>    
-     
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-      
-  </div>
   <div class="span8">
  
     <% if @users.any? %>
@@ -30,3 +9,4 @@
       <%= will_paginate %>
     <% end %>
   </div>
+<p class="spacin"></p>

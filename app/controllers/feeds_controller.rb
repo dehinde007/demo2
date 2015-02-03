@@ -7,6 +7,8 @@ class FeedsController < ApplicationController
       @comments = @micropost.comments
       @likes = @micropost.likes
       
+    else 
+      redirect_to signin_path
     end
   end
   

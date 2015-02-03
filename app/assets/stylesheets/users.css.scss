@@ -29,6 +29,7 @@
 
 #alus{
   height: 500px;
+  margin-top: 60px;
 }
 
 #allu{
@@ -48,21 +49,23 @@
   margin-top: 60px;
 }
 
-#upup{
-  color: white;
-}
-
 #edsv{
   margin-top: 12px;
   margin-left: 161px;
 }
 
 #edsv .btn-primary{
-  background: grey;
+  background: red;
 }
 
-.delac{
-   color: green !important;
+#edsv .btn-primary:focus{
+  outline: none;
+  }
+  
+#edsv .btn-primary:hover{
+  background-color: darkred;
+  }  
+
+.row{
+  margin-top: 25px;
 }
-
-
