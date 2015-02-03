@@ -31,7 +31,7 @@
   <div id="main1">
   <div id="main2">
   	
-    <span class="fllw_frm"><%= render 'follow_form' if signed_in? %></span>
+    <p class="fllw_frm"><%= render 'follow_form' if signed_in? %></p>
     <% if @user.microposts.any? %>
       <ol class="microposts">
       	
