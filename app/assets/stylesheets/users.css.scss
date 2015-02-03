@@ -16,6 +16,8 @@
 
 #infos{
   text-align: center;
+  color: grey;
+  font-weight: bold;
 }
 
 #main2{
@@ -43,7 +45,17 @@
 #xbx li{
   display: inline;
   padding: 108px;
+  font-weight: bold;
+  font-size: 13px;
 }
+
+#xbx li a:visited {
+  color: grey; 
+}
+
+//#xbx li a:hover{
+  //color: darkred;
+//}
 
 #edit{
   margin-top: 60px;
@@ -69,3 +81,4 @@
 .row{
   margin-top: 25px;
 }
+
