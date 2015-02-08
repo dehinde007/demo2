@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 gem 'heroku'
 #ruby-gemset=railstutorial_rails_4_0
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 1'
+gem 'aws-sdk-resources', '~> 2'
 gem 'rails', '4.0.5'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
