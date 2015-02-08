@@ -2,7 +2,7 @@ liked
 <% if activity.trackable %> 
 <%= link_to (image_tag activity.trackable.micropost.photo.url(:thumb)), activity.trackable.micropost %>
 
-     <span class="act_time"> <%= time_ago_in_words(activity.created_at) %> ago</span>
+     <span id="act_time"> <%= time_ago_in_words(activity.created_at) %> ago</span>
    
 <% else %> 
 a post which has since been removed 

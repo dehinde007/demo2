@@ -32,6 +32,7 @@ SampleApp::Application.routes.draw do
   match '/about_us',    to: 'static_pages#about_us',    via: 'get'
   match '/terms',   to: 'static_pages#terms',   via: 'get'
   match '/privacy', to: 'static_pages#privacy', via: 'get'
-  match '/help', to: 'static_pages#help', via: 'get'
+  match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/home', to: 'feeds#home', via: 'get'
+  
 end
