@@ -9,7 +9,7 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-gem "paperclip"
+gem "paperclip", "~> 3.5.3"
 gem 'rmagick'
 gem 'thin'
 gem 'newrelic_rpm'
@@ -42,7 +42,7 @@ group :test do
   # gem 'win32console', '1.3.2'
   # gem 'wdm', '0.1.0'
 end
-gem 'i18n', '~> 0.7.0'
+gem 'i18n', '~> 0.6.9'
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
