@@ -1,7 +1,7 @@
 
   <p id="notice"><%= notice %></p>
- 
- <%= image_tag @micropost.photo.url(:normal) %>
+ <div id="post_img">
+ <%= image_tag @micropost.photo.url(:normal) %></div>
  
    <% if current_user?(@micropost.user) %>
     <%= link_to "delete", @micropost, method: :delete,
@@ -31,5 +31,5 @@
   <% end %>
 
 
-
+<div class="app_footer"><%= render 'layouts/footer' %></div>
 

@@ -21,6 +21,20 @@ SampleApp::Application.configure do
 
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
+  
+  # ActionMailer settings
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+  :user_name => 'dehinde007',
+  :password => 'hallit007',
+  :domain => 'gmail.com',
+  :address => 'smtp.gmail.com',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+} 
 
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true

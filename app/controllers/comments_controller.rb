@@ -12,9 +12,12 @@ class CommentsController < ApplicationController
 
       def create
         @micropost = Micropost.find(params[:micropost_id])
-    @comment = @micropost.comments.create!(comment_params)
+        @comment = Comment.new(params[:comment].permit(:user_id, :body, :micropost_id))
+        @comment.micropost = @micropost
+        @comment.micropost.user = @micropost.user
      @comment.user = current_user
      if @comment.save
+       UserMailer.newcomment_email(@comment).deliver
        @comment.create_activity :create, owner: current_user
        flash[:success] = "Comment created!"
        redirect_to @micropost
@@ -32,7 +35,7 @@ class CommentsController < ApplicationController
 
     private
     def comment_params
-        params.require(:comment).permit(:body)
+        params.require(:comment).permit(:body, :micropost_id)
     end
     
     def set_comment

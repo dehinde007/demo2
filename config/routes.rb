@@ -1,5 +1,6 @@
 SampleApp::Application.routes.draw do
   
+  default_url_options :host => "www.hallit.co"
   
    resources :microposts do
     resources :likes

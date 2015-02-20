@@ -13,9 +13,12 @@ def new
 
  def create
         @micropost = Micropost.find(params[:micropost_id])
-    @like = @micropost.likes.create!(like_params)
+    @like = Like.new(params[:like].permit(:user_id, :micropost_id))
+       @like.micropost = @micropost
+       @like.micropost.user = @micropost.user
      @like.user = current_user
      if @like.save
+       UserMailer.newlike_email(@like).deliver
        @like.create_activity :create, owner: current_user
        flash[:success] = "you liked this post"
        redirect_to @micropost
