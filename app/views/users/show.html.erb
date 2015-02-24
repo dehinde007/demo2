@@ -14,7 +14,7 @@
      
      <p class="vq" id="qc"> 
      	<ul id="xbx">
-     	<li id="mpost_count"><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: grey; font-weight: bold; font-size: 13px; margin-left: 2px;'} %></li>
+     	<li id="mpost_count"><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: black; font-weight: bold; font-size: 13px; margin-left: 2px;'} %></li>
         <li><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
         <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
         </ul>
