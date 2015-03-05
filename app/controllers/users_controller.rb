@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-        @users = User.search(params[:search]).paginate(page: params[:page], per_page: 8)
+        @users = User.search(params[:search]).paginate(page: params[:page], per_page: 30)
   end
 
   def show
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
      
       sign_in @user
       flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      redirect_to help_path
     else
       render 'new'
     end

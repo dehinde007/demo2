@@ -19,13 +19,8 @@
         <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
         </ul>
      </p>
-
-  
-     
   
   </div>
-  
-  
   
   <div id="main1">
   <div id="main2">
@@ -33,10 +28,9 @@
     <p class="fllw_frm"><%= render 'follow_form' if signed_in? %></p>
     <% if @user.microposts.any? %>
       <ol class="microposts">
-      	
         <p id="rr"><%= render @microposts %></p>
       </ol>
-      <%= will_paginate @microposts %>
+     <p id="timeline_pag"><%= will_paginate @microposts %></p>
     <% end %>
   </div>
 </div>

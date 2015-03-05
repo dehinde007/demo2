@@ -1,9 +1,10 @@
-
 <% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
-
-<div class="row">
-  <div class="span6 offset3">
+<p id="sess_error"><%= flash[:alert] %></p>
+<div id="sess_box">
+	
+	<div id="sess_center">	
+	<h1 id="sess_in">Sign in</h1>
+  
     <%= form_for(:session, url: sessions_path) do |f| %>
 
       <%= f.label :email %>
@@ -12,9 +13,11 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+     <p> <%= f.submit "Sign in", class: "btn btn-sm btn-danger" %></p>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p id="sess_signup">New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
-</div>
+</div> 
+<div id="sess_spc"></div>
+<div class="app_footer"><%= render 'layouts/footer' %></div>

@@ -3,88 +3,35 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#wall_signin{
-    background: #0A0A0A;
-    min-width: 500px;
+#sess_box{
+  margin-top: 200px;
+  margin: auto;
+  height: 320px;
+  width: 370px;
+  padding-top: 20px;
+  border-radius: 5px;
+  background: #0A0A0A;
 }
 
-#signin_head{
-    height: 40px;
-    width: 100%;
-    min-width: 600px;
-    top: 0px;
-    background-color: black;
-    position: fixed;
+#sess_center{
+  text-align: center;
+  color: white;
 }
 
-#phone_wall{
-    float: left;
-    margin-top: 120px;
-    height: 180px;
-    width: 600px;
-    min-width: 100px;
+#sess_in{
+  margin-top: 50px;
+  padding-bottom: 20px;
 }
 
-#message_wall{
-  float: right;
-  height: 40px;
-  width: 600px;
-  margin-top: 130px;
+#sess_signup{
+  color: white;
 }
 
-#mssg_text{
-    font-size: 20px;
-    color: white;
-    font-family: arial;
-    font-weight: bold;
+#sess_spc{
+  margin-top: 300px;
 }
 
-#signin_box{
-    float: right;
-    height: 350px;
-    width: 270px;
-    background: white;
-    margin-top: 100px;
-    margin-right: 150px;
-    border-radius: 5px;
+#sess_error{
+  text-align: center;
+  color: rgb(168, 12, 12);
 }
-
-#field_box{
-    text-align: center;
-    font-weight: bold;
-}
-
-.signin_form{
-    font-size: 60px;  
-}
-
-#sign_h{
-   text-align: center;
-   font-size: 30px;
-}
-
-#signup_link{
-  margin-top: 30px;
-}
-
-#phone_img{
-  height: 650px;
-  margin-left: 180px;
-  margin-top: -70px;
-}
-
-#shot_img{
-  height: 453px;  
-  width: 260px;
-  margin-left: 316px;
-  margin-top: -553px;
-}
-
-#scren_logo p{
-  margin-top: -425px;
-  margin-left: 350px;
-  color: red;
-  font-family: Ariel;
-  font-size: 20px; 
-}
-

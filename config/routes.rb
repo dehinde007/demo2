@@ -24,7 +24,7 @@ SampleApp::Application.routes.draw do
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts,    only: [:create, :destroy, :show]
   resources :relationships, only: [:create, :destroy]
-  root to: 'feeds#home'
+  root to: 'static_pages#welcome'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
@@ -34,5 +34,6 @@ SampleApp::Application.routes.draw do
   match '/terms',   to: 'static_pages#terms',   via: 'get'
   match '/privacy', to: 'static_pages#privacy', via: 'get'
   match '/help', to: 'static_pages#help', via: 'get'
+  match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/home', to: 'feeds#home', via: 'get'
 end
