@@ -82,20 +82,26 @@
   background-color: darkred;
   }  
 
-.row{
-  margin-top: 25px;
-}
-
 .span8{
   margin-top: 60px;
 }
 
+#signup_box{
+  height: 520px;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  background: #0A0A0A;
+}
+
+#signupavi{
+  padding-left: 39px;
+}
 
 #sign_up{
-  margin-top: 60px;
   color: white;
 }
 
 #signup_spc{
-  margin-top: 120px;
+  margin-top: 70px;
 }
