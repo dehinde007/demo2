@@ -1,8 +1,7 @@
 <% provide(:title, "Sign in") %>
-<p id="sess_error"><%= flash[:alert] %></p>
+<p class="alert alert-error"><%= flash[:alert] %></p>
 <div id="sess_box">
 	
-	<div id="sess_center">	
 	<h1 id="sess_in">Sign in</h1>
   
     <%= form_for(:session, url: sessions_path) do |f| %>
@@ -17,7 +16,9 @@
     <% end %>
 
     <p id="sess_signup">New user? <%= link_to "Sign up now!", signup_path %></p>
+  
   </div>
-</div> 
+  
 <div id="sess_spc"></div>
+
 <div class="app_footer"><%= render 'layouts/footer' %></div>

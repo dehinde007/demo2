@@ -4,23 +4,19 @@
 
 
 #sess_box{
-  margin-top: 200px;
   margin: auto;
   height: 320px;
-  width: 370px;
-  padding-top: 20px;
-  border-radius: 5px;
+  width: 300px;
   background: #0A0A0A;
-}
-
-#sess_center{
   text-align: center;
   color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 #sess_in{
-  margin-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 #sess_signup{
@@ -29,9 +25,4 @@
 
 #sess_spc{
   margin-top: 300px;
-}
-
-#sess_error{
-  text-align: center;
-  color: rgb(168, 12, 12);
 }

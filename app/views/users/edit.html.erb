@@ -1,20 +1,23 @@
 <% provide(:title, "Edit user") %>
-<div id="edit">
-<h1 class="page_name">Update your profile</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for @user, :html => { :multipart => true} do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+<div class="alert alert-error">
+<%= form_for @user, :html => { :multipart => true} do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+</div>
+
+<div id="update_box">
+		
+<h1 id="update">Update Account</h1>
       
-      <%= f.label :avatar %>
-      <%= f.file_field :avatar %>
       
       <%= f.label :fullname %>
       <%= f.text_field :name %>
       
       <%= f.label :username %>
       <%= f.text_field :username %>
+      
+      <%= f.label :avatar %>
+      <span id="updatavi"><%= f.file_field :avatar %></span>
 
       <%= f.label :email %>
       <%= f.text_field :email %>
@@ -28,10 +31,11 @@
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
 
-      <p id="edsv"><%= f.submit "Save", class: "btn btn-sm btn-primary" %></p>
+      <p><%= f.submit "Save", class: "btn btn-sm btn-danger" %></p>
     <% end %>
     
- </div>
   </div>
-</div>
+  
+  <div id="update_spc"></div>
+
 <div class="app_footer"><%= render 'layouts/footer' %></div>

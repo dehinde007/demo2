@@ -61,37 +61,46 @@
   color: black;
 }
 
-#edit{
-  margin-top: 60px;
+#update_box{
+  height: 610px;
+  width: 300px;
+  background: #0A0A0A;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-#edsv{
-  margin-top: 12px;
-  margin-left: 161px;
+#update{
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 30px;
 }
 
-#edsv .btn-primary{
-  background: red;
+#update_spc{
+  margin-top: 20px;
 }
 
-#edsv .btn-primary:focus{
-  outline: none;
-  }
-  
-#edsv .btn-primary:hover{
-  background-color: darkred;
-  }  
+#updatavi{
+  padding-left: 39px;
+}
 
-.span8{
+.shofollow{
   margin-top: 60px;
 }
 
 #signup_box{
-  height: 520px;
+  height: 546px;
   width: 300px;
   margin: auto;
+  margin-top: -20px;
   text-align: center;
   background: #0A0A0A;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 #signupavi{
@@ -100,6 +109,8 @@
 
 #sign_up{
   color: white;
+  padding-bottom: 40px;
+  padding-top: 30px;
 }
 
 #signup_spc{
