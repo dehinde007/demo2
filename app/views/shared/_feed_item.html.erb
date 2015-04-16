@@ -14,9 +14,13 @@
     
     <div id="gg"><%= link_to (image_tag feed_item.photo.url(:normal)), feed_item %></div>
     <span id="content"><div style="word-wrap: break-word;"><%= feed_item.content %></div> <br />
-    	<div id="fcl"><%= pluralize(feed_item.comments.count, "comment") %> 
-        <%= pluralize(feed_item.likes.count, "like") %></div>
-    
+    	
+    	<div>
+    	<span id="fed_auth" class="fed_low">-<%= feed_item.author %></span>
+    	<span id="fed_cnl" class="fed_low"><%= pluralize(feed_item.comments.count, "comment") %> 
+        <%= pluralize(feed_item.likes.count, "like") %></span>
+        </div>
+        
     	<hr width="489px" /></span>
    <br />
 </p>

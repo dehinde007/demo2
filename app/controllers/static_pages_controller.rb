@@ -31,4 +31,8 @@ class StaticPagesController < ApplicationController
     
   end
   
+  def make_hall
+    
+  end
+  
 end

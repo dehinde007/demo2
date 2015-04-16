@@ -91,13 +91,19 @@
   margin-top: -40px;
 }
 
-#fcl{
-  float: right;
-  margin-right: 20px;
+.fed_low{
+   color: darkred;
+  font-family: Helvetica;
   font-size: 12px;
   font-weight: bold;
-  color: darkred;
-  font-family: Helvetica;
+}
+
+#fed_auth{
+  float: left;
+}
+
+#fed_cnl{
+  float: right;
 }
 
 #no-photo input{

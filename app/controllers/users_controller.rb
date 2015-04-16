@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user.save
      
       sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to Hallit"
       redirect_to help_path
     else
       render 'new'
