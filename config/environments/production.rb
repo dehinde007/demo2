@@ -77,6 +77,17 @@ SampleApp::Application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
+  
+  #sengrid settings
+  ActionMailer::Base.smtp_settings = {
+  :user_name => 'app27421630@heroku.com',
+  :password => 'w2ktivin',
+  :domain => 'hallit.co',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
