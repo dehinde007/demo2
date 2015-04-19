@@ -1,7 +1,7 @@
 
 <p><div style="word-wrap: break-word; margin-right: 600px; color: white; font-size: 11px;">
 	<%= link_to (image_tag comment.user.avatar.url(:mini)), comment.user %>
-    <%= link_to comment.user.username, comment.user, {:style => 'color: darkred; font-weight: bold; font-family: Helvetica; font-size: 13px;'} %>
+    <%= link_to comment.user.username, comment.user, {:style => 'color: grey; font-weight: bold; font-family: Helvetica; font-size: 13px;'} %>
   <span id="cmmb"> <%= comment.body %></span></div>
    <span id="comment_time"><%= time_ago_in_words(comment.created_at) %> ago</span>
 </p>

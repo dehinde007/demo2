@@ -26,6 +26,6 @@
         # I18n.enforce_available_locales = true
         I18n.enforce_available_locales = true
         config.serve_static_assets = true
-        config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+        config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg *.eot *.woff *.ttf)
       end
     end
