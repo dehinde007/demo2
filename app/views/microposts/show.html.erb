@@ -18,7 +18,7 @@
 </p>
   
 <%= pluralize(@micropost.comments.count, "comment") %> 
-<%= pluralize(@micropost.likes.count, "like") %> <td><%= link_to 'view all likes', like_path %></td>
+<%= pluralize(@micropost.likes.count, "like") %> <td><%= link_to 'view all likes', like_path, {:style => 'color: white; font-weight: bold;'} %></td>
 <br />
 
 <br />
