@@ -1,9 +1,10 @@
   <p id="notice"><%= notice %></p>
   
-  <%= render "shared/microusrn" %>
+  
   
  <div id="post_img">
- <%= image_tag @micropost.photo.url(:normal) %></div>
+ 	<%= render "shared/microusrn" %> 
+ <p><%= image_tag @micropost.photo.url(:normal) %> <span id="post_time"><%= time_ago_in_words(@micropost.created_at) %> </span> </p></div>
  
    <% if current_user?(@micropost.user) %>
     <%= link_to "delete", @micropost, method: :delete,
@@ -11,17 +12,17 @@
                                      title: @micropost.content %>                              
   <% end %>
 
- <strong><%= time_ago_in_words(@micropost.created_at) %> ago</strong> 
+
 <p>
   <div style="word-wrap: break-word; width: 400px;"><%= @micropost.content %></div>
 </p>
   
 <%= pluralize(@micropost.comments.count, "comment") %> 
-<%= pluralize(@micropost.likes.count, "like") %> <td><%= link_to 'Show like', like_path %></td>
+<%= pluralize(@micropost.likes.count, "like") %> <td><%= link_to 'view all likes', like_path %></td>
 <br />
 
 <br />
-  <%= render @micropost.comments %>
+  <%= render @micropost.comments %> 
 
 <%= render "comments/form" %>
 
