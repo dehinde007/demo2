@@ -18,7 +18,7 @@ def new
        @like.micropost.user = @micropost.user
      @like.user = current_user
      if @like.save
-      UserMailer.newlike_email(@like).deliver
+      
        @like.create_activity :create, owner: current_user
        flash[:success] = "you liked this post"
        redirect_to @micropost

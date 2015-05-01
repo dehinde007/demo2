@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
         @comment.micropost.user = @micropost.user
      @comment.user = current_user
      if @comment.save
-       UserMailer.newcomment_email(@comment).deliver
+       
        @comment.create_activity :create, owner: current_user
        flash[:success] = "Comment created!"
        redirect_to @micropost
