@@ -10,8 +10,9 @@ class Micropost < ActiveRecord::Base
     normal: '450x425',
     square: '170x170>',
     thumb: '100x100>',
-    medium: '300x300>'
-  }
+    medium: '550x600'
+  }, :url => "/attachments/:id/:style/:basename.:extension",
+     :path => ":rails_root/public/attachments/:id/:style/:basename.:extension"
   validates_attachment_presence :photo
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
   

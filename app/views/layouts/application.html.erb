@@ -7,12 +7,11 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   
   <body id="wall">
   	
-  <div id="wrapper">
-  		
     <%= render 'layouts/header' %> 
     
     <div class="container">
@@ -20,9 +19,9 @@
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
       <%= yield %>
-      
-   
-      </div>
     </div>
+      
+  
+  
   </body>
 </html>
