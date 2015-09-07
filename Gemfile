@@ -17,7 +17,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails'
   # The following optional lines are part of the advanced setup.
-  gem 'spork'
+  gem 'spork', '~> 1.0.0rc4'
   gem 'guard-rspec'
   gem 'spork-rails'
   gem 'guard-spork'
