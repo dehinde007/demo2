@@ -15,13 +15,13 @@ gem 'newrelic_rpm'
 gem 'public_activity', github: 'pokonski/public_activity'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails'
   # The following optional lines are part of the advanced setup.
-  gem 'spork','1.0.0rc4'
-  gem 'guard-rspec', '2.5.0'
-  gem 'spork-rails', '4.0.0'
-  gem 'guard-spork', '1.5.0'
-  gem 'childprocess', '0.3.6'
+  gem 'spork'
+  gem 'guard-rspec'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 group :test do
