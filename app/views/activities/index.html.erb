@@ -1,12 +1,22 @@
-<h1 class="page_name">Activities</h1>
+<div class="container">
+	
+<h1 class="title">Activities</h1>
 
+<hr />
 
 <% @activities.each do |activity| %>
-   <div class="activity"> 
-   	<span id="acti_user"><%= link_to activity.owner.username, activity.owner if activity.owner %></span>
-   	<%= render_activity activity %> 
-   	</div><br />
-<% end %>
 
-<p class="spacin"></p>
-<div class="app_footer"><%= render 'layouts/footer' %></div>
+ <div>
+   	<%= link_to activity.owner.username, activity.owner if activity.owner %>
+   	<%= render_activity activity %>    
+ </div>	
+ 
+ <br />
+ 
+ <% end %>
+
+</div>
+
+<br /> <br /> <br /> <br /><br /><br />
+
+<div class="footer2"><%= render 'layouts/minfooter' %></div>

@@ -1,37 +1,29 @@
 <% provide(:title, @user.name) %>
-<div id="profile_bar">
-       <div id="black">
-        <p class="info"><%= image_tag @user.avatar(:thumb) %></p>
-       </div>
-       
-       <div id="infos">
-       <p> <%= link_to @user.username, @user, {:style => 'color: darkred; font-weight: bold; font-size: 15px;'} %></p>
-       <p><%= @user.name %></p>
-       <p><%= @user.bio %></p>    
-       </div>
-                 
-     <span class="pfl"><hr style="border: 1px solid #2d2d2d" /></span>
-     
-     <p class="vq" id="qc"> 
-     	<ul id="xbx">
-     	<li id="mpost_count"><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: black; font-weight: bold; font-size: 13px; margin-left: 2px;'} %></li>
-        <li><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
-        <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
-        </ul>
-     </p>
-  
-  </div>
-  
-  <div id="main1">
-  <div id="main2">
-  	
-    <p class="fllw_frm"><%= render 'follow_form' if signed_in? %></p>
-    <% if @user.microposts.any? %>
-      <ol class="microposts">
-        <p id="rr"><%= render @microposts %></p>
-      </ol>
-     <p id="timeline_pag"><%= will_paginate @microposts %></p>
-    <% end %>
-  </div>
+
+<div class="container">
+	
+	<div class="profiletop">	
+				
+    <p class="profileimg"><%= image_tag @user.avatar(:thumb), class: "img-circle" %></p>  
+    <p><%= link_to @user.username, @user, {:style => 'color: black; font-size: 23px;'} %></p>
+    <p class="userinfo"><%= @user.name %>.  <%= @user.bio %></p> 
+    
+    <ul class="profileinfo">
+     <li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: #428bca; font-weight: bold; font-size: 14px;'} %></li>
+     <li><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
+     <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
+    </ul> 
+   
+    </div> 
+<hr />
+
 </div>
-<div class="app_footer"><%= render 'layouts/footer' %></div>
+
+<div class="container">
+ <%= render 'follow_form' if signed_in? %> 
+   <% if @user.microposts.any? %>
+      <%= render @microposts %>
+   <% end %>
+</div>
+
+<div class="footer2"><%= render 'layouts/minfooter' %></div>

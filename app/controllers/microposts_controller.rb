@@ -8,9 +8,7 @@ class MicropostsController < ApplicationController
   
   
   def show
-    
-     @micropost = Micropost.find(params[:id])
-      
+   @micropost = Micropost.find(params[:id])
    @comments = @micropost.comments
   end
   

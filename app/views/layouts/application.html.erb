@@ -7,6 +7,7 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   
@@ -14,12 +15,13 @@
   	
     <%= render 'layouts/header' %> 
     
-    <div class="container">
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
-      <%= yield %>
-    </div>
+
+  <div class="yield" class="container">     	
+    
+    <%= yield %>
+      	
+  </div>
+   
       
   
   

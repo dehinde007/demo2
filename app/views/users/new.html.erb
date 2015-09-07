@@ -5,33 +5,47 @@
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
-<div id="signup_box">
-	
-<h1 id="sign_up">Sign up</h1>
-
-      <%= f.label :fullname %>
-      <%= f.text_field :name %>
-      
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-      
-      <%= f.label :avatar %>
-     <span id="signupavi"><%= f.file_field :avatar %></span>
-
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-
-     <p><%= f.submit "Create", class: "btn btn-sm btn-danger" %></p>
+<div class="container signup">
+     
+     <section class="signupform">
+     
+     <p>	
+      <%= f.label :fullname, :class =>"signuplabel" %>
+      <%= f.text_field :name, :class =>"signupfield", placeholder: "Enter fullname" %>
+     </p>
+     
+     <p>
+      <%= f.label :username, :class =>"signuplabel" %>
+      <%= f.text_field :username, :class =>"signupfield", placeholder: "Enter username" %>
+     </p>
+     
+     <p>
+      <%= f.label :email, :class =>"signuplabel" %>
+      <%= f.text_field :email, :class =>"signupfield", placeholder: "Enter email" %>
+     </p>
+     
+    <br />
+     <p>
+      <%= f.label :avatar, :class =>"signuplabel" %>
+      <%= f.file_field :avatar %>
+     </p> 
+     
+     <p>
+      <%= f.label :password, :class =>"signuplabel" %>
+      <%= f.password_field :password, :class =>"signupfield", placeholder: "Enter password" %>
+     </p>
+    
+     <p>
+      <%= f.label :password_confirmation, :class =>"signuplabel" %>
+      <%= f.password_field :password_confirmation, :class =>"signupfield", placeholder: "re-type password" %>
+     </p>
+    <br />
+     <p><%= f.submit "Create Account", class: "btn btn-sm btn-primary" %></p>
     <% end %>
-
+   </section>
+   
 </div>
 
-<div id="signup_spc"></div>
+<br />
+<br />
 
-<div class="app_footer"><%= render 'layouts/footer' %></div>

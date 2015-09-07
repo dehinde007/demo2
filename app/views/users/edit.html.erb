@@ -1,41 +1,55 @@
 <% provide(:title, "Edit user") %>
-
 <div class="alert alert-error">
 <%= form_for @user, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
-<div id="update_box">
-		
-<h1 id="update">Update Account</h1>
+ <div class="container edit"> 
+			
+ <h1 class="title3">Update Account</h1>
+    <hr />
+ 
+    <p>
+	 <%= f.label :fullname %>
+     <%= f.text_field :name %>
+    </p>
+   
+    <p>
+     <%= f.label :username %>
+     <%= f.text_field :username %>
+    </p>
       
-      
-      <%= f.label :fullname %>
-      <%= f.text_field :name %>
-      
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-      
+    <p>
       <%= f.label :avatar %>
-      <span id="updatavi"><%= f.file_field :avatar %></span>
-
+      <section class="editavi"><%= f.file_field :avatar, class: "usereditavi" %></section>
+    </p>
+   
+    <p>
       <%= f.label :email %>
       <%= f.text_field :email %>
-      
+    </p> 
+   
+    <p>
       <%= f.label :bio %>
       <%= f.text_field :bio %>
-
+    </p>
+   
+    <p>
       <%= f.label :password %>
       <%= f.password_field :password %>
-
+    </p>
+    
+    <p>
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
-
-      <p><%= f.submit "Save", class: "btn btn-sm btn-danger" %></p>
+    </p>
+   
+   <p><%= f.submit "Save", class: "btn btn-sm btn-primary" %></p>
+      
     <% end %>
-    
-  </div>
   
-  <div id="update_spc"></div>
-
-<div class="app_footer"><%= render 'layouts/footer' %></div>
+  </div>
+  <br />
+  <br />
+  
+<div class="footer2"><%= render 'layouts/minfooter' %></div>

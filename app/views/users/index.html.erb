@@ -1,13 +1,16 @@
 <% provide(:title, 'All users') %>
+<div class="container">
+	
+<h1 class="title">Users</h1>
 
-<h1 class="page_name">Users</h1>
+<hr />
 
-<ul class="users">
   <%= render @users %>
-</ul>
 
-<p><%= will_paginate %></p>
+</div>
 
-<div id="users_spacin"></div>
+<div class="pager">
+   <%= will_paginate @feed_items %>
+</div>
 
-<div class="app_footer"><%= render 'layouts/footer' %></div>
+<div class="footer2"><%= render 'layouts/minfooter' %></div>

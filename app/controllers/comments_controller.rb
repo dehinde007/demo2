@@ -27,9 +27,9 @@ class CommentsController < ApplicationController
     end
     
      def destroy
-    @comment.destroy
+    @comment.destroy 
     @comment.create_activity :destroy, owner: current_user
-    redirect_to current_user
+    redirect_to micropost
   end
 
 

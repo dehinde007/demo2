@@ -1,24 +1,24 @@
 <% provide(:title, "Sign in") %>
 <p class="alert alert-error"><%= flash[:alert] %></p>
-<div id="sess_box">
-	
-	<h1 id="sess_in">Sign in</h1>
-  
-    <%= form_for(:session, url: sessions_path) do |f| %>
-
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-
-     <p> <%= f.submit "Sign in", class: "btn btn-sm btn-danger" %></p>
+   
+   <div class="container session">
+   	
+   	  <section class="sessionform">
+      <%= form_for(:session, url: sessions_path) do |f| %>
+      <p>
+      <%= f.label :email, :class =>"sessionlabel" %>
+      <%= f.text_field :email, :class =>"sessionfield", placeholder: "Enter email" %>
+      </p>
+ 
+      <%= f.label :password, :class =>"sessionlabel" %>
+      <%= f.password_field :password, :class =>"sessionfield", placeholder: "Enter password" %>
+      </section>
+      <br />
+     <p> <%= f.submit "Log in", class: "btn btn-sm btn-primary" %></p>
+     
     <% end %>
 
-    <p id="sess_signup">New user? <%= link_to "Sign up now!", signup_path %></p>
-  
-  </div>
-  
-<div id="sess_spc"></div>
+    <p class="sessionlink">New user? <%= link_to "Sign up", signup_path %></p>
+    
+   </div>
 
-<div class="app_footer"><%= render 'layouts/footer' %></div>

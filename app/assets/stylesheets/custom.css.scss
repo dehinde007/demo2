@@ -2,62 +2,663 @@
 html, body{
   width: 100%;
   height: 100%;
-  margin:0;
-  padding:0;
-  background-color: #570909;
+  margin: 0;
+  padding: 0;
+  background-color: #F8F8F8;
+  overflow-x: hidden;
+}
+
+/*global*/
+.yield{
+  margin-top: 50px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.title{
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.title2{
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 10px;  
+}
+
+input{
+  background-color: #fdfdfd;
+  border: solid 1px #edeeee;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 200px;
+}
+
+label{
+  display: block;
 }
 
 /* header */ 
+.navbar-toggle{
+
+}
+
 .navbar-default {
-  background-color: white;
-  border-color: black;
+  background-color: #D63636;
+  border-color: #D63636;
+}
+
+.search{
+  margin-top: 15px;
 }
 
 #logo{
   font-family: Ariel;
-  color: red;
-  font-size: 1.5em;
+  color: black;
+  font-size: 1.2em;
 }
 
-/* footer */
+/* welcome */
+.welcomewall{
+  background: url(images/welcome.jpg) no-repeat center center fixed;
+}
 
+.welcomeinfo{
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 280px;
+}
+
+.welcomeoption{
+  text-align: center;
+}
+
+/* userpartial*/
+.userpartialname{
+  color: black; 
+  font-weight: normal; 
+  font-size: 13px;
+}
+
+/* user_index */
+
+
+/* new_micropost */
 #newform{
   margin-top: 60px;
 }
 
-/* feed_item */
-.center{
-  margin-top: 70px;
+/* signup */
+.signup{
+  text-align: center;
 }
 
-.pqqq{
-  width: 509px;
-  background: white;
+.signuplabel{
+  float: left;
+  color: rgb(88, 88, 88);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.signupfield{
+  height: 30px;
+  width: 100%;
+  font-size: 13px;
+}
+
+/* sessions */
+.session{
+  text-align: center;
+}
+
+.sessionlabel{
+  float: left;
+  color: rgb(88, 88, 88);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.sessionfield{
+  height: 30px;
+  width: 100%;
+  font-size: 13px;
+}
+
+/* home */
+.pager{
+  font-size: 60%;
+}
+
+.homepag{
+  font-size: 100%;
+}
+
+/* feed */ 
+
+/* feed_item */
+.feedhouse{
+  margin-top: 20px;
+  width: 100%;
 }
 
 .puffin{
-  margin-top: -50px;
-  background: rgb(228, 228, 228);
-  width: 480px;
-  height: 480px;
-  position: relative;
+  width: 100%;
 }
 
-.puffauto .img-responsive {
-  max-height: 100%;
+.feediteminfo{
+  background: white;
+  width: 550px;
+  height: 60px; 
+}
+
+.feediteminfo .img-circle{
+  width: 4%;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.feedusern{
+  padding-bottom: 20px;
+  color: #CE2424;
+  font-size: 85%;
+  font-weight: bold;
+}
+
+.feedtime{
+  font-size: 80%;
+  font-weight: bold;
+  color: grey;
+}
+
+.contentlength{
+  background: white;
+  font-size: 95%;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.contentlength2{
+  display: none;
+}
+
+.feedlikeicon{
+  color: grey;
+}
+
+.feedlikeicon .glyphicon-heart{
+  color: rgb(206, 27, 27);
+}
+
+/* micropost_form */
+.micropostform{
+ text-align: center;
+}
+
+.micropostformcontent{
   margin: auto;
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
+  left: 0;
   right: 0;
-
 }
 
-#boxer{
-  width: 700px;
-  height: 500px;
+.formphoto{
+ margin-left: 10px;
+}
+
+.formcontent{
+  width: 100%;
+  height: 150px;
+  border-style: solid;
+
+  border-color: rgb(218, 212, 212);
+  font-size: 13px;
+}
+
+.formauthor{
+  width: 150px;
+  border-style: solid;
+
+  border-color: rgb(218, 212, 212);
+  font-size: 13px;
+}
+
+/* micropost_show */
+.micropostshow{
   background: white;
 }
+
+.posttime{
+ color: #CE2424;
+ font-size: 90%;
+ padding-top: 7px;
+}
+
+.glyphicon-trash{
+   color: black;
+   font-size: 15px;
+}
+
+.micropostauthor{
+  color: black;
+}
+
+.microviews{
+  color: black;
+}
+
+/* commentform */
+.commentform{
+  width: 100%;
+}
+
+/* commentpartial */
+.commentpartial{
+ list-style: none;  
+}
+
+.commentpartial .img-circle{
+  width: 8%;
+}
+
+.commentusername{
+  color: #CE2424; 
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.commenttime{
+  color: black;
+  font-size: 70%;
+}
+
+/* like_show */
+.likes{
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* activities_index */
+
+/* users_show */
+.profiletop{
+  text-align: center;
+}
+
+.profiletop .img-circle{
+  width: 25%;
+}
+
+.userinfo{
+  color: black;
+  font-size: 12px;
+}
+
+.profileinfo li{
+  font-weight: bold;
+  display: inline;
+}
+
+/* _micropost */
+.micropartial{
+}
+
+.micropostsquare{
+/* not using width: 26% now to shrink on the big screen */
+  background: white;  
+  float: left;
+}
+
+.micropostcount{
+  text-align: center;
+  font-size: 13px;
+  color: #6B6A6A;
+}
+
+.micropostcount .glyphicon-heart{
+   color: #D2DBE2;
+}
+
+.micropostcount .glyphicon-comment{
+ color: #D2DBE2;
+}
+
+/*edituser*/
+.title3{
+  margin-top: -20px;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.edit{
+  text-align: center;
+}
+
+.usereditavi{
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+/* footer */
+.footer{
+  width: 100%;
+}
+
+.footerul{
+  margin-left: -22px;
+  margin-top: 70px;
+  font-size: 80%;
+  list-style: none;
+  text-align: center;  
+}
+
+.footerul li{
+  padding: 5px; 
+  display: inline-block;
+  text-align: center;  
+  word-wrap: break-word;
+}
+
+.footdate{
+  list-style: none;
+  color: black;
+}
+
+.minfooter{
+  background: #F1EBEB;
+  height: 37px;
+  width: 100%;
+  position: fixed;
+  bottom:0px;
+  opacity: 0.7;
+}
+
+.minf{
+  padding-left: 0;
+  padding-right: 13.6%;
+}
+
+.minfooter .glyphicon{
+  padding-top: 10px;
+  color: rgb(184, 120, 120); 
+  font-size: 17px;
+} 
+
+
+@media screen and (min-width: 320px) {
+ /* header */
+#logo{
+  font-size: 1.3em;
+}
+  
+.micropostsquare{
+ width: 32%;
+ margin-left: 3.5px;
+ margin-top: 3.5px;
+}
+
+.micropostcount{
+ display: none;
+}
+
+.feediteminfo{
+  height: 50px; 
+}
+
+.feediteminfo .img-circle{
+  width: 6%;
+  margin-top: 2.5%;
+  margin-left: 5%;
+}
+
+.feedusern{
+  font-size: 100%;
+  margin-top: 3%;
+}
+
+.feedtime{
+  font-size: 90%;
+  margin-top: 3.5%;
+}
+
+.feedcontent{
+  font-size: 85%;
+}
+
+.feedlikeicon{
+  font-size: 100%;
+}
+
+.minf{
+  padding-left: 0;
+  padding-right: 14.9%;
+}
+
+.minfooter .glyphicon{
+  padding-top: 10px;
+  font-size: 20px;
+} 
+
+.pager{
+  margin-left: -40px;
+}
+
+}
+
+
+@media screen and (min-width: 414px) {
+
+ .minf{
+  padding-left: 0;
+  padding-right: 17%;
+}
+
+.minfooter .glyphicon{
+  padding-top: 10px;
+  font-size: 20px;
+} 
+  
+}
+
+@media screen and (min-width: 480px) {
+ .contentlength{
+   display: none;
+ }
+ 
+ .contentlength2{
+   width: 450px;
+   background: white;
+   display: block;
+   padding-bottom: 10px;
+   margin: auto;
+   left: 0;
+   right: 0;
+ }
+  
+}
+
+
+@media screen and (max-width: 758px) {
+.feediteminfo{
+  width: 450px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+ 
+.puffauto .img-responsive{
+  width: 450px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}  
+
+
+
+}
+
+
+@media screen and (min-width: 758px) {
+/* signup */
+.signup{
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 470px;
+  width: 380px;
+  background: white;
+}  
+
+.signupform{
+  margin-top: 20px;
+}
+
+.signupfield{
+  height: 30px;
+  width: 100%;
+  font-size: 13px;
+}
+  
+/* session */
+.session{
+  margin-top: 60px;
+  border-radius: 5px;
+  height: 250px;
+  width: 350px;
+  background: white;
+}
+
+.sessionform{
+  margin-top: 30px;
+}
+
+.sessionlabel{
+  font-size: 13px;
+}
+
+.sessionfield{
+  height: 30px;
+  width: 100%;
+  font-size: 13px;
+}
+
+  
+  
+/* feed_item */ 
+.feediteminfo{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+ 
+.puffauto .img-responsive{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}  
+
+.feedcontent{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+} 
+  
+.micropostsquare{
+ width: 31%;
+ margin-top: 10px;
+ margin-left: 10px;
+}
+
+.micropostcount{
+ display: block;
+}
+
+
+}
+
+
+@media screen and (min-width: 992px) {
+.feediteminfo{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+ 
+.puffauto .img-responsive{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}  
+
+.feedcontent{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}  
+  
+.micropostsquare{
+ width: 31%;
+ margin-top: 20px;
+ margin-left: 20px;
+}
+
+.micropostcount{
+ display: block;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+.feedhouse{
+
+} 
+
+.feediteminfo{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+ 
+.puffauto .img-responsive{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}  
+
+.feedcontent{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+  
+.micropostsquare{
+ width: 25%;
+ margin-top: 40px;
+ margin-left: 62.5px;
+}
+
+.micropostcount{
+ display: block;
+}
+
+}
+
 
 

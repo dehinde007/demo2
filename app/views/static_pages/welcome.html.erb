@@ -1,16 +1,22 @@
-<p class="p1">Hallit is a free online social networking service that allows its users upload photos with words and icons on the them which are called "halls" </p>
-<p id="p2">Our official beta font is "Bebas Neue"</p>
-
-<div id="wel_p">
+<body class="welcomewall">
 	
-<div id="well"><img src="/assets/images/phone.png", alt="welcome_phone", id="welcome_phone" /></div>
-<div id="welll"><img src="/assets/images/y.png", alt="wel_shot", id="wel_shot" /></div>
-
-<h1 id="learnhall"><%= link_to "( learn how to make a hall )", make_hall_path, {:style => 'color: rgb(224, 24, 24); font-size: 17px;'}%></h1>
-
-</div>
-
-
-
-<p id="mssg_text">Share your thoughts, ideas and quotes through Hallit</p>
+		<h1 class="welcomeinfo">Share quotes with the world</h1>
+		
+		<p class="welcomeoption">
+			<%= link_to "Sign in", signin_path, :class => "btn btn-sm btn-primary" %> 
+		    <%= link_to "Sign up now", signup_path, :class => "btn btn-sm btn-primary" %>			
+		</p>
+		
+	  <p>
+<ul class="footerul">
+      <li><%= link_to "About Us", about_us_path, {:style => 'color: white;'} %></li>	
+      <li><%= link_to "Help", help_path, {:style => 'color: white;'} %></li>
+      <li><%= link_to "Privacy", privacy_path, {:style => 'color: white;'} %></li> 
+      <li><%= link_to "Terms", terms_path, {:style => 'color: white;'} %></li> 
+      <li><%= link_to "Contact Us", contact_us_path, {:style => 'color: white;'} %></li> 
+      <li class="footdate">2015 Hallit</li> 
+</ul>
+     </p>
+      
+</body>
 

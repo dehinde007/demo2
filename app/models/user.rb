@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 #user search
   def self.search(search)
     if search 
-      where('name ILIKE ?', "%#{search}%")
+      where('name LIKE ?', "%#{search}%")
     else
    scoped  
     end
@@ -11,10 +11,8 @@ end
 
 #avatar
   has_attached_file :avatar, styles: {
-    mini:   '48x48#', 
-    thumb:  '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
+    mini: '38x38#', 
+    thumb: '100x100#'
   }, :url => "/avatars/:id/:style/:basename.:extension",
      :path => ":rails_root/public/avatars/:id/:style/:basename.:extension"
 

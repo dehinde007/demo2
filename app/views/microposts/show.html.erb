@@ -1,38 +1,42 @@
-  <p id="notice"><%= notice %></p>
-  
-  
-  
- <div id="post_img">
- 	<%= render "shared/microusrn" %> 
- <p><%= image_tag @micropost.photo.url(:normal) %> <span id="post_time"><%= time_ago_in_words(@micropost.created_at)%> ago</span> </p></div>
- 
-   <% if current_user?(@micropost.user) %>
+<div class="micropostshow">	
+	<%= notice %>
+<div class="container posttime"> <%= time_ago_in_words(@micropost.created_at)%> ago</div>   
+ 	<%= image_tag @micropost.photo.url(:normal) %>  
+   
+    <div class="container">
+    <%= render "shared/microusrn" %><%= @micropost.content %> (<%= @micropost.author %>)
+    <% if current_user?(@micropost.user) %>
     <%= link_to "delete", @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: @micropost.content %>                              
   <% end %>
+    <div>
 
+    
+</div>
 
-<p>
-  <div style="word-wrap: break-word; width: 400px;"><%= @micropost.content %></div>
-</p>
-  
-<%= pluralize(@micropost.comments.count, "comment") %> 
-<%= pluralize(@micropost.likes.count, "like") %> <td><%= link_to 'view all likes', like_path, {:style => 'color: white; font-weight: bold;'} %></td>
-<br />
+<div class="microviews">  
+	
+<span class="glyphicon glyphicon-comment"></span><%= pluralize(@micropost.comments.count, "") %> </span>
+<span class="glyphicon glyphicon-heart"></span><%= pluralize(@micropost.likes.count, "") %>
+<%= link_to 'view all likes', like_path, {:style => 'color: black;'} %>
 
-<br />
+</div>
+
+<hr />
+<section id="comments-section">
   <%= render @micropost.comments %> 
 
-<%= render "comments/form" %>
+  <%= render "comments/form" %>
 
 
-<% if like = current_user.likes.find_by_micropost_id(@micropost.id) %>
+  <% if like = current_user.likes.find_by_micropost_id(@micropost.id) %>
                 
-<% else %>
+ <% else %>
   <%= render "likes/form" %>
   <% end %>
+</section>  
 
-
-<div class="app_footer"><%= render 'layouts/footer' %></div>
-
+</div>
+</div>
+<div class="footer2"><%= render 'layouts/minfooter' %></div>

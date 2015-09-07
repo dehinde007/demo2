@@ -1,10 +1,10 @@
-<li id="allu">
-  <%= image_tag user.avatar.url(:mini) %>
-  <%= link_to user.name, user, {:style => 'color: white; font-weight: bold; font-family: Helvetica; font-size: 13px;'} %>
+
+  <%= image_tag user.avatar.url(:mini), class: "img-circle" %>
+  <%= link_to user.name, user, class: "userpartialname" %>
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete,
                                   data: { confirm: "You sure?" } %>
                                   
   <% end %>
-  
-</li><br />
+
+<hr />

@@ -1,32 +1,40 @@
-<table class="center">	
-		  	
-  <tbody>
-   <tr> 
-   <td>
-   	<%= link_to (image_tag feed_item.user.avatar.url(:mini)), feed_item.user %>
-    <%= link_to feed_item.user.username, feed_item.user, {:style => 'color: darkred; font-weight: bold; font-family: Helvetica; font-size: 13px;'} %>
-    <%= time_ago_in_words(feed_item.created_at) %> ago
-   <br /> <br />
-   <br /> <br />
-   <br />
+
+	<div class="feedhouse">
+		
+    <section class="feediteminfo">
+    <%= link_to (image_tag feed_item.user.avatar.url(:mini), class: "img-circle"), feed_item.user %>
+    <%= link_to feed_item.user.username, feed_item.user, class: "feedusern"  %>
+    <span class="feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
+    </section>
    
-   <div class="puffin">  	
-<span id="<%= feed_item.id %>"> 
+  	<div class="puffin">
+    <span id="<%= feed_item.id %>"> 
 	<div class="puffauto">
   	<%= link_to (image_tag feed_item.photo.url(:medium), class: "img-responsive"), feed_item %>
   	</div>
-   </div>
-   <p><% if feed_item.content.length > 125 %>
-  	<%= truncate(feed_item.content, length: 125) %>
+  	</div>
+		
+    </div>
+    
+    <section class="container contentlength">
+    <p class="feedlikeicon">
+    <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "like") %>
+  	</p>		
+    <% if feed_item.content.length > 125 %>
+  	<%= truncate(feed_item.content, length: 350) %>
   	<% else %>
   	<%= feed_item.content %>
   	<% end %>
-  	</p>
-   
+    </section>
 
-   </td>
-   </tr>
-  </tbody>
-  
-</table>
-
+    <section class="container contentlength2">
+    <p class="feedlikeicon">
+    <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "like") %>
+  	</p>		
+    <% if feed_item.content.length > 125 %>
+  	<%= truncate(feed_item.content, length: 350) %>
+  	<% else %>
+  	<%= feed_item.content %>
+  	<% end %>
+    </section>
+    

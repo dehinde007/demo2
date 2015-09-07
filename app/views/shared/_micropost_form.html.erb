@@ -1,21 +1,29 @@
 <%= form_for(@micropost, multipart: true) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
+<%= render 'shared/error_messages', object: f.object %>
 
-<div id="field">
-    <div id="no-photo">
-    <%= f.file_field :photo %> 
-    </div>
+<div class="container micropostform">
+<div class="micropostformcontent">
+	<h1 class="title">New Hall</h1>
+	<hr />
+  <div class="formphoto">
+   <%= f.file_field :photo %> 
+  </div>
+
   <p>
-  <%= f.text_area :content, :class =>"ar", placeholder: "Write Details..." %>
+   <%= f.text_area :content, :class =>"formcontent", placeholder: "Describe Hall..." %>
   </p>
+  
   <p>
-    <%= f.label :author %>
-    <%= f.text_field :author %>
+   <%= f.text_field :author, :class =>"formauthor", placeholder: "Author" %>
   </p>
-</div>
   
+  <p> 
+   <%= f.submit "Share to subscribers", class: "btn btn-sm btn-primary" %>
+  </p>
   
-  
- <p id="submitbt"> <%= f.submit "Hall", class: "btn btn-sm btn-primary" %></p>
- 
 <% end %>
+
+<br />
+<br />
+</div>
+</div>
