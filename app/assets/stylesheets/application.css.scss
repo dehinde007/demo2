@@ -12,6 +12,7 @@
  *= require_tree .
  *= require bootstrap
  */
+$icon-font-path: 'bootstrap/';
 @import "bootstrap-sprockets";
 @import "bootstrap";
 

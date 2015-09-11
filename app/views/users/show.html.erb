@@ -9,7 +9,7 @@
     <p class="userinfo"><%= @user.name %>.  <%= @user.bio %></p> 
     
     <ul class="profileinfo">
-     <li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: #428bca; font-weight: bold; font-size: 14px;'} %></li>
+     <li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: #428bca; font-weight: bold; font-size: 13px;'} %></li>
      <li><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
      <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
     </ul> 
@@ -25,5 +25,6 @@
       <%= render @microposts %>
    <% end %>
 </div>
-
+<br />
+<br />
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

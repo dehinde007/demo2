@@ -10,37 +10,37 @@
     <hr />
  
     <p>
-	 <%= f.label :fullname %>
+	 <%= f.label :fullname, class: "edit-lab" %>
      <%= f.text_field :name %>
     </p>
    
     <p>
-     <%= f.label :username %>
+     <%= f.label :username, class: "edit-lab" %>
      <%= f.text_field :username %>
     </p>
       
     <p>
-      <%= f.label :avatar %>
+      <%= f.label :avatar, class: "edit-lab" %>
       <section class="editavi"><%= f.file_field :avatar, class: "usereditavi" %></section>
     </p>
    
     <p>
-      <%= f.label :email %>
+      <%= f.label :email, class: "edit-lab" %>
       <%= f.text_field :email %>
     </p> 
    
     <p>
-      <%= f.label :bio %>
+      <%= f.label :bio, class: "edit-lab" %>
       <%= f.text_field :bio %>
     </p>
    
     <p>
-      <%= f.label :password %>
+      <%= f.label :password, class: "edit-lab" %>
       <%= f.password_field :password %>
     </p>
     
     <p>
-      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.label :password_confirmation, class: "edit-lab" %>
       <%= f.password_field :password_confirmation %>
     </p>
    
