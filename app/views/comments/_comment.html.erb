@@ -3,9 +3,9 @@
  <%= link_to (image_tag comment.user.avatar.url(:mini), class: "img-circle"), comment.user %>
  <%= link_to comment.user.username, comment.user, class: "commentusername" %>
  <span class="commenttime"><%= time_ago_in_words(comment.created_at) %> ago</span>
- <%= comment.body %>
- <p>
- 	
+
+ <p class="commentbody">
+ <%= comment.body %> 
  </p>
 
 </li>
