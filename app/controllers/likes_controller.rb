@@ -3,8 +3,8 @@ class LikesController < ApplicationController
 
 
 def new
-        @like = @micropost.likes.new
-    end
+     @like = @micropost.likes.new
+  end
 
  def show
      @micropost = Micropost.find(params[:id])
@@ -17,21 +17,26 @@ def new
        @like.micropost = @micropost
        @like.micropost.user = @micropost.user
      @like.user = current_user
-     if @like.save
-      
+     @like.save
        @like.create_activity :create, owner: current_user
-       flash[:success] = "you liked this post"
-       redirect_to @micropost
-    else
-      render 'shared/_like_form'
+       respond_to do |format|
+      format.html { redirect_to @like.micropost }
+      format.js
       end
     end
     
     def destroy
     @like = Like.find(params[:id])
   @like.destroy  
+     respond_to do |format|
+      format.html { redirect_to @like.micropost }
+      format.js
+   end   
+  end
+  
+  def likeactivitydestroy
+  @like.destroy  
   @like.create_activity :destroy, owner: current_user
-     redirect_to @micropost
   end
 
 

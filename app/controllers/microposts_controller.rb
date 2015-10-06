@@ -1,7 +1,7 @@
 class MicropostsController < ApplicationController
   before_action :signed_in_user,  only: [:create, :destroy, :show]
   before_action :correct_user,   only: :destroy
-  
+
   def index
     @microposts = Micropost.all
   end
@@ -10,6 +10,10 @@ class MicropostsController < ApplicationController
   def show
    @micropost = Micropost.find(params[:id])
    @comments = @micropost.comments
+      respond_to do |format|
+        format.html # show.html.erb
+        format.js
+  end
   end
   
   def new

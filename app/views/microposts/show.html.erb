@@ -1,37 +1,45 @@
 <div class="micropostshow">	
 	<%= notice %>
-<div class="container posttime"> <%= time_ago_in_words(@micropost.created_at)%> ago</div>   
- 	<%= image_tag @micropost.photo.url(:normal) %>  
+<div class="container posttime"> <%= time_ago_in_words(@micropost.created_at)%> ago</div> <%= link_to "comments", "#", class: "comments-link" %>
+ 	<section class="post-img"><%= image_tag @micropost.photo.url(:normal) %></section>
    
-    <div class="container">
-    <%= render "shared/microusrn" %><%= @micropost.content %> (<%= @micropost.author %>)
+   <div class="container">
+    
+   <section class="showmicrocontent">
+   	<%= render "shared/microusrn" %>
+    <%= @micropost.content %>
+   <span class="postauthor">
+   	<% if @micropost.author? %>
+ - <%= @micropost.author %>
+    <% else %>
+<% end %>  
+   </span> 
     <% if current_user?(@micropost.user) %>
-    <%= link_to "delete", @micropost, method: :delete,
+    <%= link_to "Delete", @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: @micropost.content %>                              
-  <% end %>
-    <div>
+   <% end %>
 
-    
-</div>
-
+  
 <div class="microviews">  
 	
-<span class="glyphicon glyphicon-comment"></span><%= pluralize(@micropost.comments.count, "") %> </span>
+<span class="glyphicon glyphicon-comment"></span><span class="shocmmcou"><%= pluralize(@micropost.comments.count, "") %> </span>
 <span class="glyphicon glyphicon-heart"></span><%= pluralize(@micropost.likes.count, "") %>
-<%= link_to 'view all likes', like_path, {:style => 'color: black;'} %>
+<%= link_to 'All Likes', like_path %>
 
 </div>
 
 <hr />
 <section id="comments-section">
-  <%= render @micropost.comments %> 
+<section class="ddd"><%= render @micropost.comments %></section>
 
-  <%= render "comments/form" %>
+  <p><%= render "comments/form" %></p>
 
 
   <% if like = current_user.likes.find_by_micropost_id(@micropost.id) %>
-                
+            <%= form_for like, :html => { :method => :delete } do |f| %>
+    <%= f.submit "Unlike" %>
+  <% end %>      
  <% else %>
   <%= render "likes/form" %>
   <% end %>
@@ -39,6 +47,7 @@
 
 </div>
 </div>
+</section>
 <br />
 <br />
 

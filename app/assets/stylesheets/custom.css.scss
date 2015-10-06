@@ -43,9 +43,25 @@ label{
   display: block;
 }
 
-/* header */ 
-.navbar-toggle{
+::-webkit-input-placeholder{
+   color: white;
+}
 
+/* header */ 
+.navbar-default .navbar-toggle{
+  border-color: #D63636;
+  background-color: #D63636;
+  cursor: pointer;
+  &:hover{
+  background-color: rgb(196, 80, 80);
+  }
+
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: white; 
+  height: 2px;
+  width: 24px;
 }
 
 .navbar-default {
@@ -57,10 +73,23 @@ label{
   margin-top: 15px;
 }
 
+p .sr{
+  background: #D63636;
+  border-color: #D63636;
+  border: 0px;
+  outline: none;
+  color: white;
+}
+
 #logo{
   font-family: Ariel;
   color: black;
-  font-size: 1.2em;
+  font-size: 1.2em; 
+}
+
+.logout .glyphicon-lock{
+  color: black;
+  
 }
 
 /* welcome */
@@ -172,7 +201,6 @@ label{
 
 .feedtime{
   font-size: 80%;
- 
   color: grey;
 }
 
@@ -229,7 +257,7 @@ label{
 
 /* micropost_show */
 .micropostshow{
-  background: white;
+ 
 }
 
 .posttime{
@@ -238,23 +266,41 @@ label{
  padding-top: 7px;
 }
 
-.glyphicon-trash{
-   color: black;
-   font-size: 15px;
+.showmicrocontent{
+  font-size: 100%;
 }
 
-.micropostauthor{
-  color: black;
+.postauthor{
+  color: red;
+  font-size: 12px;
 }
 
 .microviews{
-  color: black;
+  color: #DD7070;
   padding-top: 10px;
+  font-size: 100%;
+}
+
+.microviews .glyphicon-comment{
+  color: #DD7070;
+}
+
+.microviews .glyphicon-heart{
+  color: #DD7070; 
+}
+
+.micropostshow hr{
+ margin-top: -1px;
+}
+
+.subscribe-btn{
+  margin-top: -20px;
 }
 
 /* commentform */
 .commentform{
   width: 100%;
+  border-radius: 5px;
 }
 
 /* commentpartial */
@@ -262,24 +308,21 @@ label{
  list-style: none;  
 }
 
-.commentpartial .img-circle{
-  width: 7%;
-}
-
 .commentusername{
   color: #CE2424; 
-  font-weight: bold;
-  font-size: 90%;
-}
-
-.commenttime{
-  color: black;
-  font-size: 90%;
+  font-size: 100%;
 }
 
 .commentbody{
-  padding-left: 20px;
-  font-size: 90%;
+  padding-left: 0px;
+  font-size: 100%;
+}
+
+/* commentform */
+.commentformbtn .btn-primary{
+ width: 100%; 
+ border-color: #D63636;
+ background-color: #D63636;
 }
 
 /* like_show */
@@ -332,11 +375,11 @@ label{
 }
 
 .micropostcount .glyphicon-heart{
-   color: #D2DBE2;
+  color: #EC585E;
 }
 
 .micropostcount .glyphicon-comment{
- color: #D2DBE2;
+  color: #EC585E;
 }
 
 /*edituser*/
@@ -468,10 +511,17 @@ label{
 
 }
 
-
 @media screen and (min-width: 414px) {
+/* show */
+.micropostshow{
+  
+}
 
- .minf{
+.profiletop .img-circle{
+  width: 150px;
+}
+
+.minf{
   padding-left: 0;
   padding-right: 17%;
 }
@@ -483,20 +533,52 @@ label{
   
 }
 
+@media screen and (max-width: 480px) {    
+/* micropost_show */
+.post-img{
+ text-align: center;
+}
+
+.showmicrocontent{
+  margin: auto;
+  left: 0px;
+  right: 0px;
+}
+
+}
+
 @media screen and (min-width: 480px) {
- .contentlength{
-   display: none;
- }
+/* feed-item */  
+.contentlength{
+  display: none;
+}
  
- .contentlength2{
-   width: 450px;
-   background: white;
-   display: block;
-   padding-bottom: 10px;
-   margin: auto;
-   left: 0;
-   right: 0;
- }
+.contentlength2{
+  width: 450px;
+  background: white;
+  display: block;
+  padding-bottom: 10px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+/* micropost_show */
+.micropostshow{
+
+}
+
+.post-img{
+  text-align: center;
+}
+
+.showmicrocontent{
+  width: 450px;
+  background: white;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+}
   
 }
 
@@ -516,12 +598,15 @@ label{
   right: 0;
 }  
 
-
-
 }
 
 
 @media screen and (min-width: 758px) {
+/* user_show */
+.userprofile{
+  background: #861212;
+} 
+   
 /* signup */
 .signup{
   margin-top: 10px;
@@ -564,7 +649,10 @@ label{
   font-size: 13px;
 }
 
-  
+/* home */
+.home{
+  background: #861212;
+}
   
 /* feed_item */ 
 .feediteminfo{
@@ -580,6 +668,16 @@ label{
   left: 0;
   right: 0;
 }  
+ 
+.contentlength2{
+   width: 500px;
+   background: white;
+   display: block;
+   padding-bottom: 10px;
+   margin: auto;
+   left: 0;
+   right: 0;
+ }
 
 .feedcontent{
   width: 500px;
@@ -597,7 +695,6 @@ label{
 .micropostcount{
  display: block;
 }
-
 
 }
 
