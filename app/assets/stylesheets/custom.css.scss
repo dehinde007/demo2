@@ -49,7 +49,7 @@ label{
 
 /* header */ 
 .navbar-default .navbar-toggle{
-  border-color:  rgb(196, 80, 80);
+  border-color: #D63636;
   background-color: #D63636;
   cursor: pointer;
   &:hover{
@@ -67,10 +67,6 @@ label{
 .navbar-default {
   background-color: #D63636;
   border-color: #D63636;
-}
-
-.navbar-default .navbar-collapse, .navbar-default .navbar-form{
-  border-color:  rgb(196, 80, 80);
 }
 
 .search{

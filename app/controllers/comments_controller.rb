@@ -17,7 +17,6 @@ class CommentsController < ApplicationController
         @comment.micropost.user = @micropost.user
         @comment.user = current_user
         @comment.save
-        
         @comment.create_activity :create, owner:
         current_user
         respond_to do |format|
