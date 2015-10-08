@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
   
+  get "password_resets/new"
+  get "password_resets/edit"
   default_url_options :host => "www.hallit.co"
   
    resources :microposts do
@@ -24,6 +26,7 @@ SampleApp::Application.routes.draw do
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts,    only: [:create, :destroy, :show]
   resources :relationships, only: [:create, :destroy]
+  resources :password_resets, only: [:new, :create, :edit, :update]
   root to: 'static_pages#welcome'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'

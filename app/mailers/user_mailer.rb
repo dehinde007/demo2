@@ -16,5 +16,10 @@ class UserMailer < ActionMailer::Base
     @like = like
     mail(to: like.micropost.user.email, subject: "Hallit Notify")
   end   
-    
+  
+  def password_reset(user)
+    @user = user
+    mail to: user.email, subject: "Password reset"
+  end
+     
 end
