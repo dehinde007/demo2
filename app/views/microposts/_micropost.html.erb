@@ -1,8 +1,7 @@
 <div class="micropostpartial">
 	
 	 <div class="micropostsquare">
-	 	<%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost %> 
-	 	
+	 	<%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost %>
 	 <section class="micropostcount">	
 	 	<span class="glyphicon glyphicon-comment"></span><%= pluralize(micropost.comments.count, "comment") %> 
         <span class="glyphicon glyphicon-heart"></span><%= pluralize(micropost.likes.count, "like") %> 	

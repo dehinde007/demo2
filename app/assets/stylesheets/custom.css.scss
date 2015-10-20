@@ -18,11 +18,10 @@ img{
   height: auto;
 }
 
-.title{
-  color: black;
-  text-align: center;
-  font-size: 25px;
-  font-weight: normal;
+#pagename{
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
 }
 
 .title2{
@@ -49,7 +48,7 @@ label{
 
 /* header */ 
 .navbar-default .navbar-toggle{
-  border-color: #D63636;
+  border-color: rgb(196, 80, 80);
   background-color: #D63636;
   cursor: pointer;
   &:hover{
@@ -62,6 +61,10 @@ label{
   background-color: white; 
   height: 2px;
   width: 24px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  border-color: rgb(196, 80, 80);
 }
 
 .navbar-default {
@@ -83,7 +86,7 @@ p .sr{
 
 #logo{
   font-family: Ariel;
-  color: black;
+  color: rgb(240, 240, 240);
   font-size: 1.2em; 
 }
 
@@ -257,7 +260,6 @@ p .sr{
 
 /* micropost_show */
 .micropostshow{
- 
 }
 
 .posttime{
@@ -293,8 +295,15 @@ p .sr{
  margin-top: -1px;
 }
 
+.micro_like_form{
+  margin-top: -29px;
+  float: right;
+}
+
+/* subscribe_form */
+
 .subscribe-btn{
-  margin-top: -20px;
+
 }
 
 /* commentform */
@@ -320,7 +329,8 @@ p .sr{
 
 /* commentform */
 .commentformbtn .btn-primary{
- width: 100%; 
+ width: 80%; 
+ height: 28px;
  border-color: #D63636;
  background-color: #D63636;
 }
@@ -335,17 +345,28 @@ p .sr{
 /* activities_index */
 
 /* users_show */
-.profiletop{
+
+.profile_h .img-circle{
+  width: 20px;
+}
+
+.profile_h .dropdown{
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.userinfo1{
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
   text-align: center;
 }
 
-.profiletop .img-circle{
-  width: 25%;
-}
-
-.userinfo{
+.userinfo2{
   color: black;
-  font-size: 12px;
+  font-size: 13px;
+  text-align: center;
 }
 
 .profileinfo{
@@ -380,6 +401,13 @@ p .sr{
 
 .micropostcount .glyphicon-comment{
   color: #EC585E;
+}
+
+/* micropost_index */
+
+.micropostindex2{
+  background: white;  
+  float: left;
 }
 
 /*edituser*/
@@ -458,11 +486,11 @@ p .sr{
 }
   
 .micropostsquare{
- width: 32%;
- margin-left: 3.5px;
- margin-top: 3.5px;
+  width: 32%;
+  margin-left: 3.6px;
+  margin-top: 3.5px;
 }
-
+ 
 .micropostcount{
  display: none;
 }
@@ -509,7 +537,26 @@ p .sr{
   margin-left: -40px;
 }
 
+/* micropost_index */
+.micropostindex2{
+  width: 32%;
+  margin-left: 3.6px;
+  margin-top: 3.5px;
 }
+
+}
+
+@media screen and (max-width: 320px) {
+/* commentform */
+.commentformbtn .btn-primary{
+ width: 85%; 
+ height: 28px;
+ border-color: #D63636;
+ background-color: #D63636;
+}
+
+}
+
 
 @media screen and (min-width: 414px) {
 /* show */
@@ -530,6 +577,14 @@ p .sr{
   padding-top: 10px;
   font-size: 20px;
 } 
+
+/* commentform */
+.commentformbtn .btn-primary{
+ width: 89%; 
+ height: 28px;
+ border-color: #D63636;
+ background-color: #D63636;
+}
   
 }
 
@@ -602,10 +657,6 @@ p .sr{
 
 
 @media screen and (min-width: 758px) {
-/* user_show */
-.userprofile{
-  background: #861212;
-} 
    
 /* signup */
 .signup{
@@ -649,10 +700,6 @@ p .sr{
   font-size: 13px;
 }
 
-/* home */
-.home{
-  background: #861212;
-}
   
 /* feed_item */ 
 .feediteminfo{
@@ -696,6 +743,12 @@ p .sr{
  display: block;
 }
 
+.micropostindex2{
+ width: 31%;
+ margin-top: 10px;
+ margin-left: 10px; 
+}
+
 }
 
 
@@ -729,6 +782,12 @@ p .sr{
 
 .micropostcount{
  display: block;
+}
+
+.micropostindex2{
+ width: 31%;
+ margin-top: 20px;
+ margin-left: 20px; 
 }
 
 }
@@ -767,6 +826,12 @@ p .sr{
 
 .micropostcount{
  display: block;
+}
+
+.micropostindex2{
+ width: 25%;
+ margin-top: 40px;
+ margin-left: 62.5px; 
 }
 
 }

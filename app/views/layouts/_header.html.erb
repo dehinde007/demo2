@@ -24,6 +24,11 @@
                 </div>
             </li>
             
+            <li class="">
+                <%= link_to "setting", edit_user_path(current_user) %> 
+              
+            </li>
+            
             <li class="logout">
                  <%= link_to '<i class="glyphicon glyphicon-lock" >Logout</i>'.html_safe, signout_path, method: "delete"%> 
               

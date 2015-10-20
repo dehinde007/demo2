@@ -3,6 +3,7 @@ class MicropostsController < ApplicationController
   before_action :correct_user,   only: :destroy
 
   def index
+    @skip_header = true
     @microposts = Micropost.all
   end
   
@@ -17,7 +18,7 @@ class MicropostsController < ApplicationController
   end
   
   def new
-    
+    @skip_header = true
     @micropost = Micropost.new
   end
 

@@ -1,6 +1,6 @@
 <div class="micropostshow">	
 	<%= notice %>
-<div class="container posttime"> <%= time_ago_in_words(@micropost.created_at)%> ago</div> <%= link_to "comments", "#", class: "comments-link" %>
+<div class="container posttime"> <%= time_ago_in_words(@micropost.created_at)%> ago</div>
  	<section class="post-img"><%= image_tag @micropost.photo.url(:normal) %></section>
    
    <div class="container">
@@ -26,6 +26,7 @@
 <span class="glyphicon glyphicon-comment"></span><span class="shocmmcou"><%= pluralize(@micropost.comments.count, "") %> </span>
 <span class="glyphicon glyphicon-heart"></span><%= pluralize(@micropost.likes.count, "") %>
 <%= link_to 'All Likes', like_path %>
+  
 
 </div>
 
@@ -33,16 +34,18 @@
 <section id="comments-section">
 <section class="ddd"><%= render @micropost.comments %></section>
 
-  <p><%= render "comments/form" %></p>
+<%= render "comments/form" %> 
 
+<section class="micro_like_form">
+<% if like = current_user.likes.find_by_micropost_id(@micropost.id) %>
+<%= form_for like, :html => { :method => :delete } do |f| %>
+<%= button_tag "", type: 'submit', class: "btn btn-default glyphicon glyphicon-heart-empty" %>
+<% end %>      
+<% else %>
+<%= render "likes/form" %>
+<% end %>  	
+</section>  
 
-  <% if like = current_user.likes.find_by_micropost_id(@micropost.id) %>
-            <%= form_for like, :html => { :method => :delete } do |f| %>
-    <%= f.submit "Unlike" %>
-  <% end %>      
- <% else %>
-  <%= render "likes/form" %>
-  <% end %>
 </section>  
 
 </div>

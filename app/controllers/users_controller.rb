@@ -1,15 +1,17 @@
 class UsersController < ApplicationController
+
   before_action :signed_in_user,
                 only: [:index, :show, :edit, :update, :destroy, :following, :followers]
   before_action :correct_user,   only: [:edit, :update, :destroy]
   before_action :admin_user,     only: :destroy
-
+  
   def index
-        @users = User.search(params[:search]).paginate(page: params[:page], per_page: 30)
+    @skip_header = true
+    @users = User.search(params[:search]).paginate(page: params[:page], per_page: 30)
   end
 
   def show
-    
+    @skip_header = true
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page], per_page: 12)
   end
