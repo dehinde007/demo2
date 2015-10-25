@@ -1,8 +1,8 @@
 class Micropost < ActiveRecord::Base
   belongs_to :user
   default_scope -> { order('created_at DESC') }
-   has_many :comments, dependent: :destroy
-   has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
   validates :user_id, presence: true
   
   #photo

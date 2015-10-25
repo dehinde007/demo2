@@ -1,10 +1,12 @@
+<% cache 'help' do %>
+
 <div id="help">
 	<div id="hlp">
 	<h1 id="help_h">Help</h1>
 	<hr />
 	
 	<h2>Navigating through Hallit using the Account button:<span class="helpspa"> You can easily navigate around the app using the Account button. </span></h2> 
-	<img src="/assets/images/p.png", alt="p", id="p_img" />
+	<img src="/assets/images/beta.png", alt="p", id="p_img" />
 	
 	<h3>Making and Uploading Hall:<span class="helpspa"> Learn how to make a Hall <%= link_to "here", make_hall_path, id: "makehallhlp"%>. After you have learnt and created a Hall, click on upload Hall to post your Hall. </span></h3>
 	
@@ -17,3 +19,5 @@
 </div>
 <br />
 <div class="app_footer"><%= render 'layouts/footer' %></div>
+
+<% end %>

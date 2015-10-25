@@ -5,6 +5,8 @@ class MicropostsController < ApplicationController
   def index
     @skip_header = true
     @microposts = Micropost.all
+    @microposts = @microposts.paginate(page: params[:page], per_page: 18)
+    
   end
   
   
@@ -13,7 +15,7 @@ class MicropostsController < ApplicationController
    @comments = @micropost.comments
       respond_to do |format|
         format.html # show.html.erb
-        format.js
+        format.js    
   end
   end
   

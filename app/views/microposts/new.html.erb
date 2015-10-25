@@ -39,8 +39,40 @@
 </header> 
 
 
+<%= form_for @micropost, :html => { :multipart => true} do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
 
-<%= render 'shared/micropost_form' %>
+<div class="container micropostform">
+<div class="micropostformcontent">
+<br />
+
+  <span class="glyphicon glyphicon-camera"></span>
+  <section class="formphoto">
+   <section class="formphotofield"><%= f.file_field :photo %></section>
+  </section>
+
+  <p>
+   <%= f.text_area :content, :class =>"formcontent", placeholder: "Describe Hall..." %>
+  </p>
+  
+  <p>
+   <%= f.text_field :author, :class =>"formauthor", placeholder: "Author" %>
+  </p>
+  
+  <p> 
+   <%= f.submit "Share to subscribers", class: "new_butt btn btn-sm btn-primary" %>
+  </p>
+  
+ <% end %>
+<br />
+<br />
+<br />
+<%= image_tag asset_path('assets/images/ring.gif'), class: "loaderd" %>  
+  
+<br />
+<br />
+</div>
+</div>
 
 
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

@@ -8,6 +8,12 @@ html, body{
   overflow-x: hidden;
 }
 
+.loaderd{
+  display: none;
+  height: 25px;
+  width: 25px;
+}
+
 /*global*/
 .yield{
   margin-top: 50px;
@@ -19,7 +25,7 @@ img{
 }
 
 #pagename{
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   color: white;
 }
@@ -115,7 +121,7 @@ p .sr{
 /* userpartial*/
 .userpartialname{
   color: black; 
-  font-weight: normal; 
+  font-weight: bold; 
   font-size: 13px;
 }
 
@@ -237,8 +243,20 @@ p .sr{
   right: 0;
 }
 
+.micropostformcontent .glyphicon-camera{
+  top: 30px;
+  margin-left: -240px;
+  color: red;
+  font-size: 30px;
+}
+
 .formphoto{
- margin-left: 10px;
+ margin-left: 40px;
+ cursor: pointer;
+}
+
+.formphotofield{
+
 }
 
 .formcontent{
@@ -300,6 +318,14 @@ p .sr{
   float: right;
 }
 
+.like_glyph .glyphicon-heart{
+  color: rgb(209, 206, 206); 
+}
+
+.unlike_glyph .glyphicon-heart{
+  color: #DD7070; 
+}
+
 /* subscribe_form */
 
 .subscribe-btn{
@@ -330,7 +356,7 @@ p .sr{
 /* commentform */
 .commentformbtn .btn-primary{
  width: 80%; 
- height: 28px;
+ font-weight: bold;
  border-color: #D63636;
  background-color: #D63636;
 }
@@ -421,9 +447,12 @@ p .sr{
 
 .edit-lab{
   font-size: 13px;
+  width: 100%;
+  height: 27px;
 }
 
-.edit{
+.editusr{
+  margin-top: -15px;
   text-align: center;
 }
 
@@ -460,7 +489,7 @@ p .sr{
 
 .minfooter{
   background: #F1EBEB;
-  height: 37px;
+  height: 46px;
   width: 100%;
   position: fixed;
   bottom:0px;
@@ -524,13 +553,13 @@ p .sr{
 }
 
 .minf{
-  padding-left: 0;
-  padding-right: 14.9%;
+  padding-left: 0.7%;
+  padding-right: 13.1%;
 }
 
 .minfooter .glyphicon{
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 22px;
 } 
 
 .pager{
@@ -559,9 +588,13 @@ p .sr{
 
 
 @media screen and (min-width: 414px) {
-/* show */
+/* microshow */
 .micropostshow{
   
+}
+
+.posttime{
+  text-align: center;
 }
 
 .profiletop .img-circle{
@@ -569,13 +602,13 @@ p .sr{
 }
 
 .minf{
-  padding-left: 0;
-  padding-right: 17%;
+  padding-left: 1%;
+  padding-right: 15.1%;
 }
 
 .minfooter .glyphicon{
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 22px;
 } 
 
 /* commentform */
@@ -634,6 +667,11 @@ p .sr{
   left: 0px;
   right: 0px;
 }
+
+.minf{
+  padding-left: 1%;
+  padding-right: 17%;
+}
   
 }
 
@@ -652,6 +690,7 @@ p .sr{
   left: 0;
   right: 0;
 }  
+
 
 }
 
@@ -699,7 +738,6 @@ p .sr{
   width: 100%;
   font-size: 13px;
 }
-
   
 /* feed_item */ 
 .feediteminfo{
@@ -749,6 +787,11 @@ p .sr{
  margin-left: 10px; 
 }
 
+.minf{
+  padding-left: 2%;
+  padding-right: 17.5%;
+}
+
 }
 
 
@@ -788,6 +831,11 @@ p .sr{
  width: 31%;
  margin-top: 20px;
  margin-left: 20px; 
+}
+
+.minf{
+  padding-left: 2%;
+  padding-right: 18.7%;
 }
 
 }
@@ -832,6 +880,11 @@ p .sr{
  width: 25%;
  margin-top: 40px;
  margin-left: 62.5px; 
+}
+
+.minf{
+  padding-left: 1.2%;
+  padding-right: 20.6%;
 }
 
 }

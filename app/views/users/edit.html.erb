@@ -1,22 +1,60 @@
+<header class="indexhead">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <span class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </span>
+          <span id="pagename" class="navbar-brand">Update Account</span>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         
+           
+           <ul class="nav navbar-nav navbar-right">
+            <li>
+            	<div class="search">
+                <% if signed_in? %> 		
+                <%= render 'shared/search' %>                
+                <% end %>
+                </div>
+            </li>
+            
+            <li class="">
+                <%= link_to "setting", edit_user_path(current_user) %> 
+              
+            </li>
+            
+            <li class="logout">
+                 <%= link_to '<i class="glyphicon glyphicon-lock" >Logout</i>'.html_safe, signout_path, method: "delete"%> 
+              
+            </li>
+      </ul>
+        </div><!-- /.navbar-collapse -->    
+      </div><!-- /.container -->
+    </nav>
+</header> 
+
+
 <% provide(:title, "Edit user") %>
 <div class="alert alert-error">
 <%= form_for @user, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
- <div class="container edit"> 
-			
- <h1 class="title3">Update Account</h1>
-    <hr />
+ <div class="container editusr"> 
  
     <p>
 	 <%= f.label :fullname, class: "edit-lab" %>
-     <%= f.text_field :name %>
+     <%= f.text_field :name, class: "edit-lab" %>
     </p>
    
     <p>
      <%= f.label :username, class: "edit-lab" %>
-     <%= f.text_field :username %>
+     <%= f.text_field :username, class: "edit-lab" %>
     </p>
       
     <p>
@@ -26,28 +64,30 @@
    
     <p>
       <%= f.label :email, class: "edit-lab" %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, class: "edit-lab" %>
     </p> 
    
     <p>
       <%= f.label :bio, class: "edit-lab" %>
-      <%= f.text_field :bio %>
+      <%= f.text_field :bio, class: "edit-lab" %>
     </p>
    
     <p>
       <%= f.label :password, class: "edit-lab" %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: "edit-lab" %>
     </p>
     
     <p>
       <%= f.label :password_confirmation, class: "edit-lab" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "edit-lab" %>
     </p>
    
-   <p><%= f.submit "Save", class: "btn btn-sm btn-primary" %></p>
+   <p><%= f.submit "Save", class: "edit_butt btn btn-sm btn-primary" %></p>
       
     <% end %>
-  
+    
+    <br />
+   <%= image_tag asset_path('assets/images/ring.gif'), class: "loaderd" %>  
   </div>
   <br />
   <br />

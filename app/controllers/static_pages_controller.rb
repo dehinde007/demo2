@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  
+ 
   def welcome
      if signed_in?
       redirect_to home_path

@@ -21,7 +21,7 @@
       <%= @user.username %><span class="caret"></span>
     </span>
     <ul class="dropdown-menu">
-     <li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: #428bca; font-weight: bold; font-size: 13px;'} %></li>
+     <li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: #428bca; font-weight: normal; font-size: 13px;'} %></li>
      <li><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
      <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
     </ul>
@@ -79,6 +79,9 @@
       <%= render @microposts %>
    <% end %>
 </div>
+   <div class="pager">
+   <%= will_paginate @microposts %>
+   </div>
 <br />
 <br />
 </div>
