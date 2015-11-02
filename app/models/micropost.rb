@@ -4,7 +4,7 @@ class Micropost < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   validates :user_id, presence: true
-  
+
   #photo
   has_attached_file :photo, styles: {
     thumb: '100x100#',
@@ -13,7 +13,7 @@ class Micropost < ActiveRecord::Base
     medium: '550x600'
   }, :url => "/attachments/:id/:style/:basename.:extension",
      :path => ":rails_root/public/attachments/:id/:style/:basename.:extension"
-  validates_attachment_presence :photo
+  validates_attachment_presence :photo # think u wouldnt validate in base64
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
   
 
