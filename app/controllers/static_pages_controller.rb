@@ -13,7 +13,7 @@ class StaticPagesController < ApplicationController
   end
 
   def terms
-    render :layout => "staticpages"
+
   end
 
   def privacy
