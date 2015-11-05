@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base  
-  
+ 
 #user search
   def self.search(search)
     if search 

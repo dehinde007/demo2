@@ -8,12 +8,6 @@ html, body{
   overflow-x: hidden;
 }
 
-/* Kit Ui */
-#container{
-  margin-top: 140px;
-  margin-left: 200px;
-  background: yellow;
-}
 
 .loaderd{
   display: none;
@@ -23,6 +17,13 @@ html, body{
 
 /*global*/
 .yield{
+  margin-top: 50px;
+}
+
+/* kit */
+#container{
+  max-width: 100%;
+  height: 350px;
   margin-top: 50px;
 }
 
@@ -560,7 +561,7 @@ p .sr{
 }
 
 .minf{
-  padding-left: 0.7%;
+  padding-left: 1.7%;
   padding-right: 13.1%;
 }
 
