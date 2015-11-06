@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base  
  
+has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
+belongs_to :invitation
+ 
 #user search
   def self.search(search)
     if search 
@@ -20,8 +23,7 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   
 #photo
 has_attached_file :photo
-  
-  
+    
   has_many :microposts, dependent: :destroy
    has_many :comments, dependent: :destroy
    has_many :likes, dependent: :destroy

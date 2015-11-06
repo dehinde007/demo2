@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122034424) do
+ActiveRecord::Schema.define(version: 20151105183423) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20141122034424) do
     t.integer  "micropost_id"
     t.integer  "user_id"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invitations", force: true do |t|
+    t.integer  "sender_id"
+    t.string   "recipient_email"
+    t.datetime "sent_at"
+    t.string   "new"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -85,6 +94,9 @@ ActiveRecord::Schema.define(version: 20141122034424) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
+    t.integer  "invitation_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

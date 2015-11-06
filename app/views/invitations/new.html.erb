@@ -1,0 +1,12 @@
+<div class="container inviteform">
+	
+<%= form_for @invitation, :html => { :multipart => true} do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.text_field :recipient_email %>
+
+<%= f.submit "Invite!" %>
+
+<% end %>
+
+</div>
