@@ -64,7 +64,7 @@ window.onload = function() {
      
       $.ajax({
       type: "POST",
-      url: ":rails_root/public/attachments/:id/:style/:basename.:extension",
+      url: "microposts/create",
       data: {
         image: dataUrl
       }

@@ -11,6 +11,10 @@ class StaticPagesController < ApplicationController
   def help
     
   end
+  
+  def imgkit
+    
+  end
 
   def terms
 

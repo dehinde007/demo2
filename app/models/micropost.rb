@@ -16,6 +16,14 @@ class Micropost < ActiveRecord::Base
   validates_attachment_presence :photo 
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
   
+   def set_image
+    StringIO.open(Base64.decode64(image_json)) do |data|
+      data.class.class_eval { attr_accessor :original_filename, :content_type }
+      data.original_filename = "file.jpg"
+      data.content_type = "image/jpeg"
+      self.image = data
+    end
+  end
 
   # Returns microposts from the users being followed by the given user.
   def self.from_users_followed_by(user)

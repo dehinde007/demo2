@@ -24,6 +24,7 @@
         # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
         # config.i18n.default_locale = :de
         # I18n.enforce_available_locales = true
+        config.assets.paths << Rails.root.join("app", "assets", "fonts")
         I18n.enforce_available_locales = true
         config.serve_static_assets = true
         config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg *.eot *.woff *.ttf)

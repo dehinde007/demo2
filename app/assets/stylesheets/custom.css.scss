@@ -145,8 +145,41 @@ p .sr{
 
 
 /* new_micropost */
-#newform{
-  margin-top: 60px;
+.micropostform{
+ text-align: center;
+}
+
+.micropostformcontent{
+
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.formphoto{
+ margin-left: 40px;
+ cursor: pointer;
+}
+
+.formphotofield{
+
+}
+
+.formcontent{
+  width: 100%;
+  height: 150px;
+  border-style: solid;
+
+  border-color: rgb(218, 212, 212);
+  font-size: 13px;
+}
+
+.formauthor{
+  width: 150px;
+  border-style: solid;
+
+  border-color: rgb(218, 212, 212);
+  font-size: 13px;
 }
 
 /* signup */
@@ -246,50 +279,6 @@ p .sr{
 
 .feedlikeicon .glyphicon-heart{
   color: rgb(206, 27, 27);
-}
-
-/* micropost_form */
-.micropostform{
- text-align: center;
-}
-
-.micropostformcontent{
-  margin: auto;
-  left: 0;
-  right: 0;
-}
-
-.micropostformcontent .glyphicon-camera{
-  top: 30px;
-  margin-left: -240px;
-  color: red;
-  font-size: 30px;
-}
-
-.formphoto{
- margin-left: 40px;
- cursor: pointer;
-}
-
-.formphotofield{
-
-}
-
-.formcontent{
-  width: 100%;
-  height: 150px;
-  border-style: solid;
-
-  border-color: rgb(218, 212, 212);
-  font-size: 13px;
-}
-
-.formauthor{
-  width: 150px;
-  border-style: solid;
-
-  border-color: rgb(218, 212, 212);
-  font-size: 13px;
 }
 
 /* micropost_show */
