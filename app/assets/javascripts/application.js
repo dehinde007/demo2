@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-// = require jquery.lazyload.js
 //= require bootstrap
 //= require_tree .
 

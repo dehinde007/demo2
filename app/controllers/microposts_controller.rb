@@ -26,7 +26,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "Hall created!"
+      flash[:success] = "Quote created!"
       redirect_to home_path
     else
       @feed_items = []
@@ -42,7 +42,7 @@ class MicropostsController < ApplicationController
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content, :photo, :author)
+      params.require(:micropost).permit(:content, :photo, :author, :base64)
     end
 
     def correct_user
