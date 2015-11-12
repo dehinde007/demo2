@@ -26,7 +26,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "Quote created!"
+      flash[:success] = "Hall created!"
       redirect_to home_path
     else
       @feed_items = []
