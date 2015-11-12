@@ -5,3 +5,4 @@
 #jQuery ->
 #   alert "lol"
 
+ $(".img-responsive").lazyload
