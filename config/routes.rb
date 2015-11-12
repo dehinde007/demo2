@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
   
+  get "hashtags/:hashtag",   to: "hashtags#show",      as: :hashtag
+  get "hashtags",            to: "hashtags#index",     as: :hashtags
   default_url_options :host => "www.hallit.co"
   
    resources :invitations

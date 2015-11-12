@@ -10,7 +10,7 @@
   	<div class="puffin">
     <span id="<%= feed_item.id %>"> 
 	<div class="puffauto">
-  	<%= link_to (image_tag feed_item.photo.url(:medium), class: "img-responsive"), feed_item %>
+  	<%= link_to (image_tag feed_item.photo.url(:medium), class: "img-responsive"), feed_item, lazy: true %>
   	</div>
   	</div>
 		

@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 gem 'heroku'
 gem 'aws-sdk', '< 2.0'
 gem 'rails', '4.0.5'
@@ -11,6 +11,8 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem "paperclip", "~> 3.5.3"
 gem 'rmagick'
 gem 'thin'
+gem 'simple_hashtag'
+gem "lazyload-rails"
 gem 'newrelic_rpm'
 gem 'public_activity', github: 'pokonski/public_activity'
 group :development, :test do

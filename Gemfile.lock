@@ -29,7 +29,7 @@ GIT
     spork (1.0.0rc4)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.0.5)
       actionpack (= 4.0.5)
@@ -60,6 +60,7 @@ GEM
     aws-sdk (1.45.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
+    bcrypt-ruby (3.1.2)
     bcrypt-ruby (3.1.2-x86-mingw32)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
@@ -101,6 +102,7 @@ GEM
     daemons (1.1.9)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     excon (0.38.0)
     execjs (2.1.0)
@@ -111,8 +113,11 @@ GEM
       railties (>= 3.0.0)
     faker (1.1.2)
       i18n (~> 0.5)
+    ffi (1.9.3)
     ffi (1.9.3-x86-mingw32)
     formatador (0.2.5)
+    gherkin (2.12.2)
+      multi_json (~> 1.3)
     gherkin (2.12.2-x86-mingw32)
       multi_json (~> 1.3)
     growl (1.0.3)
@@ -148,6 +153,8 @@ GEM
     json (1.8.1)
     launchy (2.4.2)
       addressable (~> 2.3)
+    lazyload-rails (0.3.1)
+      nokogiri (~> 1.5)
     listen (2.7.6)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -164,6 +171,8 @@ GEM
     multi_test (0.1.1)
     netrc (0.7.7)
     newrelic_rpm (3.9.3.241)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     nokogiri (1.6.2.1-x86-mingw32)
       mini_portile (= 0.6.0)
     paperclip (3.5.4)
@@ -171,8 +180,13 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.5)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     pry (0.9.12.6-x86-mingw32)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -233,6 +247,8 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
+    simple_hashtag (0.1.9)
+      rails (> 3.2.0)
     slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -243,6 +259,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sqlite3 (1.3.8)
     sqlite3 (1.3.8-x86-mingw32)
     thin (1.6.2)
       daemons (>= 1.0.9)
@@ -288,6 +305,7 @@ DEPENDENCIES
   i18n (~> 0.6.9)
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
+  lazyload-rails
   newrelic_rpm
   paperclip (~> 3.5.3)
   pg
@@ -298,6 +316,7 @@ DEPENDENCIES
   rspec-rails (= 2.13.1)
   sass-rails (= 4.0.1)
   sdoc (= 0.3.20)
+  simple_hashtag
   spork!
   spork-rails!
   sprockets (= 2.11.0)
