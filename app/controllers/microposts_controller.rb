@@ -6,7 +6,6 @@ class MicropostsController < ApplicationController
     @skip_header = true
     @microposts = Micropost.all
     @microposts = @microposts.paginate(page: params[:page], per_page: 18)
-    
   end
   
   
@@ -23,7 +22,6 @@ class MicropostsController < ApplicationController
     @skip_header = true
     @micropost = Micropost.new
   end
-
 
   def create
     @micropost = current_user.microposts.build(micropost_params)

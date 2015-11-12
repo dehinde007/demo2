@@ -1,14 +1,14 @@
 <div class="home">
    	<% if signed_in? %>
   
-   <%= render 'shared/feed' %>	
+   <%= render 'feeds/feed' %>	
    
-   <div class="pager">
-   <span "homepag"><%= will_paginate @feed_items %></span>
-   </div>
+
    <% else %>
    
    <% end %>
-</div>
+</div>     <div class="pager">
+   <span "homepag"><%= will_paginate @feed_items %></span>
+   </div>
    <div class="footer2"><%= render 'layouts/minfooter' %></div>
    

@@ -38,6 +38,7 @@
     </nav>
 </header> 
 
+	<% if @activities.any? %>
 
 <div class="container">
 
@@ -54,6 +55,15 @@
  <% end %>
 
 </div>
+
+    <% else %>
+    
+    <div class="noactivity">
+     <p>No Activity Yet!</p>
+     <p>Subscribe To a Channel To Get Activities</p>
+    </div>
+
+    <% end %>
 
 <br /> <br /> <br /> <br /><br /><br />
 

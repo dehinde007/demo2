@@ -77,6 +77,8 @@
  <section class="subscribe-btn"><%= render 'follow_form' if signed_in? %></section>
    <% if @user.microposts.any? %>
       <%= render @microposts %>
+   <% else %>   
+      <div class="nohall">Upload Your First Hall</p>
    <% end %>
 </div>
    <div class="pager">

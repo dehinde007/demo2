@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-
+//= require bootstrap
 //= require_tree .
 
 $(function() {
@@ -21,7 +21,6 @@ $(function() {
 /* global ImglyKit */
 "use strict";
 window.onload = function() {
-
   /*
    * Initialize ImglyKit
    */
@@ -76,6 +75,8 @@ window.onload = function() {
   
   
 };
+
+
 
 });
 

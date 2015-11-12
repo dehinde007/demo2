@@ -5,7 +5,6 @@ html, body{
   margin: 0;
   padding: 0;
   background-color: #F8F8F8;
-  overflow-x: hidden;
 }
 
 .inviteform{
@@ -150,7 +149,6 @@ p .sr{
 }
 
 .micropostformcontent{
-
   margin: auto;
   left: 0;
   right: 0;
@@ -177,9 +175,16 @@ p .sr{
 .formauthor{
   width: 150px;
   border-style: solid;
-
   border-color: rgb(218, 212, 212);
   font-size: 13px;
+}
+
+/* activity */
+.noactivity{
+  font-weight: bold;
+  color: #BBBBBB;
+  text-align: center;
+  margin-top: 170px;
 }
 
 /* signup */
@@ -228,6 +233,12 @@ p .sr{
 }
 
 /* feed */ 
+.nofeed{
+  font-weight: bold;
+  color: #BBBBBB;
+  text-align: center;
+  margin-top: 200px;
+}
 
 /* feed_item */
 .feedhouse{
@@ -373,9 +384,14 @@ p .sr{
   font-size: 30px;
 }
 
-/* activities_index */
 
 /* users_show */
+.nohall{
+  font-weight: bold;
+  color: #BBBBBB;
+  text-align: center;
+  margin-top: 100px;
+}
 
 .profile_h .img-circle{
   width: 20px;

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html style="overflow-x: hidden;">
   <head>
     <title>Hallit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <%= stylesheet_link_tag "application", media: "all",
-                                           "data-turbolinks-track" => true %>   
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>   
     <link rel="stylesheet" href="/css/imglykit-night-ui.css" />
-    <script src="/js/imglykit.js"></script>                                                                   
+    <script src="/js/imglykit.js"></script>                                                                
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
       </head>
   
-  <body id="wall">
+  <body id="wall" >
   	
     <%= render 'layouts/header' unless @skip_header %> 
     
