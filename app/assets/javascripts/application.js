@@ -14,8 +14,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery.lazy-images.js
-//= require jquery.lazyload.js
 //= require_tree .
 
 $(function() {
