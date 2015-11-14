@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   def index
     @skip_header = true
     @microposts = Micropost.all
-    @microposts = @microposts.paginate(page: params[:page], per_page: 18)
+    @microposts = @microposts.paginate(page: params[:page], per_page: 15)
   end
   
   

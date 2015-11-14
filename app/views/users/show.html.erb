@@ -46,7 +46,7 @@
             </li>
             
             <li class="">
-                <%= link_to "setting", edit_user_path(current_user) %> 
+                <%= link_to "setting", edit_user_path(current_user), id: "setting" %> 
               
             </li>
             
@@ -61,28 +61,20 @@
 </header> 
 
 
-
-
 <p class="userinfo1"><%= @user.name %></p> 
 <p class="userinfo2"><%= @user.bio %></p>
 
-<div class="userprofile">
-<div class="container">
-
-<hr />
-
-</div>
-
-<div class="container">
+<div class="container userpost">
+	<hr />
  <section class="subscribe-btn"><%= render 'follow_form' if signed_in? %></section>
    <% if @user.microposts.any? %>
       <%= render @microposts %>
    <% else %>   
-      <div class="nohall">Upload Your First Hall</p>
+      <div class="nohall">Yet to Upload a Hall</p>
    <% end %>
-</div>
+      </div>
    <div class="pager">
-   <%= will_paginate @microposts %>
+   <%= will_paginate @microposts, :page_links => false %>
    </div>
 <br />
 <br />

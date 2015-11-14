@@ -25,7 +25,7 @@
             </li>
             
             <li class="">
-                <%= link_to "setting", edit_user_path(current_user) %> 
+                <%= link_to "setting", edit_user_path(current_user), id: "setting" %> 
               
             </li>
             
@@ -41,16 +41,15 @@
 
 
 
-<div class="container">
+<div class="container allusers">
 
-<hr />
 
   <%= render @users %>
 
 </div>
 
 <div class="pager">
-   <%= will_paginate @users %>
+   <%= will_paginate @users, :page_links => false %>
 </div>
 
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

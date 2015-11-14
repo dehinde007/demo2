@@ -1,5 +1,5 @@
 <% provide(:title, "Sign in") %>
-<p class="alert alert-error"><%= flash[:alert] %></p>
+<div class="container" style="color: #a94442;"><%= flash[:alert] %></div>
    
    <div class="container session">
    	
@@ -14,11 +14,11 @@
       <%= f.password_field :password, :class =>"sessionfield", placeholder: "Enter password" %>
       </section>
       <br />
-     <p> <%= f.submit "Log in", class: "sess-butt btn btn-sm btn-primary" %></p>
+     <p> <%= f.submit "Sign in", class: "sess-butt btn btn-sm btn-primary" %></p>
      
     <% end %>
 
-    <p class="sessionlink">New user? <%= link_to "Sign up", signup_path %></p>
+    <p class="sessionlink">New user? <%= link_to "create an account", signup_path %></p>
     
     
    </div>

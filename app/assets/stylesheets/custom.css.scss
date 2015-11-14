@@ -7,6 +7,7 @@ html, body{
   background-color: #F8F8F8;
 }
 
+/* invite */
 .inviteform{
 background: red;
 margin-top: 60px;
@@ -25,6 +26,10 @@ margin-left: 100px;
 /*global*/
 .yield{
   margin-top: 50px;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 /* kit */
@@ -64,7 +69,7 @@ label{
 }
 
 ::-webkit-input-placeholder{
-   color: white;
+
 }
 
 /* header */ 
@@ -111,10 +116,14 @@ p .sr{
   font-size: 1.2em; 
 }
 
+#setting{
+  color: white;
+}
+
 .logout .glyphicon-lock{
   color: black;
-  
 }
+
 
 /* welcome */
 .welcomewall{
@@ -133,6 +142,18 @@ p .sr{
   text-align: center;
 }
 
+/* about_us */
+.jumbotron{
+  background: #F8F8F8;
+}
+
+.static_head{
+  text-align: center;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+
 /* userpartial*/
 .userpartialname{
   color: black; 
@@ -141,7 +162,9 @@ p .sr{
 }
 
 /* user_index */
-
+.allusers{
+  padding-top: 10px;
+}
 
 /* new_micropost */
 .micropostform{
@@ -207,6 +230,7 @@ p .sr{
 
 /* sessions */
 .session{
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -342,12 +366,6 @@ p .sr{
   color: #DD7070; 
 }
 
-/* subscribe_form */
-
-.subscribe-btn{
-
-}
-
 /* commentform */
 .commentform{
   width: 100%;
@@ -416,14 +434,21 @@ p .sr{
   text-align: center;
 }
 
-.profileinfo{
-  margin-left: -30px;
+.userpost{
+  margin-top: -10px;
 }
 
-.profileinfo li{
-  font-weight: bold;
-  list-style-type: none;
-  display: inline-block;
+.subscribe-btn{
+  margin-top: -20px;
+}
+
+/* un/followform */
+.sub_but .btn-info{
+  width: 70px;
+}
+
+.sub_but .btn-danger{
+  width: 80px;
 }
 
 /* _micropost */
@@ -720,7 +745,6 @@ p .sr{
    
 /* signup */
 .signup{
-  margin-top: 10px;
   border-radius: 5px;
   height: 470px;
   width: 380px;
@@ -728,7 +752,7 @@ p .sr{
 }  
 
 .signupform{
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .signupfield{

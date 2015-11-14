@@ -24,7 +24,7 @@
             </li>
             
             <li class="">
-                <%= link_to "setting", edit_user_path(current_user) %> 
+                <%= link_to "setting", edit_user_path(current_user), id: "setting" %> 
               
             </li>
             
@@ -38,11 +38,11 @@
     </nav>
 </header> 
 
-	<% if @activities.any? %>
-
+	
+<br />
 <div class="container">
 
-
+<% if @activities.any? %>
 <% @activities.each do |activity| %>
 
  <div>
@@ -53,18 +53,16 @@
  <br />
  
  <% end %>
-
+    <div class="pager"><%= will_paginate @activities, :page_links => false %></div>
 </div>
 
-    <% else %>
+ <% else %>
     
     <div class="noactivity">
      <p>No Activity Yet!</p>
      <p>Subscribe To a Channel To Get Activities</p>
     </div>
 
-    <% end %>
-
-<br /> <br /> <br /> <br /><br /><br />
+ <% end %>
 
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

@@ -18,9 +18,9 @@ end
     thumb: '100x100#'
   }, :url => "/avatars/:id/:style/:basename.:extension",
      :path => ":rails_root/public/avatars/:id/:style/:basename.:extension"
-
+validates_attachment_presence :avatar 
 validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/ 
-  
+
 #photo
 has_attached_file :photo
     

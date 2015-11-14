@@ -1,6 +1,6 @@
 <span class="sub_but"><%= form_for(current_user.relationships.build(followed_id: @user.id),
              remote: true) do |f| %>
   <div><%= f.hidden_field :followed_id %></div>
-  <%= f.submit "Subscribe", class: "btn btn-success" %>
+  <%= f.submit "Subscribe", class: "btn btn-info btn-xs" %>
 <% end %>
 </span>
