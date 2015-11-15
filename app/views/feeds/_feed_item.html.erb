@@ -4,7 +4,7 @@
     <section class="feediteminfo">
     <%= link_to (image_tag feed_item.user.avatar.url(:mini), class: "img-circle"), feed_item.user %>
     <%= link_to feed_item.user.username, feed_item.user, class: "feedusern"  %>
-    <span class="feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
+    <span class="font-fam feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
     </section>
    
   	<div class="puffin">

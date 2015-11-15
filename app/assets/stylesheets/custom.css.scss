@@ -7,21 +7,101 @@ html, body{
   background-color: #F8F8F8;
 }
 
-/* invite */
-.inviteform{
-background: red;
-margin-top: 60px;
-height: 400px;
-width: 400px;
-margin-left: 100px;
+/* ad_custom */
+.carousel_ad{
+  float: right;
 }
 
-
-.loaderd{
-  display: none;
-  height: 25px;
-  width: 25px;
+.loll{
+  float: left;
 }
+
+#carousel {
+  width:100px;
+  height:100px;    
+  margin-top: -70px;
+}
+
+#slides {
+  overflow:hidden;
+  /* fix ie overflow issue */
+  position:relative;
+  width:100px;
+  height:100px;
+}
+
+#sliders {
+  overflow:hidden;
+  /* fix ie overflow issue */
+  position:relative;
+  width:100px;
+  height:100px;
+  margin-left: -40px;
+}
+/* remove the list styles, width : item width * total items */    
+#slides ul {
+  position:relative;
+  left:0;
+  top:0;
+  list-style:none;
+  margin:0;
+  padding:0;    
+  width:750px;            
+}
+/* width of the item, in this case I put 250x250x gif */
+#slides li {
+  width:250px;
+  height:250px;    
+  float:left;
+}
+#slides li img {
+  padding:5px;
+}
+
+#sliders ul {
+  position:relative;
+  left:0;
+  top:0;
+  list-style:none;
+  margin:0;
+  padding:0;    
+  width:750px;            
+}
+/* width of the item, in this case I put 250x250x gif */
+#sliders li {
+  width:250px;
+  height:250px;    
+  float:left;
+}
+#sliders li img {
+  padding:5px;
+}
+/* Styling for prev and next buttons */
+#buttons {
+  padding:0 0 5px 0;    
+  float:right;
+}
+#buttons a {
+  display:block; 
+  width:31px; 
+  height:32px;
+  text-indent:-999em;
+  float:left;
+  outline:0;
+}
+a#prev {
+  background:url(arrow.gif) 0 -31px no-repeat; 
+}
+a#prev:hover {
+  background:url(arrow.gif) 0 0 no-repeat;
+}
+a#next {
+  background:url(arrow.gif) -32px -31px no-repeat; 
+}
+a#next:hover {
+  background:url(arrow.gif) -32px 0 no-repeat;
+}
+.clear {clear:both}
 
 /*global*/
 .yield{
@@ -30,6 +110,25 @@ margin-left: 100px;
 
 .btn:focus {
   outline: none;
+}
+
+.loaderd{
+  display: none;
+  height: 25px;
+  width: 25px;
+}
+
+.font-fam{
+  font-family: ralewayregular;
+}
+
+/* invite */
+.inviteform{
+background: red;
+margin-top: 60px;
+height: 400px;
+width: 400px;
+margin-left: 100px;
 }
 
 /* kit */
@@ -80,7 +179,6 @@ label{
   &:hover{
   background-color: rgb(196, 80, 80);
   }
-
 }
 
 .navbar-default .navbar-toggle .icon-bar{
@@ -124,7 +222,6 @@ p .sr{
   color: black;
 }
 
-
 /* welcome */
 .welcomewall{
   background: url(images/welcome.jpg) no-repeat center center fixed;
@@ -152,7 +249,6 @@ p .sr{
   font-size: 18px;
   padding-top: 20px;
 }
-
 
 /* userpartial*/
 .userpartialname{
@@ -190,7 +286,6 @@ p .sr{
   width: 100%;
   height: 150px;
   border-style: solid;
-
   border-color: rgb(218, 212, 212);
   font-size: 13px;
 }
@@ -290,6 +385,8 @@ p .sr{
   padding-bottom: 20px;
   color: #CE2424;
   font-size: 85%;
+  font-family: ralewayregular;
+  font-weight: bold;
 }
 
 .feedtime{
@@ -301,6 +398,7 @@ p .sr{
   background: white;
   font-size: 100%;
   width: 100%;
+  font-family: ralewayregular;
   padding-bottom: 10px;
 }
 
@@ -323,11 +421,13 @@ p .sr{
 .posttime{
  color: #CE2424;
  font-size: 90%;
+ font-family: ralewayregular;
  padding-top: 7px;
 }
 
 .showmicrocontent{
   font-size: 100%;
+  font-family: ralewayregular;
 }
 
 .postauthor{
@@ -402,7 +502,6 @@ p .sr{
   font-size: 30px;
 }
 
-
 /* users_show */
 .nohall{
   font-weight: bold;
@@ -424,6 +523,7 @@ p .sr{
 .userinfo1{
   color: black;
   font-size: 22px;
+  font-family: ralewayregular;
   font-weight: bold;
   text-align: center;
 }
@@ -431,6 +531,7 @@ p .sr{
 .userinfo2{
   color: black;
   font-size: 13px;
+  font-family: ralewayregular;
   text-align: center;
 }
 
@@ -476,7 +577,6 @@ p .sr{
 }
 
 /* micropost_index */
-
 .micropostindex2{
   background: white;  
   float: left;
@@ -553,9 +653,13 @@ p .sr{
   font-size: 17px;
 } 
 
-
 @media screen and (min-width: 320px) {
- /* header */
+.carousel_ad{
+  float: right;
+  margin-right: -100px;
+}
+
+/* header */
 #logo{
   font-size: 1.3em;
 }
@@ -631,7 +735,6 @@ p .sr{
 }
 
 }
-
 
 @media screen and (min-width: 414px) {
 /* microshow */
@@ -721,7 +824,6 @@ p .sr{
   
 }
 
-
 @media screen and (max-width: 758px) {
 .feediteminfo{
   width: 450px;
@@ -737,9 +839,7 @@ p .sr{
   right: 0;
 }  
 
-
 }
-
 
 @media screen and (min-width: 758px) {
    
@@ -800,13 +900,13 @@ p .sr{
 }  
  
 .contentlength2{
-   width: 500px;
-   background: white;
-   display: block;
-   padding-bottom: 10px;
-   margin: auto;
-   left: 0;
-   right: 0;
+  width: 500px;
+  background: white;
+  display: block;
+  padding-bottom: 10px;
+  margin: auto;
+  left: 0;
+  right: 0;
  }
 
 .feedcontent{
@@ -817,19 +917,19 @@ p .sr{
 } 
   
 .micropostsquare{
- width: 31%;
- margin-top: 10px;
- margin-left: 10px;
+  width: 31%;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .micropostcount{
- display: block;
+  display: block;
 }
 
 .micropostindex2{
- width: 31%;
- margin-top: 10px;
- margin-left: 10px; 
+  width: 31%;
+  margin-top: 10px;
+  margin-left: 12px; 
 }
 
 .minf{
@@ -863,19 +963,19 @@ p .sr{
 }  
   
 .micropostsquare{
- width: 31%;
- margin-top: 20px;
- margin-left: 20px;
+  width: 31%;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .micropostcount{
- display: block;
+  display: block;
 }
 
 .micropostindex2{
- width: 31%;
- margin-top: 20px;
- margin-left: 20px; 
+  width: 31%;
+  margin-top: 20px;
+  margin-left: 20px; 
 }
 
 .minf{
@@ -912,19 +1012,19 @@ p .sr{
 }
   
 .micropostsquare{
- width: 25%;
- margin-top: 40px;
- margin-left: 62.5px;
+  width: 25%;
+  margin-top: 40px;
+  margin-left: 62.5px;
 }
 
 .micropostcount{
- display: block;
+  display: block;
 }
 
 .micropostindex2{
- width: 25%;
- margin-top: 40px;
- margin-left: 62.5px; 
+  width: 25%;
+  margin-top: 40px;
+  margin-left: 64.5px; 
 }
 
 .minf{

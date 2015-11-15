@@ -17,13 +17,13 @@
 			 
 	<span class="dropdown" >
 		 
-    <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="font-fam dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <%= @user.username %><span class="caret"></span>
     </span>
     <ul class="dropdown-menu">
-     <li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: #428bca; font-weight: normal; font-size: 13px;'} %></li>
-     <li><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
-     <li><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
+     <li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: #428bca; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
+     <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
+     <li class="font-fam"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
     </ul>
 
     </span>
@@ -66,11 +66,11 @@
 
 <div class="container userpost">
 	<hr />
- <section class="subscribe-btn"><%= render 'follow_form' if signed_in? %></section>
+ <section class="font-fam subscribe-btn"><%= render 'follow_form' if signed_in? %></section>
    <% if @user.microposts.any? %>
       <%= render @microposts %>
    <% else %>   
-      <div class="nohall">Yet to Upload a Hall</p>
+      <div class="font-fam nohall">Yet to Upload a Hall</p>
    <% end %>
       </div>
    <div class="pager">
