@@ -123,13 +123,25 @@ a#next:hover {
 }
 
 /* invite */
-.inviteform{
-background: red;
-margin-top: 60px;
-height: 400px;
-width: 400px;
-margin-left: 100px;
+.invite{
+  text-align: center;
+  margin-top: 20px;
 }
+
+.betainvite{
+  text-align: center;
+  font-size: 18px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.invite-form{
+  padding-top: 20px;
+}
+
+
+
+
 
 /* kit */
 #container{
@@ -247,6 +259,7 @@ p .sr{
 .static_head{
   text-align: center;
   font-size: 18px;
+  font-weight: bold;
   padding-top: 20px;
 }
 
@@ -428,6 +441,10 @@ p .sr{
 .showmicrocontent{
   font-size: 100%;
   font-family: ralewayregular;
+}
+
+.showcontentsize{
+  font-size: 90%;
 }
 
 .postauthor{
@@ -626,6 +643,7 @@ p .sr{
   display: inline-block;
   text-align: center;  
   word-wrap: break-word;
+  font-family: ralewayregular;
 }
 
 .footdate{
@@ -704,7 +722,7 @@ p .sr{
 
 .minf{
   padding-left: 1.7%;
-  padding-right: 13.1%;
+  padding-right: 12.8%;
 }
 
 .minfooter .glyphicon{

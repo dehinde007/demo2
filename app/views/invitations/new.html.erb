@@ -1,12 +1,17 @@
-<div class="container inviteform">
+<div class="container invite font-fam">
 	
+<section class="betainvite"> Beta Invite</section>	
+
+<div class="invite-form">
 <%= form_for @invitation, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<%= f.text_field :recipient_email %>
+<p><%= f.text_field :recipient_email, placeholder: "Enter email" %></p>
 
-<%= f.submit "Invite!" %>
+<p><%= f.submit "Invite!", class: "btn btn-sm btn-danger" %></p>
 
 <% end %>
+</div>
 
 </div>
+<div class="footer2"><%= render 'layouts/minfooter' %></div>

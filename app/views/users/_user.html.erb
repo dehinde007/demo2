@@ -1,4 +1,4 @@
-
+<span class="font-fam">
   <%= image_tag user.avatar.url(:mini), class: "img-circle" %>
   <%= link_to user.name, user, class: "userpartialname" %>
   <% if current_user.admin? && !current_user?(user) %>
@@ -6,5 +6,6 @@
                                   data: { confirm: "You sure?" } %>
                                   
   <% end %>
+</span>
 
 <hr />

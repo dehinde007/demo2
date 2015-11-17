@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          
            
-           <ul class="nav navbar-nav navbar-right">
+           <ul class="font-fam nav navbar-nav navbar-right">
             <li>
             	<div class="search">
                 <% if signed_in? %> 		
@@ -25,12 +25,15 @@
             </li>
             
             <li class="">
+                <%= link_to "Invite", new_invitation_path(current_user), id: "invite" %> 
+            </li>
+            
+            <li class="">
                 <%= link_to "setting", edit_user_path(current_user), id: "setting" %> 
             </li>
             
             <li class="logout">
-                 <%= link_to '<i class="glyphicon glyphicon-lock" >Logout</i>'.html_safe, signout_path, method: "delete"%> 
-              
+                <%= link_to '<i class="glyphicon glyphicon-lock" >Logout</i>'.html_safe, signout_path, method: "delete"%> 
             </li>
       </ul>
         </div><!-- /.navbar-collapse -->    

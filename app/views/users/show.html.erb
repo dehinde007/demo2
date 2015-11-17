@@ -21,7 +21,7 @@
       <%= @user.username %><span class="caret"></span>
     </span>
     <ul class="dropdown-menu">
-     <li><%= link_to pluralize(@user.microposts.count, "Quote"), @user, {:style => 'color: #428bca; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
+     <li><%= link_to pluralize(@user.microposts.count, "Hall"), @user, {:style => 'color: #428bca; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
      <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
      <li class="font-fam"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
     </ul>
@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          
            
-           <ul class="nav navbar-nav navbar-right">
+           <ul class="font-fam nav navbar-nav navbar-right">
             <li>
             	<div class="search">
                 <% if signed_in? %> 		

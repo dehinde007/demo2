@@ -7,7 +7,7 @@
     
    <section class="showmicrocontent">
    	<%= render "shared/microusrn" %>
-    <%= @micropost.content %>
+   <span class="showcontentsize"><%= @micropost.content %></span>
    <span class="postauthor">
    	<% if @micropost.author? %>
  - <%= @micropost.author %>
