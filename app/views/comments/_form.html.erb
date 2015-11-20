@@ -1,6 +1,5 @@
 <%= form_for [@micropost, @micropost.comments.build], remote: true do |f| %>
 
-
   <span>
     <%= f.text_area :body, class: "commentform", placeholder: "Leave comment..." %>
   </span>
