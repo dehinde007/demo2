@@ -27,7 +27,7 @@ def new
     
     def destroy
     @like = Like.find(params[:id])
-    @like.destroy  
+  @like.destroy  
      respond_to do |format|
       format.html { redirect_to @like.micropost }
       format.js
