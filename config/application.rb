@@ -26,7 +26,7 @@
         # I18n.enforce_available_locales = true
         config.assets.paths << Rails.root.join("app", "assets", "fonts")
         I18n.enforce_available_locales = true
-        config.serve_static_assets = true
+        config.serve_static_files = true
         config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg *.eot *.woff *.ttf)
       end
     end
