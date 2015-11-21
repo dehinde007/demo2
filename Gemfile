@@ -12,6 +12,7 @@ gem "paperclip", "~> 3.5.3"
 gem 'rmagick'
 gem 'puma'
 gem 'tzinfo-data'
+gem 'delayed_job_active_record'
 gem 'newrelic_rpm'
 gem 'public_activity', github: 'pokonski/public_activity'
 group :development, :test do

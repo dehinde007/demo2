@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105183423) do
+ActiveRecord::Schema.define(version: 20151121172946) do
 
-  create_table "activities", force: true do |t|
+  create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
-    t.string   "trackable_type"
+    t.string   "trackable_type", limit: 255
     t.integer  "owner_id"
-    t.string   "owner_type"
-    t.string   "key"
+    t.string   "owner_type",     limit: 255
+    t.string   "key",            limit: 255
     t.text     "parameters"
     t.integer  "recipient_id"
-    t.string   "recipient_type"
+    t.string   "recipient_type", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20151105183423) do
   add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type"
   add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.integer  "micropost_id"
     t.integer  "user_id"
     t.text     "body"
@@ -38,16 +38,32 @@ ActiveRecord::Schema.define(version: 20151105183423) do
     t.datetime "updated_at"
   end
 
-  create_table "invitations", force: true do |t|
-    t.integer  "sender_id"
-    t.string   "recipient_email"
-    t.datetime "sent_at"
-    t.string   "new"
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "likes", force: true do |t|
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
+
+  create_table "invitations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.string   "recipient_email", limit: 255
+    t.datetime "sent_at"
+    t.string   "new",             limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "likes", force: :cascade do |t|
     t.integer  "micropost_id"
     t.integer  "user_id"
     t.boolean  "heart"
@@ -55,21 +71,21 @@ ActiveRecord::Schema.define(version: 20151105183423) do
     t.datetime "updated_at"
   end
 
-  create_table "microposts", force: true do |t|
-    t.string   "content"
+  create_table "microposts", force: :cascade do |t|
+    t.string   "content",            limit: 255
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
+    t.string   "photo_file_name",    limit: 255
+    t.string   "photo_content_type", limit: 255
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
-    t.string   "author"
+    t.string   "author",             limit: 255
   end
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
 
-  create_table "relationships", force: true do |t|
+  create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
     t.datetime "created_at"
@@ -80,21 +96,36 @@ ActiveRecord::Schema.define(version: 20151105183423) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
+  create_table "simple_hashtag_hashtaggings", force: :cascade do |t|
+    t.integer "hashtag_id"
+    t.integer "hashtaggable_id"
+    t.string  "hashtaggable_type", limit: 255
+  end
+
+  add_index "simple_hashtag_hashtaggings", ["hashtag_id"], name: "index_simple_hashtag_hashtaggings_on_hashtag_id"
+  add_index "simple_hashtag_hashtaggings", ["hashtaggable_id", "hashtaggable_type"], name: "index_hashtaggings_hashtaggable_id_hashtaggable_type"
+
+  create_table "simple_hashtag_hashtags", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password_digest"
-    t.string   "remember_token"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name",                limit: 255
+    t.string   "email",               limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest",     limit: 255
+    t.string   "remember_token",      limit: 255
     t.boolean  "admin"
-    t.string   "username"
+    t.string   "username",            limit: 255
     t.text     "bio"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "reset_digest"
+    t.string   "reset_digest",        limit: 255
     t.datetime "reset_sent_at"
     t.integer  "invitation_id"
   end
