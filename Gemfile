@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 gem 'heroku'
 gem 'aws-sdk', '< 2.0'
-gem 'rails', '~> 4.1.1'
+gem 'rails', '4.2.0'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
@@ -12,6 +12,7 @@ gem "paperclip", "~> 3.5.3"
 gem 'rmagick'
 gem 'puma'
 gem 'tzinfo-data'
+gem 'responders', '~> 2.0'
 gem 'newrelic_rpm'
 gem 'public_activity', github: 'pokonski/public_activity'
 group :development, :test do
@@ -43,7 +44,7 @@ group :test do
   # gem 'win32console', '1.3.2'
   # gem 'wdm', '0.1.0'
 end
-gem 'i18n', '~> 0.6.9'
+gem 'i18n', '0.7.0'
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
