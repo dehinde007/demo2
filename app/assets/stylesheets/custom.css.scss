@@ -5,6 +5,7 @@ html, body{
   margin: 0;
   padding: 0;
   background-color: #F8F8F8;
+  overflow-x: hidden;
 }
 
 /* ad_custom */
@@ -114,6 +115,7 @@ a#next:hover {
 
 .loaderd{
   display: none;
+  text-align: center;
   height: 25px;
   width: 25px;
 }

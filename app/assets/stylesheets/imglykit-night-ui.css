@@ -32,7 +32,7 @@
   position: absolute;
   width: 100%;
   height: 600px;
-  background: #1E1E1E;
+  background: rgba(255, 146, 127, 0.18);
   overflow: hidden;
   text-align: left; }
   .imglykit-container div, .imglykit-container span, .imglykit-container applet, .imglykit-container object, .imglykit-container iframe,
@@ -162,7 +162,7 @@
         font-size: 20px;
         margin-bottom: 5px; }
       .imglykit-container .imglykit-drop-area-container .imglykit-drop-area .imglykit-drop-area-content span {
-        color: rgba(255, 255, 255, 0.2);
+        color: white;
         font-size: 14px; }
     .imglykit-container .imglykit-drop-area-container .imglykit-drop-area .imglykit-drop-area-hidden-input {
       visibility: hidden;

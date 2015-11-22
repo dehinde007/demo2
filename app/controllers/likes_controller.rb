@@ -1,7 +1,6 @@
 class LikesController < ApplicationController
   before_action :signed_in_user, only: [:show, :edit, :update, :destroy]
 
-
 def new
      @like = @micropost.likes.new
   end
@@ -33,6 +32,7 @@ def new
       format.js
    end   
   end
+
   
   def likeactivitydestroy
   @like.destroy  

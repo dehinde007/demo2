@@ -24,7 +24,7 @@
             </li>
             
             <li class="">
-                <%= link_to "setting", edit_user_path(current_user), id: "setting" %> 
+                <%= link_to "setting", edit_user_path(current_user), id:"setting" %> 
               
             </li>
             
@@ -38,18 +38,15 @@
     </nav>
 </header> 
 
-<div id="container"></div> <!-- /.imgkit-div -->
-
 
 <%= form_for @micropost, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
 <div class="font-fam container micropostform">
 <div class="micropostformcontent">
-<br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
   <section class="formphoto">
-   <section class="formphotofield btn btn-success fileinput-button"><%= f.file_field :photo %></section>
+   <section class="formphotofield fileinput-button"><%= f.file_field :photo %></section>
   </section>
 
   <p>
@@ -68,12 +65,12 @@
 <br />
 <br />
 <br />
-<span><%= image_tag asset_path('assets/images/ring.gif'), class: "loaderd" %></span>
+<p class="loaderd">Please wait...</p>
   
 <br />
 <br />
 </div>
 </div>
 
-
+<br /><br /><br /><br />
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

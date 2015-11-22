@@ -1,5 +1,4 @@
-class User < ActiveRecord::Base  
- 
+class User < ActiveRecord::Base   
 has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
 belongs_to :invitation
  
@@ -69,7 +68,7 @@ has_attached_file :photo
     relationships.find_by(followed_id: other_user.id).destroy
   end
   
-  
+
   private
 
     def create_remember_token

@@ -24,8 +24,12 @@
                 </div>
             </li>
             
+            <li>
+                <%= link_to "Invite", new_invitation_path(current_user), id: "invite" %>  
+            </li>
+            
             <li class="">
-                <%= link_to "Invite", new_invitation_path(current_user), id: "invite" %> 
+            	<%= link_to "Imgkit", imgkit_path, id:"imgkit" %> 
             </li>
             
             <li class="">
