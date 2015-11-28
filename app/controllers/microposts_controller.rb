@@ -36,7 +36,7 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-    redirect_to current_user
+    redirect_to :back
   end
 
   private
