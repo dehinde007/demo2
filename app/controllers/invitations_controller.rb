@@ -14,7 +14,7 @@ class InvitationsController < ApplicationController
       redirect_to root_url
     else
       flash[:notice] = "Thank you, we will notify when we are ready."
-      render "new"
+      redirect_to 
     end
  end
  
