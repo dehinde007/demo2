@@ -39,5 +39,5 @@ SampleApp::Application.routes.draw do
   match '/imgkit', to: 'static_pages#imgkit', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/make_hall', to: 'static_pages#make_hall', via: 'get'
-  match '/home', to: 'feeds#home', via: 'get'
+  match '/home', to: 'static_pages#home', via: 'get'
 end
