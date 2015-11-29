@@ -1,14 +1,14 @@
 source 'http://rubygems.org'
 gem 'heroku'
 gem 'aws-sdk', '< 2.0'
-gem 'rails', '4.2.4'
+gem 'rails', '~> 4.1.1'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip", "~> 3.5.3"
 gem 'rmagick'
 gem 'puma'
 gem 'tzinfo-data'
@@ -24,7 +24,7 @@ group :development, :test do
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
 end
-  gem 'web-console', '~> 2.0'
+
 group :test do
  
   gem 'capybara', '2.1.0'
@@ -43,12 +43,12 @@ group :test do
   # gem 'win32console', '1.3.2'
   # gem 'wdm', '0.1.0'
 end
-gem 'i18n', '0.7.0'
+gem 'i18n', '~> 0.6.9'
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
-gem 'turbolinks', '~> 2.5.3'
+gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 
 group :doc do
