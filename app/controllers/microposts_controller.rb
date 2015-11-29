@@ -35,13 +35,13 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-    redirect_to :back
+    redirect_to current_user
   end
 
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content, :photo, :author, :base64)
+      params.require(:micropost).permit(:content, :photo, :author)
     end
 
     def correct_user

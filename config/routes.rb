@@ -40,4 +40,6 @@ SampleApp::Application.routes.draw do
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/make_hall', to: 'static_pages#make_hall', via: 'get'
   match '/home', to: 'static_pages#home', via: 'get'
+  match '/halls', to: 'microposts#index', via: 'get'
+  match '/new/hall', to: 'microposts#new', via: 'get'
 end
