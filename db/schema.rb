@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151129141209) do
+ActiveRecord::Schema.define(version: 20151105183423) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -37,22 +37,6 @@ ActiveRecord::Schema.define(version: 20151129141209) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "delayed_jobs", force: true do |t|
-    t.integer  "priority",               default: 0, null: false
-    t.integer  "attempts",               default: 0, null: false
-    t.text     "handler",                            null: false
-    t.text     "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.string   "locked_by",  limit: nil
-    t.string   "queue",      limit: nil
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
 
   create_table "invitations", force: true do |t|
     t.integer  "sender_id"
@@ -96,21 +80,6 @@ ActiveRecord::Schema.define(version: 20151129141209) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
-  create_table "simple_hashtag_hashtaggings", force: true do |t|
-    t.integer "hashtag_id"
-    t.integer "hashtaggable_id"
-    t.string  "hashtaggable_type"
-  end
-
-  add_index "simple_hashtag_hashtaggings", ["hashtag_id"], name: "index_simple_hashtag_hashtaggings_on_hashtag_id"
-  add_index "simple_hashtag_hashtaggings", ["hashtaggable_id", "hashtaggable_type"], name: "index_hashtaggings_hashtaggable_id_hashtaggable_type"
-
-  create_table "simple_hashtag_hashtags", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -132,14 +101,5 @@ ActiveRecord::Schema.define(version: 20151129141209) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
-
-  create_table "verifies", force: true do |t|
-    t.boolean  "verified"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "verifies", ["user_id"], name: "index_verifies_on_user_id"
 
 end

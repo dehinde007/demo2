@@ -63,13 +63,7 @@
 
 <p class="userinfo1"><%= @user.name %></p> 
 <p class="userinfo2"><%= @user.bio %></p>
-<% if @user.verifies.any? %>
 
-<% render @verifies %>
-
-<% else %>
-
-<% end %>
 <div class="container userpost">
 	<hr />
  <section class="font-fam subscribe-btn"><%= render 'follow_form' if signed_in? %></section>
