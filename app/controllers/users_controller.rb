@@ -13,7 +13,8 @@ class UsersController < ApplicationController
     @skip_header = true
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page], per_page: 12)
-  end
+    @verify = @user.verify
+  end 
 
   def new
     @user = User.new
