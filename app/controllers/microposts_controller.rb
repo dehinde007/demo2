@@ -29,8 +29,7 @@ class MicropostsController < ApplicationController
       flash[:success] = "Hall created!"
       redirect_to home_path
     else
-      @feed_items = []
-      render 'static_pages/home'
+      render 'new'
     end
   end
 

@@ -1,13 +1,5 @@
 class StaticPagesController < ApplicationController
  
-  def welcome
-     if signed_in?
-      redirect_to home_path
-    else 
-    
-    end
-  end
-  
   def home
     if signed_in?
       @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 10)   
@@ -16,6 +8,14 @@ class StaticPagesController < ApplicationController
     end
   end
   
+  def welcome
+     if signed_in?
+      redirect_to home_path
+    else 
+    
+    end
+  end
+ 
   def help
     
   end
