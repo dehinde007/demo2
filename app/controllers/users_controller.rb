@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :signed_in_user,
-                only: [:index, :show, :edit, :update, :destroy, :following, :followers]
-  before_action :correct_user,   only: [:edit, :update, :destroy]
+                only: [:index, :show, :edit, :update, :destroy, :following, :followers, :verify, :ver]
+  before_action :correct_user,   only: [:edit, :update, :destroy, :ver, :verify]
   before_action :admin_user,     only: :destroy
   
   def index
@@ -42,6 +42,19 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+  
+  def verify
+    @userr = User.find(params[:id])
+  end
+  
+    def ver
+    if @userr.update_attributes(user_params)
+      flash[:success] = "Verified"
+      redirect_to @user
+    else
+      render 'verify'
+    end
+  end
 
   def destroy
     User.find(params[:id]).destroy
@@ -66,7 +79,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :username, :avatar, :bio, :email, :password, 
+      params.require(:user).permit(:name, :username, :avatar, :verify, :bio, :email, :password, 
                                    :password_confirmation)
     end
 

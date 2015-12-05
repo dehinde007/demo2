@@ -24,21 +24,11 @@
       <%= f.text_field :email, :class =>"signupfield", placeholder: "Enter email" %>
      </p>
      
-    <br />
-     <p>
-      <%= f.label :avatar, :class =>"signuplabel" %>
-      <%= f.file_field :avatar %>
-     </p> 
-     
      <p>
       <%= f.label :password, :class =>"signuplabel" %>
       <%= f.password_field :password, :class =>"signupfield", placeholder: "Enter password" %>
      </p>
-    
-     <p>
-      <%= f.label :password_confirmation, :class =>"signuplabel" %>
-      <%= f.password_field :password_confirmation, :class =>"signupfield", placeholder: "re-type password" %>
-     </p>
+
     <br />
      <p><%= f.submit "Create Account", class: "btn btn-sm btn-primary" %></p>
     <% end %>

@@ -438,6 +438,7 @@ p .sr{
  font-size: 90%;
  font-family: ralewayregular;
  padding-top: 7px;
+ font-weight: bold;
 }
 
 .showmicrocontent{
@@ -552,6 +553,12 @@ p .sr{
   font-size: 13px;
   font-family: ralewayregular;
   text-align: center;
+}
+
+.userverify{
+  text-align: center;
+  margin-top: -42px;
+  margin-left: 170px;
 }
 
 .userpost{
@@ -866,7 +873,7 @@ p .sr{
 /* signup */
 .signup{
   border-radius: 5px;
-  height: 470px;
+  height: 360px;
   width: 380px;
   background: white;
 }  

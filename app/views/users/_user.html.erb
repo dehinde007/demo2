@@ -2,10 +2,15 @@
   <%= image_tag user.avatar.url(:mini), class: "img-circle" %>
   <%= link_to user.name, user, class: "userpartialname" %>
   <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-                                  
-  <% end %>
+| <%= link_to "delete", user, method: :delete,
+                              data: { confirm: "You sure?" } %>
+<% end %>
+ <% if user.verify == true%>
+ <img src="/assets/images/verify.png" width="15" height="15"/>
+ <% else %>
+ <% end %>
+
+  
 </span>
 
 <hr />

@@ -63,6 +63,13 @@
 
 <p class="userinfo1"><%= @user.name %></p> 
 <p class="userinfo2"><%= @user.bio %></p>
+<p class="userverify">
+<% if @user.verify == true%>
+<span><img src="/assets/images/ver.png" width="25" height="25"/></span>
+<% else %>
+<br />
+<% end %>
+</p>
 
 <div class="container userpost">
 	<hr />

@@ -1,7 +1,7 @@
 SampleApp::Application.routes.draw do
   
   default_url_options :host => "www.hallit.co"
-  
+    resources :users
    resources :invitations
 
    resources :microposts do
@@ -20,6 +20,7 @@ SampleApp::Application.routes.draw do
   resources :users do
     member do
       get :following, :followers
+      get :ver, :verify
     end
   end
   resources :activities

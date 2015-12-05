@@ -16,8 +16,9 @@ end
     mini: '38x38#', 
     thumb: '100x100#'
   }, :url => "/avatars/:id/:style/:basename.:extension",
+     :default_url => '/assets/images/avv (2).jpg',
      :path => ":rails_root/public/avatars/:id/:style/:basename.:extension"
-validates_attachment_presence :avatar 
+
 validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/ 
 
 #photo
