@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base   
 has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
 belongs_to :invitation
-before_create :set_invitation_limit 
+ 
 #user search
   def self.search(search)
     if search 
@@ -74,9 +74,5 @@ has_attached_file :photo
 
     def create_remember_token
       self.remember_token = User.digest(User.new_remember_token)
-    end
-    
-    def set_invitation_limit
-      self.invitation_limit = 5
     end
 end

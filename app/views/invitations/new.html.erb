@@ -12,10 +12,6 @@
 
 <% end %>
 </div>
-<% if current_user.invitation_limit > 0 %>
-<p>(<%= current_user.invitation_limit.to_i %> left)</p>
-<% else %>
-<% end %>
 
 </div>
 <div class="footer2"><%= render 'layouts/minfooter' %></div>
