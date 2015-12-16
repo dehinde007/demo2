@@ -258,6 +258,17 @@ p .sr{
   text-align: center;
 }
 
+/* help */
+.help{
+  background: white;
+  height: 430px;
+}
+
+.help .glyphicon{
+  color: rgb(184, 120, 120); 
+  font-size: 14px;
+} 
+
 /* about_us */
 .jumbotron{
   background: #F8F8F8;
@@ -285,6 +296,7 @@ p .sr{
 /* new_micropost */
 .micropostform{
  text-align: center;
+ margin-top: 200px;
 }
 
 .micropostformcontent{

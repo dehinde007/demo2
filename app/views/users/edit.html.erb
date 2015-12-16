@@ -23,15 +23,24 @@
                 </div>
             </li>
             
-            <li class="">
-                <%= link_to "setting", edit_user_path(current_user), id: "setting" %> 
-              
+            <li>
+          <%= link_to new_invitation_path(current_user) do %>
+          <span class="headglyph glyphicon glyphicon-envelope"></span>
+          <% end %> 
+            </li>
+     
+            <li>
+          <%= link_to edit_user_path(current_user) do %>
+          <span class="headglyph glyphicon glyphicon-cog"></span>
+          <% end %>    
             </li>
             
-            <li class="logout">
-                 <%= link_to '<i class="glyphicon glyphicon-lock" >Logout</i>'.html_safe, signout_path, method: "delete"%> 
-              
+           <li> 
+         <%= link_to signout_path, method: "delete" do %>
+         <span class="headglyph glyphicon glyphicon-off"></span>
+          <% end %>        
             </li>
+
       </ul>
         </div><!-- /.navbar-collapse -->    
       </div><!-- /.container -->

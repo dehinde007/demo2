@@ -11,9 +11,8 @@ class InvitationsController < ApplicationController
   if @invitation.save
       Mailer.invitation(@invitation).deliver
       flash[:notice] = "Thank you, invitation sent."
-      redirect_to root_url
+      redirect_to new_invitation_path(current_user)
     else
-      flash[:notice] = "Thank you, we will notify when we are ready."
       render "new"
     end
  end
