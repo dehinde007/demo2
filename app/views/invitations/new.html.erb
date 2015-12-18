@@ -1,4 +1,10 @@
-<div class="container" style="color: green;"><%= flash[:notice] %></div>
+
+<% if flash[:notice] -%>
+  <p class='container kkkkk'><%=h flash[:notice] %></p>
+<% end -%>
+
+
+
 <div class="container invite font-fam">	
 <section class="betainvite"> Beta Invite</section>	
 
@@ -8,10 +14,12 @@
 
 <p><%= f.text_field :recipient_email, placeholder: "Enter email" %></p>
 
-<p><%= f.submit "Invite!", class: "btn btn-sm btn-danger" %></p>
+<p><%= f.submit "Invite!", class: "loadbut btn btn-sm btn-danger" %></p>
 
 <% end %>
 </div>
-
 </div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<p style="text-align:center;"><%= image_tag asset_path('assets/images/spin1.gif'), :class => "loaderd" %></p>
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

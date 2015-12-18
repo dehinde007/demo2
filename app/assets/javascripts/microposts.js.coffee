@@ -1,4 +1,4 @@
   $ ->
-    $('.new_butt').click ->
+    $('.loadbut').click ->
       $('.loaderd').show('slow');
       

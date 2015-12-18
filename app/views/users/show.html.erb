@@ -74,7 +74,7 @@
 <p class="userinfo2"><%= @user.bio %></p>
 <p class="userverify">
 <% if @user.verify == true%>
-<span><img src="/assets/images/ver.png" width="25" height="25"/></span>
+<span><img src="/assets/images/ver.png" width="25" height="25" data-toggle="tooltip" data-placement="top" title="Verified Account"/></span>
 <% else %>
 <br />
 <% end %>
