@@ -9,7 +9,7 @@ class InvitationsController < ApplicationController
   @invitation = Invitation.new(invitation_params)
   @invitation.sender = current_user
   if @invitation.save
-      Mailer.invitation(@invitation).deliver
+      SendNotificationJob.set(wait: 20.seconds).perform_later(@invitation)
       flash[:notice] = "Thank you, invitation sent."
       redirect_to new_invitation_path(current_user)
     else

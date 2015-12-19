@@ -17,6 +17,7 @@ def new
        @like.micropost.user = @micropost.user
      @like.user = current_user
      @like.save
+       SendNotificationJob.set(wait: 20.seconds).perform_later(@like)
        @like.create_activity :create, owner: current_user
        respond_to do |format|
       format.html { redirect_to @like.micropost }
