@@ -1,5 +1,8 @@
+<% if flash[:notice] -%>
+<p class='container kkkkk alert alert-info'><%=h flash[:notice] %></p>
+<% end -%>
+
 <div class="micropostshow">	
-	<%= notice %>
 <div class="container posttime"> <%= time_ago_in_words(@micropost.created_at)%> ago</div>
  	<section class="post-img"><%= image_tag @micropost.photo.url(:normal) %></section>
    
@@ -9,10 +12,12 @@
    	<%= render "shared/microusrn" %>
    <span class="showcontentsize"><%= @micropost.content %></span>
    <span class="postauthor">
+<i>  	
    	<% if @micropost.author? %>
- - <%= @micropost.author %>
+    - <%= @micropost.author %>
     <% else %>
-<% end %>  
+    <% end %>  
+</i> 
    </span> 
     <% if current_user?(@micropost.user) %>
     <%= link_to "Delete", @micropost, method: :delete,

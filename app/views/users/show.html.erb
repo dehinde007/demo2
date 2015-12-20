@@ -46,7 +46,7 @@
             </li>
             
             <li>
-          <%= link_to new_invitation_path(current_user) do %>
+          <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
           <span class="headglyph glyphicon glyphicon-envelope"></span>
           <% end %> 
             </li>

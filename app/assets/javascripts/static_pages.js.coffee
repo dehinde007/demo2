@@ -5,3 +5,6 @@
 #jQuery ->
 #   alert "lol"
 
+$ ->
+  $('.kkkkk').delay(2500).fadeOut()
+  

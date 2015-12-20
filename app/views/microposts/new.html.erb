@@ -24,14 +24,14 @@
             </li>
             
             <li>
-          <%= link_to new_invitation_path(current_user) do %>
+          <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
           <span class="headglyph glyphicon glyphicon-envelope"></span>
           <% end %> 
             </li>
      
             <li>
           <%= link_to edit_user_path(current_user) do %>
-          <span class="headglyph glyphicon glyphicon-cog"></span>
+          <span class="headglyph glyphicon glyphicon-edit"></span>
           <% end %>    
             </li>
             
@@ -78,7 +78,9 @@
 <br />
 <br />
 <br />
-<p class="loaderd">Please wait...</p>
+<section style="text-align:center;">
+<p class="pleasewait">Please wait...</p>	
+</section>
   
 <br />
 <br />

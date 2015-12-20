@@ -25,6 +25,14 @@
   	<% else %>
   	<%= feed_item.content %>
   	<% end %>
+<span class="postauthor">
+<i>
+   	<% if feed_item.author? %>
+    - <%= feed_item.author %>
+    <% else %>
+    <% end %>  
+</i>
+</span>   	
     </section>
 
     <section class="container contentlength2">
@@ -36,4 +44,12 @@
   	<% else %>
   	<%= feed_item.content %>
   	<% end %>
+<span class="postauthor">
+<i>
+   	<% if feed_item.author? %>
+    - <%= feed_item.author %>
+    <% else %>
+    <% end %> 
+</i>	    
+</span> 
     </section>

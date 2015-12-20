@@ -1,2 +1,3 @@
 $ ->
-  $('.kkkkk').delay(2500).fadeOut()
+  $('.loadbut').click ->
+    $('.loaderd').show('slow');  

@@ -1,4 +1,8 @@
 <div class="home">
+<% if flash[:notice] -%>
+  <p class='container kkkkk alert alert-info' id="flashh"><%=h flash[:notice] %></p>
+<% end -%>	
+	
    	<% if signed_in? %>
   
    <%= render 'feeds/feed' %>	

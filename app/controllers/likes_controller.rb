@@ -19,6 +19,7 @@ def new
      @like.save
        SendNotificationJob.set(wait: 20.seconds).perform_later(@like)
        @like.create_activity :create, owner: current_user
+       flash[:notice] = "Hall liked."
        respond_to do |format|
       format.html { redirect_to @like.micropost }
       format.js
