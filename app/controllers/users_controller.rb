@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-    SendNotificationJob.set(wait: 20.seconds).perform_later(@user)
+   UserMailer.delay.welcome_email(@user)
       sign_in @user
       flash[:success] = "Welcome to Hallit"
       redirect_to help_path

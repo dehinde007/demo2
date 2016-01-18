@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
         @comment.micropost.user = @micropost.user
         @comment.user = current_user
         @comment.save
-        SendNotificationJob.set(wait: 20.seconds).perform_later(@comment)
+        UserMailer.delay.newcomment_email(@comment)
         @comment.create_activity :create, owner:
         current_user
         respond_to do |format|
