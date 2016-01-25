@@ -4,7 +4,7 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #F8F8F8;
+  background-color: #F8F8F8!important;
   overflow-x: hidden;
 }
 
@@ -160,8 +160,6 @@ a#next:hover {
 
 
 
-
-
 /* kit */
 #container{
   max-width: 100%;
@@ -203,28 +201,29 @@ label{
 }
 
 /* header */ 
+
+.navbar-default{
+  background: #D63636!important;
+  border-color: #D63636!important;
+}
+
 .navbar-default .navbar-toggle{
-  border-color: rgb(196, 80, 80);
+  border-color: rgb(196, 80, 80)!important;
   background-color: #D63636;
   cursor: pointer;
   &:hover{
-  background-color: rgb(196, 80, 80);
+  background-color: rgb(196, 80, 80)!important;
   }
 }
 
 .navbar-default .navbar-toggle .icon-bar{
-  background-color: white; 
+  background-color: white!important; 
   height: 2px;
   width: 24px;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
-  border-color: rgb(196, 80, 80);
-}
-
-.navbar-default {
-  background-color: #D63636;
-  border-color: #D63636;
+  border-color: rgb(196, 80, 80)!important;
 }
 
 .search{
@@ -292,6 +291,7 @@ p .sr{
   font-size: 18px;
   font-weight: bold;
   padding-top: 20px;
+  font-family: ralewayregular;
 }
 
 /* userpartial*/
@@ -578,6 +578,7 @@ p .sr{
   font-weight: bold;
   text-align: center;
 }
+
 
 .userinfo2{
   color: black;
@@ -883,6 +884,7 @@ p .sr{
   left: 0;
   right: 0;
 }
+
  
 .puffauto .img-responsive{
   width: 450px;
@@ -894,12 +896,21 @@ p .sr{
 }
 
 @media screen and (min-width: 758px) {
+  .contentlength2{
+  width: 500px!important;
+  background: white;
+  display: block;
+  padding-bottom: 10px;
+  margin: auto;
+  left: 0;
+  right: 0;
+ }
    
 /* signup */
 .signup{
   border-radius: 5px;
-  height: 360px;
-  width: 380px;
+  height: 360px!important;
+  width: 380px!important;
   background: white;
 }  
 
@@ -917,8 +928,8 @@ p .sr{
 .session{
   margin-top: 60px;
   border-radius: 5px;
-  height: 250px;
-  width: 350px;
+  height: 250px!important;
+  width: 350px!important;
   background: white;
 }
 
@@ -992,7 +1003,7 @@ p .sr{
 }
 
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {  
 .feediteminfo{
   width: 500px;
   margin: auto;
@@ -1038,6 +1049,7 @@ p .sr{
 }
 
 @media screen and (min-width: 1200px) {
+
 .feedhouse{
 
 } 

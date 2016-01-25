@@ -16,5 +16,11 @@ class UserMailer < ActionMailer::Base
     @like = like
     mail(to: like.micropost.user.email, subject: "Hallit Notify")
   end   
+  
+  def newfollow_email(user, follower)
+    @user = user
+    @follower = follower
+    mail(to: "<#{@user.email}>", :subject => "Hallit Notify")
+  end
     
 end

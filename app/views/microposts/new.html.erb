@@ -55,7 +55,7 @@
 <%= form_for @micropost, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<div class="font-fam container micropostform">
+<div class="container micropostform">
 <div class="micropostformcontent">
 
   <section class="formphoto">
@@ -63,15 +63,15 @@
   </section>
 
   <p>
-   <%= f.text_area :content, :class =>"formcontent", placeholder: "Describe Hall..." %>
+   <%= f.text_area :content, :class =>"formcontent font-fam", placeholder: "Describe Hall..." %>
   </p>
   
   <p>
-   <%= f.text_field :author, :class =>"formauthor", placeholder: "Author" %>
+   <%= f.text_field :author, :class =>"formauthor font-fam", placeholder: "Author" %>
   </p>
   
   <p> 
-   <%= f.submit "Share to subscribers", class: "loadbut btn btn-sm btn-primary" %>
+   <%= f.submit "Share to subscribers", class: "loadbut btn btn-sm btn-primary font-fam" %>
   </p>
   
  <% end %>

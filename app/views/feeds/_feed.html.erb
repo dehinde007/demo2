@@ -1,11 +1,11 @@
 	
 	<% if @feed_items.any? %>
 <div class="paper">
-    <%= render partial: 'feeds/feed_item', collection: @feed_items %>
+    <%= render partial: 'shared/feed_item', collection: @feed_items %>
 </div>    
     <% else %>
     
-    <div class="nofeed">Subscribe To Channels You Love</div>
+    <div class="nofeed">Search and Subscribe To Channels You Love</div>
     
     <% end %>
 

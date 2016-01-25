@@ -6,12 +6,12 @@ class UsersController < ApplicationController
   
   def index
     @skip_header = true
-    @users = User.search(params[:search]).paginate(page: params[:page], per_page: 30)
+    @users = User.search(params[:search]).paginate(page: params[:page], per_page: 30).order('created_at DESC')
   end
 
   def show
     @skip_header = true
-    @user = User.find(params[:id])
+    @user = User.find_by_username(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page], per_page: 12)
   end
 
@@ -32,6 +32,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
@@ -44,7 +45,7 @@ class UsersController < ApplicationController
   end
   
   def verify
-    @userr = User.find(params[:id])
+    @userr = User.find_by_username(params[:id])
   end
   
     def ver
@@ -57,21 +58,21 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
+    User.find_by_username(params[:id]).destroy
     flash[:success] = "User destroyed."
     redirect_to users_url
   end
 
   def following
     @title = "Following"
-    @user = User.find(params[:id])
+    @user = User.find_by_username(params[:id])
     @users = @user.followed_users.paginate(page: params[:page])
     render 'show_follow'
   end
 
   def followers
     @title = "Followers"
-    @user = User.find(params[:id])
+    @user = User.find_by_username(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
   end
@@ -86,7 +87,7 @@ class UsersController < ApplicationController
     # Before filters
 
     def correct_user
-      @user = User.find(params[:id])
+      @user = User.find_by_username(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
 

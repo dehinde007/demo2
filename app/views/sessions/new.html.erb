@@ -1,25 +1,25 @@
 <% provide(:title, "Sign in") %>
 <div class="container" style="color: #a94442;"><%= flash[:alert] %></div>
    
-   <div class="container font-fam session">
+   <div class="container session">
    	
    	  <section class="sessionform">
       <%= form_for(:session, url: sessions_path) do |f| %>
-      <p>
+      <p class="font-fam">
       <%= f.label :email, :class =>"sessionlabel" %>
       <%= f.text_field :email, :class =>"sessionfield", placeholder: "Enter email" %>
       </p>
- 
+      <p class="font-fam">
       <%= f.label :password, :class =>"sessionlabel" %>
       <%= f.password_field :password, :class =>"sessionfield", placeholder: "Enter password" %>
+      </p>
       </section>
       <br />
-     <p> <%= f.submit "Sign in", class: "sess-butt btn btn-sm btn-primary" %></p>
+     <p class="font-fam"> <%= f.submit "Sign in", class: "sess-butt btn btn-sm btn-primary" %></p>
      
     <% end %>
 
-    <p class="sessionlink">New user? <%= link_to "create an account", signup_path %></p>
-    
+    <p class="sessionlink font-fam">New user? <%= link_to "create an account", signup_path %></p>
     
    </div>
 

@@ -5,35 +5,35 @@
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
-<div class="container font-fam signup">
+<div class="container signup">
      
      <section class="signupform">
      
-     <p>	
+     <p class="font-fam">	
       <%= f.label :fullname, :class =>"signuplabel" %>
       <%= f.text_field :name, :class =>"signupfield", placeholder: "Enter fullname" %>
      </p>
      
-     <p>
+     <p class="font-fam">
       <%= f.label :username, :class =>"signuplabel" %>
       <%= f.text_field :username, :class =>"signupfield", placeholder: "Enter username" %>
      </p>
      
-     <p>
+     <p class="font-fam">
       <%= f.label :email, :class =>"signuplabel" %>
       <%= f.text_field :email, :class =>"signupfield", placeholder: "Enter email" %>
      </p>
      
-     <p>
+     <p class="font-fam">
       <%= f.label :password, :class =>"signuplabel" %>
       <%= f.password_field :password, :class =>"signupfield", placeholder: "Enter password" %>
      </p>
 
     <br />
-     <p><%= f.submit "Create Account", class: "btn btn-sm btn-primary" %></p>
+     <p class="font-fam"><%= f.submit "Create Account", class: "btn btn-sm btn-primary" %></p>
     <% end %>
    </section>
-   <img src="assets/images/beta.png"><span style="font-size:11px;"> 1.0</span>
+   <img src="assets/images/beta.png"><span class="font-fam" style="font-size:11px;"> 1.0</span>
 </div>
 
 <br />

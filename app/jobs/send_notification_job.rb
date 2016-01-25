@@ -21,4 +21,10 @@ class SendNotificationJob < ActiveJob::Base
   Mailer.invitation(@invitation).deliver_later
   end
   
+  def perform(user, follower)
+  @user = user
+  @follower = follower
+  UserMailer.mewfollow_email(@user, @follower).deliver_later
+  end
+  
 end

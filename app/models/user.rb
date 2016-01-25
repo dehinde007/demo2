@@ -11,6 +11,12 @@ belongs_to :invitation
     end
 end
 
+ def to_param
+   self.username
+ end
+ 
+
+
 #avatar
   has_attached_file :avatar, styles: {
     mini: '38x38#', 
