@@ -27,7 +27,7 @@ class StaticPagesController < ApplicationController
   def privacy
   end
   
-  def about_us
+  def vision
    
   end
   

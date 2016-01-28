@@ -141,6 +141,26 @@ a#next:hover {
   margin-top: 50px;
 }
 
+.hov:hover{
+  background: none;
+}
+
+.minf a:hover{
+  background: none;
+}
+
+/* shared */
+.microusrn{
+  font-family: ralewayregular; 
+  font-weight: bold; 
+  color: #CE2424; 
+  font-size: 100%;
+}
+
+.microusrn:visited{
+  color: #CE2424;
+}
+
 /* invite */
 .invite{
   text-align: center;
@@ -232,7 +252,7 @@ label{
 
 p .sr{
   background: white;
-  height: 21px;
+  height: 24px;
   border-color: #D63636;
   border: 0px;
   outline: none;
@@ -270,6 +290,15 @@ p .sr{
   text-align: center;
 }
 
+.ckl:visited{
+  color: white;
+}
+
+.carousel .item img{
+  margin: 0 auto;
+}
+
+
 /* help */
 .help{
   background: white;
@@ -304,6 +333,10 @@ p .sr{
 /* user_index */
 .allusers{
   padding-top: 15px;
+}
+
+.topsrcbar{
+  margin-top: -50px;
 }
 
 /* new_micropost */
@@ -387,6 +420,14 @@ p .sr{
   font-size: 13px;
 }
 
+.ckl2:visited{
+  color: #337ab7;
+}
+
+.ckl2:hover{
+  background: none;
+}
+
 /* home */
 .pager{
   font-size: 60%;
@@ -433,6 +474,11 @@ p .sr{
   font-family: ralewayregular;
   font-weight: bold;
 }
+
+.feedusern:visited{
+  color: #CE2424;
+}
+
 
 .feedtime{
   font-size: 80%;
@@ -681,6 +727,30 @@ p .sr{
   font-family: ralewayregular;
 }
 
+.footerlnk{
+  color: black;
+}
+
+.footerlnk:visited{
+  color: black;
+}
+
+.footerlnk:hover{
+  color: black;
+}
+
+.wfooterlnk{
+  color: white;
+}
+
+.wfooterlnk:visited{
+  color: white;
+}
+
+.wfooterlnk:hover{
+  color: white;
+}
+
 .footdate{
   list-style: none;
   color: black;
@@ -877,7 +947,8 @@ p .sr{
   
 }
 
-@media screen and (max-width: 758px) {
+@media screen and (max-width: 758px) { 
+  
 .feediteminfo{
   width: 450px;
   margin: auto;
@@ -896,6 +967,11 @@ p .sr{
 }
 
 @media screen and (min-width: 758px) {
+  
+.solve{
+  margin-left: 500px!important;
+  margin-top: -40px;
+}    
   .contentlength2{
   width: 500px!important;
   background: white;
@@ -1001,9 +1077,9 @@ p .sr{
 }
 
 }
-
-
+ 
 @media screen and (min-width: 992px) {  
+  
 .feediteminfo{
   width: 500px;
   margin: auto;
@@ -1095,6 +1171,7 @@ p .sr{
   padding-left: 1.2%;
   padding-right: 20.6%;
 }
+
 
 }
 

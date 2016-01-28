@@ -22,7 +22,7 @@
     <% if current_user?(@micropost.user) %>
     <%= link_to "Delete", @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
-                                     title: @micropost.content %>                              
+                                     title: @micropost.content, class: "hov ckl2" %>                              
    <% end %>
 
   
@@ -30,7 +30,7 @@
 	
 <span class="glyphicon glyphicon-comment"></span><span class="shocmmcou"><%= pluralize(@micropost.comments.count, "") %> </span>
 <span class="glyphicon glyphicon-heart"></span><span class="sholikecou"><%= pluralize(@micropost.likes.count, "") %> </span>
-<%= link_to 'All Likes', like_path %> 
+<%= link_to 'All Likes', like_path, class: "hov ckl2" %> 
 
 </div>
 
