@@ -8,9 +8,8 @@
            <ul class="font-fam solve  pull-right">
             
             <li>
-          <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
-          <span class="headglyph glyphicon glyphicon-eye-open"></span>
-          <% end %> 
+          <a href="/users?utf8=✓&search=", data-no-turbolink="true">
+          <span class="headglyph glyphicon glyphicon-eye-open"></span></a> 
             </li>
      
             <li>
@@ -26,10 +25,8 @@
             </li>
       </ul>
         </div>
-        
-           
-          
-        
+
+      
         <% else %>
             <%= link_to "HALLIT", home_path, id: "logo", class: "navbar-brand" %>
         <% end %>
