@@ -28,19 +28,18 @@ class StaticPagesController < ApplicationController
   end
   
   def vision
-   
+   @skip_header = true
   end
   
   def jobs
+    @skip_header = true
     
   end
   
   def contact_us
-    
+    @skip_header = true
   end
   
-  def make_hall
-    
-  end
+
   
 end

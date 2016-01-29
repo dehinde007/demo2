@@ -227,23 +227,16 @@ label{
   border-color: #D63636!important;
 }
 
-.navbar-default .navbar-toggle{
-  border-color: rgb(196, 80, 80)!important;
-  background-color: #D63636;
-  cursor: pointer;
-  &:hover{
-  background-color: rgb(196, 80, 80)!important;
-  }
+.solve{
+  float: right!important;
+  padding-right: 10px;
+  padding-top: 5px;
 }
 
-.navbar-default .navbar-toggle .icon-bar{
-  background-color: white!important; 
-  height: 2px;
-  width: 24px;
-}
-
-.navbar-default .navbar-collapse, .navbar-default .navbar-form{
-  border-color: rgb(196, 80, 80)!important;
+.solve li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 9px;
 }
 
 .search{
@@ -310,12 +303,13 @@ p .sr{
   font-size: 14px;
 } 
 
-/* about_us */
-.jumbotron{
-  background: #F8F8F8;
+/* vision */
+.dejavu{
+  float: right;
 }
 
 .static_head{
+  margin-top: -40px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
