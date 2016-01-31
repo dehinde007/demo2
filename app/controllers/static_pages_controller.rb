@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
     end
   end
  
-  def help
+  def getting_started
     
   end
 
@@ -36,7 +36,7 @@ class StaticPagesController < ApplicationController
     
   end
   
-  def contact_us
+  def support
     @skip_header = true
   end
   

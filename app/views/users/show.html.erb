@@ -72,6 +72,32 @@
       <%= render @microposts %>
    <% else %>   
       <div class="font-fam nohall">Yet to Upload a Hall</p>
+      	
+ <div id="myCarousel" class="carousel slide">
+   <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="active item">
+            	<%= image_tag asset_path('assets/images/1.jpg') %>
+           
+            </div>
+            <div class="item">
+               <a href="/users/sign_up"><img src="assets/images/2.jpg"> </a>
+            </div>
+            <div class="item">
+               <a href="/users/sign_up"><img src="assets/images/3.jpg"> </a>
+            </div>
+            <div class="item">
+               <a href="/users/sign_up"><img src="assets/images/4.jpg"> </a>
+            </div>
+            <div class="item">
+               <a href="/users/sign_up"><img src="assets/images/5.png"> </a>
+            </div>
+          </div>
+      <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+       </div> 	
+      	
    <% end %>
       </div>
    <div class="pager">

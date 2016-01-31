@@ -8720,16 +8720,9 @@ return /******/ (function(modules) { // webpackBootstrap
        */
       value: function _registerControls() {
         this.registerControl('filters', 'filters', __webpack_require__(82));
-        this.registerControl('rotation', 'rotation', __webpack_require__(83));
-        this.registerControl('flip', 'flip', __webpack_require__(84));
+        this.registerControl('saturation', 'saturation', __webpack_require__(87));  
         this.registerControl('brightness', 'brightness', __webpack_require__(85));
-        this.registerControl('contrast', 'contrast', __webpack_require__(86));
-        this.registerControl('saturation', 'saturation', __webpack_require__(87));
         this.registerControl('crop', 'crop', __webpack_require__(88));
-        this.registerControl('radial-blur', 'radial-blur', __webpack_require__(89));
-        this.registerControl('tilt-shift', 'tilt-shift', __webpack_require__(90));
-        this.registerControl('frames', 'frames', __webpack_require__(91));
-        this.registerControl('stickers', 'stickers', __webpack_require__(92));
         this.registerControl('text', 'text', __webpack_require__(93));
       }
     }, {
