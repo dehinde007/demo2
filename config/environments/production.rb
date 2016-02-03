@@ -81,7 +81,7 @@ SampleApp::Application.configure do
   #sengrid settings
   ActionMailer::Base.smtp_settings = {
   :user_name => 'app27421630@heroku.com',
-  :password => 'w2ktivin',
+  :password => 'qjjprlkb7447',
   :domain => 'hallit.co',
   :address => 'smtp.sendgrid.net',
   :port => 587,

@@ -15,11 +15,13 @@
       <%= @user.username %><span class="caret"></span>
     </span>
     <ul class="dropdown-menu">
-     <li><%= link_to pluralize(@user.microposts.count, "Hall"), @user, {:style => 'color: #428bca; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
-     <li>
+     <li><%= link_to pluralize(@user.microposts.count, "Hall"), @user, {:style => 'color: #D63636; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
+     <% if current_user == @user %> 
+     <li class="font-fam">
        <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
        <span class="glyphicon glyphicon-envelope"></span>Invite
        <% end %> 
+       <% end %>
      </li>
      <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
      <li class="font-fam"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
@@ -33,20 +35,19 @@
       
            <ul class="font-fam solve  pull-right">
             
-            <li>
-          <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
-          <span class="headglyph glyphicon glyphicon-eye-open"></span>
-          <% end %> 
+           <li>
+          <a href="/users?utf8=✓&search=" class="hov", data-no-turbolink="true">
+          <span class="headglyph glyphicon glyphicon-eye-open"></span></a> 
             </li>
      
             <li>
-          <%= link_to edit_user_path(current_user), :"data-no-turbolink" => true do %>
+          <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>
           <span class="headglyph glyphicon glyphicon-edit"></span>
           <% end %>    
             </li>
             
            <li> 
-         <%= link_to signout_path, method: "delete" do %>
+         <%= link_to signout_path, class: "hov", method: "delete" do %>
          <span class="headglyph glyphicon glyphicon-off"></span>
           <% end %>        
             </li>
@@ -64,13 +65,14 @@
 <% end %>	
 </p> 
 <p class="userinfo2"><%= @user.bio %></p>
+<p class="userinfo2"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
 
 <div class="container userpost">
 	<hr />
  <section class="font-fam subscribe-btn"><%= render 'follow_form' if signed_in? %></section>
    <% if @user.microposts.any? %>
       <%= render @microposts %>
-   <% else %>   
+   <% elsif current_user == @user %>   
       <div class="font-fam nohall">Yet to Upload a Hall</p>
       	
  <div id="myCarousel" class="carousel slide">
@@ -96,8 +98,9 @@
       <!-- Carousel nav -->
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-       </div> 	
-      	
+       </div>
+   <% else %>    
+ 
    <% end %>
       </div>
    <div class="pager">

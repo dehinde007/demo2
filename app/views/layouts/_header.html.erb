@@ -5,21 +5,21 @@
         <div class="navbar-header">
           <%= link_to "HALLIT", home_path, id: "logo", class: "navbar-brand" %>
           
-           <ul class="font-fam solve  pull-right">
+           <ul class="font-fam solve pull-right">
             
             <li>
-          <a href="/users?utf8=✓&search=", data-no-turbolink="true">
+          <a href="/users?utf8=✓&search=" class="hov", data-no-turbolink="true">
           <span class="headglyph glyphicon glyphicon-eye-open"></span></a> 
             </li>
      
             <li>
-          <%= link_to edit_user_path(current_user), :"data-no-turbolink" => true do %>
+          <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>
           <span class="headglyph glyphicon glyphicon-edit"></span>
           <% end %>    
             </li>
             
            <li> 
-         <%= link_to signout_path, method: "delete" do %>
+         <%= link_to signout_path, class: "hov", method: "delete" do %>
          <span class="headglyph glyphicon glyphicon-off"></span>
           <% end %>        
             </li>

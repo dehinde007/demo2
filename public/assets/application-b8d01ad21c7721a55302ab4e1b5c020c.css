@@ -1,3 +1,982 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+ */
+/* Import the fonts */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(/assets/glyphicons-halflings-regular.eot);
+  src: url(/assets/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"), url(/assets/glyphicons-halflings-regular.woff) format("woff"), url(/assets/glyphicons-halflings-regular.ttf) format("truetype"), url(/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg"); }
+@font-face {
+  font-family: 'bebasregular';
+  src: url(/assets/bebas___1-webfont.eot);
+  src: url(/assets/bebas___1-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/bebas___1-webfont.woff2) format("woff2"), url(/assets/bebas___1-webfont.woff) format("woff"), url(/assets/bebas___1-webfont.ttf) format("truetype"), url(/assets/bebas___1-webfont.svg#bebasregular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ralewayregular';
+  src: url(/assets/raleway-regular1-webfont.eot);
+  src: url(/assets/raleway-regular1-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/raleway-regular1-webfont.woff2) format("woff2"), url(/assets/raleway-regular1-webfont.woff) format("woff"), url(/assets/raleway-regular1-webfont.ttf) format("truetype"), url(/assets/raleway-regular1-webfont.svg#ralewayregular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'sofia_prolight';
+  src: url(/assets/SofiaProLight-webfont.eot);
+  src: url(/assets/SofiaProLight-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/SofiaProLight-webfont.woff2) format("woff2"), url(/assets/SofiaProLight-webfont.woff) format("woff"), url(/assets/SofiaProLight-webfont.ttf) format("truetype"), url(/assets/SofiaProLight-webfont.svg#sofia_prolight) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* application */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F8F8F8 !important;
+  overflow-x: hidden; }
+
+.headglyph {
+  font-size: 17px;
+  color: white; }
+
+/* ad_custom */
+.carousel_ad {
+  float: right; }
+
+.loll {
+  float: left; }
+
+#carousel {
+  width: 100px;
+  height: 100px;
+  margin-top: -70px; }
+
+#slides {
+  overflow: hidden;
+  /* fix ie overflow issue */
+  position: relative;
+  width: 100px;
+  height: 100px; }
+
+#sliders {
+  overflow: hidden;
+  /* fix ie overflow issue */
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-left: -40px; }
+
+/* remove the list styles, width : item width * total items */
+#slides ul {
+  position: relative;
+  left: 0;
+  top: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 750px; }
+
+/* width of the item, in this case I put 250x250x gif */
+#slides li {
+  width: 250px;
+  height: 250px;
+  float: left; }
+
+#slides li img {
+  padding: 5px; }
+
+#sliders ul {
+  position: relative;
+  left: 0;
+  top: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 750px; }
+
+/* width of the item, in this case I put 250x250x gif */
+#sliders li {
+  width: 250px;
+  height: 250px;
+  float: left; }
+
+#sliders li img {
+  padding: 5px; }
+
+/* Styling for prev and next buttons */
+#buttons {
+  padding: 0 0 5px 0;
+  float: right; }
+
+#buttons a {
+  display: block;
+  width: 31px;
+  height: 32px;
+  text-indent: -999em;
+  float: left;
+  outline: 0; }
+
+a#prev {
+  background: url(arrow.gif) 0 -31px no-repeat; }
+
+a#prev:hover {
+  background: url(arrow.gif) 0 0 no-repeat; }
+
+a#next {
+  background: url(arrow.gif) -32px -31px no-repeat; }
+
+a#next:hover {
+  background: url(arrow.gif) -32px 0 no-repeat; }
+
+.clear {
+  clear: both; }
+
+/*global*/
+.yield {
+  margin-top: 50px; }
+
+.btn:focus {
+  outline: none; }
+
+.loaderd {
+  display: none;
+  height: 35px;
+  width: 35px; }
+
+.pleasewait {
+  display: none; }
+
+.font-fam {
+  font-family: ralewayregular; }
+
+.ul-userinfo {
+  margin-top: -40px;
+  margin-left: 10px; }
+
+#flashh {
+  margin-top: 50px; }
+
+.hov:hover {
+  background: none; }
+
+.minf a:hover {
+  background: none; }
+
+.apptrash .glyphicon {
+  color: #CE2424; }
+
+/* shared */
+.microusrn {
+  font-family: ralewayregular;
+  font-weight: bold;
+  color: #CE2424;
+  font-size: 100%; }
+
+.microusrn:visited {
+  color: #CE2424; }
+
+/* invite */
+.invite {
+  text-align: center;
+  margin-top: 20px; }
+
+.betainvite {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 20px;
+  font-weight: bold; }
+
+.invite-form {
+  padding-top: 20px; }
+
+/* kit */
+#container {
+  max-width: 100%;
+  height: 350px;
+  margin-top: 50px; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+#pagename {
+  font-size: 15px;
+  font-weight: bold;
+  color: white; }
+
+.title2 {
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 10px; }
+
+input {
+  background-color: #fdfdfd;
+  border: solid 1px #edeeee;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 200px; }
+
+label {
+  display: block; }
+
+/* header */
+.navbar-default {
+  background: #D63636 !important;
+  border-color: #D63636 !important; }
+
+.solve {
+  float: right !important;
+  padding-right: 10px;
+  padding-top: 5px; }
+
+.solve li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 9px; }
+
+.search {
+  margin-top: 15px; }
+
+p .sr {
+  background: white;
+  height: 32px;
+  border-color: #D63636;
+  border: 0px;
+  outline: none;
+  color: red; }
+
+#logo {
+  font-family: Ariel;
+  color: #f0f0f0;
+  font-size: 1.2em; }
+
+#setting {
+  color: white; }
+
+.logout .glyphicon-lock {
+  color: black; }
+
+/* welcome */
+IMG.coverphone {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.welcomeinfo {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px; }
+
+.welcomeoption {
+  text-align: center; }
+
+.ckl:visited {
+  color: white; }
+
+.appbutton .btn-primary {
+  color: #fff;
+  background-color: #D4C2C2 !important;
+  border-color: #D4C2C2 !important; }
+  .appbutton .btn-primary:hover {
+    background-color: #D63636 !important;
+    border-color: #D63636 !important; }
+
+/* help */
+.help {
+  background: white;
+  height: 430px; }
+
+.help .glyphicon {
+  color: #b87878;
+  font-size: 14px; }
+
+/* vision */
+.dejavu {
+  float: right; }
+
+.static_head {
+  margin-top: -40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 20px;
+  font-family: ralewayregular; }
+
+/* userpartial*/
+.userpartialname {
+  color: black;
+  font-weight: bold;
+  font-size: 13px; }
+
+/* user_index */
+.allusers {
+  padding-top: 15px; }
+
+.topsrcbar {
+  margin-top: -50px; }
+
+/* new_micropost */
+.micropostform {
+  text-align: center;
+  margin-top: 200px; }
+
+.micropostformcontent {
+  margin: auto;
+  left: 0;
+  right: 0; }
+
+.formphoto {
+  margin-left: 40px;
+  cursor: pointer; }
+
+.formcontent {
+  width: 100%;
+  height: 150px;
+  border-style: solid;
+  border-color: #dad4d4;
+  font-size: 13px; }
+
+.formauthor {
+  width: 150px;
+  border-style: solid;
+  border-color: #dad4d4;
+  font-size: 13px; }
+
+/* activity */
+.noactivity {
+  font-weight: bold;
+  color: #BBBBBB;
+  text-align: center;
+  margin-top: 170px; }
+
+/* signup */
+.signup {
+  text-align: center; }
+
+.signuplabel {
+  float: left;
+  color: #585858;
+  font-weight: bold;
+  font-size: 13px; }
+
+.signupfield {
+  height: 30px;
+  width: 100%;
+  font-size: 13px; }
+
+/* sessions */
+.session {
+  margin-top: 20px;
+  text-align: center; }
+
+.sessionlabel {
+  float: left;
+  color: #585858;
+  font-weight: bold;
+  font-size: 13px; }
+
+.sessionfield {
+  height: 30px;
+  width: 100%;
+  font-size: 13px; }
+
+.ckl2:visited {
+  color: #337ab7; }
+
+.ckl2:hover {
+  background: none; }
+
+/* home */
+.pager {
+  font-size: 60%; }
+
+.homepag {
+  font-size: 100%; }
+
+/* feed */
+.nofeed {
+  font-weight: bold;
+  color: #BBBBBB;
+  text-align: center;
+  margin-top: 200px; }
+
+/* feed_item */
+.feedhouse {
+  margin-top: 20px;
+  width: 100%; }
+
+.puffin {
+  width: 100%; }
+
+.feediteminfo {
+  background: white;
+  width: 550px;
+  height: 60px; }
+
+.feediteminfo .img-circle {
+  width: 4%;
+  margin-top: 3%;
+  margin-left: 2%; }
+
+.feedusern {
+  padding-bottom: 20px;
+  color: #CE2424;
+  font-size: 85%;
+  font-family: ralewayregular;
+  font-weight: bold; }
+
+.feedusern:visited {
+  color: #CE2424; }
+
+.feedtime {
+  font-size: 80%;
+  color: grey; }
+
+.contentlength {
+  background: white;
+  font-size: 100%;
+  width: 100%;
+  font-family: ralewayregular;
+  padding-bottom: 10px; }
+
+.contentlength2 {
+  display: none;
+  font-family: ralewayregular; }
+
+.feedlikeicon {
+  color: grey; }
+
+.feedlikeicon .glyphicon-heart {
+  color: #ce1b1b; }
+
+/* micropost_show */
+.posttime {
+  color: #CE2424;
+  font-size: 90%;
+  font-family: ralewayregular;
+  padding-top: 7px;
+  font-weight: bold; }
+
+.showmicrocontent {
+  font-size: 100%;
+  font-family: ralewayregular; }
+
+.showcontentsize {
+  font-size: 90%; }
+
+.postauthor {
+  color: red;
+  font-size: 12px; }
+
+.microviews {
+  color: #DD7070;
+  padding-top: 10px;
+  font-size: 100%; }
+
+.microviews .glyphicon-comment {
+  color: #DD7070; }
+
+.microviews .glyphicon-heart {
+  color: #DD7070; }
+
+.micropostshow hr {
+  margin-top: -1px; }
+
+.micro_like_form {
+  margin-top: -29px;
+  float: right; }
+
+.like_glyph .glyphicon-heart {
+  color: #d1cece; }
+
+.unlike_glyph .glyphicon-heart {
+  color: #DD7070; }
+
+/* commentform */
+.commentform {
+  width: 100%;
+  border-radius: 5px; }
+
+/* commentpartial */
+.commentpartial {
+  list-style: none; }
+
+.commentusername {
+  color: #CE2424;
+  font-size: 100%; }
+  .commentusername:visited {
+    color: #CE2424; }
+
+.commentbody {
+  padding-left: 0px;
+  font-size: 100%; }
+
+/* commentform */
+.commentformbtn .btn-primary {
+  width: 80%;
+  font-weight: bold;
+  border-color: #D63636;
+  background-color: #D63636; }
+
+/* like_show */
+.likes {
+  color: black;
+  font-weight: bold;
+  font-size: 30px; }
+
+/* users_show */
+.nohall {
+  font-weight: bold;
+  color: #BBBBBB;
+  text-align: center;
+  margin-top: 100px; }
+
+.carousel .item img {
+  margin: 0 auto; }
+
+.profile_h .img-circle {
+  width: 20px; }
+
+.profile_h .dropdown {
+  cursor: pointer;
+  font-weight: bold;
+  color: white; }
+
+.userinfo1 {
+  color: black;
+  font-size: 22px;
+  font-family: ralewayregular;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 9px; }
+
+.userinfo2 {
+  color: black;
+  font-size: 13px;
+  font-family: ralewayregular;
+  text-align: center;
+  margin-top: -3px; }
+
+.userpost {
+  margin-top: -15px; }
+
+.subscribe-btn {
+  margin-top: -20px; }
+
+/* un/followform */
+.sub_but .btn-info {
+  width: 70px; }
+
+.sub_but .btn-danger {
+  width: 80px; }
+
+/* _micropost */
+.micropostsquare {
+  /* not using width: 26% now to shrink on the big screen */
+  background: white;
+  float: left; }
+
+.micropostcount {
+  text-align: center;
+  font-size: 13px;
+  color: #6B6A6A; }
+
+.micropostcount .glyphicon-heart {
+  color: #EC585E; }
+
+.micropostcount .glyphicon-comment {
+  color: #EC585E; }
+
+/* micropost_index */
+.micropostindex2 {
+  background: white;
+  float: left; }
+
+/*edituser*/
+.title3 {
+  margin-top: -20px;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal; }
+
+.edit-lab {
+  font-size: 13px;
+  width: 100%;
+  height: 27px; }
+
+.editusr {
+  margin-top: -15px;
+  text-align: center; }
+
+.usereditavi {
+  margin: auto;
+  left: 0;
+  right: 0; }
+
+/* footer */
+.footer {
+  width: 100%; }
+
+.footerul {
+  margin-left: -22px;
+  margin-top: 70px;
+  font-size: 80%;
+  list-style: none;
+  text-align: center; }
+
+.footerul li {
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  word-wrap: break-word;
+  font-family: ralewayregular; }
+
+.footerlnk {
+  color: black; }
+
+.footerlnk:visited {
+  color: black; }
+
+.footerlnk:hover {
+  color: black; }
+
+.wfooterlnk {
+  color: #D4C2C2 !important; }
+
+.wfooterlnk:visited {
+  color: #D4C2C2 !important; }
+
+.wfooterlnk:hover {
+  color: #D63636 !important; }
+
+.footdate {
+  list-style: none;
+  color: black; }
+
+.minfooter {
+  background: #F1EBEB;
+  height: 46px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  opacity: 0.7; }
+
+.minf {
+  padding-left: 0;
+  padding-right: 13.6%; }
+
+.minfooter .glyphicon {
+  padding-top: 10px;
+  color: #b87878;
+  font-size: 17px; }
+
+@media screen and (min-width: 320px) {
+  .carousel_ad {
+    float: right;
+    margin-right: -100px; }
+
+  /* header */
+  #logo {
+    font-size: 1.3em; }
+
+  .micropostsquare {
+    width: 32%;
+    margin-left: 3.6px;
+    margin-top: 3.5px; }
+
+  .micropostcount {
+    display: none; }
+
+  .feediteminfo {
+    height: 50px; }
+
+  .feediteminfo .img-circle {
+    width: 6%;
+    margin-top: 2.5%;
+    margin-left: 5%; }
+
+  .feedusern {
+    font-size: 100%;
+    margin-top: 3%; }
+
+  .feedtime {
+    font-size: 90%;
+    margin-top: 3.5%; }
+
+  .feedcontent {
+    font-size: 85%; }
+
+  .feedlikeicon {
+    font-size: 100%; }
+
+  .minf {
+    padding-left: 1.7%;
+    padding-right: 12.8%; }
+
+  .minfooter .glyphicon {
+    padding-top: 10px;
+    font-size: 22px; }
+
+  .pager {
+    margin-left: -40px; }
+
+  /* micropost_index */
+  .micropostindex2 {
+    width: 32%;
+    margin-left: 3.6px;
+    margin-top: 3.5px; } }
+@media screen and (max-width: 320px) {
+  /* commentform */
+  .commentformbtn .btn-primary {
+    width: 85%;
+    height: 28px;
+    border-color: #D63636;
+    background-color: #D63636; } }
+@media screen and (min-width: 414px) {
+  /* microshow */
+  .posttime {
+    text-align: center; }
+
+  .profiletop .img-circle {
+    width: 150px; }
+
+  .minf {
+    padding-left: 1%;
+    padding-right: 15.1%; }
+
+  .minfooter .glyphicon {
+    padding-top: 10px;
+    font-size: 22px; }
+
+  /* commentform */
+  .commentformbtn .btn-primary {
+    width: 89%;
+    height: 28px;
+    border-color: #D63636;
+    background-color: #D63636; } }
+@media screen and (max-width: 480px) {
+  /* micropost_show */
+  .post-img {
+    text-align: center; }
+
+  .showmicrocontent {
+    margin: auto;
+    left: 0px;
+    right: 0px; } }
+@media screen and (min-width: 480px) {
+  /* feed-item */
+  .contentlength {
+    display: none; }
+
+  .contentlength2 {
+    width: 450px;
+    background: white;
+    display: block;
+    padding-bottom: 10px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  /* micropost_show */
+  .post-img {
+    text-align: center; }
+
+  .showmicrocontent {
+    width: 450px;
+    background: white;
+    margin: auto;
+    left: 0px;
+    right: 0px; }
+
+  .minf {
+    padding-left: 1%;
+    padding-right: 17%; } }
+@media screen and (max-width: 758px) {
+  .feediteminfo {
+    width: 450px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .puffauto .img-responsive {
+    width: 450px;
+    margin: auto;
+    left: 0;
+    right: 0; } }
+@media screen and (min-width: 758px) {
+  .solve {
+    margin-left: 500px !important;
+    margin-top: -40px; }
+
+  .contentlength2 {
+    width: 500px !important;
+    background: white;
+    display: block;
+    padding-bottom: 10px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  /* signup */
+  .signup {
+    border-radius: 5px;
+    height: 360px !important;
+    width: 380px !important;
+    background: white; }
+
+  .signupform {
+    padding-top: 20px; }
+
+  .signupfield {
+    height: 30px;
+    width: 100%;
+    font-size: 13px; }
+
+  /* session */
+  .session {
+    margin-top: 60px;
+    border-radius: 5px;
+    height: 250px !important;
+    width: 350px !important;
+    background: white; }
+
+  .sessionform {
+    margin-top: 30px; }
+
+  .sessionlabel {
+    font-size: 13px; }
+
+  .sessionfield {
+    height: 30px;
+    width: 100%;
+    font-size: 13px; }
+
+  /* feed_item */
+  .feediteminfo {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .puffauto .img-responsive {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .contentlength2 {
+    width: 500px;
+    background: white;
+    display: block;
+    padding-bottom: 10px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .feedcontent {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .micropostsquare {
+    width: 31%;
+    margin-top: 10px;
+    margin-left: 10px; }
+
+  .micropostcount {
+    display: block; }
+
+  .micropostindex2 {
+    width: 31%;
+    margin-top: 10px;
+    margin-left: 12px; }
+
+  .minf {
+    padding-left: 2%;
+    padding-right: 17.5%; } }
+@media screen and (min-width: 992px) {
+  .feediteminfo {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .puffauto .img-responsive {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .feedcontent {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .micropostsquare {
+    width: 31%;
+    margin-top: 20px;
+    margin-left: 20px; }
+
+  .micropostcount {
+    display: block; }
+
+  .micropostindex2 {
+    width: 31%;
+    margin-top: 20px;
+    margin-left: 20px; }
+
+  .minf {
+    padding-left: 2%;
+    padding-right: 18.7%; } }
+@media screen and (min-width: 1200px) {
+  .feediteminfo {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .puffauto .img-responsive {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .feedcontent {
+    width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0; }
+
+  .micropostsquare {
+    width: 25%;
+    margin-top: 40px;
+    margin-left: 62.5px; }
+
+  .micropostcount {
+    display: block; }
+
+  .micropostindex2 {
+    width: 25%;
+    margin-top: 40px;
+    margin-left: 64.5px; }
+
+  .minf {
+    padding-left: 1.2%;
+    padding-right: 20.6%; } }
 /*!
  * Copyright (c) 2013-2015 9elements GmbH
  *
@@ -22,6 +1001,7 @@
  *
  * For commercial use, please contact us at contact@9elements.com
  */
+
 .imglykit-container {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -998,3 +1978,58 @@
   width: 50px;
   margin: 2px;
   cursor: pointer; }
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+  a:visited {
+    color: #666; }
+  a:hover {
+    color: #fff;
+    background-color: #000; }
+
+div.field, div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square; }

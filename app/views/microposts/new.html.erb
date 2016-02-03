@@ -1,36 +1,19 @@
 <header class="indexhead">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <span class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </span>
-          <span id="pagename" class="navbar-brand">New Hall</span>
-        </div>
-        
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-         
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
            
-           <ul class="font-fam nav navbar-nav navbar-right">
-            <li>
-            	<div class="search">
-                <% if signed_in? %> 		
-                <%= render 'shared/search' %>                
-                <% end %>
-                </div>
-            </li>
+    <span id="pagename" class="navbar-brand font-fam">New Hall</span>
+      
+           <ul class="font-fam solve  pull-right">
             
-            <li>
-          <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
-          <span class="headglyph glyphicon glyphicon-envelope"></span>
-          <% end %> 
+           <li>
+          <a href="/users?utf8=✓&search=", data-no-turbolink="true">
+          <span class="headglyph glyphicon glyphicon-eye-open"></span></a> 
             </li>
      
             <li>
-          <%= link_to edit_user_path(current_user) do %>
+          <%= link_to edit_user_path(current_user), :"data-no-turbolink" => true do %>
           <span class="headglyph glyphicon glyphicon-edit"></span>
           <% end %>    
             </li>
@@ -40,12 +23,11 @@
          <span class="headglyph glyphicon glyphicon-off"></span>
           <% end %>        
             </li>
-
       </ul>
-        </div><!-- /.navbar-collapse -->    
+        </div>   
       </div><!-- /.container -->
     </nav>
-</header> 
+</header>
 
 <link rel="stylesheet" href="/css/imglykit-night-ui.css" />
 <script src="/js/imglykit.js"></script>
@@ -70,7 +52,7 @@
    <%= f.text_field :author, :class =>"formauthor font-fam", placeholder: "Author" %>
   </p>
   
-  <p> 
+  <p class="appbutton"> 
    <%= f.submit "Share to subscribers", class: "loadbut btn btn-sm btn-primary font-fam" %>
   </p>
   

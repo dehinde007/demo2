@@ -149,6 +149,10 @@ a#next:hover {
   background: none;
 }
 
+.apptrash .glyphicon{
+  color: #CE2424;
+}
+
 /* shared */
 .microusrn{
   font-family: ralewayregular; 
@@ -177,7 +181,6 @@ a#next:hover {
 .invite-form{
   padding-top: 20px;
 }
-
 
 
 /* kit */
@@ -245,7 +248,7 @@ label{
 
 p .sr{
   background: white;
-  height: 24px;
+  height: 32px;
   border-color: #D63636;
   border: 0px;
   outline: none;
@@ -271,12 +274,18 @@ p .sr{
  
 }
 
+IMG.coverphone{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .welcomeinfo{
   font-weight: bold;
-  color: white;
+  color: black;
   font-size: 20px;
   text-align: center;
-  margin-top: 280px;
+  margin-top: 30px;
 }
 
 .welcomeoption{
@@ -287,17 +296,15 @@ p .sr{
   color: white;
 }
 
-.carousel .item img{
-  margin: 0 auto;
+.appbutton .btn-primary {
+    color: #fff;
+    background-color: #D4C2C2 !important;
+    border-color: #D4C2C2 !important;
+    &:hover {
+    background-color: #D63636 !important;
+    border-color: #D63636 !important;  
+    }   
 }
-
-
-IMG.blddd {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
- }
-
 
 /* help */
 .help{
@@ -578,6 +585,9 @@ IMG.blddd {
 .commentusername{
   color: #CE2424; 
   font-size: 100%;
+  &:visited{
+  color: #CE2424;  
+  }
 }
 
 .commentbody{
@@ -608,6 +618,10 @@ IMG.blddd {
   margin-top: 100px;
 }
 
+.carousel .item img{
+  margin: 0 auto;
+}
+
 .profile_h .img-circle{
   width: 20px;
 }
@@ -624,14 +638,15 @@ IMG.blddd {
   font-family: ralewayregular;
   font-weight: bold;
   text-align: center;
+  padding-top: 9px;
 }
-
 
 .userinfo2{
   color: black;
   font-size: 13px;
   font-family: ralewayregular;
   text-align: center;
+  margin-top: -3px;
 }
 
 .userpost{
@@ -741,15 +756,15 @@ IMG.blddd {
 }
 
 .wfooterlnk{
-  color: white;
+  color: #D4C2C2 !important;
 }
 
 .wfooterlnk:visited{
-  color: white;
+  color: #D4C2C2 !important;
 }
 
 .wfooterlnk:hover{
-  color: white;
+  color: #D63636 !important;
 }
 
 .footdate{
@@ -861,6 +876,7 @@ IMG.blddd {
 }
 
 @media screen and (min-width: 414px) {
+  
 /* microshow */
 .micropostshow{
   

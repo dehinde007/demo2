@@ -81,6 +81,11 @@
     </p>
     
     <p class="font-fam">
+      <%= f.label :website, class: "edit-lab" %>
+      <%= f.text_field :website, class: "edit-lab" %>
+    </p>
+    
+    <p class="font-fam">
       <%= f.label :password, class: "edit-lab" %>
       <%= f.password_field :password, class: "edit-lab" %>
     </p>
@@ -90,7 +95,7 @@
       <%= f.password_field :password_confirmation, class: "edit-lab" %>
     </p>
    
-   <p class="font-fam"><%= f.submit "Save", class: "edit_butt btn btn-sm btn-primary" %></p>
+   <p class="font-fam appbutton"><%= f.submit "Save", class: "edit_butt btn btn-sm btn-primary" %></p>
       
     <% end %>
     

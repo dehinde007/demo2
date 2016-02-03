@@ -1,11 +1,13 @@
 <p><li class="commentpartial" id=<%= dom_id(comment) %>>
 
- <%= link_to comment.user.username, comment.user, class: "commentusername" %>
+ <%= link_to comment.user.username, comment.user, class: "commentusername hov" %>
 
  <span class="commentbody">
- <%= comment.body %>     <%= link_to 'Delete', [comment.micropost, comment], :method => :delete,
+ <%= comment.body %>  <%= link_to [comment.micropost, comment], :method => :delete,
                                                                              :remote => true, 
-                                                                             :class => 'delete_pony'%>
+                                                                             :class => 'delete_pony hov apptrash' do %>
+                                                                <span class="glyphicon glyphicon-trash", style="font-size: 10px;"></span>             
+                                                                             <% end %>
  </span>
 
 </li>

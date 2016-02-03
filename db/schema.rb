@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151219152819) do
+ActiveRecord::Schema.define(version: 20160202124550) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(version: 20151219152819) do
     t.integer  "invitation_id"
     t.boolean  "verify"
     t.integer  "invitation_limit"
+    t.string   "website"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
