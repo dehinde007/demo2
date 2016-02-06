@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
         @comment.micropost.user = @micropost.user
         @comment.user = current_user
         @comment.save
-        UserMailer.newcomment_email(@comment).deliver
+        UserMailer.delay.newcomment_email(@comment)
         @comment.create_activity :create, owner:
         current_user
         respond_to do |format|

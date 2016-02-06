@@ -110,6 +110,15 @@ a#next:hover {
 .clear {clear:both}
 
 /*global*/
+.app_a_link a:hover {
+    background: none;
+}
+
+.app_a_link a:visited {
+    color: #337ab7;
+    background: none;
+}
+
 .yield{
   margin-top: 50px;
 }

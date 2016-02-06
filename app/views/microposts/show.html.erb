@@ -10,7 +10,7 @@
     
    <section class="showmicrocontent">
    	<%= render "shared/microusrn" %>
-   <span class="showcontentsize"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
+   <span class="showcontentsize app_a_link"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
    <span class="postauthor">
 <i>  	
    	<% if @micropost.author? %>
