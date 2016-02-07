@@ -114,6 +114,10 @@ a#next:hover {
     background: none;
 }
 
+.btn-primary:focus {
+  outline: none;
+}
+
 .app_a_link a:visited {
     color: #337ab7;
     background: none;
@@ -315,13 +319,14 @@ IMG.coverphone{
     }   
 }
 
-/* help */
-.help{
+/* Gettingstarted */
+.getstarted{
   background: white;
   height: 430px;
+  margin-top: 5px;
 }
 
-.help .glyphicon{
+.getstarted .glyphicon{
   color: rgb(184, 120, 120); 
   font-size: 14px;
 } 
@@ -345,6 +350,13 @@ IMG.coverphone{
   color: black; 
   font-weight: bold; 
   font-size: 13px;
+  &:visited{
+  color: black;
+  }
+  &:hover{
+   background: none; 
+  }
+  
 }
 
 /* user_index */
@@ -355,6 +367,7 @@ IMG.coverphone{
 .topsrcbar{
   margin-top: -50px;
 }
+
 
 /* new_micropost */
 .micropostform{

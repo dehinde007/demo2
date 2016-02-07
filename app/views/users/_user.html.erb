@@ -2,7 +2,7 @@
 <%= image_tag user.avatar.url(:mini), class: "img-circle" %>
 <ul class="ul-userinfo" style="list-style-type:none">
  <li>
-  <%= link_to user.name, user, class: " font-fam userpartialname" %>
+  <span><%= link_to user.name, user, class: "font-fam userpartialname" %></span>
   <% if current_user.admin? && !current_user?(user) %>
   | <%= link_to "delete", user, method: :delete,
   data: { confirm: "You sure?" } %>

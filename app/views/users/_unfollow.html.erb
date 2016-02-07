@@ -1,6 +1,6 @@
 <span class="sub_but"><%= form_for(current_user.relationships.find_by(followed_id: @user.id),
              html: { method: :delete },
              remote: true) do |f| %>
-  <%= f.submit "Unsubscribe", class: "btn btn-danger btn-xs" %>
+  <%= f.submit "Unsubscribe", class: "btn-primary btn-danger btn-xs" %>
 <% end %>
 </span>
