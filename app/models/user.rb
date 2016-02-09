@@ -5,7 +5,7 @@ belongs_to :invitation
 #user search
   def self.search(search)
     if search 
-      where('name LIKE ?', "%#{search}%")
+      where('name LIKE ? or username like ?', "%#{search}%", "%#{search}%")
     else
    scoped  
     end
@@ -14,8 +14,6 @@ end
  def to_param
    self.username
  end
- 
-
 
 #avatar
   has_attached_file :avatar, styles: {
@@ -42,8 +40,8 @@ has_attached_file :photo
   has_many :followers, through: :reverse_relationships, source: :follower
   before_save { self.email = email.downcase }
   before_create :create_remember_token
-  validates :name, presence: true, length: { maximum: 50 }
-  validates :username, presence: true, length: { maximum: 50 },
+  validates :name, presence: true, length: { maximum: 25 }
+  validates :username, presence: true, length: { maximum: 25 },
                        uniqueness: { case_sensitive: false }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },

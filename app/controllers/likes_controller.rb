@@ -17,7 +17,7 @@ def new
        @like.micropost.user = @micropost.user
      @like.user = current_user
      @like.save
-       UserMailer.delay.newlike_email(@like)
+       UserMailer.newlike_email(@like).deliver
        @like.create_activity :create, owner: current_user
        flash[:notice] = "Hall liked."
        respond_to do |format|
