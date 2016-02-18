@@ -8,11 +8,6 @@ html, body{
   overflow-x: hidden;
 }
 
-.headglyph{
-  font-size: 17px;
-  color: white;
-}
-
 /* ad_custom */
 .carousel_ad{
   float: right;
@@ -167,6 +162,16 @@ a#next:hover {
 }
 
 /* shared */
+p .sr{
+  background: white;
+  height: 32px;
+  border-color: #D63636;
+  border: 0px;
+  outline: none;
+  color: black;
+  text-align:center;
+}
+
 .microusrn{
   font-family: ralewayregular; 
   font-weight: bold; 
@@ -194,7 +199,6 @@ a#next:hover {
 .invite-form{
   padding-top: 20px;
 }
-
 
 /* kit */
 #container{
@@ -237,10 +241,19 @@ label{
 }
 
 /* header */ 
-
 .navbar-default{
   background: #D63636!important;
-  border-color: #D63636!important;
+  border-color: #D63636!important;  
+}
+
+.navbar-header{
+  width: 100%;
+}
+
+#logo{
+  font-family: Ariel;
+  color: rgb(240, 240, 240);
+  font-size: 1.2em; 
 }
 
 .solve{
@@ -255,39 +268,14 @@ label{
   padding: 9px;
 }
 
-.search{
-  margin-top: 15px;
-}
-
-p .sr{
-  background: white;
-  height: 32px;
-  border-color: #D63636;
-  border: 0px;
-  outline: none;
-  color: red;
-}
-
-#logo{
-  font-family: Ariel;
-  color: rgb(240, 240, 240);
-  font-size: 1.2em; 
-}
-
-#setting{
+.headglyph{
+  font-size: 17px;
   color: white;
 }
 
-.logout .glyphicon-lock{
-  color: black;
-}
-
 /* welcome */
-.welcomewall{
- 
-}
-
 IMG.coverphone{
+    margin-top: 70px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -295,10 +283,8 @@ IMG.coverphone{
 
 .welcomeinfo{
   font-weight: bold;
-  color: black;
-  font-size: 20px;
+  font-size: 26px;
   text-align: center;
-  margin-top: 30px;
 }
 
 .welcomeoption{
@@ -368,6 +354,9 @@ IMG.coverphone{
   margin-top: -50px;
 }
 
+.usindexsearch{
+  margin-top: 15px;
+}
 
 /* new_micropost */
 .micropostform{
@@ -774,19 +763,7 @@ IMG.coverphone{
 }
 
 .footerlnk:hover{
-  color: black;
-}
-
-.wfooterlnk{
-  color: #D4C2C2 !important;
-}
-
-.wfooterlnk:visited{
-  color: #D4C2C2 !important;
-}
-
-.wfooterlnk:hover{
-  color: #D63636 !important;
+  color: white;
 }
 
 .footdate{
@@ -815,6 +792,24 @@ IMG.coverphone{
 } 
 
 @media screen and (min-width: 320px) {
+/* welcome */
+.wfooterlnk{
+  color: black;
+}
+
+.wfooterlnk:visited{
+  color: black;
+}  
+
+.wfooterlnk:hover{
+  color: black;
+}
+
+.welcomeinfo{
+  color: black;
+  margin-top: 60px;
+}    
+  
 .carousel_ad{
   float: right;
   margin-right: -100px;
@@ -886,7 +881,7 @@ IMG.coverphone{
 
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {  
 /* commentform */
 .commentformbtn .btn-primary{
  width: 85%; 
@@ -898,7 +893,6 @@ IMG.coverphone{
 }
 
 @media screen and (min-width: 414px) {
-  
 /* microshow */
 .micropostshow{
   
@@ -986,8 +980,7 @@ IMG.coverphone{
   
 }
 
-@media screen and (max-width: 758px) { 
-  
+@media screen and (max-width: 758px) {  
 .feediteminfo{
   width: 450px;
   margin: auto;
@@ -1005,13 +998,35 @@ IMG.coverphone{
 
 }
 
-@media screen and (min-width: 758px) {
+@media screen and (min-width: 758px) {  
+IMG.coverphone{
+   display: none;
+}
   
-.solve{
-  margin-left: 500px!important;
-  margin-top: -40px;
-}    
-  .contentlength2{
+.question {
+   background-image: url("/assets/images/banner3.jpg");
+   background-size: 100% 670px;
+   background-repeat: no-repeat; 
+}  
+ 
+.welcomeinfo{
+  margin-top: 470px;
+  color: white;
+} 
+
+.wfooterlnk{
+  color: white;
+}
+
+.wfooterlnk:visited{
+  color: white;
+}  
+
+.wfooterlnk:hover{
+  color: white;
+}
+    
+.contentlength2{
   width: 500px!important;
   background: white;
   display: block;
@@ -1117,7 +1132,21 @@ IMG.coverphone{
 
 }
  
-@media screen and (min-width: 992px) {  
+@media screen and (min-width: 992px) {    
+IMG.coverphone{
+   display: none;
+}
+  
+.question {
+   background-image: url("/assets/images/banner3.jpg");
+   background-size: 100% 670px;
+   background-repeat: no-repeat; 
+}
+
+.welcomeinfo{
+  margin-top: 470px;
+  color: white;
+}  
   
 .feediteminfo{
   width: 500px;
@@ -1164,6 +1193,20 @@ IMG.coverphone{
 }
 
 @media screen and (min-width: 1200px) {
+IMG.coverphone{
+  display: none;
+}
+  
+.question {
+  background-image: url("/assets/images/banner3.jpg");
+  background-size: 100% 670px;
+  background-repeat: no-repeat; 
+}
+
+.welcomeinfo{
+  margin-top: 470px;
+  color: white;
+}
 
 .feedhouse{
 

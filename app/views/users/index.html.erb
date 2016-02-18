@@ -1,11 +1,10 @@
-
-   <div class="topsrcbar">
-      <div class="search">
+<div class="topsrcbar">
+      <div class="usindexsearch">
       <% if signed_in? %> 		
       <%= render 'shared/search' %>                
       <% end %>
       </div>
-  </div>
+</div>
 
 <div class="container allusers">
   <%= render @users %>
