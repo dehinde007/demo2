@@ -2,7 +2,7 @@
 
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
+    <div class="">
     <div class="navbar-header">
            
   <span id="pagename" class="navbar-brand">
@@ -19,7 +19,7 @@
      <% if current_user == @user %> 
      <li class="font-fam">
        <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
-       <span class="glyphicon glyphicon-envelope"></span>Invite
+       <span class="glyphicon glyphicon-envelope"></span>Invite Someone
        <% end %> 
        <% end %>
      </li>
