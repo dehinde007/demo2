@@ -315,6 +315,16 @@ IMG.coverphone{
   font-size: 14px;
 } 
 
+/* search */
+.static-search{
+  color: black;
+}
+
+.static-search .glyphicon-star-empty{
+  color: gold;
+}
+
+
 /* vision */
 .dejavu{
   float: right;
@@ -716,20 +726,32 @@ IMG.coverphone{
 
 .edit-lab{
   font-size: 13px;
-  width: 100%;
-  height: 27px;
+  width: 90%;
+  height: 27px; 
+  border-top-color: #F8F8F8;
+  border-left-color: #F8F8F8;
+  border-right-color: #F8F8F8;
+  border-bottom-color: #EAEAEA;
+  background: #F8F8F8;
+}
+
+.edit-lab:focus{
+  outline: none;
+}
+
+.edit_butt{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.usereditavi{
+  margin-left: 20px;
 }
 
 .editusr{
   margin-top: -15px;
-  text-align: center;
 }
 
-.usereditavi{
-  margin: auto;
-  left: 0;
-  right: 0;
-}
 
 /* footer */
 .footer{

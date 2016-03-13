@@ -1,0 +1,38 @@
+<div class="topsrcbar">
+  <div class="usindexsearch">
+   <% if signed_in? %> 		
+   <%= render 'shared/search' %>                
+   <% end %>
+  </div>
+</div>
+
+<p class="container static-search font-fam"><span class="headglyph glyphicon glyphicon-star-empty"></span> Favourites to follow</p>
+<br />
+<div class="container">
+<% @users.each do |user| %>
+
+<span class="font-fam">
+<%= image_tag user.avatar.url(:mini), class: "img-circle" %>
+<ul class="ul-userinfo" style="list-style-type:none">
+  <li>
+  <span><%= link_to user.username, user, class: "font-fam userpartialname" %></span>
+  <% if current_user.admin? && !current_user?(user) %>
+  | <%= link_to "delete", user, method: :delete,
+  data: { confirm: "You sure?" } %>
+  <% end %>
+  
+  <% if user.verify == true%>
+  <img src="/assets/images/verify.png" width="15" height="15" data-toggle="tooltip" data-placement="top" title="Verified Account"/>
+  <% else %>
+  <% end %>
+  </li>
+  
+  <li class="font-fam"><%= user.name %></li>
+</ul>
+<hr />
+</span>
+
+<% end %>
+</div>
+
+<div class="footer2"><%= render 'layouts/minfooter' %></div>

@@ -31,6 +31,11 @@ class StaticPagesController < ApplicationController
    @skip_header = true
   end
   
+  def search
+   @skip_header = true  
+   @users = User.find([1,2])
+  end
+  
   def jobs
     @skip_header = true
     

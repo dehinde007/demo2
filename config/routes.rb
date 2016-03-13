@@ -38,6 +38,7 @@ SampleApp::Application.routes.draw do
   match '/privacy', to: 'static_pages#privacy', via: 'get'
   match '/getting_started', to: 'static_pages#getting_started', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
+  match '/search', to: 'static_pages#search', via: 'get'
   match '/make_hall', to: 'static_pages#make_hall', via: 'get'
   match '/home', to: 'static_pages#home', via: 'get'
   match '/halls', to: 'microposts#index', via: 'get'

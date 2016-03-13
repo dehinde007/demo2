@@ -8,18 +8,19 @@
            <ul class="font-fam solve  pull-right">
             
            <li>
-          <a href="/users?utf8=✓&search=", data-no-turbolink="true">
-          <span class="headglyph glyphicon glyphicon-eye-open"></span></a> 
+           <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="headglyph glyphicon glyphicon-eye-open"></span>
+          <% end %> 
             </li>
      
             <li>
-          <%= link_to edit_user_path(current_user), :"data-no-turbolink" => true do %>
+          <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>
           <span class="headglyph glyphicon glyphicon-edit"></span>
           <% end %>    
             </li>
             
            <li> 
-         <%= link_to signout_path, method: "delete" do %>
+         <%= link_to signout_path, class: "hov", method: "delete" do %>
          <span class="headglyph glyphicon glyphicon-off"></span>
           <% end %>        
             </li>

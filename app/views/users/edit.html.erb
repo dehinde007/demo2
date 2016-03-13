@@ -8,9 +8,10 @@
            <ul class="font-fam solve  pull-right">
             
            <li>
-          <a href="/users?utf8=✓&search=" class="hov", data-no-turbolink="true">
-          <span class="headglyph glyphicon glyphicon-eye-open"></span></a> 
-            </li>
+           <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="headglyph glyphicon glyphicon-eye-open"></span>
+          <% end %> 
+           </li>
      
             <li>
           <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>
@@ -37,47 +38,47 @@
 
  <div class="container editusr"> 
  
-    <p class="font-fam">
-	 <%= f.label :fullname, class: "edit-lab" %>
-     <%= f.text_field :name, class: "edit-lab" %>
+    <p class="container font-fam">
+     <span class="glyphicon glyphicon-user"></span>
+     <%= f.text_field :name, class: "edit-lab", placeholder: "fullname" %>
     </p>
    
-    <p class="font-fam">
-     <%= f.label :username, class: "edit-lab" %>
-     <%= f.text_field :username, class: "edit-lab" %>
+    <p class="container font-fam">
+     <span class="glyphicon glyphicon-tag"></span>
+     <%= f.text_field :username, class: "edit-lab", placeholder: "username" %>
     </p>
       
-    <p class="font-fam">
-      <%= f.label :avatar, class: "edit-lab" %>
+    <p class="container font-fam">
+      <span class="glyphicon glyphicon-paperclip"></span>
       <section class="editavi"><%= f.file_field :avatar, class: "usereditavi" %></section>
     </p>
    
-    <p class="font-fam">
-      <%= f.label :email, class: "edit-lab" %>
-      <%= f.text_field :email, class: "edit-lab" %>
+    <p class="container font-fam">
+      @
+      <%= f.text_field :email, class: "edit-lab", placeholder: "email" %>
     </p> 
    
-    <p class="font-fam">
-      <%= f.label :bio, class: "edit-lab" %>
-      <%= f.text_field :bio, class: "edit-lab" %>
+    <p class="container font-fam">
+      <span class="glyphicon glyphicon-list-alt"></span>
+      <%= f.text_field :bio, class: "edit-lab", placeholder: "bio"%>
     </p>
     
-    <p class="font-fam">
-      <%= f.label :website, class: "edit-lab" %>
-      <%= f.text_field :website, class: "edit-lab" %>
+    <p class="container font-fam">
+      <span class="glyphicon glyphicon-globe"></span>
+      <%= f.text_field :website, class: "edit-lab", placeholder: "website" %>
     </p>
     
-    <p class="font-fam">
-      <%= f.label :password, class: "edit-lab" %>
-      <%= f.password_field :password, class: "edit-lab" %>
+    <p class="container font-fam">
+      <span class="glyphicon glyphicon-lock"></span>
+      <%= f.password_field :password, class: "edit-lab", placeholder: "password" %>
     </p>
     
-    <p class="font-fam">
-      <%= f.label :password_confirmation, class: "edit-lab" %>
-      <%= f.password_field :password_confirmation, class: "edit-lab" %>
+    <p class="container font-fam">
+      <span class="glyphicon glyphicon-ok-circle"></span>
+      <%= f.password_field :password_confirmation, class: "edit-lab", placeholder: "password confirmation" %>
     </p>
    
-   <p class="font-fam appbutton"><%= f.submit "Save", class: "edit_butt btn-primary btn-sm " %></p>
+   <p class="font-fam appbutton edit_butt"><%= f.submit "Save", class: "btn-primary btn-sm" %></p>
       
     <% end %>
     
