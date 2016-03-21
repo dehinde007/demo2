@@ -34,5 +34,12 @@
 
 <% end %>
 </div>
+<p class="container static-search font-fam"><span class="headglyph glyphicon glyphicon-shopping-cart"></span>Sponsored Post</p>
+<% @microposts.each do |micropost| %>
+
+<p class="container font-fam"><%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost, :"data-no-turbolink" => true %></p>
+
+
+<% end %>
 
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

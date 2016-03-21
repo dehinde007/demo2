@@ -34,6 +34,7 @@ class StaticPagesController < ApplicationController
   def search
    @skip_header = true  
    @users = User.find([1,2])
+   @microposts = Micropost.find([19,14])
   end
   
   def jobs

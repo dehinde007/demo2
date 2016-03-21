@@ -183,7 +183,7 @@ p .sr{
   color: #CE2424;
 }
 
-/* invite */
+/* invitation */
 .invite{
   text-align: center;
   margin-top: 20px;
@@ -198,6 +198,11 @@ p .sr{
 
 .invite-form{
   padding-top: 20px;
+}
+
+.invite-fill{
+  width: 90%;
+  height: 30px;
 }
 
 /* kit */
@@ -306,7 +311,7 @@ IMG.coverphone{
 /* Gettingstarted */
 .getstarted{
   background: white;
-  height: 450px;
+  height: 500px;
   margin-top: 5px;
 }
 
@@ -324,6 +329,9 @@ IMG.coverphone{
   color: gold;
 }
 
+.static-search .glyphicon-shopping-cart{
+  color: black;
+}
 
 /* vision */
 .dejavu{
@@ -897,6 +905,7 @@ IMG.coverphone{
   width: 32%;
   margin-left: 3.6px;
   margin-top: 3.5px;
+  margin-top: 15px;
 }
 
 }
