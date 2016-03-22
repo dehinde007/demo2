@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322114748) do
+ActiveRecord::Schema.define(version: 20160202124550) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
-    t.string   "trackable_type"
+    t.string   "trackable_type", limit: 255
     t.integer  "owner_id"
-    t.string   "owner_type"
-    t.string   "key"
+    t.string   "owner_type",     limit: 255
+    t.string   "key",            limit: 255
     t.text     "parameters"
     t.integer  "recipient_id"
-    t.string   "recipient_type"
+    t.string   "recipient_type", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,11 +56,12 @@ ActiveRecord::Schema.define(version: 20160322114748) do
 
   create_table "invitations", force: :cascade do |t|
     t.integer  "sender_id"
-    t.string   "recipient_email"
+    t.string   "recipient_email", limit: 255
     t.datetime "sent_at"
-    t.string   "new"
+    t.string   "new",             limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token",           limit: 255
   end
 
   create_table "likes", force: :cascade do |t|
@@ -72,16 +73,15 @@ ActiveRecord::Schema.define(version: 20160322114748) do
   end
 
   create_table "microposts", force: :cascade do |t|
-    t.string   "content"
+    t.string   "content",            limit: 255
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
+    t.string   "photo_file_name",    limit: 255
+    t.string   "photo_content_type", limit: 255
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
-    t.string   "author"
-    t.integer  "likes_count"
+    t.string   "author",             limit: 255
   end
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
@@ -113,21 +113,24 @@ ActiveRecord::Schema.define(version: 20160322114748) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
+    t.string   "name",                limit: 255
+    t.string   "email",               limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password_digest"
-    t.string   "remember_token"
+    t.string   "password_digest",     limit: 255
+    t.string   "remember_token",      limit: 255
     t.boolean  "admin"
-    t.string   "username"
+    t.string   "username",            limit: 255
     t.text     "bio"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "reset_digest",        limit: 255
+    t.datetime "reset_sent_at"
     t.integer  "invitation_id"
     t.boolean  "verify"
+    t.integer  "invitation_limit"
     t.string   "website"
   end
 
