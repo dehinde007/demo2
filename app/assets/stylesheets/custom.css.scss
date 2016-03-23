@@ -37,7 +37,7 @@ html, body{
   position:relative;
   width:100px;
   height:100px;
-  margin-left: -40px;
+  margin-left: -50px;
 }
 /* remove the list styles, width : item width * total items */    
 #slides ul {
@@ -331,6 +331,10 @@ IMG.coverphone{
 
 .static-search .glyphicon-shopping-cart{
   color: black;
+}
+
+.divsearch .img-circle{
+  width: 40px;
 }
 
 /* vision */

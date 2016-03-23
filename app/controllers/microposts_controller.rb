@@ -4,11 +4,9 @@ class MicropostsController < ApplicationController
 
   def index
     @skip_header = true
-    @microposts = Micropost.all
-    @microposts = @microposts.paginate(page: params[:page], per_page: 15)
+    @microposts = Micropost.paginate(page: params[:page], per_page: 15)
   end
-  
-  
+
   def show
    @micropost = Micropost.find(params[:id])
    @comments = @micropost.comments
