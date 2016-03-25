@@ -25,7 +25,7 @@ class UsersController < ApplicationController
    UserMailer.delay.welcome_email(@user)
       sign_in @user
       flash[:success] = "Welcome to Hallit"
-      redirect_to help_path
+      redirect_to getting_started_path
     else
       render 'new'
     end

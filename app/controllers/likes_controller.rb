@@ -11,12 +11,11 @@ def new
   end
 
  def create
-        @micropost = Micropost.find(params[:micropost_id])
-    @like = Like.new(params[:like].permit(:user_id, :micropost_id))
-       @like.micropost = @micropost
-       @like.micropost.user = @micropost.user
-     @like.user = current_user
-     @like.save
+       @micropost = Micropost.find(params[:micropost_id])
+       @like = current_user.likes.new(like_params)
+       @like.micropost =  @micropost
+       @like.user_id = current_user.id
+       @like.save
        UserMailer.delay.newlike_email(@like)
        @like.create_activity :create, owner: current_user
        flash[:notice] = "Hall liked."
@@ -25,10 +24,10 @@ def new
       format.js
       end
     end
-    
-    def destroy
+
+    def destroy 
     @like = Like.find(params[:id])
-  @like.destroy  
+    @like.destroy  
      respond_to do |format|
       format.html { redirect_to @like.micropost }
       format.js
@@ -50,6 +49,6 @@ def new
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def like_params
-      params.require(:like).permit(:user_id, :micropost_id)
+      params.require(:like).permit(:like_id, :user_id, :micropost_id, :heart)
     end
 end
