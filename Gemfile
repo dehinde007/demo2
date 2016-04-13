@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'heroku'
 gem 'aws-sdk', '< 2.0'
 gem 'rails', '4.2.4'

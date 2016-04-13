@@ -31,6 +31,7 @@ has_attached_file :photo
   has_many :microposts, dependent: :destroy
    has_many :comments, dependent: :destroy
    has_many :likes, dependent: :destroy
+   has_many :trendss, dependent: :destroy
    #relationship
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed

@@ -49,12 +49,13 @@
     </p>
       
     <p class="container font-fam">
-      <span class="glyphicon glyphicon-paperclip"></span>
-      <section class="editavi"><%= f.file_field :avatar, class: "usereditavi" %></section>
+      <span class="glyphicon glyphicon-paperclip font-fam"></span><span class="editavatar">Avatar</span>
+      <section class="editavi"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section>
+      <p class="glyphicon glyphicon-camera editusr-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
     </p>
    
     <p class="container font-fam">
-      @
+      <span class="editusremail">@</span>
       <%= f.text_field :email, class: "edit-lab", placeholder: "email" %>
     </p> 
    

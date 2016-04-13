@@ -13,9 +13,14 @@ SampleApp::Application.routes.draw do
   resources :microposts do
     resources :comments
    end
-  
 
   resources :comments
+  
+  resources :microposts do
+    resources :trends
+   end
+  
+  resources :trends
 
   resources :users do
     member do

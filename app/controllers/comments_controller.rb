@@ -28,6 +28,7 @@ class CommentsController < ApplicationController
     
      def destroy
         @comment = Comment.find(params[:id])
+        @micropost = @comment.micropost
         @comment.destroy 
         respond_to do |format|
         format.html { redirect_to @comment.micropost }

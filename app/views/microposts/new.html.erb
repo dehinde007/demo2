@@ -42,8 +42,10 @@
 <div class="micropostformcontent">
 
   <section class="formphoto">
-   <section class="formphotofield fileinput-button"><%= f.file_field :photo %></section>
+   <section><%= f.file_field :photo, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section> 
   </section>
+  
+  <p class="glyphicon glyphicon-camera newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
 
   <p>
    <%= f.text_area :content, :class =>"formcontent font-fam", placeholder: "Describe Hall..." %>
@@ -54,7 +56,7 @@
   </p>
   
   <p class="appbutton"> 
-   <%= f.submit "Share to subscribers", class: "loadbut btn btn-sm btn-primary font-fam" %>
+   <%= f.submit "Hall", class: "loadbut btn btn-sm btn-primary font-fam" %>
   </p>
   
  <% end %>

@@ -1,0 +1,9 @@
+<%= form_for [@micropost, @micropost.trends.build], remote: true do |f| %>
+
+  <span>
+    <%= f.text_area :peer, class: "commentform", placeholder: "Leave trend..." %>
+  </span>
+  <span class="commentformbtn appbutton">
+    <%= f.submit "trend", class: "btn-primary btn-sm" %>
+  </span>
+<% end %>

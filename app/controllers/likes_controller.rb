@@ -18,7 +18,6 @@ def new
        @like.save
        UserMailer.delay.newlike_email(@like)
        @like.create_activity :create, owner: current_user
-       flash[:notice] = "Hall liked."
        respond_to do |format|
       format.html { redirect_to @like.micropost }
       format.js
@@ -27,10 +26,11 @@ def new
 
     def destroy 
     @like = Like.find(params[:id])
+    @micropost = @like.micropost
     @like.destroy  
      respond_to do |format|
       format.html { redirect_to @like.micropost }
-      format.js
+      format.js 
    end   
   end
 
