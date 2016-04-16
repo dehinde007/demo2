@@ -105,17 +105,21 @@ a#next:hover {
 .clear {clear:both}
 
 /*global*/
-.app_a_link a:hover {
-    background: none;
+.app_a_link a{
+  color: #E8C6C2;
+&:visited {
+  color: #E8C6C2;
+  background: none;
+ }  
+&:hover {
+  color: #E8C6C2;
+  background: none;
+}
+  
 }
 
 .btn-primary:focus {
   outline: none;
-}
-
-.app_a_link a:visited {
-    color: #337ab7;
-    background: none;
 }
 
 .yield{
@@ -477,12 +481,15 @@ IMG.coverphone{
   font-size: 13px;
 }
 
-.ckl2:visited{
-  color: #337ab7;
+.ckl2{
+  color: #E8C6C2;
+&:visited{
+  color: #E8C6C2;
 }
-
-.ckl2:hover{
+&:hover{
   background: none;
+}
+  
 }
 
 /* home */
