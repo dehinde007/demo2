@@ -3,11 +3,14 @@
  <%= link_to comment.user.username, comment.user, class: "commentusername hov" %>
 
  <span class="commentbody">
- <%= comment.body %>  <%= link_to [comment.micropost, comment], :method => :delete,
-                                                                             :remote => true, 
-                                                                             :class => 'delete_pony hov apptrash' do %>
-                                                                <span class="glyphicon glyphicon-trash", style="font-size: 10px;"></span>             
-                                                                             <% end %>
+ <%= comment.body %>  
+<% if current_user?(comment.user) %> 
+ <%= link_to [comment.micropost, comment], :method => :delete,
+                                           :remote => true, 
+                                           :class => 'delete_pony hov apptrash' do %>
+  <span class="glyphicon glyphicon-trash", style="font-size: 10px;"></span>             
+ <% end %>
+ <% end %>
  </span>
 
 </li>
