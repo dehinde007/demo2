@@ -8,7 +8,7 @@ html, body{
   overflow-x: hidden;
 }
 
-html.turbolinks-progress-bar::before {
+.turbolinks-progress-bar::before {
   background-color: #E8C6C2 !important;
 }
 
@@ -264,8 +264,9 @@ label{
 
 /* header */ 
 .navbar-default{
-  background: #D63636!important;
-  border-color: #D63636!important;  
+  background: #b87878 !important;
+  border-color: #b87878 !important;
+  opacity: 0.2;
 }
 
 .navbar-header{
@@ -852,12 +853,13 @@ IMG.coverphone{
 }
 
 .minfooter{
-  background: #F1EBEB;
-  height: 46px;
-  width: 100%;
-  position: fixed;
-  bottom:0px;
-  opacity: 0.7;
+border-color: #b87878 !important;
+    background: #b87878 !important;
+    height: 46px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    opacity: 0.2;
 }
 
 .minf{
@@ -867,7 +869,7 @@ IMG.coverphone{
 
 .minfooter .glyphicon{
   padding-top: 10px;
-  color: rgb(184, 120, 120); 
+  color: white; 
   font-size: 17px;
 } 
 
