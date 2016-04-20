@@ -8,7 +8,7 @@
            <ul class="font-fam solve  pull-right">
             
            <li>
-           <%= link_to current_user do %>
+           <%= link_to current_user, class: "hov" do %>
            <span class="headglyph glyphicon glyphicon-user"></span>
            <% end %>
             </li>
@@ -37,7 +37,7 @@
 <% @activities.each do |activity| %>
 
  <div>
-   	<%= link_to activity.owner.username, activity.owner if activity.owner %>
+   	<span class="app_a_link"><%= link_to activity.owner.username, activity.owner if activity.owner %></span>
    	<%= render_activity activity %>    
  </div>	
  

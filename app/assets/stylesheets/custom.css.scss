@@ -263,10 +263,12 @@ label{
 }
 
 /* header */ 
+.navbar{
+  border: rgba(184, 120, 120, 0.2) !important;
+}
+
 .navbar-default{
-  background: #b87878 !important;
-  border-color: #b87878 !important;
-  opacity: 0.2;
+  background: rgba(184, 120, 120, 0.2) !important;
 }
 
 .navbar-header{
@@ -275,7 +277,7 @@ label{
 
 #logo{
   font-family: Ariel, serif;
-  color: rgb(240, 240, 240);
+  color: white;
   font-size: 1.2em; 
 }
 
@@ -435,8 +437,9 @@ IMG.coverphone{
 
 .formcontent{
   width: 100%;
-  height: 150px;
+  height: 120px;
   border-style: solid;
+  border-width: 2px;
   border-color: rgb(218, 212, 212);
   font-size: 13px;
 }
@@ -444,7 +447,7 @@ IMG.coverphone{
 .formauthor{
   width: 150px;
   border-style: solid;
-  border-width: 5px;
+  border-width: 2px;
   border-color: rgb(218, 212, 212);
   font-size: 13px;
 }
