@@ -39,9 +39,42 @@ window.onload = function() {
 
   kit.run();
 
+  /*
+   * We have a "Render" button which (on click) will request the rendered
+   * image from ImglyKit and add it to the DOM
+   */
+  var button = document.getElementById("render-button");
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // This will render the image with 100 pixels in width while
+    // respecting the aspect ratio
+    // Possible render types: image, data-url
+    var image = kit.render("image", "image/png")
+      .then(function (image) {
+        document.body.appendChild(image);
+      });
+  });
+  
+    // Let `kit` be your ImglyKit instance
+    kit.render("data-url", "image/png")
+      .then(function (dataUrl) {
+     
+      $.ajax({
+      type: "POST",
+      url: "microposts/create",
+      data: {
+        image: dataUrl
+      }
+    }).done(function(o) {
+      console.log('saved');
+    });
+     
+ });
   
   
 };
+
 
 });
 
@@ -188,3 +221,5 @@ $(document).ready(function() {
 function rotate() {
     $('#next').click();
 }
+
+

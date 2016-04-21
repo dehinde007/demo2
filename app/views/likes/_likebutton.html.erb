@@ -6,7 +6,7 @@
    <% end %>  
    </div>    
 <% else %>
-
+    <div id="likki">
    <%= form_for [@micropost, @micropost.likes.new], :remote => true do |f| %>
     <%= f.hidden_field :micropost_id %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
@@ -14,6 +14,6 @@
     <%= button_tag "", type: 'submit', class: "btn btn-default glyphicon glyphicon-heart" %>
     </span>
    <% end %>
-   
+   </div>
 <% end %>  
 </div>

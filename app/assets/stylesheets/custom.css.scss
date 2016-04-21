@@ -499,13 +499,13 @@ IMG.coverphone{
 
 .ckl2{
   color: #E8C6C2;
-&:visited{
-  color: #E8C6C2;
-}
 &:hover{
   background: none;
-}
-  
+  color: #E8C6C2;
+}  
+&:visited{
+  color: #E8C6C2;
+ } 
 }
 
 /* home */
@@ -562,7 +562,7 @@ IMG.coverphone{
 
 .feedtime{
   font-size: 80%;
-  color: grey;
+  color: #E8C6C2;
 }
 
 .contentlength{
@@ -635,17 +635,7 @@ IMG.coverphone{
   float: right;
 }
 
-.like_glyph .glyphicon-heart{
-  color: rgb(209, 206, 206); 
-}
 
-.unlike_glyph .glyphicon-heart{
-  color: #DD7070; 
-}
-
-.unlike_glyph{
-  font-size: 30px;
-}
 
 /* commentform */
 .commentform{
@@ -679,6 +669,35 @@ IMG.coverphone{
  background-color: #D63636;
 }
 
+/* likeform */
+#likky .btn-default{
+  color: #DD7070;
+  background-color: white;
+  border-color: #d1cece;
+&:focus{
+  outline: none;
+} 
+&:hover{
+  color: #d1cece;
+  background-color: white;
+  border-color: #d1cece;
+ }   
+}
+
+#likki .btn-default{
+  color: #d1cece;
+  background-color: white;
+  border-color: #d1cece;
+&:focus{
+  outline: none;
+}
+&:hover{
+  color: #DD7070;
+  background-color: white;
+  border-color: #d1cece;    
+ }  
+}
+
 /* like_show */
 .likes{
   color: black;
@@ -699,7 +718,7 @@ IMG.coverphone{
 }
 
 .profile_h .img-circle{
-  width: 20px;
+  width: 30px;
 }
 
 .profile_h .dropdown{
@@ -856,13 +875,12 @@ IMG.coverphone{
 }
 
 .minfooter{
-border-color: #b87878 !important;
-    background: #b87878 !important;
+    background: rgba(184, 120, 120, 0.2) !important;
+    border-color: rgba(184, 120, 120, 0.2) !important;
     height: 46px;
     width: 100%;
     position: fixed;
     bottom: 0px;
-    opacity: 0.2;
 }
 
 .minf{
