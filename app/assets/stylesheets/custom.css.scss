@@ -119,13 +119,13 @@ a#next:hover {
 
 /*global*/
 .app_a_link a{
-  color: #E8C6C2;
+  color: #D63636;
 &:visited {
-  color: #E8C6C2;
+  color: #D63636;
   background: none;
  }  
 &:hover {
-  color: #E8C6C2;
+  color: #D63636;
   background: none;
 }
   
@@ -263,12 +263,10 @@ label{
 }
 
 /* header */ 
-.navbar{
-  border: rgba(184, 120, 120, 0.2) !important;
-}
 
 .navbar-default{
-  background: rgba(184, 120, 120, 0.2) !important;
+  background: #D63636!important;
+  border-color: #D63636!important;
 }
 
 .navbar-header{
@@ -875,12 +873,12 @@ IMG.coverphone{
 }
 
 .minfooter{
-    background: rgba(184, 120, 120, 0.2) !important;
-    border-color: rgba(184, 120, 120, 0.2) !important;
+    background: #F1EBEB;
     height: 46px;
     width: 100%;
     position: fixed;
     bottom: 0px;
+    opacity: 0.7;
 }
 
 .minf{
@@ -890,7 +888,7 @@ IMG.coverphone{
 
 .minfooter .glyphicon{
   padding-top: 10px;
-  color: white; 
+  color: rgb(184, 120, 120); 
   font-size: 17px;
 } 
 
