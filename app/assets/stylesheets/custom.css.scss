@@ -131,6 +131,17 @@ a#next:hover {
   
 }
 
+.ckl2{
+  color: grey;
+&:hover{
+  background: none;
+  color: grey;
+}  
+&:visited{
+  color: grey;
+ } 
+}
+
 .btn-primary:focus {
   outline: none;
 }
@@ -490,19 +501,19 @@ IMG.coverphone{
 }
 
 .sessionfield{
-  height: 30px;
+  height: 40px;
   width: 100%;
   font-size: 13px;
 }
 
-.ckl2{
-  color: #E8C6C2;
+.ckl3{
+  color: #D63636;
 &:hover{
   background: none;
-  color: #E8C6C2;
+  color: #D63636;
 }  
 &:visited{
-  color: #E8C6C2;
+  color: #D63636;
  } 
 }
 
@@ -560,7 +571,7 @@ IMG.coverphone{
 
 .feedtime{
   font-size: 80%;
-  color: #E8C6C2;
+  color: grey;
 }
 
 .contentlength{
@@ -629,19 +640,17 @@ IMG.coverphone{
 }
 
 .micro_like_form{
-  margin-top: -29px;
+  margin-top: -34px;
   float: right;
 }
 
-
-
-/* commentform */
+// commentform 
 .commentform{
   width: 100%;
   border-radius: 5px;
 }
 
-/* commentpartial */
+// commentpartial 
 .commentpartial{
  list-style: none;  
 }
@@ -874,7 +883,7 @@ IMG.coverphone{
 
 .minfooter{
     background: #F1EBEB;
-    height: 46px;
+    height: 45px;
     width: 100%;
     position: fixed;
     bottom: 0px;
@@ -886,8 +895,11 @@ IMG.coverphone{
   padding-right: 13.6%;
 }
 
+.ddffs{
+  margin-top: -3px;
+}
+
 .minfooter .glyphicon{
-  padding-top: 10px;
   color: rgb(184, 120, 120); 
   font-size: 17px;
 } 
@@ -967,7 +979,7 @@ IMG.coverphone{
 
 .minfooter .glyphicon{
   padding-top: 10px;
-  font-size: 22px;
+  font-size: 25px;
 } 
 
 .pager{
@@ -988,7 +1000,7 @@ IMG.coverphone{
 /* commentform */
 .commentformbtn .btn-primary{
  width: 85%; 
- height: 28px;
+ height: 32px;
  border-color: #D63636;
  background-color: #D63636;
 }
@@ -1001,28 +1013,26 @@ IMG.coverphone{
   
 }
 
-.posttime{
-  text-align: center;
-}
 
 .profiletop .img-circle{
   width: 150px;
 }
 
+
 .minf{
   padding-left: 1%;
-  padding-right: 15.5%;
+  padding-right: 13.4%;
 }
 
 .minfooter .glyphicon{
   padding-top: 10px;
-  font-size: 22px;
+  font-size: 30px;
 } 
 
 /* commentform */
 .commentformbtn .btn-primary{
  width: 89%; 
- height: 28px;
+ height: 32px;
  border-color: #D63636;
  background-color: #D63636;
 }
