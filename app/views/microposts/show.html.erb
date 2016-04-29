@@ -1,3 +1,29 @@
+<div class="leisure">
+
+<header class="indexhead">
+    <nav class="navbar hallshowheader navbar-fixed-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+    <span id="pagename" class="navbar-brand font-fam">Pins</span>
+      
+           <ul class="font-fam solve  pull-right">
+            
+           <li>
+           <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="headglyph glyphicon glyphicon-eye-open"></span>
+          <% end %> 
+            </li>
+     
+       
+      </ul>
+        </div>   
+      </div><!-- /.container -->
+    </nav>
+</header> 
+
+
+
 <div class="micropostshow">	
 <div class="container posttime"> <%= time_ago_in_words(@micropost.created_at)%> ago</div>
  	<section class="post-img"><%= image_tag @micropost.photo.url(:medium) %></section>
@@ -97,4 +123,7 @@
 <br />
 <br />
 
-<div class="footer2"><%= render 'layouts/minfooter' %></div>
+
+
+
+</div>

@@ -1,13 +1,14 @@
 class MicropostsController < ApplicationController
   before_action :signed_in_user,  only: [:new, :create, :destroy, :show]
   before_action :correct_user,   only: :destroy
-
+  
   def index
     @skip_header = true
     @microposts = Micropost.paginate(page: params[:page], per_page: 15)
   end
 
   def show
+   @skip_header = true
    @micropost = Micropost.find(params[:id])
    @comments = @micropost.comments
       respond_to do |format|

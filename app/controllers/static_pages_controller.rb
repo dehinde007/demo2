@@ -43,6 +43,7 @@ class StaticPagesController < ApplicationController
   end
   
   def support
+
     @skip_header = true
   end
   
