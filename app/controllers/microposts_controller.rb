@@ -8,6 +8,7 @@ class MicropostsController < ApplicationController
   end
 
   def show
+    @skip_header = true
    @micropost = Micropost.find(params[:id])
    @comments = @micropost.comments
       respond_to do |format|

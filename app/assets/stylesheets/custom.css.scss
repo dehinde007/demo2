@@ -186,7 +186,8 @@ a#next:hover {
 }
 
 .apptrash .glyphicon{
-  color: #CE2424;
+  color: white;
+  font-size: 18px;
 }
 
 /* shared */
@@ -237,7 +238,7 @@ p .sr{
 #container{
   max-width: 100%;
   height: 350px;
-  margin-top: 50px;
+  margin-top: -50px;
 }
 
 img{
@@ -678,31 +679,51 @@ IMG.coverphone{
 
 /* likeform */
 #likky .btn-default{
-  color: #DD7070;
-  background-color: white;
-  border-color: #d1cece;
+  color: #ce1b1b;
+  background-color: #F8F8F8;
+  border-color: #F8F8F8;
+  margin-right: -6px;
 &:focus{
   outline: none;
 } 
+&:active{
+  box-shadow: none;
+}
 &:hover{
-  color: #d1cece;
-  background-color: white;
-  border-color: #d1cece;
+  color: #ce1b1b;
+  background-color: #F8F8F8;
+  border-color: #F8F8F8;
  }   
+}
+
+#likky .glyphicon-heart{
+  font-size: 20px;
+  margin-top: -2px;
+  margin-left: -5px;
 }
 
 #likki .btn-default{
   color: #d1cece;
-  background-color: white;
-  border-color: #d1cece;
+  margin-right: -6px;
+  background-color: #F8F8F8;
+  border-color: #F8F8F8;
 &:focus{
   outline: none;
 }
+&:active{
+  box-shadow: none;
+}
 &:hover{
-  color: #DD7070;
-  background-color: white;
-  border-color: #d1cece;    
+  color: #d1cece;
+  background-color: #F8F8F8;
+  border-color: #F8F8F8;    
  }  
+}
+
+#likki .glyphicon-heart{
+  font-size: 20px;
+  margin-top: -2px;
+  margin-left: -5px;
 }
 
 /* like_show */
@@ -1051,6 +1072,7 @@ IMG.coverphone{
   right: 0px;
 }
 
+
 }
 
 @media screen and (min-width: 480px) {
@@ -1079,11 +1101,43 @@ IMG.coverphone{
 }
 
 .showmicrocontent{
-  width: 450px;
+  width: 550px;
   background: white;
+  padding-left: 3px;
   margin: auto;
   left: 0px;
   right: 0px;
+  
+}
+#likky .btn-default{
+  background-color: white;
+  border-color: white;
+
+&:hover{
+  background-color: white;
+  border-color: white;
+ }   
+}
+
+#likky .glyphicon-heart{
+    font-size: 16.5px;
+    margin-top: -4.5px;
+    margin-right: 6px;
+}
+
+#likki .btn-default{
+  background-color: white;
+  border-color: white;
+&:hover{
+  background-color: white;
+  border-color: white;    
+ }  
+}
+
+#likki .glyphicon-heart {
+    font-size: 16.5px;
+    margin-top: -4.5px;
+    margin-right: 6px;
 }
 
 .minf{
