@@ -17,6 +17,11 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
     outline: 0 none;
 }
 
+input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 1000px #F8F8F8 inset !important;
+}
+
+
 .sr input[type]:focus {
   box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
 }
@@ -971,7 +976,7 @@ IMG.coverphone{
 
 .welcomeinfo{
   color: white;
-  margin-top: 310px;
+  margin-top: 290px;
   line-height: normal;
   text-align: center;
 }    
