@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
     end
   end
  
-  def getting_started
+  def getstarted
     
   end
 

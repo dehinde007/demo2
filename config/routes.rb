@@ -41,7 +41,7 @@ SampleApp::Application.routes.draw do
   match '/vision',    to: 'static_pages#vision',    via: 'get'
   match '/terms',   to: 'static_pages#terms',   via: 'get'
   match '/privacy', to: 'static_pages#privacy', via: 'get'
-  match '/getting_started', to: 'static_pages#getting_started', via: 'get'
+  match '/getting_started', to: 'static_pages#getstarted', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/search', to: 'static_pages#search', via: 'get'
   match '/make_hall', to: 'static_pages#make_hall', via: 'get'

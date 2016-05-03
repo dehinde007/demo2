@@ -74,26 +74,22 @@
    <% if @user.microposts.any? %>
       <%= render @microposts %>
    <% elsif current_user == @user %>   
-      <div class="font-fam nohall">Yet to Upload a Hall</p>
+      <div class="font-fam nohall">How to Make a Hall</p>
       	
  <div id="myCarousel" class="carousel slide">
    <!-- Carousel items -->
           <div class="carousel-inner">
             <div class="active item">
-            	<%= image_tag asset_path('assets/images/1.jpg') %>
-           
+            	<%= image_tag asset_path('assets/images/ste.jpg') %>
             </div>
             <div class="item">
-               <a href="/users/sign_up"><img src="assets/images/2.jpg"> </a>
+               <%= image_tag asset_path('assets/images/ste.jpg') %>
             </div>
             <div class="item">
-               <a href="/users/sign_up"><img src="assets/images/3.jpg"> </a>
+               <%= image_tag asset_path('assets/images/ste.jpg') %>
             </div>
             <div class="item">
-               <a href="/users/sign_up"><img src="assets/images/4.jpg"> </a>
-            </div>
-            <div class="item">
-               <a href="/users/sign_up"><img src="assets/images/5.png"> </a>
+               <%= image_tag asset_path('assets/images/ste.jpg') %>
             </div>
           </div>
       <!-- Carousel nav -->
