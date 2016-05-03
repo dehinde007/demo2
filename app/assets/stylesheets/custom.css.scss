@@ -17,8 +17,8 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
     outline: 0 none;
 }
 
-input:-webkit-autofill{
-  -webkit-box-shadow: 0 0 0 1000px #F8F8F8 inset !important;
+input:-webkit-autofill, input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px #F8F8F8 inset;
 }
 
 .sr input[type]:focus {
@@ -520,13 +520,17 @@ IMG.coverphone{
   float: left;
   color: rgb(88, 88, 88);
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .sessionfield{
   height: 40px;
   width: 100%;
   font-size: 13px;
+}
+
+.sessionlink{
+  font-size: 15px;
 }
 
 .ckl3{
@@ -975,11 +979,15 @@ IMG.coverphone{
 
 .welcomeinfo{
   color: white;
-  margin-top: 290px;
+  margin-top: 270px;
   line-height: normal;
   text-align: center;
 }    
 
+.welcomeoption{
+  margin-top: 20px;
+}
+  
 .carousel_ad{
   float: right;
   margin-right: -100px;
@@ -1280,7 +1288,7 @@ IMG.coverphone{
 }
 
 .sessionlabel{
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .sessionfield{
