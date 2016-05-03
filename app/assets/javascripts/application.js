@@ -222,4 +222,3 @@ function rotate() {
     $('#next').click();
 }
 
-

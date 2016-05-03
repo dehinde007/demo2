@@ -8,3 +8,5 @@
 $ ->
   $('.kkkkk').delay(2500).fadeOut()
   
+$ ->
+  $('.lazy').Lazy()
