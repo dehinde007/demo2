@@ -5,10 +5,8 @@
        </span>
 
        <span class="minf">
-       <%= link_to current_user do %>
-       <span class="glyphicon glyphicon-user"></span>
-       <% end %>
-       </span>
+       <a href="/activities"><i class="glyphicon glyphicon-pushpin"></i></a>
+       </span>      
        
        <span class="minf">
        <a href="/new/hall", data-no-turbolink="true"><i class="glyphicon glyphicon-cloud-upload"></i></a>
@@ -18,9 +16,11 @@
        <a href="/halls"><i class="glyphicon glyphicon-globe"></i></a>
        </span>
        
-       <span class="minf">
-       <a href="/activities"><i class="glyphicon glyphicon-pushpin"></i></a>
-       </span> 
+        <span class="minf">
+       <%= link_to current_user do %>
+       <span class="glyphicon glyphicon-user"></span>
+       <% end %>
+       </span>
      </p>  	
 </div>
 
