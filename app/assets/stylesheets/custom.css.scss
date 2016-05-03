@@ -247,7 +247,7 @@ img{
 }
 
 #pagename{
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   color: white;
 }
@@ -268,6 +268,16 @@ input{
 
 label{
   display: block;
+}
+
+.appbutton .btn-primary {
+    color: #fff;
+    background-color: #D4C2C2 !important;
+    border-color: #D4C2C2 !important;
+    &:hover {
+    background-color: #D63636 !important;
+    border-color: #D63636 !important;  
+    }   
 }
 
 ::-webkit-input-placeholder{
@@ -328,10 +338,11 @@ IMG.coverphone{
   color: white;
 }
 
-.appbutton .btn-primary {
+.wappbutton .btn-primary {
     color: #fff;
-    background-color: #D4C2C2 !important;
+    background-color: rgba(0,0,0,.5)!important;
     border-color: #D4C2C2 !important;
+    opacity: 0.7;
     &:hover {
     background-color: #D63636 !important;
     border-color: #D63636 !important;  
@@ -473,7 +484,7 @@ IMG.coverphone{
 
 .glyphicon-bookmark{
   color: #D63636;
-  font-size: 25px;
+  font-size: 20px;
   margin-left: 12px;
 }
 
@@ -880,7 +891,7 @@ IMG.coverphone{
 
 .footerul{
   margin-left: -22px;
-  margin-top: 70px;
+  margin-top: 150px;
   font-size: 80%;
   list-style: none;
   text-align: center;  
@@ -934,22 +945,35 @@ IMG.coverphone{
 
 @media screen and (min-width: 320px) {
 /* welcome */
+IMG.coverphone{
+   display: none;
+}
+  
+.question {
+   background-image: url("/assets/images/wallhug.jpg");
+   background-size: 100% 670px;
+   background-repeat: no-repeat; 
+} 
+
 .wfooterlnk{
-  color: black;
+ color: white;
+&:hover{
+ color: white;
+}
+ &:visited{
+ color: white;
+}
 }
 
-.wfooterlnk:visited{
-  color: black;
-}  
-
-.wfooterlnk:hover{
-  color: black;
+.footdate{
+  color: white;
 }
 
 .welcomeinfo{
-  color: black;
-  margin-top: 60px;
+  color: white;
+  margin-top: 310px;
   line-height: normal;
+  text-align: center;
 }    
   
 .carousel_ad{
@@ -1036,9 +1060,19 @@ IMG.coverphone{
 }
 
 @media screen and (min-width: 414px) {
+   
+  
+#pagename{
+  font-size: 18px;
+}  
+  
 /* microshow */
 .micropostshow{
   
+}
+
+.glyphicon-bookmark{
+  font-size: 25px;
 }
 
 
