@@ -17,6 +17,7 @@ class StaticPagesController < ApplicationController
   end
  
   def getstarted
+    render :layout => "getstart"
     
   end
 

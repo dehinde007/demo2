@@ -397,6 +397,21 @@ IMG.coverphone{
   color: #E8C6C2;
 }
 
+#pagenameee{
+  font-family: ralewayregular;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  margin-left: -26px;
+}
+
+.mission{
+  font-family: ralewayregular;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333; 
+}
+
 /* support */
 .supportlink{
   text-align: center;
@@ -668,7 +683,7 @@ IMG.coverphone{
 
 .micro_like_form{
   margin-top: -34px;
-  float: right;
+  float: left;
 }
 
 // commentform 
@@ -697,10 +712,8 @@ IMG.coverphone{
 
 /* commentform */
 .commentformbtn .btn-primary{
- width: 80%; 
  font-weight: bold;
- border-color: #D63636;
- background-color: #D63636;
+ 
 }
 
 /* likeform */
@@ -708,7 +721,7 @@ IMG.coverphone{
   color: #ce1b1b;
   background-color: #F8F8F8;
   border-color: #F8F8F8;
-  margin-right: -6px;
+
 &:focus{
   outline: none;
 } 
@@ -725,12 +738,10 @@ IMG.coverphone{
 #likky .glyphicon-heart{
   font-size: 20px;
   margin-top: -2px;
-  margin-left: -5px;
 }
 
 #likki .btn-default{
   color: #d1cece;
-  margin-right: -6px;
   background-color: #F8F8F8;
   border-color: #F8F8F8;
 &:focus{
@@ -749,7 +760,7 @@ IMG.coverphone{
 #likki .glyphicon-heart{
   font-size: 20px;
   margin-top: -2px;
-  margin-left: -5px;
+
 }
 
 /* like_show */
@@ -1062,17 +1073,10 @@ IMG.coverphone{
 
 @media screen and (max-width: 320px) {  
 /* commentform */
-.commentformbtn .btn-primary{
- width: 85%; 
- height: 32px;
- border-color: #D63636;
- background-color: #D63636;
-}
 
 }
 
-@media screen and (min-width: 414px) {
-   
+@media screen and (min-width: 414px) { 
   
 #pagename{
   font-size: 18px;
@@ -1103,17 +1107,11 @@ IMG.coverphone{
   font-size: 30px;
 } 
 
-/* commentform */
-.commentformbtn .btn-primary{
- width: 89%; 
- height: 32px;
- border-color: #D63636;
- background-color: #D63636;
-}
-  
+
 }
 
-@media screen and (max-width: 480px) {    
+
+@media screen and (max-width: 480px) {      
 /* micropost_show */
 .post-img{
  text-align: center;
@@ -1201,6 +1199,7 @@ IMG.coverphone{
 }
 
 @media screen and (max-width: 758px) {  
+
 .feediteminfo{
   width: 450px;
   margin: auto;
@@ -1477,5 +1476,12 @@ IMG.coverphone{
 
 }
 
+@media screen and (max-width: 1400px) {
+/* commentform */
+.commentformbtn .btn-primary{
+ width: 83.5%; 
+ height: 32px;
+ margin-left: 46px;
+} 
 
-
+}

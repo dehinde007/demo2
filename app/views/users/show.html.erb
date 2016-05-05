@@ -15,16 +15,18 @@
       <%= @user.username %><span class="caret"></span>
     </span>
     <ul class="dropdown-menu">
-     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, {:style => 'color: #D63636; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
+     
      <% if current_user == @user %> 
      <li class="font-fam">
        <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
        <span class="glyphicon glyphicon-envelope"></span>Invite Someone
        <% end %> 
        <% end %>
-     </li>
+     </li> 	
+     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, {:style => 'color: #D63636; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
      <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
      <li class="font-fam"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
+     <li class="font-fam"><%= link_to "Edit Account", edit_user_path(current_user) %></li>
     </ul>
 
     </span>
@@ -34,6 +36,12 @@
   </span>
       
            <ul class="font-fam solve  pull-right">
+           	
+            <li>
+          <%= link_to getstarted_path, class: "hov", :"data-no-turbolink" => true do %>
+          <span class="headglyph glyphicon glyphicon-info-sign"></span>
+          <% end %>    
+            </li>
             
            <li>
            <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
@@ -41,11 +49,6 @@
           <% end %> 
            </li>
      
-            <li>
-          <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>
-          <span class="headglyph glyphicon glyphicon-edit"></span>
-          <% end %>    
-            </li>
             
            <li> 
          <%= link_to signout_path, class: "hov", method: "delete" do %>

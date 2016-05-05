@@ -32,7 +32,7 @@ SampleApp::Application.routes.draw do
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts,    only: [:create, :destroy, :show]
   resources :relationships, only: [:create, :destroy]
-  root to: 'static_pages#welcome'
+  root to: 'static_pages#vision'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
@@ -41,7 +41,7 @@ SampleApp::Application.routes.draw do
   match '/vision',    to: 'static_pages#vision',    via: 'get'
   match '/terms',   to: 'static_pages#terms',   via: 'get'
   match '/privacy', to: 'static_pages#privacy', via: 'get'
-  match '/getting_started', to: 'static_pages#getstarted', via: 'get'
+  match '/getstarted', to: 'static_pages#getstarted', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/search', to: 'static_pages#search', via: 'get'
   match '/make_hall', to: 'static_pages#make_hall', via: 'get'

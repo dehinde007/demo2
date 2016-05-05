@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hallit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <%= favicon_link_tag 'favicon-2.ico' %>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <%= stylesheet_link_tag "getstart", media: "all", "data-turbolinks-track" => true %>                                                      
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>      
+    
+      </head>
+
+  <body id="wall">
+
+  <header class="indexhead">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+    <span id="pagename" class="navbar-brand font-fam">
+    	   <%= link_to :back, class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="headglyph glyphicon glyphicon-menu-left"></span>
+          <% end %> 
+    </span>
+    
+    <span id="pagenameee" class="navbar-brand font-fam">Get Started</span>
+      
+           <ul class="font-fam solve  pull-right">
+            
+           <li> 
+     
+           </li>
+      </ul>
+        </div>   
+      </div><!-- /.container -->
+    </nav>
+</header>  
+
+<div class="container">
+<div class="container getstarted">
+	<br />
+<p class="font-fam" style="font-size: 12px;">Add Hallit to your homescreen for a better experience</p>
+<p class="font-fam" style="font-size: 12px;">Use the browsers back and forward icon to go back and forth when using the app</p>
+<p class="font-fam" style="font-size: 12px;">Invite users with their email using envelope icon <span class="glyphicon glyphicon-envelope"></span> (Find this icon in your profile when clicking your profile name)</p>	
+<p class="font-fam" style="font-size: 12px;">Search user using eye icon <span class="glyphicon glyphicon-eye-open"></span></p>	
+<p class="font-fam" style="font-size: 12px;">Nav to update profile using edit icon <span class="glyphicon glyphicon-edit"></span></p>
+<p class="font-fam" style="font-size: 12px;">Logout using off icon <span class="glyphicon glyphicon-off"></span></p>
+<p class="font-fam" style="font-size: 12px;">Nav to your home using home icon <span class="glyphicon glyphicon-home"></span> or Hallit logo </p>
+<p class="font-fam" style="font-size: 12px;">Nav to view your profile using user icon <span class="glyphicon glyphicon-user"></span></p>	
+<p class="font-fam" style="font-size: 12px;">Nav to make and upload hall using the cloud-upload icon <span class="glyphicon glyphicon-cloud-upload"></span></p>
+<p class="font-fam" style="font-size: 12px;">Nav to view your subscribed activities using ice-lolly icon <span class="glyphicon glyphicon-ice-lolly"></span></p>
+<p class="font-fam" style="font-size: 12px;">Nav to discover more post using the globe icon <span class="glyphicon glyphicon-globe"></span></p>
+</div>
+</div>
+
+<div class="app_footer"><%= render 'layouts/footer' %></div>
+
+<br /><br /><br /><br />
+  <% if signed_in? %> 		
+   <div class="footer2"><%= render 'layouts/minfooter' %></div>                           
+  <% end %>
+
+
+
+
+  </body>
+</html>  

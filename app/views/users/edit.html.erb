@@ -3,27 +3,16 @@
     <div class="">
     <div class="navbar-header">
            
-    <span id="pagename" class="navbar-brand font-fam">Update Account</span>
-      
-           <ul class="font-fam solve  pull-right">
-            
-           <li>
-           <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
-          <span class="headglyph glyphicon glyphicon-eye-open"></span>
+        <span id="pagename" class="navbar-brand font-fam">
+    	   <%= link_to :back, class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="headglyph glyphicon glyphicon-menu-left"></span>
           <% end %> 
-           </li>
-     
-            <li>
-          <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>
-          <span class="headglyph glyphicon glyphicon-edit"></span>
-          <% end %>    
-            </li>
+        </span>
+        
+       <span id="pagenameee" class="navbar-brand font-fam">Edit Account</span>
+      
+      <ul class="font-fam solve  pull-right">
             
-           <li> 
-         <%= link_to signout_path, class: "hov", method: "delete" do %>
-         <span class="headglyph glyphicon glyphicon-off"></span>
-          <% end %>        
-            </li>
       </ul>
         </div>   
       </div><!-- /.container -->
