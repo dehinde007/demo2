@@ -413,9 +413,12 @@ IMG.coverphone{
 }
 
 .betaprepdiv{
-  height: 270px;
-  widht: 100px;
+  height: 320px;
   background: #D63636;
+}
+
+.betaprepalign{
+  text-align: center;
 }
 
 .betaprepemail{
@@ -426,7 +429,7 @@ IMG.coverphone{
 .betapreph{
   color: white;
   font-family: ralewayregular;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .betaprepp{
@@ -436,7 +439,7 @@ IMG.coverphone{
 
 .betaprepinput{
   color: black;
-  width: 80%;
+  width: 50%;
   height: 30px;
 }
 
@@ -446,9 +449,14 @@ IMG.coverphone{
   background: #444444;
   border-color: #444444;
   width: 40%;
-  height: 50px;
+  height: 40px;
   font-family: ralewayregular;
 }
+
+.app_footer{
+  margin-top: -80px;
+}
+
 
 /* support */
 .supportlink{
