@@ -405,15 +405,22 @@ IMG.coverphone{
   margin-left: -26px;
 }
 
+.visionhdfont{
+  font-family: ralewayregular;
+  color: #CE2424; 
+  font-size: 30px; 
+  margin-top: 30px;
+}
+
 .mission{
   font-family: ralewayregular;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333; 
+  color: #B77575; 
 }
 
 .betaprepdiv{
-  height: 320px;
+  height: 400px;
   background: #D63636;
 }
 
@@ -439,7 +446,7 @@ IMG.coverphone{
 
 .betaprepinput{
   color: black;
-  width: 50%;
+  width: 54%;
   height: 30px;
 }
 
@@ -448,7 +455,7 @@ IMG.coverphone{
   font-weight: bold;
   background: #444444;
   border-color: #444444;
-  width: 40%;
+  width: 45%;
   height: 40px;
   font-family: ralewayregular;
 }
@@ -1152,6 +1159,11 @@ IMG.coverphone{
   padding-top: 10px;
   font-size: 30px;
 } 
+
+.betaprepdiv{
+  height: 330px;
+  background: #D63636;
+}
 
 
 }
