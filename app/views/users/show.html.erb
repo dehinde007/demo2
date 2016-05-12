@@ -15,13 +15,6 @@
       <%= @user.username %><span class="caret"></span>
     </span>
     <ul class="dropdown-menu">
-     
-     <% if current_user == @user %> 
-     <li class="font-fam">
-       <%= link_to new_invitation_path(current_user), :"data-no-turbolink" => true do %>
-       <span class="glyphicon glyphicon-envelope"></span>Invite Someone
-       <% end %> 
-       <% end %>
      </li> 	
      <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, {:style => 'color: #D63636; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
      <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
@@ -77,28 +70,8 @@
    <% if @user.microposts.any? %>
       <%= render @microposts %>
    <% elsif current_user == @user %>   
-      <div class="font-fam nohall">How to Make a Hall</p>
-      	
- <div id="myCarousel" class="carousel slide">
-   <!-- Carousel items -->
-          <div class="carousel-inner">
-            <div class="active item">
-            	<%= image_tag asset_path('assets/images/ste.jpg') %>
-            </div>
-            <div class="item">
-               <%= image_tag asset_path('assets/images/ste.jpg') %>
-            </div>
-            <div class="item">
-               <%= image_tag asset_path('assets/images/ste.jpg') %>
-            </div>
-            <div class="item">
-               <%= image_tag asset_path('assets/images/ste.jpg') %>
-            </div>
-          </div>
-      <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-       </div>
+      <div class="font-fam nohall">How to Make a Hall
+
    <% else %>    
  
    <% end %>

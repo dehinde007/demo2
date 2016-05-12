@@ -48,15 +48,6 @@
   font-family: ralewayregular;
 }
 
-.getstarted_head{
-  margin-top: 40px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: ralewayregular;
-  color: #E8C6C2;
-}
-
 #pagenameee{
   font-family: ralewayregular;
   font-size: 15px;
@@ -71,7 +62,16 @@
 .getstarted{
   background: white;
   height: 500px;
-  margin-top: 5px;
+  margin-top: 50px;
+}
+
+.getstarth{
+  color: #CE2424;
+  font-weight: bolder;
+}
+
+.getstartp{
+
 }
 
 .getstarted .glyphicon{
