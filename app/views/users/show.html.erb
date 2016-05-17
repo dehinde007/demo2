@@ -17,8 +17,8 @@
     <ul class="dropdown-menu">
      </li> 	
      <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, {:style => 'color: #D63636; font-family: ralewayregular; font-weight: normal; font-size: 13px;'} %></li>
-     <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
      <li class="font-fam"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> subscribers</a></li>
+     <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> subscribed</a></li>
      <li class="font-fam"><%= link_to "Edit Account", edit_user_path(current_user) %></li>
     </ul>
 
@@ -67,8 +67,10 @@
 <div class="container userpost">
 	<hr />
  <section class="font-fam subscribe-btn"><%= render 'follow_form' if signed_in? %></section>
-   <% if @user.microposts.any? %>
+ <% if @user.microposts.any? %>
+
       <%= render @microposts %>
+
    <% elsif current_user == @user %>   
       <div class="font-fam nohall">No hall yet!
 

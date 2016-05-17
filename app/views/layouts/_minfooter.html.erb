@@ -11,7 +11,10 @@
        </span>     
        
        <span class="minf">
-       <a href="/new/hall", data-no-turbolink="true"><i class="glyphicon glyphicon-cloud-upload"></i></a>
+       	<% if current_user.verify? %>
+       	<a href="/new/hall", data-no-turbolink="true"><i class="glyphicon glyphicon-cloud-upload"></i></a>
+       	<% else %>
+       <% end %>
        </span>
        
        <span class="minf">

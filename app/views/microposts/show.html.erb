@@ -12,7 +12,7 @@
            <ul class="font-fam solve  pull-right">
             
            <li> 
-             <% if current_user?(@micropost.user) %>
+             <% if current_user.admin? && !current_user?(@micropost.user) %>
     <%= link_to @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: @micropost.content, class: "hov ckl2 apptrash" do %>
