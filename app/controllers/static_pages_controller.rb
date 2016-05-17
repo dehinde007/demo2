@@ -18,7 +18,6 @@ class StaticPagesController < ApplicationController
  
   def getstarted
     render :layout => "getstart"
-    
   end
 
   def terms
@@ -45,6 +44,10 @@ class StaticPagesController < ApplicationController
   
   def support
     @skip_header = true
+  end
+  
+    def howto
+    render :layout => "ht"
   end
   
 

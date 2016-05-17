@@ -42,6 +42,7 @@ SampleApp::Application.routes.draw do
   match '/terms',   to: 'static_pages#terms',   via: 'get'
   match '/privacy', to: 'static_pages#privacy', via: 'get'
   match '/getstarted', to: 'static_pages#getstarted', via: 'get'
+  match '/howto', to: 'static_pages#howto', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/search', to: 'static_pages#search', via: 'get'
   match '/make_hall', to: 'static_pages#make_hall', via: 'get'
