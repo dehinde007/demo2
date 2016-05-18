@@ -8,6 +8,7 @@ class Micropost < ActiveRecord::Base
 
   #photo
   has_attached_file :photo, styles: {
+    instag: '1080x1080',
     medium: '550x600',
     thumb: '100x100#',
     normal: '450x425',

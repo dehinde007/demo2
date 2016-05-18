@@ -1,13 +1,11 @@
 
-
-
 /* application */
 html, body{
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #F8F8F8!important;
+  background-color: white!important;
 }
 
 .turbolinks-progress-bar::before {
@@ -661,7 +659,7 @@ IMG.coverphone{
 }
 
 .feediteminfo{
-  background: white;
+  background: #F8F8F8;
   widht: 100%;
   height: 60px; 
 }
@@ -695,7 +693,7 @@ IMG.coverphone{
 }
 
 .contentlength{
-  background: white;
+  background: #F8F8F8;
   font-size: 100%;
   width: 100%;
   font-family: ralewayregular;
@@ -717,14 +715,6 @@ IMG.coverphone{
 
 /* micropost_show */
 .micropostshow{
-}
-
-.posttime{
- color: #CE2424;
- font-size: 90%;
- font-family: ralewayregular;
- padding-top: 7px;
- font-weight: bold;
 }
 
 .showmicrocontent{
@@ -1191,16 +1181,11 @@ IMG.coverphone{
 
 @media screen and (max-width: 480px) {      
 /* micropost_show */
-.post-img{
- text-align: center;
-}
-
 .showmicrocontent{
   margin: auto;
   left: 0px;
   right: 0px;
 }
-
 
 }
 
@@ -1241,23 +1226,15 @@ IMG.coverphone{
 }
 
 /* micropost_show */
-.micropostshow{
-
-}
-
-.post-img{
-  text-align: center;
-}
-
 .showmicrocontent{
-  width: 550px;
+  width: 450px;
   background: white;
   padding-left: 3px;
   margin: auto;
   left: 0px;
   right: 0px;
-  
 }
+
 #likky .btn-default{
   background-color: white;
   border-color: white;
@@ -1297,6 +1274,12 @@ IMG.coverphone{
 }
 
 @media screen and (max-width: 758px) {  
+.post-img .img-responsive{
+  width: 450px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}   
  
 .puffauto .img-responsive{
   width: 450px;
@@ -1374,6 +1357,22 @@ IMG.coverphone{
   height: 30px;
   width: 100%;
   font-size: 13px;
+}
+
+// micropost_show
+.post-img .img-responsive{
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}  
+
+.showmicrocontent{
+  width: 500px;
+  padding-left: 3px;
+  margin: auto;
+  left: 0px;
+  right: 0px;
 }
   
 /* feed_item */ 
