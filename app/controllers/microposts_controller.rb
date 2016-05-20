@@ -35,7 +35,7 @@ class MicropostsController < ApplicationController
 
   def destroy
     @user = User.find_by_username(params[:id])
-    @micropost.destroy!
+    @micropost.destroy
     redirect_to current_user
   end
 
