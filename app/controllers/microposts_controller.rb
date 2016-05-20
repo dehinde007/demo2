@@ -34,7 +34,7 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
-    authorize! :destroy
+    @user = User.find_by_username(params[:id])
     @micropost.destroy!
     redirect_to current_user
   end
