@@ -18,7 +18,7 @@
   	<div class="puffin">
     <span id="<%= feed_item.id %>"> 
 	<div class="puffauto">
-  	<%= link_to (image_tag feed_item.photo.url(:instag), class: "img-responsive"), feed_item, :"data-no-turbolink" => true %>
+  	<%= link_to (image_tag feed_item.photo.url(:medium), class: "img-responsive"), feed_item, :"data-no-turbolink" => true %>
   	</div>
   	</div>
 		
@@ -62,3 +62,4 @@
 </i>	    
 </span> 
     </section>
+

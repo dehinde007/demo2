@@ -1,11 +1,13 @@
-	
+	<div class="">
 	<% if @feed_items.any? %>
 <div class="paper">
     <%= render partial: 'shared/feed_item', collection: @feed_items %>
+    
 </div>    
     <% else %>
     
     <div class="nofeed font-fam">Search and Subscribe To Channels You Love</div>
     
     <% end %>
-
+</div>
+<span class="homepag"><%= will_paginate @feed_items %></span>

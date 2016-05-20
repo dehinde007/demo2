@@ -1,4 +1,4 @@
-<div class="home">
+<div class="home allsummer">
 <% if flash[:notice] -%>
   <p class='container kkkkk alert alert-info' id="flashh"><%=h flash[:notice] %></p>
 <% end -%>	
@@ -13,7 +13,7 @@
 </div>     
 
 <div class="pager">
-   <span class="homepag"><%= will_paginate @feed_items, inner_window: 1, outer_window: 1 %></span>
+   <span class="homepag"><%= will_paginate @feed_items, class: "infinite-scrolling" %></span>
 </div>
 
   <div class="footer2"><%= render 'layouts/minfooter' %></div>
