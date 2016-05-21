@@ -677,14 +677,14 @@ IMG.coverphone{
 
 .feedusern{
   padding-bottom: 20px;
-  color: #CE2424;
+  color: grey !important;
   font-size: 85%;
   font-family: ralewayregular;
   font-weight: bold;
 }
 
 .feedusern:visited{
-  color: #CE2424;
+  color: grey !important;
 }
 
 
@@ -1009,7 +1009,7 @@ IMG.coverphone{
 }
 
 .minfooter{
-    background: #F1EBEB;
+    background: #F8F8F8!important;
     height: 45px;
     width: 100%;
     position: fixed;
@@ -1027,7 +1027,7 @@ IMG.coverphone{
 }
 
 .minfooter .glyphicon{
-  color: rgb(184, 120, 120); 
+  color: grey!important; 
   font-size: 17px;
 } 
 
