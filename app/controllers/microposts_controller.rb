@@ -1,7 +1,7 @@
 class MicropostsController < ApplicationController
   before_action :signed_in_user,  only: [:new, :create, :destroy, :show]
   before_action :correct_user,   only: :destroy
-  before_action :admin_user,     only: :destroy
+
 
   def index
     @skip_header = true
@@ -50,8 +50,5 @@ class MicropostsController < ApplicationController
       redirect_to root_url if @micropost.nil?
     end
     
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
     
 end
