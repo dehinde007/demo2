@@ -27,7 +27,7 @@ SampleApp::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   config.serve_static_files = true
-
+  config.action_controller.asset_host = "d3qcqih8npdu1b.cloudfront.net"
   # Compress JavaScripts and CSS.
   config.assets.js_compressor  = :uglifier
   # config.assets.css_compressor = :sass
