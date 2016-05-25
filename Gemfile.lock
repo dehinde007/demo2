@@ -139,6 +139,8 @@ GEM
     faker (1.1.2)
       i18n (~> 0.5)
     ffi (1.9.10-x86-mingw32)
+    font_assets (0.1.12)
+      rack
     formatador (0.2.5)
     gherkin (3.2.0)
     globalid (0.3.6)
@@ -227,7 +229,6 @@ GEM
       slop (~> 3.4)
     puma (2.15.3)
     rack (1.6.4)
-    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.4)
@@ -346,6 +347,7 @@ DEPENDENCIES
   delayed_paperclip
   factory_girl_rails (= 4.2.0)
   faker (= 1.1.2)
+  font_assets
   growl (= 1.0.3)
   guard-rails (= 0.7.2)
   guard-rspec
@@ -359,7 +361,6 @@ DEPENDENCIES
   pg
   public_activity!
   puma
-  rack-cors
   rails (= 4.2.4)
   rails_12factor
   rails_autolink
