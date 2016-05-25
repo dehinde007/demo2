@@ -1,8 +1,8 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 gem 'heroku'
 gem 'aws-sdk', '< 2.0'
 gem 'rails', '4.2.4'
-gem 'font_assets'
+gem "font-assets"
 gem 'responders', '~> 2.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
