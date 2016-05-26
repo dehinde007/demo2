@@ -1,4 +1,3 @@
-
 /* application */
 html, body{
   width: 100%;
@@ -321,22 +320,41 @@ label{
 }
 
 /* welcome */
-IMG.coverphone{
-    margin-top: 70px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+.question {
+   background-image: url("/assets/images/wall7.JPG");
+   background-size: 100% 670px;
+   background-repeat: no-repeat; 
+   margin-top: -40px;
+} 
 
 .welcomeinfo{
   font-weight: bold;
+  color: white;
   font-size: 26px;
   text-align: center;
+  line-height: normal;
+  padding-top: 290px;
 }
 
 .welcomeoption{
   text-align: center;
+  margin-top: 20px;
 }
+
+.wfooterlnk{
+ color: white;
+&:hover{
+ color: white;
+}
+ &:visited{
+ color: white;
+}
+}
+
+.footdate{
+  color: white;
+}
+  
 
 .ckl:visited{
   color: white;
@@ -353,11 +371,20 @@ IMG.coverphone{
     }   
 }
 
-/* Gettingstarted */
+// Gettingstarted 
 .getstarted{
   background: white;
   height: 500px;
-  margin-top: 5px;
+}
+
+.getstarth{
+  color: #CE2424;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.getstartp{
+  font-size: 13px;
 }
 
 .getstarted .glyphicon{
@@ -367,14 +394,6 @@ IMG.coverphone{
 
 /* search */
 .static-search{
-  color: black;
-}
-
-.static-search .glyphicon-star-empty{
-  color: gold;
-}
-
-.static-search .glyphicon-shopping-cart{
   color: black;
 }
 
@@ -1032,41 +1051,6 @@ IMG.coverphone{
 } 
 
 @media screen and (min-width: 320px) {
-/* welcome */
-IMG.coverphone{
-   display: none;
-}
-  
-.question {
-   background-image: url("/assets/images/wall7.JPG");
-   background-size: 100% 670px;
-   background-repeat: no-repeat; 
-} 
-
-.wfooterlnk{
- color: white;
-&:hover{
- color: white;
-}
- &:visited{
- color: white;
-}
-}
-
-.footdate{
-  color: white;
-}
-
-.welcomeinfo{
-  color: white;
-  margin-top: 250px;
-  line-height: normal;
-  text-align: center;
-}    
-
-.welcomeoption{
-  margin-top: 20px;
-}
   
 .carousel_ad{
   float: right;
@@ -1292,14 +1276,12 @@ IMG.coverphone{
 }
 
 @media screen and (min-width: 758px) {  
-IMG.coverphone{
-   display: none;
-}
-  
+
 .question {
    background-image: url("/assets/images/banner3.jpg");
    background-size: 100% 670px;
    background-repeat: no-repeat; 
+   margin-top: -420px;
 }  
  
 .welcomeinfo{
@@ -1430,20 +1412,6 @@ IMG.coverphone{
 }
  
 @media screen and (min-width: 992px) {    
-IMG.coverphone{
-   display: none;
-}
-  
-.question {
-   background-image: url("/assets/images/banner3.jpg");
-   background-size: 100% 670px;
-   background-repeat: no-repeat; 
-}
-
-.welcomeinfo{
-  margin-top: 470px;
-  color: white;
-}  
  
 .puffauto .img-responsive{
   width: 500px;
@@ -1483,20 +1451,6 @@ IMG.coverphone{
 }
 
 @media screen and (min-width: 1200px) {
-IMG.coverphone{
-  display: none;
-}
-  
-.question {
-  background-image: url("/assets/images/banner3.jpg");
-  background-size: 100% 670px;
-  background-repeat: no-repeat; 
-}
-
-.welcomeinfo{
-  margin-top: 470px;
-  color: white;
-}
 
 .puffauto .img-responsive{
   width: 500px;

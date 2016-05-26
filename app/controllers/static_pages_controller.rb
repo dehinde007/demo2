@@ -20,14 +20,7 @@ class StaticPagesController < ApplicationController
   end
  
   def getstarted
-    render :layout => "getstart"
-  end
-
-  def terms
-
-  end
-
-  def privacy
+   @skip_header = true
   end
   
   def vision
@@ -40,19 +33,12 @@ class StaticPagesController < ApplicationController
 
   end
   
-  def jobs
-    @skip_header = true
-    
-  end
-  
   def support
     @skip_header = true
   end
   
-    def howto
+  def howto
     render :layout => "ht"
   end
-  
-
   
 end
