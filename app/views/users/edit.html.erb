@@ -9,9 +9,16 @@
           <% end %> 
         </span>
         
-       <span id="pagenameee" class="navbar-brand font-fam">Edit Account</span>
+       <span id="pagenameee" class="navbar-brand font-fam">Update Info</span>
       
       <ul class="font-fam solve  pull-right">
+      	
+      <li> 
+          <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="headglyph glyphicon glyphicon-search"></span>
+          <% end %> 
+      </li>
+            
             
       </ul>
         </div>   
@@ -33,14 +40,14 @@
     </p>
    
     <p class="container font-fam">
-     <span class="glyphicon glyphicon-tag"></span>
+     <span class="glyphicon gggf glyphicon-tag"></span>
      <%= f.text_field :username, class: "edit-lab", placeholder: "username" %>
     </p>
       
     <p class="container font-fam">
       <span class="glyphicon glyphicon-paperclip font-fam"></span><span class="editavatar">Avatar</span>
       <section class="editavi"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section>
-      <p class="glyphicon glyphicon-camera editusr-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
+      <p class="glyphicon glyphicon-camera editavi-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
     </p>
    
     <p class="container font-fam">

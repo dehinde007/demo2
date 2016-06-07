@@ -4,13 +4,16 @@
     <div class="navbar-header">
            
 
-    <span id="pagename" class="navbar-brand font-fam">Learn to Make Hall</span>
+    <span class="navbar-brand font-fam"><%= link_to "Tap to learn to make hall", howtomakeahall_path, class:"learnhall", :"data-no-turbolink" => true %></span>
       
            <ul class="font-fam solve  pull-right">
             
-           <li> 
-     
-           </li>
+       <li> 
+          <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="headglyph glyphicon glyphicon-search"></span>
+          <% end %> 
+       </li>
+            
       </ul>
         </div>   
       </div><!-- /.container -->
@@ -33,7 +36,7 @@
    <section><%= f.file_field :photo, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section> 
   </section>
   
-  <p class="glyphicon glyphicon-camera newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
+  <p class="glyphicon glyphicon-cloud newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
 
   <p>
    <%= f.text_area :content, :class =>"formcontent font-fam", placeholder: "Describe Hall..." %>

@@ -9,7 +9,7 @@
           <% end %> 
     </span>
     
-    <span id="pagenameee" class="navbar-brand font-fam">Hallit Help Center</span>
+    <span id="pagenameee" class="navbar-brand font-fam">Help Center</span>
       
            <ul class="font-fam solve  pull-right">
             
@@ -27,38 +27,28 @@
 <div class="container getstarted">
 
 <hr />
-<h1 class="font-fam getstarth">Installing the App</h1>	
-<p class="font-fam getstartp">Welcome! To have a better experience using Hallit, go to your home and add Hallit to your homescreen </p>
-
-<h1 class="font-fam getstarth">Navigate the App</h1>
-<p class="font-fam getstartp">Use the browsers back and forward icon to go back and forth during a session <span class="glyphicon glyphicon-menu-left"></span> <span class="glyphicon glyphicon-menu-right"></span></p>
-
-<h1 class="font-fam getstarth">Basic Icons</h1>	
-<p class="font-fam getstartp">Get to help by tapping <span class="glyphicon glyphicon-info-sign"></span></p>	
-<p class="font-fam getstartp">Get to search by tapping <span class="glyphicon glyphicon-eye-open"></span></p>	
-<p class="font-fam getstartp">Logout by tapping <span class="glyphicon glyphicon-off"></span></p>	
-<p class="font-fam getstartp">Get to your home by tapping <span class="glyphicon glyphicon-home"></span> or Hallit logo </p>
-<p class="font-fam getstartp">Get to your profile by tapping <span class="glyphicon glyphicon-user"></span></p>	
-<p class="font-fam getstartp">Create and upload hall by tapping <span class="glyphicon glyphicon-cloud-upload"></span></p>
-<p class="font-fam getstartp">Explore more halls by tapping <span class="glyphicon glyphicon-globe"></span></p>
-<p class="font-fam getstartp">View your friends activities by tapping <span class="glyphicon glyphicon-stats"></span></p>
-<p class="font-fam getstartp">Get to previous by tapping <span class="glyphicon glyphicon-menu-left"></span></p>
-
-<h1 class="font-fam getstarth">Others</h1>	
-<p class="font-fam getstartp">Tap on usernames in profile to view information such as; Edit Profile and much more...</p>
-<p class="font-fam getstartp">Click on photos to view them. Tap <span class="glyphicon glyphicon-heart"></span> to like  </p>
-<p class="font-fam getstartp">When you find friends or channels you love, tap on the subscribe button to subscribe or unsubscribe button to unsubscribe  </p>
-
+	
+<p class="font-fam getstartp">Welcome! To have a better experience using Hallit, tap <span class="glyphicon glyphicon-home"></span> to go to your home and add Hallit to your homescreen </p><br />
+<p class="font-fam getstartp gtstbr">Tap browser <span class="glyphicon glyphicon-menu-left"></span> <span class="glyphicon glyphicon-menu-right"></span> to go back and forth when using the app </p>
+<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-home"></span> to get to home </p>
+<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-heart-empty"></span> to explore halls </p>
+<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-camera"></span> to create hall. <%= link_to "learn more", howtomakeahall_path, class: "gtstlearnhall" %> </p>
+<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-tent"></span> to view followed activities </p>
+<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-search"></span> to find friends or discover users </p>
+<p class="font-fam getstartp">tap <img src="/assets/images/ro.png" class="imggtst"/> to find out more </p><br />
+<p class="font-fam getstartp">Tapping a users username on a profile page allows you to view information such as; number of halls or followers. </p>
+<p class="font-fam getstartp">Tapping on photos will allow you to view them. </p>
+<p class="font-fam getstartp">When you find friends or channels you love, tapping on the follow button will allow you to subscribe to them!  </p>
 
 </div>
 </div>
 
 
 
-<br /><br /><br /><br />
+<br />
   <% if signed_in? %> 		
    <div class="footer2"><%= render 'layouts/minfooter' %></div>                           
   <% end %>
-<br /><br /><br /><br /><br /><br />
+<br /><br />
 <div class="app_footer"><%= render 'layouts/footer' %></div>
 

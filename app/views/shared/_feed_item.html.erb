@@ -2,17 +2,17 @@
 	<div class="feedhouse">
 		
     <section class="feediteminfo">
-    <%=(image_tag feed_item.user.avatar.url(:mini), class: "img-circle") %>
+    <%=(image_tag feed_item.user.avatar.url(:thumb), class: "img-circle") %>
     <%= link_to feed_item.user.username, feed_item.user, class: "hov feedusern"  %>
     <span class="font-fam feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
-    <span><img src="/assets/images/ver.png" width="25" height="25" data-toggle="tooltip" data-placement="top" title="Verified Account"/></span>
+   
     </section>
     
     <section class="feediteminfo2">
-    <%=(image_tag feed_item.user.avatar.url(:mini), class: "img-circle") %>
+    <%=(image_tag feed_item.user.avatar.url(:thumb), class: "img-circle") %>
     <%= link_to feed_item.user.username, feed_item.user, class: "hov feedusern"  %>
     <span class="font-fam feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
-    <span><img src="/assets/images/ver.png" width="25" height="25" data-toggle="tooltip" data-placement="top" title="Verified Account"/></span>
+    
     </section>
    
   	<div class="puffin">
@@ -40,7 +40,8 @@
     <% else %>
     <% end %>  
 </i>
-</span>   	
+</span>
+<div class="feeditemhr1"><hr /></div>   	
     </section>
 
     <section class="container contentlength2">
@@ -60,6 +61,6 @@
     <% else %>
     <% end %> 
 </i>	    
-</span> 
+</span><div class="feeditemhr2"><hr /></div> 
     </section>
 

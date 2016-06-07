@@ -16,9 +16,8 @@ end
  end
 
 #avatar
-  has_attached_file :avatar, styles: {
-    mini: '38x38#', 
-    thumb: '100x100#'
+  has_attached_file :avatar, styles: { 
+    thumb: '100x100'
   }, :url => "/avatars/:id/:style/:basename.:extension",
      :default_url => '/assets/images/selll.png',
      :path => ":rails_root/public/avatars/:id/:style/:basename.:extension"

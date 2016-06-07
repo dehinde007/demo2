@@ -1,9 +1,9 @@
 commented on
 <% if activity.trackable %> 
-<%= link_to (image_tag activity.trackable.micropost.photo.url(:thumb)), activity.trackable.micropost, :"data-no-turbolink" => true %>
+<%= link_to (image_tag activity.trackable.micropost.photo.url(:normal), class: "trackable"), activity.trackable.micropost, :"data-no-turbolink" => true %>
 <span class="act_time"> <%= time_ago_in_words(activity.created_at) %> ago</span>
 <% else %> 
-post which has since been removed
+a hall which has been deleted!
 <% end %>
 
 

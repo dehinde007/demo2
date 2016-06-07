@@ -37,8 +37,8 @@ class StaticPagesController < ApplicationController
     @skip_header = true
   end
   
-  def howto
-    render :layout => "ht"
+  def howtomakeahall
+    @skip_header = true
   end
   
 end

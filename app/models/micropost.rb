@@ -9,9 +9,6 @@ class Micropost < ActiveRecord::Base
   #photo
   has_attached_file :photo, styles: {
     instag: '1080x1080',
-    medium: '550x600',
-    thumb: '100x100#',
-    normal: '450x425',
     square: '300x300#'
   }, :url => "/attachments/:id/:style/:basename.:extension",
      :path => ":rails_root/public/attachments/:id/:style/:basename.:extension"

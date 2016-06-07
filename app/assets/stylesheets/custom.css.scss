@@ -121,6 +121,10 @@ a#next:hover {
 .clear {clear:both}
 
 /*global*/
+.pager{
+  font-size: 60%;
+}
+
 .app_a_link a{
   color: #D63636;
 &:visited {
@@ -172,8 +176,8 @@ a#next:hover {
 }
 
 .ul-userinfo{
-  margin-top: -40px;
-  margin-left: 10px;
+  margin-top: -35px;
+  margin-left: 5px;
 }
 
 #flashh{
@@ -267,6 +271,11 @@ input{
   border-radius: 3px;
   font-size: 14px;
   width: 200px;
+  -webkit-appearance: none;
+}
+
+.formcontent {
+  -webkit-appearance: none;  
 }
 
 label{
@@ -275,8 +284,8 @@ label{
 
 .appbutton .btn-primary {
     color: #fff;
-    background-color: #D4C2C2 !important;
-    border-color: #D4C2C2 !important;
+    background-color: rgb(245, 177, 177) !important;
+    border-color: rgb(245, 177, 177) !important;
     &:hover {
     background-color: #D63636 !important;
     border-color: #D63636 !important;  
@@ -290,8 +299,8 @@ label{
 /* header */ 
 
 .navbar-default{
-  background: #D63636!important;
-  border-color: #D63636!important;
+  background: rgba(247, 58, 65, 0.9)!important;
+  border-color: rgba(247, 58, 65, 0.9)!important;
 }
 
 .navbar-header{
@@ -371,7 +380,7 @@ label{
     }   
 }
 
-// Gettingstarted 
+// Getstarted 
 .getstarted{
   background: white;
   height: 500px;
@@ -380,19 +389,42 @@ label{
 .getstarth{
   color: #CE2424;
   font-size: 20px;
-  font-weight: bolder;
+  text-align: center;
 }
 
 .getstartp{
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.gtstlearnhall{
+  color: #CE2424;  
   font-size: 13px;
+  &:visited{
+  color: #CE2424;
+  }
+  &:hover{
+   background: none; 
+  }
 }
 
 .getstarted .glyphicon{
   color: rgb(184, 120, 120); 
-  font-size: 14px;
+  font-size: 16px;
 } 
 
-/* search */
+.gtstbr .glyphicon{
+  color: black;
+}
+
+.imggtst{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+
+//search
 .static-search{
   color: black;
 }
@@ -401,11 +433,38 @@ label{
   width: 40px;
 }
 
-/* vision */
-.dejavu{
-  float: right;
+//howtomakeahall
+.ht-header{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(245, 177, 177);
 }
 
+.htstep{
+  text-align: center;
+  color: rgb(245, 177, 177);
+  font-size: 30px;
+}
+
+.stephoto{
+  text-align: center;
+  font-size: 70px;
+  color: rgb(245, 177, 177);
+}
+
+.stephotoi{
+  text-align: center;
+}
+
+.htsteps{
+  text-align: center;
+  color: rgb(245, 177, 177);
+  font-size: 25px;
+  line-height:  20px;
+}
+
+//vision
 .static_head{
   margin-top: -40px;
   text-align: center;
@@ -418,7 +477,7 @@ label{
 
 #pagenameee{
   font-family: ralewayregular;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   color: white;
   margin-left: -26px;
@@ -449,13 +508,15 @@ label{
 
 .betaprepdiv{
   height: 400px;
-  background: #D63636;
+  background: rgba(247, 58, 65, 0.9);
 }
 
 .visioncen{
   display: block;
   margin-left: auto;
-  margin-right: auto  
+  margin-right: auto;
+  border-radius: 50%;
+  width: 250px;  
 }
 
 .betaprepalign{
@@ -513,6 +574,10 @@ label{
 }
 
 /* userpartial*/
+.userpartialimg .img-circle{
+  width: 40px;
+}
+
 .userpartialname{
   color: black; 
   font-weight: bold; 
@@ -523,7 +588,6 @@ label{
   &:hover{
    background: none; 
   }
-  
 }
 
 /* user_index */
@@ -540,6 +604,16 @@ label{
 }
 
 /* new_micropost */
+.learnhall{
+  color: white;  
+  &:visited{
+  color: white;
+  }
+  &:hover{
+   background: none; 
+  }
+}
+
 .micropostform{
  text-align: center;
  margin-top: 200px;
@@ -551,17 +625,13 @@ label{
   right: 0;
 }
 
-.nehmodal{
- height: 10px;
-}
-
 .formphoto{
  margin-left: 40px;
  display: none;
 }
 
 .newhall-input{
- color: #E8C6C2;
+ color: rgb(245, 177, 177);
  cursor: pointer;
  font-size: 40px;
 }
@@ -584,18 +654,12 @@ label{
 }
 
 /* activity */
+
 .noactivity{
   font-weight: bold;
   color: #BBBBBB;
   text-align: center;
   margin-top: 170px;
-}
-
-
-.glyphicon-bookmark{
-  color: #D63636;
-  font-size: 20px;
-  margin-left: 12px;
 }
 
 /* signup */
@@ -630,7 +694,7 @@ label{
 }
 
 .sessionfield{
-  height: 40px;
+  height: 35px;
   width: 100%;
   font-size: 13px;
 }
@@ -651,9 +715,6 @@ label{
 }
 
 /* home */
-.pager{
-  font-size: 60%;
-}
 
 .homepag{
   font-size: 100%;
@@ -670,7 +731,7 @@ label{
 
 /* feed_item */
 .feedhouse{
-  margin-top: 20px;
+  margin-top: 5x;
   width: 100%;
 }
 
@@ -679,7 +740,7 @@ label{
 }
 
 .feediteminfo{
-  background: #F8F8F8;
+  background: white;
   widht: 100%;
   height: 60px; 
 }
@@ -696,14 +757,13 @@ label{
 
 .feedusern{
   padding-bottom: 20px;
-  color: #CE2424;
+  color: grey;
   font-size: 85%;
   font-family: ralewayregular;
-  font-weight: bold;
 }
 
 .feedusern:visited{
-  color: #CE2424;
+  color: grey;
 }
 
 
@@ -713,7 +773,7 @@ label{
 }
 
 .contentlength{
-  background: #F8F8F8;
+  background: white;
   font-size: 100%;
   width: 100%;
   font-family: ralewayregular;
@@ -730,13 +790,12 @@ label{
 }
 
 .feedlikeicon .glyphicon-heart{
-  color: rgb(206, 27, 27);
+  color: rgb(255, 68, 75);
+  font-size: 17px;
+  padding-top: 4px;
 }
 
 /* micropost_show */
-.micropostshow{
-}
-
 .showmicrocontent{
   font-size: 100%;
   font-family: ralewayregular;
@@ -798,6 +857,12 @@ label{
   font-size: 100%;
 }
 
+.commentpartial .glyphicon-trash{
+ font-size: 10px;
+ color: #CE2424;
+}
+
+
 /* commentform */
 .commentformbtn .btn-primary{
  font-weight: bold;
@@ -809,7 +874,6 @@ label{
   color: #ce1b1b;
   background-color: #F8F8F8;
   border-color: #F8F8F8;
-
 &:focus{
   outline: none;
 } 
@@ -944,51 +1008,53 @@ label{
   float: left;
 }
 
+
 /*edituser*/
 .editusr{
   margin-top: -15px;
 }
 
-.editusr .glyphicon{
-  color: #E8C6C2;
-}
-
-.editusremail{
-  color: #E8C6C2;
-}
-
-.editavi{
-  display: none;
-}
-
-.editavatar{
-  color: #E8C6C2;
-}
-
-.editusr-input{
- margin-left: 80px;
- font-size: 50px; 
- cursor: pointer;
-}
-
 .edit-lab{
   font-size: 13px;
   width: 90%;
-  height: 27px; 
-  border-top-color: #F8F8F8;
-  border-left-color: #F8F8F8;
-  border-right-color: #F8F8F8;
-  border-bottom-color: #EAEAEA;
-  background: #F8F8F8;
+  height: 37px; 
+  background: white;
 }
 
 .edit-lab:focus{
   outline: none;
 }
 
+.editusr .glyphicon{
+  color: #E8C6C2;
+  font-size: 20px;
+}
+
+.editusremail{
+  color: #E8C6C2;
+  font-size: 15px;
+}
+
+.editavi{
+  display: none;
+}
+
+.editavi-input{
+ margin-left: 50px;
+ cursor: pointer;
+}
+
+.editavatar{
+  color: #E8C6C2;
+}
+
+.editusr .glyphicon-camera{
+  font-size: 50px;
+}
+
 .edit_butt{
   text-align: center;
-  margin-top: 60px;
+  margin-top: 35px;
 }
 
 /* footer */
@@ -1027,13 +1093,18 @@ label{
   color: black;
 }
 
+// minfooter
 .minfooter{
-    background: #F8F8F8;
-    height: 45px;
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
-    opacity: 0.7;
+  background: white;
+  height: 45px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  border-top: 1px solid #E2E2E2;
+}
+
+.ddffs{
+  margin-top: -3px;
 }
 
 .minf{
@@ -1041,14 +1112,38 @@ label{
   padding-right: 13.6%;
 }
 
-.ddffs{
-  margin-top: -3px;
-}
-
-.minfooter .glyphicon{
-  color: rgb(184, 120, 120); 
+.minf .glyphicon{
+  color: rgb(245, 177, 177); 
   font-size: 17px;
 } 
+
+.hfilter{
+  margin-top: -41px;
+  float: right;
+  margin-right: 10px;
+  color: grey
+}
+
+.dropdown-menu.pull-right {
+  right:0;
+}
+
+.curusavi .img-circle{
+  width: 30px;
+  border: 3px solid white;
+}
+
+.hfilt .glyphicon{ 
+  color: rgb(184, 120, 120); 
+  font-size: 15px;
+}
+
+//publicactiviy
+
+.trackable{
+  width: 30%;
+} 
+  
 
 @media screen and (min-width: 320px) {
   
@@ -1105,14 +1200,10 @@ label{
   padding-right: 12.8%;
 }
 
-.minfooter .glyphicon{
+.minf .glyphicon{
   padding-top: 10px;
   font-size: 25px;
 } 
-
-.pager{
-  margin-left: -40px;
-}
 
 /* micropost_index */
 .micropostindex2{
@@ -1136,26 +1227,17 @@ label{
 }  
   
 /* microshow */
-.micropostshow{
-  
-}
-
-.glyphicon-bookmark{
-  font-size: 25px;
-}
-
-
 .profiletop .img-circle{
   width: 150px;
 }
 
 
 .minf{
-  padding-left: 1%;
-  padding-right: 13.4%;
+  padding-left: 4%;
+  padding-right: 10%;
 }
 
-.minfooter .glyphicon{
+.minf .glyphicon{
   padding-top: 10px;
   font-size: 30px;
 } 
@@ -1182,7 +1264,7 @@ label{
 
 .feediteminfo2{
   width: 450px;
-  background: #F8F8F8;
+  background: white;
   display: block;
   height: 50px;
   margin: auto;
@@ -1202,7 +1284,7 @@ label{
  
 .contentlength2{
   width: 450px;
-  background: #F8F8F8;
+  background: white;
   display: block;
   padding-bottom: 10px;
   margin: auto;

@@ -27,7 +27,7 @@
 </header> 
 
 <div class="micropostshow">	
-<br />
+
  	<section class="post-img"><%= image_tag @micropost.photo.url(:instag), class: "img-responsive" %></section>
    
    <div class="container">
@@ -100,7 +100,7 @@
 <hr />
 
 <section id="">
-<section class=""><%= render @micropost.comments %></section>
+<section class="ddd"><%= render @micropost.comments %></section>
 
 <%= render "comments/form" %> 
 

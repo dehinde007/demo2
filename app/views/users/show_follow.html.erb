@@ -4,9 +4,9 @@
   <div class="shofollow">
  
     <% if @users.any? %>
-      <ul class="users">
+      <div class="container users">
         <%= render @users %>
-      </ul>
+      </div>
       <%= will_paginate %>
     <% end %>
   </div>
