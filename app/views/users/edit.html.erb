@@ -1,3 +1,4 @@
+<% provide(:title, @user.name) %>
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="">
@@ -26,7 +27,6 @@
     </nav>
 </header> 
 
-<% provide(:title, "Edit user") %>
 <div class="alert alert-error">
 <%= form_for @user, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
@@ -35,47 +35,47 @@
  <div class="container editusr"> 
  
     <p class="container font-fam">
-     <span class="glyphicon glyphicon-user"></span>
+     Fullname
      <%= f.text_field :name, class: "edit-lab", placeholder: "fullname" %>
     </p>
    
     <p class="container font-fam">
-     <span class="glyphicon gggf glyphicon-tag"></span>
+     Username
      <%= f.text_field :username, class: "edit-lab", placeholder: "username" %>
     </p>
       
     <p class="container font-fam">
-      <span class="glyphicon glyphicon-paperclip font-fam"></span><span class="editavatar">Avatar</span>
+      </span><span class="editavatar">Avatar</span>
       <section class="editavi"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section>
-      <p class="glyphicon glyphicon-camera editavi-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
+      <p class="glyphicon glyphicon-camera editavi-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>     
     </p>
    
     <p class="container font-fam">
-      <span class="editusremail">@</span>
+      Email
       <%= f.text_field :email, class: "edit-lab", placeholder: "email" %>
     </p> 
    
     <p class="container font-fam">
-      <span class="glyphicon glyphicon-list-alt"></span>
-      <%= f.text_field :bio, class: "edit-lab", placeholder: "bio"%>
+      Bio
+      <%= f.text_field :bio, class: "edit-lab", placeholder: "bio" %>
     </p>
     
     <p class="container font-fam">
-      <span class="glyphicon glyphicon-globe"></span>
+      Website
       <%= f.text_field :website, class: "edit-lab", placeholder: "website" %>
     </p>
     
     <p class="container font-fam">
-      <span class="glyphicon glyphicon-lock"></span>
+      Password
       <%= f.password_field :password, class: "edit-lab", placeholder: "password" %>
     </p>
     
     <p class="container font-fam">
-      <span class="glyphicon glyphicon-ok-circle"></span>
-      <%= f.password_field :password_confirmation, class: "edit-lab", placeholder: "password confirmation" %>
+      Confirm password
+      <%= f.password_field :password_confirmation, class: "edit-lab", placeholder: "confirm password" %>
     </p>
    
-   <p class="font-fam appbutton edit_butt"><%= f.submit "Save", class: "btn-primary btn-sm" %></p>
+   <p class="font-fam appbutton edit_butt"><%= f.submit "Update", class: "btn-primary btn-sm" %></p>
       
     <% end %>
     

@@ -2,7 +2,7 @@
   <p class="ddffs">
    		
        <span class="minf">
-        <a href="/home"><i class="glyphicon glyphicon-home"></i></a>
+        <a href="/home"><i class="glyphicon glyphicon-tent"></i></a>
        </span>
        
        <span class="minf">
@@ -14,7 +14,7 @@
        </span>
       
        <span class="minf">
-        <a href="/activities"><i class="glyphicon glyphicon-tent"></i></a>
+        <a href="/activities"><i class="glyphicon glyphicon-share-alt"></i></a>
        </span> 
        
        
@@ -22,7 +22,7 @@
 	   <div class="dropup">
 		 
        <span class="font-fam dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <%= render "shared/useravi" %>
+        <%= render "shared/useravi" %> 
        </span>
     
        <ul class="dropdown-menu pull-right font-fam">
@@ -34,7 +34,7 @@
              
         <li class="hfilt font-fam">
         <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>
-        <span class="glyphicon glyphicon-cog"></span><span class="font-fam"> Update Info</span>
+        <span class="glyphicon glyphicon-wrench"></span><span class="font-fam"> Update Info</span>
         <% end %>	
         </li>
     
@@ -50,6 +50,7 @@
         <% end %>
         </li>  
        </ul>
+
 
        </div>
        </section>

@@ -126,13 +126,14 @@ a#next:hover {
 }
 
 .app_a_link a{
-  color: #D63636;
+  color: black;
+  text-decoration: underline;
 &:visited {
-  color: #D63636;
+  color: black;
   background: none;
  }  
 &:hover {
-  color: #D63636;
+  color: black;
   background: none;
 }
   
@@ -198,6 +199,10 @@ a#next:hover {
 }
 
 /* shared */
+#scrbar{
+  color: black;
+}
+
 p .sr{
   background: white;
   height: 32px;
@@ -211,13 +216,12 @@ p .sr{
 .microusrn{
   font-family: ralewayregular; 
   font-weight: bold; 
-  color: #CE2424; 
+  color: black; 
   font-size: 100%;
+  &:visited{
+  color: black;
 }
-
-.microusrn:visited{
-  color: #CE2424;
-}
+ }
 
 /* invitation */
 .invite{
@@ -287,8 +291,8 @@ label{
     background-color: rgb(245, 177, 177) !important;
     border-color: rgb(245, 177, 177) !important;
     &:hover {
-    background-color: #D63636 !important;
-    border-color: #D63636 !important;  
+    background-color: rgba(247, 58, 65, 0.9) !important;
+    border-color: rgba(247, 58, 65, 0.9) !important;  
     }   
 }
 
@@ -330,19 +334,18 @@ label{
 
 /* welcome */
 .question {
-   background-image: url("/assets/images/wall7.JPG");
-   background-size: 100% 670px;
+   background-image: url("/assets/images/wall1.png");
+   background-size: 100% 580px;
    background-repeat: no-repeat; 
-   margin-top: -40px;
+   margin-top: 0px;
 } 
 
 .welcomeinfo{
-  font-weight: bold;
   color: white;
   font-size: 26px;
   text-align: center;
   line-height: normal;
-  padding-top: 290px;
+  padding-top: 360px;
 }
 
 .welcomeoption{
@@ -372,57 +375,56 @@ label{
 .wappbutton .btn-primary {
     color: #fff;
     background-color: rgba(0,0,0,.5)!important;
-    border-color: #D4C2C2 !important;
+    border-color: white !important;
     opacity: 0.7;
     &:hover {
     background-color: #D63636 !important;
-    border-color: #D63636 !important;  
+    border-color: white !important;  
     }   
 }
 
 // Getstarted 
-.getstarted{
-  background: white;
-  height: 500px;
-}
-
-.getstarth{
-  color: #CE2424;
-  font-size: 20px;
+.getcent{
   text-align: center;
 }
 
+.getcent .glyphicon{
+  font-size: 40px;
+  color: rgb(245, 177, 177);
+}
+
+.getstarth{
+  font-size: 20px;
+  padding-top: 15px;
+}
+
 .getstartp{
-  font-size: 16px;
+  color: black;
+  font-size: 14px;
   line-height: 20px;
 }
 
+.getstartp .glyphicon{
+  color: rgb(245, 177, 177); 
+  font-size: 16px;
+} 
+
 .gtstlearnhall{
-  color: #CE2424;  
+  color: black;  
   font-size: 13px;
+  text-decoration: underline;
   &:visited{
-  color: #CE2424;
+  color: black;
   }
   &:hover{
    background: none; 
   }
 }
 
-.getstarted .glyphicon{
-  color: rgb(184, 120, 120); 
-  font-size: 16px;
-} 
-
-.gtstbr .glyphicon{
-  color: black;
-}
-
 .imggtst{
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
-
 
 //search
 .static-search{
@@ -497,13 +499,35 @@ label{
   color: #B77575; 
 }
 
+.missciond{
+  text-align: center;
+  font-family: ralewayregular;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: black; 
+  font-weight: bold;
+}
+
+.missciong{
+  text-align: center;
+}
+
+.missciong .glyphicon-menu-down{
+  color: black;
+  font-size: 30px;
+}
+
+.missciong .glyphicon-flag{
+  color: rgba(247, 58, 65, 0.9);
+  font-size: 30px;
+}
+
 .misscion{
   text-align: center;
   font-family: ralewayregular;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.42857143;
   color: #333; 
-  
 }
 
 .betaprepdiv{
@@ -516,7 +540,8 @@ label{
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  width: 250px;  
+  margin-top: -10px;
+  width: 230px;  
 }
 
 .betaprepalign{
@@ -567,9 +592,9 @@ label{
 }
 
 .supportlink a{
-    color: #E8C6C2;
+    color: rgba(247, 58, 65, 0.9);
 &:visited {
-    color: #E8C6C2;
+    color: rgba(247, 58, 65, 0.9);
  }   
 }
 
@@ -634,6 +659,9 @@ label{
  color: rgb(245, 177, 177);
  cursor: pointer;
  font-size: 40px;
+ &:hover {
+
+ }   
 }
 
 .formcontent{
@@ -757,19 +785,19 @@ label{
 
 .feedusern{
   padding-bottom: 20px;
-  color: grey;
+  color: black;
   font-size: 85%;
   font-family: ralewayregular;
 }
 
 .feedusern:visited{
-  color: grey;
+  color: black;
 }
 
 
 .feedtime{
   font-size: 80%;
-  color: grey;
+  color: black;
 }
 
 .contentlength{
@@ -786,7 +814,7 @@ label{
 }
 
 .feedlikeicon{
-  color: grey;
+  color: black;
 }
 
 .feedlikeicon .glyphicon-heart{
@@ -806,7 +834,7 @@ label{
 }
 
 .postauthor{
-  color: red;
+  color: black;
   font-size: 12px;
 }
 
@@ -976,6 +1004,12 @@ label{
 
 .sub_but .btn-danger{
   width: 80px;
+  background: rgba(247, 58, 65, 0.9);
+  border-color: rgba(247, 58, 65, 0.9);
+  &:hover {
+  background-color: rgb(245, 177, 177);
+  border-color: rgb(245, 177, 177);  
+ } 
 }
 
 /* _micropost */
@@ -1044,9 +1078,6 @@ label{
  cursor: pointer;
 }
 
-.editavatar{
-  color: #E8C6C2;
-}
 
 .editusr .glyphicon-camera{
   font-size: 50px;
@@ -1134,7 +1165,7 @@ label{
 }
 
 .hfilt .glyphicon{ 
-  color: rgb(184, 120, 120); 
+  color: black; 
   font-size: 15px;
 }
 

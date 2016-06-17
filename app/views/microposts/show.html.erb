@@ -1,3 +1,4 @@
+<% provide(:title, @micropost.user.name) %>
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="">
@@ -33,7 +34,7 @@
    <div class="container">
     
    <section class="showmicrocontent">
-   	<%= render "shared/microusrn" %><span><img src="/assets/images/ver.png" width="25" height="25" data-toggle="tooltip" data-placement="top" title="Verified Account"/></span>
+   	<%= render "shared/microusrn" %><span><img src="/assets/images/verify.png" width="10" height="10" data-toggle="tooltip" data-placement="top" title="Verified Account"/></span>
    <span class="showcontentsize app_a_link"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
    <span class="postauthor">
 <i>  	
@@ -86,7 +87,7 @@
     
  <div id="sliders"> 
   <ul>
-   <li><img src="/assets/images/nike-s.jpg" width="50" height="40" alt="Slide 1"/></li>	
+   <li><img src="/assets/images/hoj.gif" width="50" height="40" alt="Slide 1"/></li>	
    <li><img src="/assets/images/access.png" width="60" height="40" alt="Slide 2"/></li>	
    <li><img src="/assets/images/cono.png" width="50" height="40" alt="Slide 3"/></li>
    <li><img src="/assets/images/total.png" width="40" height="40" alt="Slide 4"/></li>

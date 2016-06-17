@@ -1,3 +1,4 @@
+<%content_for :title, "Activities"%>
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="">
@@ -27,7 +28,6 @@
 <% @activities.each do |activity| %>
 
  <div>
-   	<span class="app_a_link"><%= link_to activity.owner.username, activity.owner if activity.owner %></span>
    	<%= render_activity activity %>    
  </div>	
  

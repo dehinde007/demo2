@@ -1,3 +1,4 @@
+<%content_for :title, "Hallit Help Center"%>
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="">
@@ -23,29 +24,52 @@
 </header>  
 
 
-<div class="container">
 <div class="container getstarted">
+  <hr />
+  
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-tent"></p>
+  <p class="font-fam getstarth">Homescreen Intialization</p>	
+  <p class="font-fam getstartp">Welcome! To have a better experience using Hallit, tap <span class="glyphicon glyphicon-tent"></span> to go to your home and add Hallit to your homescreen</p>
+  <br /><br /><br />
+  
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-menu-left"> <span class="getcentt glyphicon glyphicon-menu-right"> </p>
+  <p class="font-fam getstarth">Browser Icon</p>	
+  <p class="font-fam getstartp">Tap browser <span class="glyphicon glyphicon-menu-left"></span> <span class="glyphicon glyphicon-menu-right"></span> to go back and forth when using the app</p>
+  <br /><br /><br /> 	
 
-<hr />
-	
-<p class="font-fam getstartp">Welcome! To have a better experience using Hallit, tap <span class="glyphicon glyphicon-home"></span> to go to your home and add Hallit to your homescreen </p><br />
-<p class="font-fam getstartp gtstbr">Tap browser <span class="glyphicon glyphicon-menu-left"></span> <span class="glyphicon glyphicon-menu-right"></span> to go back and forth when using the app </p>
-<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-home"></span> to get to home </p>
-<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-heart-empty"></span> to explore halls </p>
-<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-camera"></span> to create hall. <%= link_to "learn more", howtomakeahall_path, class: "gtstlearnhall" %> </p>
-<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-tent"></span> to view followed activities </p>
-<p class="font-fam getstartp">tap <span class="glyphicon glyphicon-search"></span> to find friends or discover users </p>
-<p class="font-fam getstartp">tap <img src="/assets/images/ro.png" class="imggtst"/> to find out more </p><br />
-<p class="font-fam getstartp">Tapping a users username on a profile page allows you to view information such as; number of halls or followers. </p>
-<p class="font-fam getstartp">Tapping on photos will allow you to view them. </p>
-<p class="font-fam getstartp">When you find friends or channels you love, tapping on the follow button will allow you to subscribe to them!  </p>
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-heart-empty"></p>
+  <p class="font-fam getstarth">Explore</p>	
+  <p class="font-fam getstartp">Tap heart to explore halls</p>
+  <br /><br /><br />
+    
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-camera"></p>
+  <p class="font-fam getstarth">New hall</p>	
+  <p class="font-fam getstartp">Tap camera to create hall. <%= link_to "learn more", howtomakeahall_path, class: "gtstlearnhall" %> </p>
+  <br /><br /><br />
+
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-share-alt"></p>
+  <p class="font-fam getstarth">Activity</p>	
+  <p class="font-fam getstartp">Tap share to view followed channels activity</p>
+  <br /><br /><br />
+  
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-search"></p>
+  <p class="font-fam getstarth">Search</p>	
+  <p class="font-fam getstartp">Tap search to find friends or discover users</p>
+  <br /><br /><br />
+  
+  <p class="getcent"><img src="/assets/images/tell.png" class="imggtst"/></p>
+  <p class="font-fam getstarth">Avatar</p>	
+  <p class="font-fam getstartp">Tap avatar to view profile, update account, help center, signout</p>
+  <br /><br />
+  
+  <p class="font-fam getstarth">Essential</p>
+  <p class="font-fam getstartp">Tapping on photos will allow you to view them</p>  
+  <p class="font-fam getstartp">Tapping a users username on a profile page will allow you to find information such as; number of halls or followers </p>
+  <p class="font-fam getstartp">When you find friends or channels you love, tapping on the follow button will allow you to subscribe to them!  </p>
 
 </div>
 </div>
 
-
-
-<br />
   <% if signed_in? %> 		
    <div class="footer2"><%= render 'layouts/minfooter' %></div>                           
   <% end %>
