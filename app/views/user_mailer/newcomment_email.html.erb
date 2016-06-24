@@ -1,3 +1,16 @@
-<p style="color: red"><%= @comment.user.username %> commented on your <%= link_to 'HALL', micropost_url(@comment.micropost) %></p>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+<p><%= @comment.user.username %> commented on your <%= link_to 'Hall', micropost_url(@comment.micropost) %> </p>
 
 <p>comment: <%= @comment.body %></p> 
+
+</body>
+</html>

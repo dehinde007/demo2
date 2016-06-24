@@ -5,3 +5,5 @@
   $ ->
     $('.edit_butt').click ->
       $('.loaderd').show('slow');
+   
+   

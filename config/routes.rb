@@ -32,7 +32,7 @@ SampleApp::Application.routes.draw do
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts,    only: [:create, :destroy, :show]
   resources :relationships, only: [:create, :destroy]
-  root to: 'static_pages#vision'
+  root to: 'static_pages#welcome'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'

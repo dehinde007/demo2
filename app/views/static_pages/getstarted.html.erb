@@ -14,9 +14,12 @@
       
            <ul class="font-fam solve  pull-right">
             
-           <li> 
-     
-           </li>
+       <li> 
+          <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="headglyph glyphicon glyphicon-search"></span>
+          <% end %> 
+       </li>
+       
       </ul>
         </div>   
       </div><!-- /.container -->
@@ -75,4 +78,4 @@
   <% end %>
 <br /><br />
 <div class="app_footer"><%= render 'layouts/footer' %></div>
-
+<br /><br />

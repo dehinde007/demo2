@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   
   def index
     @skip_header = true
-    @users = User.search(params[:search]).paginate(page: params[:page], per_page: 30).order('created_at DESC')
+    @users = User.search(params[:search]).paginate(page: params[:page], per_page: 15).order('created_at DESC')
   end
 
   def show
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
    UserMailer.delay.welcome_email(@user)
       sign_in @user
       flash[:success] = "Welcome to Hallit"
-      redirect_to getting_started_path
+      redirect_to getstarted_path
     else
       render 'new'
     end

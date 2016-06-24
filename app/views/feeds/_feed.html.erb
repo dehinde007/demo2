@@ -1,12 +1,14 @@
 	<div class="">
 	<% if @feed_items.any? %>
 <div class="paper">
-    <%= render partial: 'shared/feed_item', collection: @feed_items %>
-    
+    <%= render partial: 'shared/feed_item', collection: @feed_items %>  
 </div>    
     <% else %>
+    <div class="feedwelcomeimg">
+  	<%= image_tag asset_path('assets/images/han3.png') %> 
+  	</div>
     
-    <div class="nofeed font-fam">Search and Subscribe To Channels You Love</div>
+    <div class="nofeed font-fam"><%= link_to "Search", search_path, class: "feedsearchlink" %> and Subscribe To Channels You Love</div>
     
     <% end %>
 </div>

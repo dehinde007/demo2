@@ -4,23 +4,23 @@ class UserMailer < ActionMailer::Base
   def welcome_email(user)
    @user = user
    @url = 'http://www.google.com'
-   mail(to: @user.email, subject: 'welcome email')
+   mail(to: @user.email, subject: 'Hallit welcome email')
   end
   
   def newcomment_email(comment)
    @comment = comment
-   mail(to: comment.micropost.user.email, subject: "Hallit Notify")
+   mail(to: comment.micropost.user.email, subject: "Hallit")
    end
   
   def newlike_email(like)
     @like = like
-    mail(to: like.micropost.user.email, subject: "Hallit Notify")
+    mail(to: like.micropost.user.email, subject: "Hallit")
   end   
   
   def newfollow_email(user, follower)
     @user = user
     @follower = follower
-    mail(to: "<#{@user.email}>", :subject => "Hallit Notify")
+    mail(to: "<#{@user.email}>", :subject => "Hallit")
   end
     
 end
