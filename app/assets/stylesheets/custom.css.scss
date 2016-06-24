@@ -333,19 +333,11 @@ label{
 }
 
 /* welcome */
-.question {
-   background-image: url("/assets/images/wall1.png");
-   background-size: 100% 580px;
-   background-repeat: no-repeat; 
-   margin-top: 0px;
+.question {   
 } 
 
 .welcomeinfo{
-  color: white;
-  font-size: 26px;
-  text-align: center;
-  line-height: normal;
-  padding-top: 360px;
+  display: none;
 }
 
 .welcomeoption{
@@ -353,34 +345,20 @@ label{
   margin-top: 20px;
 }
 
-.wfooterlnk{
- color: white;
-&:hover{
- color: white;
+.wappbutton .btn-primary {
+    font-size: 14px;
+    color: #fff;
+    background-color: rgba(247, 58, 65, 0.9)!important;
+    border-color: rgba(247, 58, 65, 0.9)!important;
+    opcaity: 0.7;
+    &:hover {
+    background-color: rgba(247, 58, 65, 0.9)!important;
+    border-color: rgba(247, 58, 65, 0.9)!important;  
+    }   
 }
- &:visited{
- color: white;
-}
-}
-
-.footdate{
-  color: white;
-}
-  
 
 .ckl:visited{
   color: white;
-}
-
-.wappbutton .btn-primary {
-    color: #fff;
-    background-color: rgba(0,0,0,.5)!important;
-    border-color: white !important;
-    opacity: 0.7;
-    &:hover {
-    background-color: #D63636 !important;
-    border-color: white !important;  
-    }   
 }
 
 // Getstarted 
@@ -391,6 +369,10 @@ label{
 .getcent .glyphicon{
   font-size: 40px;
   color: rgb(245, 177, 177);
+}
+
+.loaderdd{
+  width: 120px;
 }
 
 .getstarth{
@@ -510,6 +492,7 @@ label{
 
 .missciong{
   text-align: center;
+  padding-top: 10px;
 }
 
 .missciong .glyphicon-menu-down{
@@ -541,7 +524,7 @@ label{
   margin-right: auto;
   border-radius: 50%;
   margin-top: -10px;
-  width: 230px;  
+  width: 100px;  
 }
 
 .betaprepalign{
@@ -581,14 +564,14 @@ label{
 }
 
 .app_footer{
-  margin-top: -80px;
+  margin-top: 0px;
 }
 
 
 /* support */
 .supportlink{
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .supportlink a{
@@ -750,11 +733,22 @@ label{
 }
 
 /* feed */ 
+.feedsearchlink{
+  color: #BBBBBB;  
+  text-decoration: underline;
+  &:visited{
+  color: #BBBBBB;
+  }
+  &:hover{
+   background: none; 
+  }
+}
+
 .nofeed{
   font-weight: bold;
   color: #BBBBBB;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 30px;
 }
 
 /* feed_item */
@@ -955,7 +949,7 @@ label{
   font-weight: bold;
   color: #BBBBBB;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 250px;
 }
 
 .carousel .item img{
@@ -1094,8 +1088,7 @@ label{
 }
 
 .footerul{
-  margin-left: -22px;
-  margin-top: 150px;
+  margin-left: -25px;
   font-size: 80%;
   list-style: none;
   text-align: center;  
@@ -1126,12 +1119,12 @@ label{
 
 // minfooter
 .minfooter{
-  background: white;
+  background: rgba(245, 177, 177, 0.13);
   height: 45px;
   width: 100%;
   position: fixed;
   bottom: 0px;
-  border-top: 1px solid #E2E2E2;
+  border-top: 1px solid rgba(245, 177, 177, 0.13);
 }
 
 .ddffs{
@@ -1388,30 +1381,28 @@ label{
 
 }
 
-@media screen and (min-width: 758px) {  
-
-.question {
-   background-image: url("/assets/images/banner3.jpg");
-   background-size: 100% 670px;
-   background-repeat: no-repeat; 
-   margin-top: -420px;
+@media screen and (min-width: 758px) { 
+  
+.feedwelcomeimg{
+  display: none;
 }  
- 
-.welcomeinfo{
-  margin-top: 470px;
-  color: white;
-} 
 
-.wfooterlnk{
-  color: white;
+.nofeed{
+  margin-top: 300px;
 }
 
-.wfooterlnk:visited{
-  color: white;
+  
+.yawn{
+  margin-top: 30px;
 }  
 
-.wfooterlnk:hover{
-  color: white;
+.misscion{
+ line-height: 50px; 
+}
+
+.welcomeoption{
+  text-align: center;
+  margin-top: 20px;
 }
        
 /* signup */
