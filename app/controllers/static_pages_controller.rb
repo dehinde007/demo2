@@ -29,7 +29,7 @@ class StaticPagesController < ApplicationController
   
   def search
    @skip_header = true  
-   @users = User.find([1])
+   @users = User.find([4])
 
   end
   

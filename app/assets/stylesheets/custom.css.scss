@@ -525,6 +525,7 @@ label{
   border-radius: 50%;
   margin-top: -10px;
   width: 100px;  
+  cursor: pointer;
 }
 
 .betaprepalign{
@@ -733,6 +734,10 @@ label{
 }
 
 /* feed */ 
+.feedwelcomeimgg{
+  margin-top: 5px;
+}  
+
 .feedsearchlink{
   color: #BBBBBB;  
   text-decoration: underline;
