@@ -1,40 +1,35 @@
 <%content_for :title, "Hallit | Signin or Signup"%>
-
 <body class="question"> 
-	
-<p class="missciong"><span class="headglyph glyphicon glyphicon-flag"></span></p>
-<br />	
-	
-<section class="yawn">
-<p class="misscion">Creating a stronger, safer and better world!</p>
-
-<p class="misscion">The world is quite noisy and there's need to communicate through this noise and standout. Therefore, people need to be able to differentiate themselves.</p>
-
-<p class="misscion">In everyone is a core value you want to express to the world, these core value are ideas, ethics, beliefs that guide you and can be delivered as halls and shared to the world to tell who you really are.</p>
-
-<p class="misscion">Hallit is a social network where you can share your values, ideas and awaken the interest in others through the means of writing messages on your photos for the creation of a stronger, safer and better world.</p>
-</section>	
-
 <br />
 
-<p class="misscion">Tap Photo</p>
-<img class="visioncen" data-toggle="modal" data-target="#myModal" src="assets/images/nng.png">
+<p class="misscion">Share values with the world</p>
+<br /><br />
+	
+<img class="hh" src="assets/images/j/11.jpg" data-toggle="modal" data-target="#11">
+<img class="hh" src="assets/images/j/12.jpg" data-toggle="modal" data-target="#12">
+<img class="hh" src="assets/images/j/13.jpg" data-toggle="modal" data-target="#13">
+<img class="hh" src="assets/images/j/14.jpg" data-toggle="modal" data-target="#14">
+<img class="hh" src="assets/images/j/15.jpg" data-toggle="modal" data-target="#15">
+<img class="hh" src="assets/images/j/16.jpg" data-toggle="modal" data-target="#16">
+<img class="hh" src="assets/images/j/17.jpg" data-toggle="modal" data-target="#17">
+<img class="hh" src="assets/images/j/18.jpg" data-toggle="modal" data-target="#18">
+<img class="hh" src="assets/images/j/19.jpg" data-toggle="modal" data-target="#19">
+<img class="hh" src="assets/images/j/20.jpg" data-toggle="modal" data-target="#20">
+<img class="hh" src="assets/images/j/21.jpg" data-toggle="modal" data-target="#21">
+<img class="hh" src="assets/images/j/22.jpg" data-toggle="modal" data-target="#22">
+<br /><br />
 
+<p class="misscion">Quick Tour</p>
+<br />
 
 <p class="welcomeoption wappbutton">
-	<%= link_to "Sign in", signin_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %> 
-	<%= link_to "Sign up now", signup_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %>			
+<%= link_to "Sign in", signin_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %> 
+<%= link_to "Sign up now", signup_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %>			
 </p>
 <br />
+
 <div class="app_footer"><%= render 'layouts/footer' %></div>
 
-<div id="myModal" class="modal fade" role="dialog">
-<div class="modal-dialog">
-  <div class="modal-body">
-  	<br /> <br /><br /><br />
-  <p><img src="assets/images/nng.png"></p>
-  </div> 
-</div>
-</div>
+<div><%= render 'shared/previewhome' %></div>
 
 </body>

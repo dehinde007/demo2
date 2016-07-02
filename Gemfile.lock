@@ -306,6 +306,9 @@ GEM
       rdoc (~> 3.10)
     shellany (0.0.1)
     slop (3.6.0)
+    social-share-button (0.2.1)
+      coffee-rails
+      sass-rails
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -369,6 +372,7 @@ DEPENDENCIES
   rspec-rails (= 3.3.2)
   sass-rails (= 4.0.1)
   sdoc (= 0.3.20)
+  social-share-button
   spork!
   spork-rails!
   sprockets (= 2.11.0)

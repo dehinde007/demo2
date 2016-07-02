@@ -39,6 +39,7 @@ SampleApp::Application.routes.draw do
   match '/support',    to: 'static_pages#support',    via: 'get'
   match '/jobs',    to: 'static_pages#jobs',    via: 'get'
   match '/vision',    to: 'static_pages#vision',    via: 'get'
+  match '/tour',    to: 'static_pages#tour',    via: 'get'
   match '/terms',   to: 'static_pages#terms',   via: 'get'
   match '/privacy', to: 'static_pages#privacy', via: 'get'
   match '/getstarted', to: 'static_pages#getstarted', via: 'get'
@@ -48,5 +49,6 @@ SampleApp::Application.routes.draw do
   match '/make_hall', to: 'static_pages#make_hall', via: 'get'
   match '/home', to: 'static_pages#home', via: 'get'
   match '/halls', to: 'microposts#index', via: 'get'
+  match '/leaderboard', to: 'microposts#leaderboard', via: 'get'
   match '/new/hall', to: 'microposts#new', via: 'get'
 end

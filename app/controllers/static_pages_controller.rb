@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
  
   def home
     if signed_in?
-      @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 4)   
+      @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 9)   
           if request.xhr?
       render :partial=>"feeds/feed" 
       end
@@ -27,9 +27,13 @@ class StaticPagesController < ApplicationController
    @skip_header = true
   end
   
+  def tour
+    
+  end
+  
   def search
    @skip_header = true  
-   @users = User.find([4])
+   @users = User.find([1])
 
   end
   
@@ -39,6 +43,7 @@ class StaticPagesController < ApplicationController
   
   def howtomakeahall
     @skip_header = true
+   
   end
   
 end

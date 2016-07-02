@@ -1,20 +1,22 @@
-
+<div class="container">
 <%= form_for @user do |f| %>
-
+<br />
     <p>
     <%= f.label "Verify" %> <br />
-    <%= f.check_box :verify %> <br />
+    <%= f.check_box :verify, class: "editverify" %> <br />
     </p>
    
-      <%= f.label :password, class: "edit-lab" %>
-      <%= f.password_field :password, class: "edit-lab" %>
+    <p>
+    <%= f.label :password, class: "edit-lab" %>
+    <%= f.password_field :password, class: "edit-lab" %>
     </p>
     
     <p>
-      <%= f.label :password_confirmation, class: "edit-lab" %>
-      <%= f.password_field :password_confirmation, class: "edit-lab" %>
+    <%= f.label :password_confirmation, class: "edit-lab" %>
+    <%= f.password_field :password_confirmation, class: "edit-lab" %>
     </p>
    <p><%= f.submit "Save"%></p>
       
     <% end %>
     
+</div>

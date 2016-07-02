@@ -176,6 +176,16 @@ a#next:hover {
   font-family: ralewayregular;
 }
 
+.font-fam2{
+  font-family: arial;
+}
+
+.font-fam3{
+  font-family: arial;
+  font-size: 100%;
+  font-weight: bold;
+}
+
 .ul-userinfo{
   margin-top: -35px;
   margin-left: 5px;
@@ -214,7 +224,7 @@ p .sr{
 }
 
 .microusrn{
-  font-family: ralewayregular; 
+  font-family: arial; 
   font-weight: bold; 
   color: black; 
   font-size: 100%;
@@ -335,6 +345,11 @@ label{
 /* welcome */
 .question {   
 } 
+
+.hh{
+  width: 100px;
+  height: 110px;
+}
 
 .welcomeinfo{
   display: none;
@@ -460,7 +475,6 @@ label{
 }
 
 #pagenameee{
-  font-family: ralewayregular;
   font-size: 18px;
   font-weight: bold;
   color: white;
@@ -508,7 +522,7 @@ label{
 .misscion{
   text-align: center;
   font-family: ralewayregular;
-  font-size: 17px;
+  font-size: 27px;
   line-height: 1.42857143;
   color: #333; 
 }
@@ -615,6 +629,8 @@ label{
 /* new_micropost */
 .learnhall{
   color: white;  
+  font-size: 18px;
+  font-weight: bold;
   &:visited{
   color: white;
   }
@@ -786,7 +802,7 @@ label{
   padding-bottom: 20px;
   color: black;
   font-size: 85%;
-  font-family: ralewayregular;
+  font-weight: bold;
 }
 
 .feedusern:visited{
@@ -974,7 +990,7 @@ label{
 .userinfo1{
   color: black;
   font-size: 22px;
-  font-family: ralewayregular;
+  font-family: arial;
   font-weight: bold;
   text-align: center;
   padding-top: 9px;
@@ -1011,7 +1027,24 @@ label{
  } 
 }
 
-/* _micropost */
+// leaderboard
+.leadercenter{
+
+}
+
+.leadphoto{
+ 
+}
+
+div.verticalLine{
+  height: 500px;
+  width: 3px;
+  background: black;
+}
+
+
+
+// _micropost
 .micropartial{
 }
 
@@ -1041,6 +1074,11 @@ label{
   float: left;
 }
 
+//editverify
+.editverify{
+  height: 20px;
+  width: 20px;
+}
 
 /*edituser*/
 .editusr{
@@ -1387,6 +1425,9 @@ label{
 }
 
 @media screen and (min-width: 758px) { 
+.question{
+
+}  
   
 .feedwelcomeimg{
   display: none;
@@ -1398,18 +1439,13 @@ label{
 
   
 .yawn{
-  margin-top: 30px;
+  margin-top: 490px;
 }  
 
 .misscion{
  line-height: 50px; 
 }
-
-.welcomeoption{
-  text-align: center;
-  margin-top: 20px;
-}
-       
+ 
 /* signup */
 .signup{
   border-radius: 5px;

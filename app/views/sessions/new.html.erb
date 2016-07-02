@@ -5,17 +5,17 @@
    	
    	  <section class="sessionform">
       <%= form_for(:session, url: sessions_path) do |f| %>
-      <p class="font-fam">
-      <%= f.label :email, :class =>"sessionlabel" %>
-      <%= f.text_field :email, :class =>"sessionfield", placeholder: "Enter email" %>
+      <p class="">
+      <%= f.label :email, :class =>"sessionlabel font-fam2" %>
+      <%= f.text_field :email, :class =>"sessionfield font-fam", placeholder: "Enter email" %>
       </p>
-      <p class="font-fam">
-      <%= f.label :password, :class =>"sessionlabel" %>
-      <%= f.password_field :password, :class =>"sessionfield", placeholder: "Enter password" %>
+      <p class="font-fam2">
+      <%= f.label :password, :class =>"sessionlabel font-fam2" %>
+      <%= f.password_field :password, :class =>"sessionfield font-fam", placeholder: "Enter password" %>
       </p>
       </section>
       <br />
-     <p class="appbutton font-fam"> <%= f.submit "Sign in", class: "sess-butt btn-primary btn-sm " %></p>
+     <p class="appbutton font-fam"> <%= f.submit "Log in", class: "sess-butt btn-primary btn-sm " %></p>
      
     <% end %>
 

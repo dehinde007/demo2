@@ -10,7 +10,7 @@
           <% end %> 
         </span>
         
-       <span id="pagenameee" class="navbar-brand font-fam">Update Info</span>
+       <span id="pagenameee" class="navbar-brand font-fam2">Settings</span>
       
       <ul class="font-fam solve  pull-right">
       	
@@ -34,48 +34,48 @@
 
  <div class="container editusr"> 
  
-    <p class="container font-fam">
-     Fullname
-     <%= f.text_field :name, class: "edit-lab", placeholder: "fullname" %>
+    <p class="container">
+     <span class="font-fam3">Fullname</span>
+     <%= f.text_field :name, class: "edit-lab font-fam", placeholder: "fullname" %>
     </p>
    
-    <p class="container font-fam">
-     Username
-     <%= f.text_field :username, class: "edit-lab", placeholder: "username" %>
+    <p class="container">
+     <span class="font-fam3">Username</span>
+     <%= f.text_field :username, class: "edit-lab font-fam", placeholder: "username" %>
     </p>
       
-    <p class="container font-fam">
+    <p class="container font-fam3">
       </span><span class="editavatar">Avatar</span>
       <section class="editavi"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section>
       <p class="glyphicon glyphicon-camera editavi-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>     
     </p>
    
-    <p class="container font-fam">
-      Email
-      <%= f.text_field :email, class: "edit-lab", placeholder: "email" %>
+    <p class="container">
+      <span class="font-fam3">Email</span>
+      <%= f.text_field :email, class: "edit-lab font-fam", placeholder: "email" %>
     </p> 
    
-    <p class="container font-fam">
-      Bio
-      <%= f.text_field :bio, class: "edit-lab", placeholder: "bio" %>
+    <p class="container">
+      <span class="font-fam3">Bio</span>
+      <%= f.text_field :bio, class: "edit-lab font-fam", placeholder: "bio" %>
+    </p>
+    
+    <p class="container">
+      <span class="font-fam3">Website</span>
+      <%= f.text_field :website, class: "edit-lab font-fam", placeholder: "website" %>
     </p>
     
     <p class="container font-fam">
-      Website
-      <%= f.text_field :website, class: "edit-lab", placeholder: "website" %>
+     <span class="font-fam3">Password</span>
+      <%= f.password_field :password, class: "edit-lab font-fam", placeholder: "password" %>
     </p>
     
-    <p class="container font-fam">
-      Password
-      <%= f.password_field :password, class: "edit-lab", placeholder: "password" %>
-    </p>
-    
-    <p class="container font-fam">
-      Confirm password
-      <%= f.password_field :password_confirmation, class: "edit-lab", placeholder: "confirm password" %>
+    <p class="container">
+      <span class="font-fam3">Confirm password</span>
+      <%= f.password_field :password_confirmation, class: "edit-lab font-fam", placeholder: "confirm password" %>
     </p>
    
-   <p class="font-fam appbutton edit_butt"><%= f.submit "Update", class: "btn-primary btn-sm" %></p>
+   <p class="font-fam appbutton edit_butt"><%= f.submit "UPDATE", class: "btn-primary btn-sm" %></p>
       
     <% end %>
     

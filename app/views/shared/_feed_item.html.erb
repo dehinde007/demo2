@@ -3,7 +3,7 @@
 		
     <section class="feediteminfo">
     <%=(image_tag feed_item.user.avatar.url(:thumb), class: "img-circle") %>
-    <%= link_to feed_item.user.username, feed_item.user, class: "hov feedusern"  %>
+    <%= link_to feed_item.user.username, feed_item.user, class: "hov font-fam2 feedusern"  %>
     <span class="font-fam feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
    
     </section>
@@ -11,14 +11,14 @@
     <section class="feediteminfo2">
     <%=(image_tag feed_item.user.avatar.url(:thumb), class: "img-circle") %>
     <%= link_to feed_item.user.username, feed_item.user, class: "hov feedusern"  %>
-    <span class="font-fam feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
+    <span class="font-fam2 feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
     
     </section>
    
   	<div class="puffin">
     <span id="<%= feed_item.id %>"> 
 	<div class="puffauto">
-  	<%= link_to (image_tag feed_item.photo.url(:instag), class: "img-responsive"), feed_item, :"data-no-turbolink" => true %>
+  	<%= link_to (image_tag feed_item.photo.url(:instag), class: "img-responsive"), feed_item %>
   	</div>
   	</div>
 		
@@ -26,7 +26,7 @@
     
     <section class="container contentlength">
     <p class="font-fam feedlikeicon">
-    <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "like") %>
+    <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "") %>
   	</p>		
     <% if feed_item.content.length > 1 %>
   	<span class="app_a_link font-fam"><%= auto_link(truncate(feed_item.content, length: 65), :html => { :target => '_blank' }) %></span>
@@ -46,12 +46,12 @@
 
     <section class="container contentlength2">
     <p class="font-fam feedlikeicon">
-    <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "like") %>
+    <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "") %>
   	</p>		
     <% if feed_item.content.length > 1 %>
-  	<span class="app_a_link font-fam"><%= auto_link(truncate(feed_item.content, length: 65), :html => { :target => '_blank' }) %></span>
+  	<span class="app_a_link font-fam2"><%= auto_link(truncate(feed_item.content, length: 65), :html => { :target => '_blank' }) %></span>
   	<% else %>
-  	<span class="app_a_link font-fam"><%= auto_link(feed_item.content, :html => { :target => '_blank' }) %>             
+  	<span class="app_a_link font-fam2"><%= auto_link(feed_item.content, :html => { :target => '_blank' }) %>             
   	<% end %>
   	
 <span class="postauthor">

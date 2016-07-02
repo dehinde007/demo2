@@ -4,7 +4,7 @@
     <div class="">
     <div class="navbar-header">
            
-    <span id="pagename" class="navbar-brand font-fam">Explore Halls</span>
+    <span id="pagename" class="navbar-brand font-fam2">Explore Halls</span>
       
            <ul class="font-fam solve  pull-right">
            	
@@ -24,7 +24,7 @@
  	
   <% @microposts.each do |micropost| %>
   
-  <div class="micropostindex2"> <%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost, :"data-no-turbolink" => true %></div>
+  <div class="micropostindex2"> <%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost %></div>
   
   <% end %>
   

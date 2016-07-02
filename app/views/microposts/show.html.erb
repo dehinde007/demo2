@@ -5,11 +5,11 @@
     <div class="navbar-header">
            
     <span id="pagename" class="navbar-brand font-fam">
-    	   <%= link_to :back, class: "hov", :"data-no-turbolink" => true do %>	
+    	   <%= link_to :back, class: "hov" do %>	
           <span class="headglyph glyphicon glyphicon-menu-left"></span>
           <% end %> 
     </span>
-      <span id="pagenameee" class="navbar-brand font-fam"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
+      <span id="pagenameee" class="navbar-brand font-fam2"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
            <ul class="font-fam solve  pull-right">
             
            <li> 
@@ -48,7 +48,7 @@
 <br /><br />
   
 <div class="microviews">  
-	
+	<%= social_share_button_tag(@micropost.content, :popup => "true") %>
 <span class="glyphicon glyphicon-comment"></span><span class="shocmmcou"><%= pluralize(@micropost.comments.count, "") %> </span>
 <span class="glyphicon glyphicon-heart"></span><span class="sholikecou"><%= pluralize(@micropost.likes.count, "") %> </span>
 <%= link_to 'View likes', like_path, class: "hov ckl2 font-fam" %> 
@@ -66,10 +66,7 @@
     
  <div id="slides"> 
   <ul>
-   <li><img src="/assets/images/lol.gif" width="125" height="40" alt="Slide 1"/></li>
-   <li><img src="/assets/images/mtn.png" width="40" height="40" alt="Slide 2"/></li>
-   <li><img src="/assets/images/chevys.png" width="40" height="40" alt="Slide 3"/></li>
-   <li><img src="/assets/images/batk.png" width="50" height="40" alt="Slide 4"/></li>
+
   </ul>
  </div>
     
@@ -87,10 +84,7 @@
     
  <div id="sliders"> 
   <ul>
-   <li><img src="/assets/images/hoj.gif" width="50" height="40" alt="Slide 1"/></li>	
-   <li><img src="/assets/images/access.png" width="60" height="40" alt="Slide 2"/></li>	
-   <li><img src="/assets/images/cono.png" width="50" height="40" alt="Slide 3"/></li>
-   <li><img src="/assets/images/total.png" width="40" height="40" alt="Slide 4"/></li>
+  	
   </ul>
  </div>
  

@@ -5,7 +5,7 @@
     <div class="navbar-header">
            
 
-    <span class="navbar-brand font-fam"><%= link_to "Tap here to learn!", howtomakeahall_path, class:"learnhall", :"data-no-turbolink" => true %></span>
+    <span class="navbar-brand font-fam2"><%= link_to "Learn how to make hall", howtomakeahall_path, class:"learnhall" %></span>
       
            <ul class="font-fam solve  pull-right">
             
@@ -40,7 +40,7 @@
   <p class="glyphicon glyphicon-cloud newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
 
   <p>
-   <%= f.text_area :content, :class =>"formcontent font-fam", placeholder: "Describe Hall..." %>
+   <%= f.text_area :content, :class =>"formcontent font-fam", placeholder: "describe your hall..." %>
   </p>
   
   <p>

@@ -7,6 +7,10 @@ class MicropostsController < ApplicationController
     @skip_header = true
     @microposts = Micropost.paginate(page: params[:page], per_page: 15)
   end
+  
+  def leaderboard
+    @microposts = Micropost.joins(:likes).group("microposts.id").order("count(likes.id) desc").paginate(page: params[:page], per_page: 10)
+  end
 
   def show
     @skip_header = true

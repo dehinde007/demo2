@@ -1,4 +1,4 @@
-<%content_for :title, "Find Friends or Channels"%>
+<%content_for :title, "Find friends and Channels you love"%>
 <div class="topsrcbar">
   <div class="usindexsearch">
    <% if signed_in? %> 		
@@ -16,7 +16,7 @@
 <%= image_tag user.avatar.url(:thumb), class: "img-circle" %>
 <ul class="ul-userinfo" style="list-style-type:none">
   <li>
-  <span><%= link_to user.username, user, class: "font-fam userpartialname" %></span>
+  <span><%= link_to user.username, user, class: "font-fam2 userpartialname" %></span>
   <% if current_user.admin? && !current_user?(user) %>
   | <%= link_to "delete", user, method: :delete,
   data: { confirm: "You sure?" } %>

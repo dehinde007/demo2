@@ -1,10 +1,10 @@
 <% if activity.trackable %> 
-<%= link_to (image_tag activity.trackable.micropost.photo.url(:normal), class: "trackable"), activity.trackable.micropost, :"data-no-turbolink" => true %>
-<span class="app_a_link"><%= link_to activity.owner.username, activity.owner if activity.owner %></span> liked
+<%= link_to (image_tag activity.trackable.micropost.photo.url(:normal), class: "trackable"), activity.trackable.micropost %>
+<span class="font-fam3 app_a_link"><%= link_to activity.owner.username, activity.owner if activity.owner %></span> liked
 <span class="act_time"> <%= time_ago_in_words(activity.created_at) %> ago</span>
 <hr />
 <% else %> 
-<span class="app_a_link"><%= link_to activity.owner.username, activity.owner if activity.owner %></span> liked a hall which has been deleted!
+<span class="font-fam3 app_a_link"><%= link_to activity.owner.username, activity.owner if activity.owner %></span> liked a hall which has been deleted!
 <hr /> 
 <% end %>
 

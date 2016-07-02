@@ -14,7 +14,6 @@ class Micropost < ActiveRecord::Base
      :path => ":rails_root/public/attachments/:id/:style/:basename.:extension"
   validates_attachment_presence :photo 
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
-  process_in_background :photo
 
   # Returns microposts from the users being followed by the given user.
   def self.from_users_followed_by(user)

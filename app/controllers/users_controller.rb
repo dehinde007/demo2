@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :signed_in_user,
                 only: [:index, :show, :edit, :update, :destroy, :following, :followers, :verify, :ver]
   before_action :correct_user,   only: [:edit, :update, :destroy, :ver, :verify]
-  before_action :admin_user,     only: :destroy
+  before_action :admin_user,     only: [:destroy, :ver, :verify]
   
   def index
     @skip_header = true
@@ -88,7 +88,7 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find_by_username(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      redirect_to(root_url) unless current_user?(@user) or current_user.admin?
     end
 
     def admin_user
