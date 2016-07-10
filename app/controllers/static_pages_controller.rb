@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
- 
+
   def home
     if signed_in?
       @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 9)   
@@ -24,7 +24,7 @@ class StaticPagesController < ApplicationController
   end
   
   def vision
-   @skip_header = true
+
   end
   
   def tour
@@ -38,7 +38,7 @@ class StaticPagesController < ApplicationController
   end
   
   def support
-    @skip_header = true
+
   end
   
   def howtomakeahall

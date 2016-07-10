@@ -1,15 +1,15 @@
 <%content_for :title, "Explore Halls"%>
 <header class="indexhead">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-top" role="navigation">
     <div class="">
     <div class="navbar-header">
            
-    <span id="pagename" class="navbar-brand font-fam2">Explore Halls</span>
+    <span id="pagename" class="navbar-brand font-fam2">Discover</span>
       
            <ul class="font-fam solve  pull-right">
            	
        <li> 
-          <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
+          <%= link_to search_path, class: "hov" do %>	
           <span class="headglyph glyphicon glyphicon-search"></span>
           <% end %> 
        </li>
@@ -20,7 +20,7 @@
     </nav>
 </header>
 
- <div class="container micropostindex"> 
+ <div class="micropostindex"> 
  	
   <% @microposts.each do |micropost| %>
   

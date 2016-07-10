@@ -3,10 +3,15 @@ class UsersController < ApplicationController
                 only: [:index, :show, :edit, :update, :destroy, :following, :followers, :verify, :ver]
   before_action :correct_user,   only: [:edit, :update, :destroy, :ver, :verify]
   before_action :admin_user,     only: [:destroy, :ver, :verify]
+  autocomplete :user, :username, :full => true
   
   def index
     @skip_header = true
-    @users = User.search(params[:search]).paginate(page: params[:page], per_page: 15).order('created_at DESC')
+    @users = User.all.paginate(page: params[:page], per_page: 15).order('created_at DESC')
+    if params[:search]
+      @users = User.username_like("%#{params[:search]}%").order('username').paginate(page: params[:page], per_page: 15).order('created_at DESC')
+    else
+    end
   end
 
   def show
@@ -64,6 +69,7 @@ class UsersController < ApplicationController
   end
 
   def following
+    @skip_header = true
     @title = "Following"
     @user = User.find_by_username(params[:id])
     @users = @user.followed_users.paginate(page: params[:page])
@@ -71,6 +77,7 @@ class UsersController < ApplicationController
   end
 
   def followers
+    @skip_header = true
     @title = "Followers"
     @user = User.find_by_username(params[:id])
     @users = @user.followers.paginate(page: params[:page])

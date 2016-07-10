@@ -1,10 +1,10 @@
-<% provide(:title, "Find Friends or channels") %>
+<%content_for :title, "Find friends and Channels you love"%>
 <div class="topsrcbar">
-      <div class="usindexsearch">
-      <% if signed_in? %> 		
-      <%= render 'shared/search' %>                
-      <% end %>
-      </div>
+  <div class="usindexsearch">
+   <% if signed_in? %> 		
+   <%= render 'shared/search' %>                
+   <% end %>
+  </div>
 </div>
 
 <div class="container allusers">

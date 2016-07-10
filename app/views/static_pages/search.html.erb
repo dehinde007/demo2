@@ -13,7 +13,7 @@
 <% @users.each do |user| %>
 
 <span class="font-fam">
-<%= image_tag user.avatar.url(:thumb), class: "img-circle" %>
+<div class="userpartialimg"><%= image_tag user.avatar.url(:thumb), class: "img-circle" %></div>
 <ul class="ul-userinfo" style="list-style-type:none">
   <li>
   <span><%= link_to user.username, user, class: "font-fam2 userpartialname" %></span>

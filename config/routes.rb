@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
   
   default_url_options :host => "www.hallit.co"
+  get 'users/autocomplete_user_username'
     resources :users
    resources :invitations
 

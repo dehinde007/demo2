@@ -1,26 +1,33 @@
 <%content_for :title, "Hallit | Signin or Signup"%>
 <body class="question"> 
-<br />
 
-<p class="misscion">Share values with the world</p>
-<br /><br />
-	
+<p class="misscion">Share your stories on your photos</p>
+<br />
+<div class="welimage">
+<section>
 <img class="hh" src="assets/images/j/11.jpg" data-toggle="modal" data-target="#11">
-<img class="hh" src="assets/images/j/12.jpg" data-toggle="modal" data-target="#12">
+<img class="hh" src="assets/images/j/px.jpg" data-toggle="modal" data-target="#12">
 <img class="hh" src="assets/images/j/13.jpg" data-toggle="modal" data-target="#13">
 <img class="hh" src="assets/images/j/14.jpg" data-toggle="modal" data-target="#14">
+<p></p>
+</section>
+<section>
 <img class="hh" src="assets/images/j/15.jpg" data-toggle="modal" data-target="#15">
-<img class="hh" src="assets/images/j/16.jpg" data-toggle="modal" data-target="#16">
+<img class="hh" src="assets/images/j/16.png" data-toggle="modal" data-target="#16">
 <img class="hh" src="assets/images/j/17.jpg" data-toggle="modal" data-target="#17">
 <img class="hh" src="assets/images/j/18.jpg" data-toggle="modal" data-target="#18">
+<p></p>
+</section>
+<section>	
 <img class="hh" src="assets/images/j/19.jpg" data-toggle="modal" data-target="#19">
-<img class="hh" src="assets/images/j/20.jpg" data-toggle="modal" data-target="#20">
-<img class="hh" src="assets/images/j/21.jpg" data-toggle="modal" data-target="#21">
-<img class="hh" src="assets/images/j/22.jpg" data-toggle="modal" data-target="#22">
-<br /><br />
-
-<p class="misscion">Quick Tour</p>
+<img class="hh" src="assets/images/j/20.png" data-toggle="modal" data-target="#20">
+<img class="hh" src="assets/images/j/mx.jpg" data-toggle="modal" data-target="#21">
+<img class="hh" src="assets/images/j/dx.jpg" data-toggle="modal" data-target="#22">
+</section>
+</div>
 <br />
+
+<p class="misscion"><%= link_to "Quick Tour", tour_path, :class => "tourlink", :"data-no-turbolink" => true %></p>
 
 <p class="welcomeoption wappbutton">
 <%= link_to "Sign in", signin_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %> 

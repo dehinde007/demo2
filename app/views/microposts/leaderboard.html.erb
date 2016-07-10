@@ -1,4 +1,4 @@
-<%content_for :title, "Explore Halls"%>
+<%content_for :title, "Leaderboard"%>
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="">
@@ -21,27 +21,24 @@
 </header>
 <br />
 
-
-<div class="container leadercenter"> 
-	
-<div class="verticalLine"></div>
+<div class="leadflag"><p class="glyphicon glyphicon-flag"></p></div>
+<div class="leadercenter"> 
+<br />
 <% @microposts.each do |micropost| %>
-<div >
-<div class="leadphoto">	
-<%= image_tag micropost.user.avatar(:thumb) %>
-<%= link_to micropost.user.username, micropost.user, class: "hov microusrn" %>  
-<%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost %></div>
+
+<div class="leaddetail">	
+<%= image_tag micropost.user.avatar(:thumb), class: "leadthumb img-circle" %>
+<%= link_to micropost.user.username, micropost.user, class: "hov leadname" %>
+<% if micropost.user.verify == true%>
+<img src="/assets/images/verify.png" width="10" height="10" data-toggle="tooltip" data-placement="top" title="Verified Account"/>
+<% else %>
+<% end %>  
+<p><%= link_to (image_tag micropost.photo.url(:square), class: "leadphoto"), micropost %>
+<section class="leadlikes"><span class="glyphicon glyphicon-heart"></span><%= pluralize(micropost.likes.count, "") %></section> 	
+</p>
 </div>
-  
-  
+<br /><br /><br /><br />  
 <% end %>  
 </div>
  
-
-
-
- <div class="container pager">
-   <%= will_paginate @microposts, :page_links => false %>
- </div>
-
  <div class="footer2"><%= render 'layouts/minfooter' %></div>

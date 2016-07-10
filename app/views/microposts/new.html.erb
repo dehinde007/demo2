@@ -1,31 +1,10 @@
 <%content_for :title, "Create Hall | New Hall"%>
-  <header class="indexhead">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="">
-    <div class="navbar-header">
-           
 
-    <span class="navbar-brand font-fam2"><%= link_to "Learn how to make hall", howtomakeahall_path, class:"learnhall" %></span>
-      
-           <ul class="font-fam solve  pull-right">
-            
-       <li> 
-          <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
-          <span class="headglyph glyphicon glyphicon-search"></span>
-          <% end %> 
-       </li>
-            
-      </ul>
-        </div>   
-      </div><!-- /.container -->
-    </nav>
-</header> 
+<link rel="stylesheet" href="/assets/PhotoEditorReactUI.css" />
+<script src="/assets/PhotoEditorSDK.js"></script>
+<script src="/assets/PhotoEditorReactUI.js"></script>
 
-<link rel="stylesheet" href="/css/imglykit-night-ui.css" />
-<script src="/js/imglykit.js"></script>
-<br /><br />
-<div id="container"></div> <!-- /.imgkit-div -->
-<br /><br /><br />
+<div id="container"></div>
 
 <%= form_for @micropost, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
@@ -56,7 +35,7 @@
 <br />
 <br />
 <section style="text-align:center;">
-<p style="text-align:center;"><%= image_tag asset_path('assets/images/lol.gif'), :class => "loaderdd" %></p>
+<p style="text-align:center;"><%= image_tag asset_path('assets/images/default.gif'), :class => "loaderdd" %></p>
 </section>
   
 <br />

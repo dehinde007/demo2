@@ -3,13 +3,7 @@ has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender
 belongs_to :invitation
  
 #user search
-  def self.search(search)
-    if search 
-      where('name LIKE ? or username like ?', "%#{search}%", "%#{search}%")
-    else
-   scoped  
-    end
-end
+scope :username_like, -> (username) { where("username like ?", username)}
 
 
  def to_param
@@ -19,7 +13,7 @@ end
 
 #avatar
   has_attached_file :avatar, styles: { 
-    thumb: '100x100'
+    thumb: '100x100#'
   }, :url => "/avatars/:id/:style/:basename.:extension",
      :default_url => '/assets/images/av.PNG',
      :path => ":rails_root/public/avatars/:id/:style/:basename.:extension"

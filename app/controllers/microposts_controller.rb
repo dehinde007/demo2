@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :signed_in_user,  only: [:new, :create, :destroy, :show]
+  before_action :signed_in_user,  only: [:new, :create, :index, :destroy, :show, :leaderboard]
   before_action :correct_user,   only: :destroy
 
 
@@ -9,7 +9,8 @@ class MicropostsController < ApplicationController
   end
   
   def leaderboard
-    @microposts = Micropost.joins(:likes).group("microposts.id").order("count(likes.id) desc").paginate(page: params[:page], per_page: 10)
+    @skip_header = true
+    @microposts = Micropost.joins(:likes).group("microposts.id").order("count(likes.id) desc").paginate(page: params[:page], per_page: 20)
   end
 
   def show

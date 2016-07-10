@@ -1,6 +1,6 @@
 <%content_for :title, "Hallit Help Center"%>
 <header class="indexhead">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-top" role="navigation">
     <div class="">
     <div class="navbar-header">
            
@@ -14,9 +14,11 @@
       
            <ul class="font-fam solve  pull-right">
             
-       <li> 
-          <%= link_to search_path, class: "hov", :"data-no-turbolink" => true do %>	
+       <li>
+       	  <% if signed_in? %> 
+          <%= link_to search_path, class: "hov" do %>	
           <span class="headglyph glyphicon glyphicon-search"></span>
+          <% end %> 
           <% end %> 
        </li>
        
@@ -28,7 +30,6 @@
 
 
 <div class="container getstarted">
-  <hr />
   
   <p class="getcent"><span class="getcentt glyphicon glyphicon-tent"></p>
   <p class="font-fam2 getstarth">Homescreen Intialization</p>	
