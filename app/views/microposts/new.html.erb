@@ -1,11 +1,7 @@
 <%content_for :title, "Create Hall | New Hall"%>
 <p class="font-fam1 nhallhead"><%= link_to "Learn how to make hall", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
 
-<link rel="stylesheet" href="/css/PhotoEditorReactU5.css" />
-<script src="/js/PhotoEditorSDK.js"></script>
-<script src="/js/PhotoEditorReactUI1.js"></script>
-
-<div id="container"></div>
+<div id="okland"></div>
 
 <%= form_for @micropost, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>

@@ -16,15 +16,15 @@
 //= require autocomplete-rails
 //= require turbolinks
 //= require_tree .
-#= require social-share-button
+//= require social-share-button
 
 $(function() {
   window.onload = function () {
-    var container = document.getElementById('container')
+    var container = document.getElementById('okland')
     var editor = new PhotoEditorSDK.UI.ReactUI({
       container: container,
       assets: {
-        baseUrl: '/imglykit/assets' // <-- This should be the absolute path to your `assets` directory
+        baseUrl: '/assets' // <-- This should be the absolute path to your `assets` directory
       }
     })
   }
