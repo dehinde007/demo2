@@ -10183,7 +10183,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    var context = canvas.getContext('2d');
 	
-	    context.fillStyle = 'red';
+	    context.fillStyle = 'white';
 	    context.clearRect(0, 0, canvas.width, canvas.height);
 	
 	    context.font = this.props.fontWeight + ' ' + 24 * pixelRatio + 'px ' + this.props.fontFamily;
@@ -27937,7 +27937,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  DEFAULTS: {
 	    CROP_RATIOS: [{ name: 'custom', ratio: '*', selected: true }, { name: 'square', ratio: 1 }, { name: '4-3', ratio: 1.33 }, { name: '16-9', ratio: 1.77 }],
-	    FONTS: [{ name: 'bebasregular', fontFamily: 'Bebasregular', fontWeight: 'normal' }, { name: 'verdana', fontFamily: 'Verdana', fontWeight: 'normal', default: true }],
+	    FONTS: [{ name: 'bebasregular', fontFamily: 'Bebasregular', fontWeight: 'normal', default: true }],
 	    STICKER_CATEGORIES: [{
 	      'name': 'glasses',
 	      'label': 'Glasses',
