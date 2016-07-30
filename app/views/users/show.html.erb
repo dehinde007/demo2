@@ -16,9 +16,9 @@
     </span>
     <ul class="dropdown-menu">
      
-     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, {:style => 'font-family: arial; font-weight: bold; font-size: 13px;'} %></li>
-     <li class="font-fam3"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> Following</a></li>
-     <li class="font-fam3"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> Followers</a></li>
+     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, class: "font-fam1" %></li>
+     <li class="font-fam1"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> Following</a></li>
+     <li class="font-fam1"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> Followers</a></li>
     
     </ul>
 
@@ -42,7 +42,7 @@
     </nav>
 </header> 
 
-<p class="userinfo1"><%= @user.name %>
+<p class="userinfo1"><%= @user.name.titleize %>
 <% if @user.verify == true %>
 <span><img src="/assets/images/verify.png" width="10" height="10" data-toggle="tooltip" data-placement="top" title="Verified Account"/></span>
 <% else %>
@@ -60,7 +60,7 @@
       <%= render @microposts %>
 
    <% elsif current_user == @user %>   
-      <div class="font-fam nohall">Tap Camera to Make Your First Hall
+      <div class="font-fam1 nohall">Tap Camera to Make Your First Hall
 
    <% else %>    
  

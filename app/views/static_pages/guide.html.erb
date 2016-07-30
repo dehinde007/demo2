@@ -1,0 +1,80 @@
+<%content_for :title, "Hallit Guide"%>
+<header class="indexhead">
+    <nav class="navbar navbar-default navbar-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+    <span id="pagename" class="navbar-brand font-fam">
+    	   <%= link_to :back, class: "hov" do %>	
+          <span class="headglyph glyphicon glyphicon-menu-left"></span>
+          <% end %> 
+    </span>
+    
+    <span id="pagenameee" class="navbar-brand font-fam2">Guide</span>
+      
+           <ul class="font-fam solve  pull-right">
+            
+       <li>
+       	  <% if signed_in? %> 
+          <%= link_to search_path, class: "hov" do %>	
+          <span class="headglyph glyphicon glyphicon-search"></span>
+          <% end %> 
+          <% end %> 
+       </li>
+       
+      </ul>
+        </div>   
+      </div><!-- /.container -->
+    </nav>
+</header>  
+
+
+<div class="container getstarted">
+  	
+  <p class="font-fam1 getstartp">Welcome! This guide will teach you how to use the app. First, to have an easy experience navigating to Hallit on your mobile device, tap <span class="glyphicon glyphicon-home"></span> to goto your home page, then proceed to add Hallit to your homescreen. Do this now! and return back here.</p>
+  <br /><br /><br />
+  
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-menu-left"> <span class="getcentt glyphicon glyphicon-menu-right"> </p>
+  <p class="font-fam getstarth">Browser Icon</p>	
+  <p class="font-fam1 getstartp">Tapping on your browser <span class="glyphicon glyphicon-menu-left"></span> <span class="glyphicon glyphicon-menu-right"></span> buttons will enable you go back and forth during a session on the app</p>
+  <br /><br /><br /> 	
+
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-map-marker"></p>
+  <p class="font-fam getstarth">Explore</p>	
+  <p class="font-fam1 getstartp">Tapping on your map-marker will allow you view halls from all over the world</p>
+  <br /><br /><br />
+    
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-camera"></p>
+  <p class="font-fam getstarth">New hall</p>	
+  <p class="font-fam1 getstartp">Tapping on the camera will enable you create and share a new hall. <%= link_to "Learn how to make hall", howtomakeahall_path, class: "gtstlearnhall" %> </p>
+  <br /><br /><br />
+
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-heart-empty"></p>
+  <p class="font-fam getstarth">Activity</p>	
+  <p class="font-fam1 getstartp">Tap on the heart button to view activities of friends or channels you follow</p>
+  <br /><br /><br />
+  
+  <p class="getcent"><span class="getcentt glyphicon glyphicon-search"></p>
+  <p class="font-fam getstarth">Search</p>	
+  <p class="font-fam1 getstartp">Tap on the search button to find friends and also discover users</p>
+  <br /><br /><br />
+  
+  <p class="getcent"><img src="/assets/images/av.PNG" class="imggtst"/></p>
+  <p class="font-fam getstarth">Avatar</p>	
+  <p class="font-fam1 getstartp">Tap on your avatar to find links like Profile, Settings, Invite, Guide and to signout</p>
+  <br /><br />
+  
+  <p class="font-fam getstarth">Essential</p>
+  <p class="font-fam1 getstartp">Tapping on photos will allow you to view them</p>  
+  <p class="font-fam1 getstartp">Tapping on usernames on any profile page will allow you quickly find information such as; number of halls, following and followers </p>
+  <p class="font-fam1 getstartp">When you find friends or channels you love, tap on the follow button to follow</p>
+  <p class="font-fam1 getstartp">Thank you for using our guide. If you require any additional information, reach us on twitter @hallitservice and we'll be sure to reply you.</p>
+
+</div>
+</div>
+
+  <% if signed_in? %> 		
+   <div class="footer2"><%= render 'layouts/minfooter' %></div>                           
+  <% end %>
+<br /><br />
+

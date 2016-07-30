@@ -1,4 +1,5 @@
 <% provide(:title, @micropost.user.name) %>
+<body class="overflowdisable">
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-top" role="navigation">
     <div class="">
@@ -48,10 +49,10 @@
 <br /><br />
   
 <div class="microviews">  
-	<%= social_share_button_tag(@micropost.content, :popup => "true") %>
-<span class="glyphicon glyphicon-comment"></span><span class="shocmmcou"><%= pluralize(@micropost.comments.count, "") %> </span>
-<span class="glyphicon glyphicon-heart"></span><span class="sholikecou"><%= pluralize(@micropost.likes.count, "") %> </span>
-<%= link_to 'View likes', like_path, class: "hov ckl2 font-fam" %> 
+<div class="socialshare"><%= social_share_button_tag(@micropost.content, :popup => "true") %></div>
+<span class="glyphicon glyphicon-comment"></span><span class="font-fam1"><%= pluralize(@micropost.comments.count, "") %> </span>
+<span class="glyphicon glyphicon-heart"></span><span class="font-fam1"><%= pluralize(@micropost.likes.count, "") %> </span>
+<%= link_to 'View likes', like_path, class: "hov ckl2 font-fam1" %> 
 
 </div>
 
@@ -95,7 +96,7 @@
 <hr />
 
 <section id="">
-<section class="ddd"><%= render @micropost.comments %></section>
+<section class="ddd"><%= render @comments %></section>
 
 <%= render "comments/form" %> 
 
@@ -113,4 +114,4 @@
 <br />
 <br />
 
-<div class="footer2"><%= render 'layouts/minfooter' %></div>
+<div class="footer2"><%= render 'layouts/minfooter' %></div></body>

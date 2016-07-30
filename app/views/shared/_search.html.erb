@@ -1,7 +1,7 @@
 
 <div id="srcbar">
 	<%= form_tag(users_path, :method => "get", id: "search-form") do %>
-	<p class="font-fam">
+	<p class="font-fam1">
 	<%= text_field_tag :search, params[:search], class: "search-query form-control sr", placeholder: "Find friends and channels you love...", type: "search", data: {autocomplete: users_autocomplete_user_username_path} %>  
 	</p>
 	<% end %>

@@ -1,2 +1,20 @@
-<%= @like.user.username %> liked your <%= link_to 'Hall', micropost_url(@like.micropost) %>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css" media="screen">
+    body{background: rgba(247, 58, 65, 0.9);}
+    p{ color: white; font-weight: 300; font-size: 16px; font-family: Open Sans!important; }
+
+</style>
+</head>
+
+
+<body>
+<%= link_to "HALLIT", home_path, id: "logo", class: "navbar-brand" %>
+<br /><br /><br /><br />
+<p><%= link_to @like.user.username, @like.user %> liked your <%= link_to 'Hall', micropost_url(@like.micropost), :style=>"color:black!important;" %></p>
+
+</body>
+</html>
 

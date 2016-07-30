@@ -1,8 +1,9 @@
 <%content_for :title, "Create Hall | New Hall"%>
+<p class="font-fam1 nhallhead"><%= link_to "Learn how to make hall", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
 
-<link rel="stylesheet" href="/assets/PhotoEditorReactUI.css" />
+<link rel="stylesheet" href="/assets/PhotoEditorReactUv5.css" />
 <script src="/assets/PhotoEditorSDK.js"></script>
-<script src="/assets/PhotoEditorReactUI.js"></script>
+<script src="/assets/PhotoEditorReactUI1.js"></script>
 
 <div id="container"></div>
 
@@ -16,14 +17,14 @@
    <section><%= f.file_field :photo, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section> 
   </section>
   
-  <p class="glyphicon glyphicon-cloud newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
+  <p class="glyphicon glyphicon-cloud-download newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
 
   <p>
-   <%= f.text_area :content, :class =>"formcontent font-fam", placeholder: "describe your hall..." %>
+   <%= f.text_area :content, :class =>"formcontent font-fam", placeholder: "Share story..." %>
   </p>
   
   <p>
-   <%= f.text_field :author, :class =>"formauthor font-fam", placeholder: "Author" %>
+   <%= f.text_field :author, :class =>"formauthor font-fam", placeholder: "Place author if using someone's quote" %>
   </p>
   
   <p class="appbutton"> 
@@ -35,7 +36,7 @@
 <br />
 <br />
 <section style="text-align:center;">
-<p style="text-align:center;"><%= image_tag asset_path('assets/images/default.gif'), :class => "loaderdd" %></p>
+<p style="text-align:center;"><%= image_tag asset_path('assets/images/loading.gif'), :class => "loaderdd" %></p>
 </section>
   
 <br />
@@ -43,5 +44,4 @@
 </div>
 </div>
 
-<br /><br /><br /><br />
-<div class="footer2"><%= render 'layouts/minfooter' %></div>
+

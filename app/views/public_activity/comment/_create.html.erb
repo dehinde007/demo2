@@ -1,10 +1,11 @@
 <% if activity.trackable %> 
-<span class="font-fam3"><%= link_to activity.owner.username, activity.owner if activity.owner %></span> commented
+<span class="font-fam3 app_a_link"><%= link_to activity.owner.username, activity.owner if activity.owner %></span> commented
 <span class="act_time"> <%= time_ago_in_words(activity.created_at) %> ago</span>
 <%= link_to (image_tag activity.trackable.micropost.photo.url(:square), class: "trackable"), activity.trackable.micropost %>
 <hr />
 <% else %> 
-
+<span class="font-fam3 app_a_link"><%= link_to activity.owner.username, activity.owner if activity.owner %></span> commented a hall which has been deleted!
+<hr />
 <% end %>
 
 

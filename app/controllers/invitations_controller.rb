@@ -2,6 +2,7 @@ class InvitationsController < ApplicationController
   before_action :set_invitation, only: [:show, :edit, :update, :destroy]
 
   def new
+    @skip_header = true
     @invitation = Invitation.new
   end
 

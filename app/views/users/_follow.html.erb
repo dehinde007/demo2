@@ -1,6 +1,6 @@
-<span class="sub_but appbutton"><%= form_for(current_user.relationships.build(followed_id: @user.id),
+<span class="sub_but fappbutton"><%= form_for(current_user.relationships.build(followed_id: @user.id),
              remote: true) do |f| %>
   <div><%= f.hidden_field :followed_id %></div>
-  <%= f.submit "Follow", class: "btn-primary btn-info btn-xs" %>
+  <%= f.submit "Follow", class: "btn-primary fbtn btn-xs" %>
 <% end %>
 </span>

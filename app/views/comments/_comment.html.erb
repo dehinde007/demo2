@@ -1,8 +1,12 @@
 <p><li class="commentpartial" id=<%= dom_id(comment) %>>
+  <span class="commentimg"><%= image_tag comment.user.avatar.url(:thumb), class: "img-circle" %></span>
+  <%= link_to comment.user.username, comment.user, class: "font-fam3 commentusername hov" %>
+  <% if comment.user.verify == true%>
+  <img src="/assets/images/verify.png" width="10" height="10" data-toggle="tooltip" data-placement="top" title="Verified Account"/>
+  <% else %>
+  <% end %>
 
- <%= link_to comment.user.username, comment.user, class: "commentusername hov" %>
-
- <span class="commentbody">
+ <span class="font-fam1 commentbody">
  <%= comment.body %>  
 <% if current_user?(comment.user) %> 
  <%= link_to [comment.micropost, comment], :method => :delete,

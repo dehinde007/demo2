@@ -19,8 +19,12 @@ class StaticPagesController < ApplicationController
     end
   end
  
-  def getstarted
+  def guide
    @skip_header = true
+  end
+  
+  def careers
+       
   end
   
   def vision
@@ -28,13 +32,17 @@ class StaticPagesController < ApplicationController
   end
   
   def tour
-    
+   @skip_header = true
   end
   
   def search
    @skip_header = true  
    @users = User.find([1])
 
+  end
+  
+    def note
+   @skip_header = true
   end
   
   def support

@@ -16,7 +16,7 @@ class MicropostsController < ApplicationController
   def show
     @skip_header = true
    @micropost = Micropost.find(params[:id])
-   @comments = @micropost.comments
+   @comments = @micropost.comments.paginate(page: params[:page], per_page: 7)
       respond_to do |format|
         format.html # show.html.erb
         format.js    

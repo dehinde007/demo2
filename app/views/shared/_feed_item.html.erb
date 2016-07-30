@@ -4,14 +4,14 @@
     <section class="feediteminfo">
     <%=(image_tag feed_item.user.avatar.url(:thumb), class: "img-circle") %>
     <%= link_to feed_item.user.username, feed_item.user, class: "hov font-fam2 feedusern"  %>
-    <span class="font-fam feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
+    <span class="font-fam1 feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
    
     </section>
     
     <section class="feediteminfo2">
     <%=(image_tag feed_item.user.avatar.url(:thumb), class: "img-circle") %>
     <%= link_to feed_item.user.username, feed_item.user, class: "hov font-fam2 feedusern"  %>
-    <span class="font-fam feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
+    <span class="font-fam1 feedtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
     
     </section>
    
@@ -25,7 +25,7 @@
     </div>
     
     <section class="container contentlength">
-    <p class="font-fam feedlikeicon">
+    <p class="font-fam1 feedlikeicon">
     <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "") %>
   	</p>		
     <% if feed_item.content.length > 1 %>

@@ -2,18 +2,17 @@
 <div class="container" style="color: #a94442;"><%= flash[:alert] %></div>
    
    <div class="scarcity">
-   <div class="container session">
-   	
+   <div class="container session">  	
    	
    	  <section class="sessionform">
       <%= form_for(:session, url: sessions_path) do |f| %>
       <p class="">
       <%= f.label :email, :class =>"sessionlabel font-fam2" %>
-      <%= f.text_field :email, :class =>"sessionfield font-fam", placeholder: "Enter email" %>
+      <%= f.text_field :email, :class =>"sessionfield font-fam1", placeholder: "Enter email" %>
       </p>
       <p class="font-fam2">
       <%= f.label :password, :class =>"sessionlabel font-fam2" %>
-      <%= f.password_field :password, :class =>"sessionfield font-fam", placeholder: "Enter password" %>
+      <%= f.password_field :password, :class =>"sessionfield font-fam1", placeholder: "Enter password" %>
       </p>
       </section>
       <br />
@@ -26,5 +25,5 @@
    </div>
    </div>
    
-   <p class="misscion sesswarn">Only on Iphone or Android Web Devices!</p>
+   <p class="misscion sesswarn">Switch to your Iphone or Android Web Device!</p>
 

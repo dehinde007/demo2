@@ -2,11 +2,11 @@
   <p class="ddffs">
    		
        <span class="minf">
-        <a href="/home"><i class="glyphicon glyphicon-tent"></i></a>
+        <a href="/home"><i class="glyphicon glyphicon-home"></i></a>
        </span>
        
        <span class="minf">
-        <a href="/halls"><i class="glyphicon glyphicon-map-marker"></i></a>
+        <a href="/halls"><i class="jps glyphicon glyphicon-cloud"></i></a>
        </span>
          
        <span class="minf">
@@ -14,7 +14,7 @@
        </span>
       
        <span class="minf">
-        <a href="/activities"><i class="glyphicon glyphicon-heart-empty"></i></a>
+        <a href="/activities"><i class="glyphicon glyphicon-heart"></i></a>
        </span> 
        
        
@@ -28,25 +28,31 @@
        <ul class="dropdown-menu pull-right font-fam">
         <li class="hfilt">
         <%= link_to current_user do %>
-        <span class="glyphicon glyphicon-user"></span><span class="font-fam"> Profile</span>
+        <span class="glyphicon glyphicon-user"></span><span class="font-fam1"> Profile</span>
         <% end %>
         </li>
              
         <li class="hfilt font-fam">
         <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>
-        <span class="glyphicon glyphicon-wrench"></span><span class="font-fam"> Settings</span>
+        <span class="glyphicon glyphicon-wrench"></span><span class="font-fam1"> Settings</span>
         <% end %>	
         </li>
+                                     
+        <li class="hfilt">
+        <%= link_to new_invitation_path, class: "hov" do %>
+        <span class="glyphicon glyphicon-envelope"></span><span class="font-fam1"> Invite friend</span>
+        <% end %>
+        </li> 
     
         <li class="hfilt">
-        <%= link_to getstarted_path, class: "hov" do %>
-        <span class="glyphicon glyphicon-info-sign"></span><span class="font-fam"> Guides</span>
+        <%= link_to guide_path, class: "hov" do %>
+        <span class="glyphicon glyphicon-info-sign"></span><span class="font-fam1"> Feeling lost?</span>
         <% end %>
         </li>
       
         <li class="hfilt">
         <%= link_to signout_path, class: "hov", method: "delete" do %>
-        <span class="glyphicon glyphicon-off"></span><span class="font-fam"> Logout</span>
+        <span class="glyphicon glyphicon-off"></span><span class="font-fam1"> Logout</span>
         <% end %>
         </li>  
        </ul>

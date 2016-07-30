@@ -5,11 +5,10 @@ belongs_to :invitation
 #user search
 scope :username_like, -> (username) { where("username like ?", username)}
 
-
+#vanitylinkforusernames
  def to_param
    self.username
  end
-
 
 #avatar
   has_attached_file :avatar, styles: { 
@@ -37,7 +36,7 @@ has_attached_file :photo
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 25 }
-  validates :username, presence: true, length: { maximum: 25 },
+  validates :username, presence: true, length: { maximum: 15 },
                        uniqueness: { case_sensitive: false }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },

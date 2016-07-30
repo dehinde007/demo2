@@ -1,16 +1,16 @@
-<%content_for :title, "Invite • Hallit"%>
+<%content_for :title, "Invite | Hallit"%>
 <% if flash[:notice] -%>
   <p class='container kkkkk alert alert-warning'><%=h flash[:notice] %></p>
 <% end -%>
 
 <div class="container invite font-fam">	
-<section class="betainvite">Invite Someone</section>	
+<section class="betainvite">Invite Friend</section>	
 
 <div class="invite-form">
 <%= form_for @invitation, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<p class="font-fam"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "Enter person email" %></p>
+<p class="font-fam"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "Enter email" %></p>
 
 <p class="font-fam appbutton"><%= f.submit "Invite!", class: "loadbut btn btn-sm btn-primary" %></p>
 
