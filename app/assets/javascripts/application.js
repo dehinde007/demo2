@@ -16,7 +16,7 @@
 //= require autocomplete-rails
 //= require turbolinks
 //= require_tree .
-//= require social-share-button
+#= require social-share-button
 
 $(function() {
   window.onload = function () {
