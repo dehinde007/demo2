@@ -1,1 +1,5 @@
 <%= link_to @micropost.user.username, @micropost.user, class: "hov microusrn" %>
+<% if @micropost.user.verify == true %>
+<span><%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %></span>
+<% else %>
+<% end %>	

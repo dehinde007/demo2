@@ -1,9 +1,12 @@
 <%content_for :title, "Create Hall | New Hall"%>
 <p class="font-fam1 nhallhead"><%= link_to "Learn how to make hall", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
-<link rel="stylesheet" href="/assets/PhotoEditorReactUI.css" />
-<script src="/assets/PhotoEditorSDK.js"></script>
-<script src="/assets/PhotoEditorReactUI.js"></script>
-<div id="okland"></div>
+
+    <link rel="stylesheet" href="/assets/imglykit-night-ui2.css" />
+    <script src="/assets/imglykit2.js"></script>
+
+<div id="container"></div>  <!--  imgly kit container in micropost new to edit picture before upload -->
+
+
 
 <%= form_for @micropost, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
@@ -34,7 +37,7 @@
 <br />
 <br />
 <section style="text-align:center;">
-<p style="text-align:center;"><%= image_tag asset_path('assets/images/loading.gif'), :class => "loaderdd" %></p>
+<p style="text-align:center;"><%= image_tag('loading.gif', :class => "loaderdd") %></p>
 </section>
   
 <br />

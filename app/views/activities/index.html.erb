@@ -6,14 +6,15 @@
 <% @activities.each do |activity| %>
 
  <div>
-   	<%= render_activity activity %>    
+   	<%= render_activity activity %>
+   	    
  </div>	
  
- <br />
  
  <% end %>
- <div class="container pager"><%= will_paginate @activities, :page_links => false %></div>
 
+	<div class="pager"><i><%= will_paginate @activities, :page_links => false %></i></div>
+<br /><br />
  <% else %>
     
     <div class="noactivity">

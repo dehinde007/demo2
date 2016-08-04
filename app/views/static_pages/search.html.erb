@@ -1,4 +1,4 @@
-<%content_for :title, "Find friends and Channels you love"%>
+<%content_for :title, "Find friends or Channels you love"%>
 <div class="topsrcbar">
   <div class="usindexsearch">
    <% if signed_in? %> 		
@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<p class="container static-search font-fam"><i class="jps glyphicon glyphicon-flag"></i> Favourites to follow</p>
+<p class="container static-search font-fam"><i class="jps glyphicon glyphicon-star"></i> Valued Accounts</p>
 <br />
 <div class="container divsearch">
 <% @users.each do |user| %>
@@ -23,7 +23,7 @@
   <% end %>
   
   <% if user.verify == true%>
-  <img src="/assets/images/verify.png" width="10" height="10" data-toggle="tooltip" data-placement="top" title="Verified Account"/>
+    <%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %>
   <% else %>
   <% end %>
   </li>

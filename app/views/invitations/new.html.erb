@@ -4,13 +4,13 @@
 <% end -%>
 
 <div class="container invite font-fam">	
-<section class="betainvite">Invite Friend</section>	
+<section class="betainvite">Invite</section>	
 
 <div class="invite-form">
 <%= form_for @invitation, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<p class="font-fam"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "Enter email" %></p>
+<p class="font-fam"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "Email" %></p>
 
 <p class="font-fam appbutton"><%= f.submit "Invite!", class: "loadbut btn btn-sm btn-primary" %></p>
 

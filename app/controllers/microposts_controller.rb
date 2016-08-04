@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
 
   def index
     @skip_header = true
-    @microposts = Micropost.paginate(page: params[:page], per_page: 15)
+    @microposts = Micropost.includes(:comments, :likes).paginate(page: params[:page], per_page: 15)
   end
   
   def leaderboard
@@ -16,7 +16,7 @@ class MicropostsController < ApplicationController
   def show
     @skip_header = true
    @micropost = Micropost.find(params[:id])
-   @comments = @micropost.comments.paginate(page: params[:page], per_page: 7)
+   @comments = @micropost.comments.includes(:user).paginate(page: params[:page], per_page: 7)
       respond_to do |format|
         format.html # show.html.erb
         format.js    

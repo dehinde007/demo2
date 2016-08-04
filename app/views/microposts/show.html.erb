@@ -6,16 +6,16 @@
     <div class="navbar-header">
            
     <span id="pagename" class="navbar-brand font-fam">
-    	   <%= link_to :back, class: "hov" do %>	
+    	  <%= link_to :back, class: "hov" do %>	
           <span class="headglyph glyphicon glyphicon-menu-left"></span>
           <% end %> 
     </span>
-      <span id="pagenameee" class="navbar-brand font-fam2"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
+      <span id="pagenameee" class="navbar-brand font-fam1"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
            <ul class="font-fam solve  pull-right">
             
            <li> 
              <% if current_user?(@micropost.user) %>
-    <%= link_to @micropost, method: :delete,
+   <%= link_to @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: @micropost.content, class: "hov ckl2 apptrash" do %>
                                      <span class="glyphicon glyphicon-trash"></span>             
@@ -35,7 +35,7 @@
    <div class="container">
     
    <section class="showmicrocontent">
-   	<%= render "shared/microusrn" %><span><img src="/assets/images/verify.png" width="10" height="10" data-toggle="tooltip" data-placement="top" title="Verified Account"/></span>
+   	<%= render "shared/microusrn" %>
    <span class="showcontentsize app_a_link"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
    <span class="postauthor">
 <i>  	
@@ -49,7 +49,6 @@
 <br /><br />
   
 <div class="microviews">  
-<div class="socialshare"><%= social_share_button_tag(@micropost.content, :popup => "true") %></div>
 <span class="glyphicon glyphicon-comment"></span><span class="font-fam1"><%= pluralize(@micropost.comments.count, "") %> </span>
 <span class="glyphicon glyphicon-heart"></span><span class="font-fam1"><%= pluralize(@micropost.likes.count, "") %> </span>
 <%= link_to 'View likes', like_path, class: "hov ckl2 font-fam1" %> 
@@ -93,7 +92,6 @@
 </section>
 </section>
 
-<hr />
 
 <section id="">
 <section class="ddd"><%= render @comments %></section>

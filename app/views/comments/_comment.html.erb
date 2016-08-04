@@ -2,7 +2,7 @@
   <span class="commentimg"><%= image_tag comment.user.avatar.url(:thumb), class: "img-circle" %></span>
   <%= link_to comment.user.username, comment.user, class: "font-fam3 commentusername hov" %>
   <% if comment.user.verify == true%>
-  <img src="/assets/images/verify.png" width="10" height="10" data-toggle="tooltip" data-placement="top" title="Verified Account"/>
+  <%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %>
   <% else %>
   <% end %>
 
