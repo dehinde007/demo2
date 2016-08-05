@@ -1,4 +1,4 @@
-<%content_for :title, "Hallit | Signin or Signup"%>
+<%content_for :title, "Hallit | Welcome"%>
 <body class="question"> 
 
 <p id="misfnt" class="misscion">Creating a stronger, safer and better world.</p>
@@ -30,8 +30,7 @@
 <p class="misscion"><%= link_to "Tap Photos", note_path, :class => "tourlink", :"data-no-turbolink" => true %></p>
 
 <p class="welcomeoption wappbutton">
-<%= link_to "Sign in", signin_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %> 
-<%= link_to "Sign up", note_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %>			
+<%= link_to "Log in", signin_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %> 
 </p>
 
 <div class="app_footer"><%= render 'layouts/footer' %></div>

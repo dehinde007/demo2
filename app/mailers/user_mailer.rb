@@ -1,5 +1,6 @@
 class UserMailer < ActionMailer::Base
-  default from: '"Hallit" <hallitservice@email.com>'
+  
+default from: '"Hallit" <hallitservice@gmail.com>'
 
   def welcome_email(user)
    @user = user
@@ -11,20 +12,20 @@ class UserMailer < ActionMailer::Base
   def newcomment_email(comment)
    @comment = comment
    email_with_name = %("#{comment.micropost.user.name.titleize}" <#{comment.micropost.user.email}>)
-   mail(to: email_with_name, subject: "Tidings")
+   mail(to: email_with_name, subject: "New Story")
    end
   
   def newlike_email(like)
     @like = like
     email_with_name = %("#{like.micropost.user.name.titleize}" <#{like.micropost.user.email}>)
-    mail(to: email_with_name, subject: "Tidings")
+    mail(to: email_with_name, subject: "New Story")
   end   
   
   def newfollow_email(user, follower)
     @user = user
     @follower = follower
     email_with_name = %("#{@user.name.titleize}" <#{@user.email}>)
-    mail(to: email_with_name, :subject => "Tidings")
+    mail(to: email_with_name, :subject => "New Story")
   end
     
 end

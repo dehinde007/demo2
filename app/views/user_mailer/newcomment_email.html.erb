@@ -1,16 +1,36 @@
-
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-<style>
+<meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><style type="text/css" media="screen">
+.navbar-header{}
+.emailimg{width: 80px; height: 50px;}
+.cm{font-family: Open Sans!important; font-size: 20px; color: rgb(148, 148, 148);  }
+.cmimdv{width: 250px; height: 250px; margin: auto; left: 0; right: 0;}
+.cmimg{width: 250px; height: 250px;}
+.cmbody{font-family: Open Sans!important; font-size: 15px; color: black; text-align: center;}
 
 </style>
 </head>
-<body>
+<body class="">
+<header class="indexhead">
+    <nav class="navbar navbar-default navbar-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+    <span id="pagename" class="navbar-brand font-fam2"><img class="emailimg" src="https://s3-us-west-2.amazonaws.com/assistantimgs/logos.jpg" /></span>
+      
+           <ul class="font-fam solve  pull-right">
+           	
+      </ul>
+        </div>   
+      </div><!-- /.container -->
+    </nav>
+</header>	
 
-<p><%= @comment.user.username %> commented on your <%= link_to 'Hall', micropost_url(@comment.micropost) %> </p>
-
-<p>comment: <%= @comment.body %></p> 
+<p class="cm"><%= link_to @comment.user.username, @comment.user, :style=>"color:rgb(148, 148, 148)!important; text-decoration: none;" %> made a comment on your <%= link_to 'Hall', micropost_url(@comment.micropost), :style=>"color:rgb(148, 148, 148)!important; text-decoration: none;" %> </p>
+<div class="cmimdv"><%=link_to (image_tag @comment.micropost.photo.url(:instag), class: "cmimg img-responsive"), micropost_url(@comment.micropost) %></div>
+<p class="cmbody"><%= @comment.body %></p> 
 
 </body>
 </html>

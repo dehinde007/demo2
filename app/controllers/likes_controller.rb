@@ -1,14 +1,16 @@
 class LikesController < ApplicationController
   before_action :signed_in_user, only: [:show, :edit, :update, :destroy]
 
+
 def new
      @like = @micropost.likes.new
-  end
+end
 
  def show
-     @micropost = Micropost.find(params[:id])
+   @skip_header = true
+   @micropost = Micropost.find(params[:id])
    @likes = @micropost.likes
-  end
+end
 
  def create
        @micropost = Micropost.find(params[:micropost_id])
@@ -21,7 +23,7 @@ def new
        respond_to do |format|
       format.html { redirect_to @like.micropost }
       format.js
-      end
+    end
     end
 
     def destroy 
