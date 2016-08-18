@@ -192,6 +192,8 @@ GEM
     json (1.8.3)
     launchy (2.4.3)
       addressable (~> 2.3)
+    lazyload-rails (0.3.1)
+      nokogiri (~> 1.5)
     listen (3.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -359,6 +361,7 @@ DEPENDENCIES
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   jquery-ui-rails
+  lazyload-rails
   newrelic_rpm
   paperclip (~> 4.2)
   pg

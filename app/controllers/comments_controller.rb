@@ -29,6 +29,8 @@ class CommentsController < ApplicationController
      def destroy
         @comment = Comment.find(params[:id])
         @micropost = @comment.micropost
+        @activity = PublicActivity::Activity.find_by(trackable_id: (params[:id]), trackable_type: controller_path.classify)
+        @activity.destroy
         @comment.destroy 
         respond_to do |format|
         format.html { redirect_to @comment.micropost }

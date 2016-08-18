@@ -29,6 +29,8 @@ end
     def destroy 
     @like = Like.find(params[:id])
     @micropost = @like.micropost
+    @activity = PublicActivity::Activity.find_by(trackable_id: (params[:id]), trackable_type: controller_path.classify)
+    @activity.destroy
     @like.destroy  
      respond_to do |format|
       format.html { redirect_to @like.micropost }

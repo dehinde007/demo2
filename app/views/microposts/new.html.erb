@@ -1,13 +1,11 @@
 <%content_for :title, "Create Hall | New Hall"%>
-<p class="font-fam1 nhallhead"><%= link_to "How to Make Hall?", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
+<p class="font-fam1 nhallhead"><%= link_to "Quick Tips", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
 
 <link rel="stylesheet" href="/css/imglykit-night-ui.css" />
 <script src="/js/imglykit.js"></script>
 <div id="container"></div>  <!--  imgly kit container in micropost new to edit picture before upload -->
 
-
-
-<%= form_for @micropost, :html => { :multipart => true} do |f| %>
+<%= form_for @micropost, :html => {:multipart => true, :id => "nform"} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
 <div class="container micropostform">
@@ -20,23 +18,22 @@
   <p class="glyphicon glyphicon-retweet newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
 
   <p>
-   <%= f.text_area :content, :class =>"formcontent font-fam", placeholder: "Share story..." %>
+   <%= f.text_area :content, :class =>"formcontent font-fam1", placeholder: "Share story..." %>
   </p>
   
   <p>
-   <%= f.text_field :author, :class =>"formauthor font-fam", placeholder: "Place author if using someone's quote" %>
+   <%= f.text_field :author, :class =>"formauthor font-fam1", placeholder: "Place author if using someone's quote" %>
   </p>
   
   <p class="appbutton"> 
-   <%= f.submit "Hall", class: "loadbut btn btn-sm btn-primary font-fam" %>
+   <%= f.submit "Hall", class: "submit-btn loadbut btn btn-sm btn-primary font-fam" %>
   </p>
   
  <% end %>
 <br />
-<br />
-<br />
+
 <section style="text-align:center;">
-<p style="text-align:center;"><%= image_tag('loading.gif', :class => "loaderdd") %></p>
+<p style="text-align:center;" class="loaderd">Please wait a while...</p>
 </section>
   
 <br />
@@ -44,4 +41,4 @@
 </div>
 </div>
 
-
+ <div class="footer2"><%= render 'layouts/minfooter' %></div>

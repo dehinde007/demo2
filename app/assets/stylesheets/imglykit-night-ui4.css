@@ -32,7 +32,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #1E1E1E;
+  background: white;
   overflow: hidden;
   text-align: left; }
   .imglykit div, .imglykit span, .imglykit applet, .imglykit object, .imglykit iframe,
@@ -173,12 +173,11 @@
     display: inline-block;
     margin-bottom: 10px;
     padding: 0 15px;
-    background: #43ADEB;
+    background: white;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 38px;
-    font-weight: bold;
-    color: white; }
+    color: black; }
   .imglykit-container .imglykit-splash-container .imglykit-splash-or {
     display: table;
     table-layout: fixed;
@@ -226,7 +225,7 @@
         color: white; }
       .imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-splash-content .imglykit-splash-text {
         font-size: 14px;
-        color: rgba(255, 255, 255, 0.2); }
+        color: black; }
     .imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-upload-hidden-input {
       position: absolute;
       top: 0;
@@ -249,7 +248,7 @@
 
 .imglykit-container .imglykit-header {
   display: table-cell;
-  background: #1A1A1A;
+  background: white;
   text-align: center;
   color: white;
   font: bold 11px Helvetica, Arial, sans-serif;

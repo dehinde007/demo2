@@ -5,10 +5,10 @@
 </div>    
     <% else %>
     <div class="feedwelcomeimg">
-  	<%= image_tag asset_path('assets/images/j/h5.jpg'), class: "feedwelcomeimgg" %> 
+  	<%= image_tag('h5.jpg', class: "feedwelcomeimgg") %> 
   	</div>
     
-    <div class="nofeed font-fam1"><%= link_to "Search", search_path, class: "feedsearchlink" %> and Follow Channels You Love</div>
+    <div class="nofeed font-fam1">Welcome! <%= link_to "Search", search_path, class: "feedsearchlink" %> and Follow Channels You Love</div>
     <br /><br />
     <% end %>
 </div>

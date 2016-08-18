@@ -323,13 +323,14 @@ p .sr{
 .invite-fill{
   width: 90%;
   height: 30px;
+  border-color: black;
 }
 
 /* kit */
 #container{
   max-width: 100%;
   height: 650px;
-  margin-top: -16px;
+  margin-top: -13px;
 }
 
 img{
@@ -356,10 +357,6 @@ input{
   font-size: 14px;
   width: 200px;
   -webkit-appearance: none;
-}
-
-.formcontent {
-  -webkit-appearance: none;  
 }
 
 label{
@@ -398,7 +395,7 @@ label{
 }
 
 .navbar-default{
-  background: rgba(247, 58, 65, 0.9)!important;
+  background: rgba(247, 60, 70, 0.9)!important;
   border-color: rgba(247, 58, 65, 0.9)!important; 
 }
 
@@ -498,8 +495,8 @@ label{
 }
 
 .getcent .glyphicon{
-  font-size: 40px;
-  color: rgb(245, 177, 177);
+  font-size: 20px;
+  color: rgba(211, 211, 211, 0.9);
 }
 
 .loaderdd{
@@ -518,7 +515,7 @@ label{
 }
 
 .getstartp .glyphicon{
-  color: rgb(245, 177, 177); 
+  color: rgba(211, 211, 211, 0.6); 
   font-size: 16px;
 } 
 
@@ -765,11 +762,13 @@ label{
 }
 
 .newhall-input{
- color: rgb(245, 177, 177);
+ color: black;
  cursor: pointer;
  font-size: 40px;
+ opacity: 0.1;
  &:hover {
- color: rgba(255, 0, 0, 0.59);
+ color: black;
+ opacity: 0.9;
  }   
 }
 
@@ -777,17 +776,20 @@ label{
   width: 100%;
   height: 120px;
   border-style: solid;
+  border-radius: 5px;
   border-width: 1px;
   border-color: black;
-  font-size: 13px;
+  font-size: 15px;
+  -webkit-appearance: none; 
 }
 
 .formauthor{
   width: 300px;
+  height: 30px;
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /* activity */
@@ -927,9 +929,8 @@ label{
   color: black;
 }
 
-
 .feedtime{
-  font-size: 80%;
+  font-size: 90%;
   color: black;
 }
 
@@ -951,7 +952,7 @@ label{
 }
 
 .feedlikeicon .glyphicon-heart{
-  color: black;
+  color: rgba(247, 60, 70, 0.9);
   font-size: 17px;
   padding-top: 4px;
 }
@@ -1133,8 +1134,7 @@ label{
 
 .userinfo2{
   color: black;
-  font-size: 13px;
-  font-family: ralewayregular;
+  font-size: 14px;
   text-align: center;
   margin-top: -3px;
 }
@@ -1331,12 +1331,12 @@ label{
 
 // minfooter
 .minfooter{
-  background: white;
+  background: rgba(211, 211, 211, 0.4);
   height: 45px;
   width: 100%;
   position: fixed;
   bottom: 0px;
-  border-top: 1px solid rgba(245, 177, 177, 0.13);
+  border-top: 1px solid rgba(211, 211, 211, 0.4);
 }
 
 .ddffs{
@@ -1349,12 +1349,17 @@ label{
 }
 
 .minf .glyphicon{
-  color: rgb(245, 177, 177);
+  color: white;
   font-size: 17px;
   &:hover{
-    color: #d6d6d6;
+    color: rgba(247, 60, 70, 0.9);
   }
 } 
+
+.ggt{
+  border-color: red;
+}
+
 
 .hfilter{
   margin-top: -41px;
@@ -1365,6 +1370,13 @@ label{
 
 .dropdown-menu.pull-right {
   right:0;
+  background: rgba(211, 211, 211, 0.3);
+  background-size: 160px 160px;
+  background-repeat: no-repeat;
+}
+
+.hfiltkey{
+ color: black; 
 }
 
 .curusavi .img-circle{
@@ -1409,8 +1421,8 @@ label{
 }
 
 .feediteminfo .img-circle{
-  width: 6%;
-  margin-top: 2.5%;
+  width: 7%;
+  margin-top: 0.5%;
   margin-left: 3.5%;
 }
 
@@ -1557,8 +1569,8 @@ label{
 }
 
 .feediteminfo2 .img-circle{
-  width: 6%;
-  margin-top: 2.5%;
+  width: 7%;
+  margin-top: 0.5%;
   margin-left: 4%;
 }     
    
@@ -1764,7 +1776,7 @@ label{
 .micropostindex2{
   width: 31%;
   margin-top: 10px;
-  margin-left: 12px; 
+  margin-left: 14px; 
 }
 
 .minf{
@@ -1803,7 +1815,7 @@ label{
 .micropostindex2{
   width: 31%;
   margin-top: 20px;
-  margin-left: 20px; 
+  margin-left: 17px; 
 }
 
 .minf{
@@ -1842,7 +1854,7 @@ label{
 .micropostindex2{
   width: 25%;
   margin-top: 40px;
-  margin-left: 64.5px; 
+  margin-left: 92.5px; 
 }
 
 .minf{

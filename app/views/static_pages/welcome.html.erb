@@ -1,7 +1,7 @@
 <%content_for :title, "Hallit | Welcome"%>
 <body class="question"> 
 
-<p id="misfnt" class="misscion">Creating a stronger, safer and better world.</p>
+<p id="misfnt" class="misscion">Tell stories on hallit to create a better world.</p>
 <br />
 <div class="welimage">
 <section>
@@ -27,7 +27,7 @@
 </div>
 <br />
 
-<p class="misscion"><%= link_to "Tap Photos", note_path, :class => "tourlink", :"data-no-turbolink" => true %></p>
+<p class="misscion"><%= link_to "Tap Photos", note_path, :class => "tourlink", :"data-no-turbolink" => true, "data-toggle"=>"modal", "data-target"=>"#dips" %></p>
 
 <p class="welcomeoption wappbutton">
 <%= link_to "Log in", signin_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %> 
@@ -36,5 +36,17 @@
 <div class="app_footer"><%= render 'layouts/footer' %></div>
 
 <div><%= render 'shared/previewhome' %></div>
+
+
+<div id="dips" class="modal hide fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-body">
+<br /> <br /><br />
+<button type="button" class="close previewx" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="previewx">&times;</span></button>
+ <p><%= image_tag('h6.jpg') %></p>
+</div> 
+</div>
+</div>
+
 
 </body>

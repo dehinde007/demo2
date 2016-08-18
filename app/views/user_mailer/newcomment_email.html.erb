@@ -7,8 +7,8 @@
 .emailimg{width: 80px; height: 50px;}
 .cm{font-family: Open Sans!important; font-size: 20px; color: rgb(148, 148, 148);  }
 .cmimdv{width: 250px; height: 250px; margin: auto; left: 0; right: 0;}
-.cmimg{width: 250px; height: 250px;}
-.cmbody{font-family: Open Sans!important; font-size: 15px; color: black; text-align: center;}
+.cmimg{width: 320px; height: 320px;}
+.cmbody{font-family: Open Sans!important; font-size: 20px; color: rgb(148, 148, 148); text-align: center;}
 
 </style>
 </head>
@@ -28,9 +28,7 @@
     </nav>
 </header>	
 
-<p class="cm"><%= link_to @comment.user.username, @comment.user, :style=>"color:rgb(148, 148, 148)!important; text-decoration: none;" %> made a comment on your <%= link_to 'Hall', micropost_url(@comment.micropost), :style=>"color:rgb(148, 148, 148)!important; text-decoration: none;" %> </p>
+<p class="cm"><%= link_to @comment.user.username, @comment.user, :style=>"color:rgb(148, 148, 148)!important; text-decoration: none;" %> said <span class="cmbody"><%= @comment.body %></span></p>
 <div class="cmimdv"><%=link_to (image_tag @comment.micropost.photo.url(:instag), class: "cmimg img-responsive"), micropost_url(@comment.micropost) %></div>
-<p class="cmbody"><%= @comment.body %></p> 
-
 </body>
 </html>

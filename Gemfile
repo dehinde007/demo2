@@ -12,6 +12,7 @@ gem 'faker', '1.1.2'
 gem 'social-share-button'
 gem 'rails_autolink'
 gem 'delayed_paperclip'
+gem "lazyload-rails"
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'paperclip' , '~> 4.2'

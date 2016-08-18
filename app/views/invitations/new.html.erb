@@ -1,18 +1,20 @@
 <%content_for :title, "Invite | Hallit"%>
+<p class="font-fam1 nhallhead"><%= link_to "Send Invite", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
+
 <% if flash[:notice] -%>
   <p class='container kkkkk alert alert-warning'><%=h flash[:notice] %></p>
 <% end -%>
 
-<div class="container invite font-fam1">	
-<section class="betainvite">Invite</section>	
+<div class="container invite font-fam1">		
 
 <div class="invite-form">
 <%= form_for @invitation, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<p class="font-fam"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "Email" %></p>
+<p class="font-fam"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "email" %></p>
+<br />
 
-<p class="font-fam appbutton"><%= f.submit "Send", class: "loadbut btn btn-sm btn-primary" %></p>
+<p class="font-fam1 appbutton"><%= f.submit "Send", class: "loadbut btn btn-sm btn-primary" %></p>
 
 <% end %>
 </div>
