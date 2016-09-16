@@ -5,20 +5,20 @@
     <div class="">
     <div class="navbar-header">
            
-  <span id="pagename" class="navbar-brand">
+  <span class="navbar-brand">
           	  
     <section class="profile_h dropdown"><%= image_tag @user.avatar(:thumb), class: "img-circle" %>	
 			 
 	<span class="dropdown">
 		 
-    <span class="font-fam2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <%= @user.username %><span class="caret"></span>
+    <span class="font-fam dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span id="pagename2"><%= @user.username %></span><span class="caret"></span>
     </span>
     <ul class="dropdown-menu">
      
      <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, class: "font-fam1" %></li>
-     <li class="font-fam1"><a href="<%= following_user_path(@user) %>"><%= @user.followed_users.count %> Following</a></li>
-     <li class="font-fam1"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> Followers</a></li>
+     <li class="font-fam1"><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %>  </a></li>
+     <li class="font-fam1"><a href="<%= followers_user_path(@user) %>"><%= pluralize(@user.followers.count, "Follower") %></a></li>
     
     </ul>
 
@@ -28,21 +28,21 @@
           	
   </span>
       
-           <ul class="font-fam solve  pull-right">
+           <ul class="font-fam solve pull-right">
            	
        <li> 
-          <%= link_to search_path, class: "hov" do %>	
-          <span class="headglyph glyphicon glyphicon-search"></span>
+          <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>	
+          <span class="midheadglyph glyphicon glyphicon-wrench"></span>
           <% end %> 
        </li>
-       
+
       </ul>
         </div>   
       </div><!-- /.container -->
     </nav>
 </header> 
 
-<p class="userinfo1"><%= @user.name.titleize %>
+<p class="userinfo1 font-fam1"><%= @user.name.titleize %>
 <% if @user.verify == true %>
 <span><%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %></span>
 <% else %>
@@ -66,11 +66,13 @@
  
    <% end %>
       </div>
+
+
+
+</div>
+
    <div class="pager">
    <%= will_paginate @microposts, :page_links => false %>
    </div>
-<br />
-<br />
 
-</div>
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

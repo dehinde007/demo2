@@ -1,6 +1,15 @@
 <%content_for :title, "Create Hall | New Hall"%>
-<p class="font-fam1 nhallhead"><%= link_to "Quick Tips", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
+<header class="indexhead">
+    <nav class="navbar navbar-default navbar-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+      <span id="pagename2" class="navbar-brand font-fam">Tap for help</span>
 
+    </div>   
+    </div><!-- /.container -->
+    </nav>
+</header>
 <link rel="stylesheet" href="/css/imglykit-night-ui.css" />
 <script src="/js/imglykit.js"></script>
 <div id="container"></div>  <!--  imgly kit container in micropost new to edit picture before upload -->
@@ -8,7 +17,7 @@
 <%= form_for @micropost, :html => {:multipart => true, :id => "nform"} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<div class="container micropostform">
+<div class="container micropostform font-fam1">
 <div class="micropostformcontent">
 
   <section class="formphoto">
@@ -18,16 +27,14 @@
   <p class="glyphicon glyphicon-retweet newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
 
   <p>
-   <%= f.text_area :content, :class =>"formcontent font-fam1", placeholder: "Share story..." %>
+   <%= f.text_area :content, :class =>"formcontent font-fam1", placeholder: "Write story" %>
   </p>
   
   <p>
-   <%= f.text_field :author, :class =>"formauthor font-fam1", placeholder: "Place author if using someone's quote" %>
+   <%= f.text_field :author, :class =>"formauthor font-fam1", placeholder: "Hall Author" %>
   </p>
-  
-  <p class="appbutton"> 
-   <%= f.submit "Hall", class: "submit-btn loadbut btn btn-sm btn-primary font-fam" %>
-  </p>
+ <br /> 
+ <p class="appbutton font-fam"><%= f.submit "Share Hall", class: "loadbut" %></p>
   
  <% end %>
 <br />
@@ -41,4 +48,3 @@
 </div>
 </div>
 
- <div class="footer2"><%= render 'layouts/minfooter' %></div>

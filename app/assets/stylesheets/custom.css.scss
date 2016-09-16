@@ -9,6 +9,7 @@ html, body{
 
 .turbolinks-progress-bar::before {
   background-color: white!important;
+  display: none;
 }
 
 textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
@@ -180,11 +181,51 @@ a#next:hover {
 .clear {clear:both}
 
 /*global*/
+.backheadglyph1{
+  font-size: 19px;
+  color: rgba(247, 60, 70, 0.9);
+}
+
+.backheadglyph2{
+  font-size: 19px;
+  color: black;
+}
+
+#pagename1{
+  font-size: 19px;
+  font-weight: bold;
+  color: rgba(247, 60, 70, 0.9);
+  margin-left: -26px;
+}
+
+#pagename2{
+  font-size: 19px;
+  color: black;
+}
+
+#pagename3{
+  font-size: 20px;
+  color: rgba(247, 58, 65, 0.9);
+}
+
 .pager{
   font-size: 100%;
   margin-left: -39px!important;
+  clear:both;
+  padding-bottom: 20px;
 }
 
+.pagination li a{
+  font-family: MyriadPro-Light;
+  color: rgba(247, 60, 70, 0.9);
+  &:hover {
+  color: rgba(247, 60, 70, 0.9);
+}
+}
+
+.pagination li>a{
+ border: 1px solid white!important;
+}
 
 .app_a_link a{
   color: black;
@@ -270,7 +311,7 @@ a#next:hover {
 }
 
 .apptrash .glyphicon{
-  color: white;
+  color: rgba(247, 60, 70, 0.9);
   font-size: 18px;
 }
 
@@ -281,13 +322,14 @@ a#next:hover {
 
 p .sr{
   background: #F9F9F9;
-  height: 40px;
+  height: 50px;
   border-color: #D63636;
   margin-top: 50px;
   border: 0px;
   outline: none;
   color: black;
   text-align:center;
+  position: relative;
  &:focus{
    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 2px #F9F9F9;
  }
@@ -303,6 +345,11 @@ p .sr{
 }
  }
 
+.curusavi .img-circle{
+  width: 35px;
+  border: 1px solid white;
+}
+
 /* invitation */
 .invite{
   text-align: center;
@@ -317,13 +364,27 @@ p .sr{
 }
 
 .invite-form{
-  padding-top: 20px;
+  margin-top: 180px;
 }
 
 .invite-fill{
   width: 90%;
-  height: 30px;
-  border-color: black;
+  height: 35px;
+  border: 1px solid black;
+  background: white;
+  font-size: 16px;
+}
+
+.invitebt{
+  margin-top: 100px;
+}
+
+.loadbut{
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  border: 1px solid black;
+  color: black;
 }
 
 /* kit */
@@ -336,12 +397,6 @@ p .sr{
 img{
   max-width: 100%;
   height: auto;
-}
-
-#pagename{
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
 }
 
 .title2{
@@ -364,6 +419,7 @@ label{
 }
 
 .appbutton .btn-primary {
+    font-size: 14px;
     color: black;
     background-color: white !important;
     border-color: black !important;
@@ -385,49 +441,62 @@ label{
 }   
 
 ::-webkit-input-placeholder{
-
+  color: black;
 }
 
 //header 
 .navbar{
   border-radius: 0px!important;
-  
+  height: 50px;
+}
+
+.navimg{
+  width: 80px; 
+  height: 50px;
 }
 
 .navbar-default{
-  background: rgba(247, 60, 70, 0.9)!important;
-  border-color: rgba(247, 58, 65, 0.9)!important; 
+  background: rgba(255,255,255,0.8)!important;
+  border-bottom-color: white!important; 
 }
 
 .navbar-header{
-  width: 100%;
   border-radius: 0px;
 }
 
-#logo{
-  font-family: Ariel, serif;
-  color: white;
-  font-size: 1.2em; 
-}
-
 .solve{
-  padding-top: 5px;
+margin-right: 5px;
 }
 
 .solve li{
-  list-style-type: none;
-  display: inline-block;
-  padding: 9px;
+  list-style: none;
 }
 
-.headglyph{
-  font-size: 17px;
-  color: white;
+.midheadglyph{
+  font-size: 23px;
+  color: rgba(247, 60, 70, 0.9);
+  margin-top: 13px;
+}
+
+.navbar-fixed-top .navbar-collapse{
+  background: rgba(255,255,255,0.3);
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  padding-top: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: black;
+  &:visited{
+    color: black;
+  }
 }
 
 /* welcome */
 #misfnt{
- font-size: 23px;
+ font-size: 25px;
+ margin-top: 70px;
 }
 
 .previewx{
@@ -456,22 +525,11 @@ label{
 
 .welcomeoption{
   text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .welcomeoption .btn-primary{
   width: 100px;
-}
-
-.tourlink{
-  color: black;
-&:visited {
-  color: black;
- }
-&:hover{
-  background: none; 
-  text-decoration: underline;
-  }    
 }
 
 .wappbutton .btn-primary {
@@ -490,13 +548,17 @@ label{
 }
 
 // Getstarted 
+.getstarted{
+  margin-top: 70px;
+}
+
 .getcent{
   text-align: center;
 }
 
 .getcent .glyphicon{
-  font-size: 20px;
-  color: rgba(211, 211, 211, 0.9);
+  font-size: 30px;
+  color: black;
 }
 
 .loaderdd{
@@ -515,7 +577,7 @@ label{
 }
 
 .getstartp .glyphicon{
-  color: rgba(211, 211, 211, 0.6); 
+  color: black; 
   font-size: 16px;
 } 
 
@@ -542,7 +604,14 @@ label{
 }
 
 .divsearch .img-circle{
-  width: 40px;
+  width: 140px;
+}
+
+//youth
+.oval{
+  width: 100%;
+  height: 650px;
+  background: rgb(247,247,247);
 }
 
 //howtomakeahall
@@ -574,13 +643,6 @@ label{
   padding-top: 20px;
   font-family: ralewayregular;
   color: #E8C6C2;
-}
-
-#pagenameee{
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  margin-left: -26px;
 }
 
 .visionhdfont{
@@ -623,7 +685,7 @@ label{
 
 .misscion{
   text-align: center;
-  font-family: ralewayregular;
+  font-family: MyriadPro-Light;;
   font-size: 27px;
   line-height: 1.42857143;
   color: #333; 
@@ -681,7 +743,7 @@ label{
 }
 
 .app_footer{
-  margin-top: 0px;
+  margin-top: 25px;
 }
 
 /* support */
@@ -730,6 +792,7 @@ label{
 /* new_micropost */
 .nhallhead{
   text-align: center;
+  color: rgba(247, 60, 70, 0.9)!important;
 }
 
 .nlearnhall{
@@ -893,6 +956,10 @@ label{
 }
 
 /* feed_item */
+.paper{
+  margin-top: 70px;
+}
+
 .feedhouse{
   width: 100%;
   margin-top: -5px;
@@ -1009,6 +1076,12 @@ label{
   width: 100%;
   border-radius: 5px;
   -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  &:focus{
+  outline: none;
+  background: rgba(211, 211, 211, 0.1);
+  }
 }
 
 // commentpartial 
@@ -1042,11 +1115,10 @@ label{
  color: black;
 }
 
-
 /* commentform */
 .commentformbtn .btn-primary{
  font-weight: bold;
- 
+ border-radius: 5px;
 }
 
 /* likeform */
@@ -1119,6 +1191,10 @@ label{
   color: white;
 }
 
+.caret{
+  color: rgba(247, 60, 70, 0.9);
+}
+
 .verify{
   width: 10px;
   height: 10px;  
@@ -1127,9 +1203,8 @@ label{
 .userinfo1{
   color: black;
   font-size: 22px;
-  font-family: MyriadPro-Light;
   text-align: center;
-  margin-top: -20px;
+  margin-top: -15px;
 }
 
 .userinfo2{
@@ -1155,10 +1230,12 @@ label{
 
 .sub_but .ufbtn{
   width: 100%;
+  background-color: rgba(247, 60, 70, 0.2)!important;
+  border-color: rgba(247, 60, 70, 0.2)!important;
   &:hover{
    color: #fff;
-   background-color: #337ab7;
-   border-color: #2e6da4;
+   background-color: rgba(247, 60, 70, 0.9)!important;
+   border-color: rgba(247, 60, 70, 0.9) !important;
   }
 }
 
@@ -1236,12 +1313,14 @@ label{
 }
 
 .micropostindex{
-  margin-top: -24px;
+  margin-top: -21px;
+  width: 100%;
 }
 
 .micropostindex2{
   background: white;  
   float: left;
+  width: 33.3%;
 }
 
 //editverify
@@ -1252,22 +1331,26 @@ label{
 
 /*edituser*/
 .editusr{
-  margin-top: -50px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .edit-lab{
-  font-size: 13px;
-  width: 90%;
+  width: 100%;
   height: 37px; 
-  background: white;
-}
-
-.edit-lab:focus{
-  outline: none;
+  border: 0;
+  outline: 0;
+  background: rgb(255, 255, 255);
+  margin-top: 7px;
+  font-size: 15px;
+  &:focus{
+    outline: none;
+    background: rgba(211, 211, 211, 0.1);
+  }
 }
 
 .editusr .glyphicon{
-  color: #E8C6C2;
+  color: rgba(211, 211, 211, 0.4);
   font-size: 20px;
 }
 
@@ -1300,8 +1383,8 @@ label{
 }
 
 .footerul{
-  margin-left: -25px;
-  font-size: 80%;
+  margin-left: -35px;
+  font-size: 85%;
   list-style: none;
   text-align: center;  
 }
@@ -1311,7 +1394,6 @@ label{
   display: inline-block;
   text-align: center;  
   word-wrap: break-word;
-  font-family: ralewayregular;
 }
 
 .footerlnk{
@@ -1324,19 +1406,25 @@ label{
  }
 }
 
+.copyright{
+  font-size: 10px;
+}
+
 .footdate{
   list-style: none;
   color: black;
+  text-align: center;
+  font-size: 10px;
 }
 
 // minfooter
 .minfooter{
-  background: rgba(211, 211, 211, 0.4);
+  background: rgba(255,255,255,0.8);
   height: 45px;
   width: 100%;
   position: fixed;
   bottom: 0px;
-  border-top: 1px solid rgba(211, 211, 211, 0.4);
+  border-top: 1px solid white;
 }
 
 .ddffs{
@@ -1349,45 +1437,20 @@ label{
 }
 
 .minf .glyphicon{
-  color: white;
+  color: rgba(247, 60, 70, 0.5);
   font-size: 17px;
   &:hover{
     color: rgba(247, 60, 70, 0.9);
   }
 } 
 
-.ggt{
-  border-color: red;
-}
-
-
-.hfilter{
-  margin-top: -41px;
-  float: right;
-  margin-right: 13px;
-  color: grey;
-}
-
-.dropdown-menu.pull-right {
-  right:0;
-  background: rgba(211, 211, 211, 0.3);
-  background-size: 160px 160px;
-  background-repeat: no-repeat;
-}
-
-.hfiltkey{
- color: black; 
-}
-
-.curusavi .img-circle{
-  width: 26px;
-  border: 1px solid white;
-}
-
-.hfilt .glyphicon{ 
-  color: black; 
-  font-size: 15px;
-}
+.minf2 .glyphicon{
+  color: rgba(247, 60, 70, 0.5);
+  font-size: 17px;
+  &:hover{
+    color: rgba(247, 60, 70, 0.9);
+  }
+} 
 
 //publicactiviy
 
@@ -1463,11 +1526,7 @@ label{
 }
 
 /* micropost_index */
-.micropostindex2{
-  width: 32%;
-  margin-left: 3.6px;
-  margin-top: 3.5px;
-}
+
 
 }
 
@@ -1490,10 +1549,7 @@ label{
   margin-left: 4.3px;
 }  
   
-.micropostindex2{
-  margin-left: 4.3px;
-}  
-  
+
 .welimage{
   text-align: center;
 }
@@ -1503,9 +1559,6 @@ label{
   height: 110px;
 }  
    
-#pagename{
-  font-size: 18px;
-}  
   
 /* microshow */
 .profiletop .img-circle{
@@ -1513,8 +1566,8 @@ label{
 }
 
 .minf{
-  padding-left: 4%;
-  padding-right: 10%;
+  padding-left: 3%;
+  padding-right: 33%;
 }
 
 .minf .glyphicon{
@@ -1773,11 +1826,6 @@ label{
   display: block;
 }
 
-.micropostindex2{
-  width: 31%;
-  margin-top: 10px;
-  margin-left: 14px; 
-}
 
 .minf{
   padding-left: 2%;
@@ -1869,7 +1917,7 @@ label{
 /* commentform */
 .commentformbtn .btn-primary{
  width: 83.5%; 
- height: 32px;
+ height: 35px;
  margin-left: 46px;
 } 
 

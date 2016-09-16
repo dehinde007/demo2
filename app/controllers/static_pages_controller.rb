@@ -14,44 +14,36 @@ class StaticPagesController < ApplicationController
   def welcome
      if signed_in?
       redirect_to home_path
-    else 
-    
+    else     
     end
   end
+    
+  def about
+    @skip_header = true
+  end 
+  
+  def youth
+    
+  end
+    
+  def contact
+   @skip_header = true
+  end
+  
+  def terms  
+   @skip_header = true  
+  end
  
-  def guide
-   @skip_header = true
-  end
-  
-  def careers
-       
-  end
-  
-  def vision
-
-  end
-  
-  def tour
-   @skip_header = true
+  def support
   end
   
   def search
    @skip_header = true  
    @users = User.find([1])
+  end
 
-  end
-  
-    def note
-   @skip_header = true
-  end
-  
-  def support
-
-  end
-  
   def howtomakeahall
-    @skip_header = true
-   
+    @skip_header = true  
   end
   
 end

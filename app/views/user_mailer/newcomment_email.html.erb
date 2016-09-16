@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
 <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1, user-scalable=no">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><style type="text/css" media="screen">
-.navbar-header{}
-.emailimg{width: 80px; height: 50px;}
-.cm{font-family: Open Sans!important; font-size: 20px; color: rgb(148, 148, 148);  }
-.cmimdv{width: 250px; height: 250px; margin: auto; left: 0; right: 0;}
-.cmimg{width: 320px; height: 320px;}
-.cmbody{font-family: Open Sans!important; font-size: 20px; color: rgb(148, 148, 148); text-align: center;}
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+<style type="text/css" media="screen">
+body{margin: 0; padding: 0;}
+.navbar-default{background: rgba(247, 60, 70, 0.9); height: 50px;}
+.emailimg{width: 80px; height: 50px;}
+.cm{font-family: Open Sans!important; font-size: 14px; color: black; text-align: center; }
+.cmimg{width: 100%; height: auto!important;}
+.cmbody{font-family: Open Sans!important; font-size: 14px; color: black; text-align: center;}
+.footer{width: 100%;}
+.footerul{margin-left: -25px; font-size: 14px; list-style: none; text-align: center;}
+.footerul li{padding: 5px; display: inline-block; text-align: center;  word-wrap: break-word; font-family: Open Sans!important;}
+.footerlnk{color: black; text-decoration: none;}
+.footdate{list-style: none; color: black;}
+@media screen and (max-width: 1500px) {
+.cmimg{max-width: 414px;}
+}
 </style>
+
 </head>
+
 <body class="">
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-top" role="navigation">
@@ -20,15 +31,26 @@
            
     <span id="pagename" class="navbar-brand font-fam2"><img class="emailimg" src="https://s3-us-west-2.amazonaws.com/assistantimgs/logos.jpg" /></span>
       
-           <ul class="font-fam solve  pull-right">
-           	
+      <ul class="font-fam solve  pull-right">
       </ul>
         </div>   
       </div><!-- /.container -->
     </nav>
 </header>	
 
-<p class="cm"><%= link_to @comment.user.username, @comment.user, :style=>"color:rgb(148, 148, 148)!important; text-decoration: none;" %> said <span class="cmbody"><%= @comment.body %></span></p>
-<div class="cmimdv"><%=link_to (image_tag @comment.micropost.photo.url(:instag), class: "cmimg img-responsive"), micropost_url(@comment.micropost) %></div>
+<p class="cm">Hi, <%= @comment.user.name.titleize %> thank you for helping in creating a stronger, safer and better world.</p>
+<%= image_tag('https://s3-us-west-2.amazonaws.com/assistantimgs/h14.jpg', :class => "cmimg") %>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<p class="footer">
+	
+    <ul class="footerul">
+      <li><%= link_to "Vision", vision_path, class: "hov footerlnk" %></li>	
+      <li><%= link_to "Guide", guide_path, class: "hov footerlnk" %></li>
+      <li><%= link_to "Support", support_path, class: "hov footerlnk" %></li> 
+      <li class="footdate">2016 Hallit</li> 
+    </ul>
+
+</p>
 </body>
 </html>

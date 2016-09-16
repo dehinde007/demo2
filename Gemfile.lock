@@ -274,7 +274,7 @@ GEM
     rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
-    rmagick (2.15.4)
+    rmagick (2.16.0)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -371,7 +371,7 @@ DEPENDENCIES
   rails4-autocomplete
   rails_autolink
   responders (~> 2.0)
-  rmagick (= 2.15.4)
+  rmagick (= 2.16.0)
   rspec-rails (= 3.3.2)
   sass-rails (= 4.0.1)
   sdoc (= 0.3.20)

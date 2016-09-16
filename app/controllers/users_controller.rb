@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def show
     @skip_header = true
     @user = User.find_by_username(params[:id])
-    @microposts = @user.microposts.includes(:comments, :likes).paginate(page: params[:page], per_page: 12)
+    @microposts = @user.microposts.includes(:comments, :likes).paginate(page: params[:page], per_page: 15)
   end
 
   def new

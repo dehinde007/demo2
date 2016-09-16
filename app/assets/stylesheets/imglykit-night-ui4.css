@@ -174,7 +174,7 @@
     margin-bottom: 10px;
     padding: 0 15px;
     background: white;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: MyriadPro-Light, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 38px;
     color: black; }
@@ -225,7 +225,8 @@
         color: white; }
       .imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-splash-content .imglykit-splash-text {
         font-size: 14px;
-        color: black; }
+        color: black;
+        font-family: MyriadPro-Light;}
     .imglykit-container .imglykit-splash-container .imglykit-splash-row .imglykit-upload-hidden-input {
       position: absolute;
       top: 0;

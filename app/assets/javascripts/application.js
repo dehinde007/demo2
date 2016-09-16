@@ -68,14 +68,14 @@ window.onload = function() {
 
   //Adslides  
 
-$(function(){
+$(document).on('ready page:load', function () {
     $('.fadein p:gt(0)').hide();
     setInterval(function(){$('.fadein > :first-child').fadeOut().next('p').fadeIn().end().appendTo('.fadein');}, 4000);
 });
 
-$(document).ready(function() {
+$(document).on('ready page:load', function () {
     //rotation speed and timer
-    var speed = 7000;
+    var speed = 15000;
     var run = setInterval('rotate()', speed);    
     
     //grab the width and calculate left value
@@ -146,9 +146,9 @@ function rotate() {
 
 
 
-$(document).ready(function() {
+$(document).on('ready page:load', function () {
     //rotation speed and timer
-    var speed = 2000;
+    var speed = 5000;
     var run = setInterval('rotate()', speed);    
     
     //grab the width and calculate left value

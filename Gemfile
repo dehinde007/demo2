@@ -16,7 +16,7 @@ gem "lazyload-rails"
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'paperclip' , '~> 4.2'
-gem 'rmagick', '2.15.4'
+gem 'rmagick', '2.16.0'
 gem 'therubyracer', platforms: :ruby
 gem 'coffee-script-source', '1.8.0'
 gem 'puma'

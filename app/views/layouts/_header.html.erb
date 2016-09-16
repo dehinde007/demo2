@@ -1,25 +1,29 @@
-<header id="top3">
-      <nav class="navbar navbar-default navbar-top" role="navigation">
-      <div class="">
+<header id="indexhead">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
         <% if signed_in? %>
         <div class="navbar-header">
-          <%= link_to "HALLIT", home_path, id: "logo", class: "navbar-brand" %>
-          
-      <ul class="font-fam solve pull-right">
-
-           	
-       <li> 
+       <span class="" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"><%= image_tag('Hallit.jpg', :class => "navimg") %></span>
+                	
+       <p class="font-fam solve pull-right"> 
           <%= link_to search_path, class: "hov" do %>	
-          <span class="headglyph glyphicon glyphicon-search"></span>
+          <span class="midheadglyph glyphicon glyphicon-flash"></span>
           <% end %> 
-       </li>
-            
-      </ul>
-        </div>
-
+       </p>    
       
-        <% else %>
-            <%= link_to "HALLIT", welcome_path, id: "logo", class: "navbar-brand", :"data-no-turbolink" => true %>           
+        </div>  
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="font-fam1 nav navbar-nav navbar-right">
+            	<li class="navl"><%= link_to current_user do %><%= render "shared/useravi" %><% end %></li>
+            	<li class="navl"><%= link_to "New Hall", new_hall_path, class: "hov" %></li>
+                <li class="navl"><%= link_to "Invite Someone", new_invitation_path, class: "hov" %></li>
+                <li class="navl"><a href="/support">Help</a></li>
+                <li class="navl"><%= link_to "Logout", signout_path, class: "hov", method: "delete" %></li>
+            </ul>
+                </div>
+          
+        <% else %>       
+           <div class="navbar-header"><section class="logopad"><%= image_tag('Hallit.jpg', :class => "navimg") %></section></div>
         <% end %>
       </div><!-- /.container -->
     </nav>

@@ -1,6 +1,15 @@
 <%content_for :title, "Activities"%>
-<p class="font-fam1 nhallhead"><%= link_to "Activities", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
+<header class="indexhead">
+    <nav class="navbar navbar-default navbar-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+      <span id="pagename2" class="navbar-brand font-fam">Following</span>
 
+    </div>   
+    </div><!-- /.container -->
+    </nav>
+</header>
 <div class="font-fam1 activity container">
 
 <% if @activities.any? %>
@@ -14,8 +23,8 @@
  
  <% end %>
 
-	<div class="pager"><i><%= will_paginate @activities, :page_links => false %></i></div>
-<br /><br />
+ <div class="pager"><%= will_paginate @activities, :page_links => false %></div>
+
  <% else %>
     
     <div class="noactivity">

@@ -1,10 +1,6 @@
 <p><li class="commentpartial" id=<%= dom_id(comment) %>>
   <span class="commentimg"><%= image_tag comment.user.avatar.url(:thumb), class: "img-circle" %></span>
   <%= link_to comment.user.username, comment.user, class: "font-fam3 commentusername hov" %>
-  <% if comment.user.verify == true%>
-  <%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %>
-  <% else %>
-  <% end %>
 
  <span class="font-fam1 commentbody">
  <%= comment.body %>  <span class="commenttime"><%= time_ago_in_words(comment.created_at) %></span>

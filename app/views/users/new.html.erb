@@ -1,40 +1,36 @@
 <% provide(:title, 'Sign up for Hallit') %>
-
+<br /><br />
 <div class="alert alert-error">
 <%= form_for @user, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
-<div class="scarcity">
+<div class="scarcity oval">
 <div class="container signup">
      
      <section class="signupform">
      
      <p class="font-fam">	
-      <%= f.label :fullname, :class =>"signuplabel font-fam2" %>
-      <%= f.text_field :name, :class =>"signupfield font-fam1", placeholder: "Enter fullname" %>
+      <%= f.text_field :name, :class =>"signupfield font-fam1", placeholder: "Fullname" %>
      </p>
-     
+     <br />
      <p class="font-fam">
-      <%= f.label :username, :class =>"signuplabel font-fam2" %>
-      <%= f.text_field :username, :class =>"signupfield font-fam1", placeholder: "Enter username" %>
+      <%= f.text_field :username, :class =>"signupfield font-fam1", placeholder: "Username" %>
      </p>
-     
+     <br />
      <p class="font-fam">
-      <%= f.label :email, :class =>"signuplabel font-fam2" %>
-      <%= f.text_field :email, :class =>"signupfield font-fam1", placeholder: "Enter email" %>
+      <%= f.text_field :email, :class =>"signupfield font-fam1", placeholder: "Email" %>
      </p>
-     
+     <br />
      <p class="font-fam">
-      <%= f.label :password, :class =>"signuplabel font-fam2" %>
-      <%= f.password_field :password, :class =>"signupfield font-fam1", placeholder: "Enter password" %>
+      <%= f.password_field :password, :class =>"signupfield font-fam1", placeholder: "Password" %>
      </p>
 
     <br />
-     <p class="font-fam appbutton"><%= f.submit "Create Account", class: "btn-primary btn-sm" %></p>
+     <p class="font-fam1 appbutton"><%= f.submit "Create Account", class: "btn-primary btn-sm" %></p>
     <% end %>
     
-    <p class="font-fam">By signing up, you agree to the Terms of Service and Privacy Policy.</p>
+    <p class="font-fam1">By signing up, you agree with our terms.</p>
    </section>
 
 </div>
@@ -44,4 +40,5 @@
 
 <br />
 <br />
-
+<br />
+<div class="app_footer"><%= render 'layouts/footer' %></div>

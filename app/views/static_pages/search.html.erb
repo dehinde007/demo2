@@ -1,34 +1,25 @@
-<%content_for :title, "Find friends or Channels you love"%>
-<div class="topsrcbar">
-  <div class="usindexsearch">
-   <% if signed_in? %> 		
-   <%= render 'shared/search' %>                
-   <% end %>
-  </div>
-</div>
+<%content_for :title, "Favorite channels"%>
+<header class="indexhead">
+    <nav class="navbar navbar-default navbar-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+      <span id="pagename2" class="navbar-brand font-fam"><i class="jps glyphicon glyphicon-flash"></i> Valued Channels</span>
 
-<p class="container static-search font-fam"><i class="jps glyphicon glyphicon-star"></i> Valued Accounts</p>
-<br />
+    </div>   
+    </div><!-- /.container -->
+    </nav>
+</header>
+
 <div class="container divsearch">
 <% @users.each do |user| %>
 
 <span class="font-fam">
 <div class="userpartialimg"><%= image_tag user.avatar.url(:thumb), class: "img-circle" %></div>
 <ul class="ul-userinfo" style="list-style-type:none">
-  <li>
-  <span><%= link_to user.username, user, class: "font-fam2 userpartialname" %></span>
-  <% if current_user.admin? && !current_user?(user) %>
-  | <%= link_to "delete", user, method: :delete,
-  data: { confirm: "You sure?" } %>
-  <% end %>
   
-  <% if user.verify == true%>
-    <%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %>
-  <% else %>
-  <% end %>
-  </li>
+  <li class="font-fam"><%= user.bio %></li>
   
-  <li class="font-fam"><%= user.name %></li>
 </ul>
 <hr />
 </span>

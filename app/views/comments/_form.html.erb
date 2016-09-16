@@ -1,9 +1,9 @@
 <%= form_for [@micropost, @micropost.comments.build], remote: true do |f| %>
 
   <span>
-    <%= f.text_area :body, class: "commentform", placeholder: "Leave comment..." %>
+    <%= f.text_area :body, class: "font-fam1 commentform", placeholder: "leave comment..." %>
   </span><br />
-  <section class="commentformbtn appbutton">
-    <%= f.submit "comment", class: "btn-primary" %>
+  <section class="font-fam1 commentformbtn appbutton">
+    <%= f.submit "Send", class: "btn-primary" %>
   </section>
 <% end %>

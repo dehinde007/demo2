@@ -1,6 +1,15 @@
 <% provide(:title, @user.name) %>
-<p class="font-fam1 nhallhead"><%= link_to "Settings", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
+<header class="indexhead">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+      <span id="pagename2" class="navbar-brand font-fam">Account</span>
 
+    </div>   
+    </div><!-- /.container -->
+    </nav>
+</header> 
 <div class="alert alert-error">
 <%= form_for @user, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
@@ -9,47 +18,39 @@
  <div class="container editusr"> 
  
     <p class="container">
-     <span class="font-fam3">Fullname</span>
      <%= f.text_field :name, class: "edit-lab font-fam1", placeholder: "fullname" %>
     </p>
    
     <p class="container">
-     <span class="font-fam3">Username</span>
      <%= f.text_field :username, class: "edit-lab font-fam1", placeholder: "username" %>
     </p>
       
-    <p class="container font-fam3">
-      </span><span class="editavatar">Avatar</span>
+    <p class="font-fam3">
       <section class="editavi"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section>
       <p class="glyphicon glyphicon-camera editavi-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>     
     </p>
    
     <p class="container">
-      <span class="font-fam3">Email</span>
       <%= f.text_field :email, class: "edit-lab font-fam1", placeholder: "email" %>
     </p> 
    
     <p class="container">
-      <span class="font-fam3">Bio</span>
-      <%= f.text_field :bio, class: "edit-lab font-fam1", placeholder: "bio" %>
+      <%= f.text_field :bio, class: "edit-lab font-fam1", placeholder: "How do you spend most of your time?" %>
     </p>
     
     <p class="container">
-      <span class="font-fam3">Website</span>
       <%= f.text_field :website, class: "edit-lab font-fam1", placeholder: "website" %>
     </p>
     
     <p class="container font-fam">
-     <span class="font-fam3">Password</span>
       <%= f.password_field :password, class: "edit-lab font-fam1", placeholder: "password" %>
     </p>
     
     <p class="container">
-      <span class="font-fam3">Confirm password</span>
       <%= f.password_field :password_confirmation, class: "edit-lab font-fam1", placeholder: "confirm password" %>
     </p>
    
-   <p class="font-fam appbutton edit_butt"><%= f.submit "UPDATE", class: "btn-primary btn-sm" %></p>
+   <p class="appbutton edit_butt font-fam"><%= f.submit "Update", class: "loadbut" %></p>
       
     <% end %>
     
@@ -58,5 +59,3 @@
   </div>
   <br />
   <br />
-  
-<div class="footer2"><%= render 'layouts/minfooter' %></div>

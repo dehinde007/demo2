@@ -5,24 +5,24 @@
     <div class="">
     <div class="navbar-header">
            
-    <span id="pagename" class="navbar-brand font-fam">
+    <span class="navbar-brand font-fam">
     	  <%= link_to :back, class: "hov" do %>	
-          <span class="headglyph glyphicon glyphicon-menu-left"></span>
+          <span class="backheadglyph1 glyphicon glyphicon-menu-left"></span>
           <% end %> 
     </span>
-      <span id="pagenameee" class="navbar-brand font-fam1"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
-           <ul class="font-fam solve  pull-right">
-            
+      <span id="pagename1" class="navbar-brand font-fam1"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
+           
+           <ul class="font-fam solve pull-right">
            <li> 
              <% if current_user?(@micropost.user) %>
-   <%= link_to @micropost, method: :delete,
+             <%= link_to @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: @micropost.content, class: "hov ckl2 apptrash" do %>
-                                     <span class="glyphicon glyphicon-trash"></span>             
+                                     <span class="midheadglyph glyphicon glyphicon-trash"></span>             
                                      <% end %>                              
-   <% end %>        
+                                     <% end %>        
            </li>
-      </ul>
+           </ul>
         </div>   
       </div><!-- /.container -->
     </nav>
@@ -49,9 +49,8 @@
 <br /><br />
   
 <div class="microviews">  
+<span class="glyphicon glyphicon-heart"></span><span class="font-fam1"><%= pluralize(@micropost.likes.count, "") %> </span>	
 <span class="glyphicon glyphicon-comment"></span><span class="font-fam1"><%= pluralize(@micropost.comments.count, "") %> </span>
-<span class="glyphicon glyphicon-heart"></span><span class="font-fam1"><%= pluralize(@micropost.likes.count, "") %> </span>
-<%= link_to 'View likes', like_path, class: "hov ckl2 font-fam1" %> 
 
 </div>
 
@@ -66,7 +65,10 @@
     
  <div id="slides"> 
   <ul>
-
+   <li><img src="/assets/supreme.png" width="55" height="40" alt="Slide 1"/></li>
+   <li><img src="/assets/diamond.png" width="40" height="40" alt="Slide 2"/></li>
+   <li><img src="/assets/ps.png" width="40" height="40" alt="Slide 3"/></li>
+   <li><img src="/assets/h4.jpg" width="50" height="40" alt="Slide 4"/></li>
   </ul>
  </div>
     
@@ -84,7 +86,10 @@
     
  <div id="sliders"> 
   <ul>
-  	
+   <li><img src="/assets/obey.png" width="50" height="40" alt="Slide 1"/></li>	
+   <li><img src="/assets/gap.png" width="50" height="40" alt="Slide 2"/></li>	
+   <li><img src="/assets/visa.png" width="50" height="40" alt="Slide 3"/></li>
+   <li><img src="/assets/h8.jpg" width="40" height="40" alt="Slide 4"/></li>
   </ul>
  </div>
  
@@ -95,7 +100,7 @@
 
 <section id="">
 <section class="ddd"><%= render @comments %></section>
-
+<br />
 <%= render "comments/form" %> 
 
 <section class="micro_like_form">
@@ -108,8 +113,5 @@
 </div>
 </div>
 </section>
-<br />
-<br />
-<br />
 
-<div class="footer2"><%= render 'layouts/minfooter' %></div></body>
+</body>

@@ -1,6 +1,15 @@
 <%content_for :title, "Invite | Hallit"%>
-<p class="font-fam1 nhallhead"><%= link_to "Send Invite", howtomakeahall_path, class: "nlearnhall", :"data-no-turbolink" => true %></p>
+<header class="indexhead">
+    <nav class="navbar navbar-default navbar-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+      <span id="pagename2" class="navbar-brand font-fam">Invitation</span>
 
+    </div>   
+    </div><!-- /.container -->
+    </nav>
+</header>
 <% if flash[:notice] -%>
   <p class='container kkkkk alert alert-warning'><%=h flash[:notice] %></p>
 <% end -%>
@@ -11,15 +20,15 @@
 <%= form_for @invitation, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<p class="font-fam"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "email" %></p>
+<p class="font-fam1"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "Enter email" %></p>
 <br />
 
-<p class="font-fam1 appbutton"><%= f.submit "Send", class: "loadbut btn btn-sm btn-primary" %></p>
+<p class="appbutton font-fam invitebt"><%= f.submit "Send", class: "loadbut" %></p>
 
 <% end %>
 </div>
 </div>
-<br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br />
 
 <p style="text-align:center;"><%= image_tag asset_path('assets/images/spin1.gif'), :class => "loaderd" %></p>
 <div class="footer2"><%= render 'layouts/minfooter' %></div>

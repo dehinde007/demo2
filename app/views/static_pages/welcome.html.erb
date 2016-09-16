@@ -1,52 +1,34 @@
 <%content_for :title, "Hallit | Welcome"%>
 <body class="question"> 
-
-<p id="misfnt" class="misscion">Tell stories on hallit to create a better world.</p>
+<p id="misfnt" class="misscion">Share your values and stories with the world</p>
 <br />
 <div class="welimage">
 <section>
-<%= image_tag('h6.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#11") %>
-<%= image_tag('53.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#12") %>
-<%= image_tag('h2.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#13") %>
-<%= image_tag('48.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#14") %>
+<%= image_tag('70.jpg', :class => "hh") %>
+<%= image_tag('53.jpg', :class => "hh") %>
+<%= image_tag('wel.jpg', :class => "hh") %>
+<%= image_tag('48.jpg', :class => "hh") %>
 <p></p>
 </section>
 <section>
-<%= image_tag('h4.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#15") %>
-<%= image_tag('54.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#16") %>
-<%= image_tag('h9.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#17") %>
-<%= image_tag('69.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#18") %>
+<%= image_tag('32.jpg', :class => "hh") %>
+<%= image_tag('54.jpg', :class => "hh") %>
+<%= image_tag('h1.jpg', :class => "hh") %>
+<%= image_tag('69.jpg', :class => "hh") %>
 <p></p>
 </section>
 <section>	
-<%= image_tag('h17.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#19") %>
-<%= image_tag('h7.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#20") %>
-<%= image_tag('h15.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#21") %>
-<%= image_tag('h13.jpg', :class => "hh", "data-toggle"=>"modal", "data-target"=>"#22") %>
+<%= image_tag('68.jpg', :class => "hh") %>
+<%= image_tag('h7.jpg', :class => "hh") %>
+<%= image_tag('20.PNG', :class => "hh") %>
+<%= image_tag('35.jpg', :class => "hh") %>
 </section>
 </div>
-<br />
-
-<p class="misscion"><%= link_to "Tap Photos", note_path, :class => "tourlink", :"data-no-turbolink" => true, "data-toggle"=>"modal", "data-target"=>"#dips" %></p>
 
 <p class="welcomeoption wappbutton">
-<%= link_to "Log in", signin_path, :"data-no-turbolink" => true, :class => "ckl font-fam btn btn-sm btn-primary" %> 
+<%= link_to "Join Here", signin_path, :"data-no-turbolink" => true, :class => "ckl font-fam1 btn btn-sm btn-primary" %> 
 </p>
 
 <div class="app_footer"><%= render 'layouts/footer' %></div>
-
-<div><%= render 'shared/previewhome' %></div>
-
-
-<div id="dips" class="modal hide fade" role="dialog">
-<div class="modal-dialog">
-<div class="modal-body">
-<br /> <br /><br />
-<button type="button" class="close previewx" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="previewx">&times;</span></button>
- <p><%= image_tag('h6.jpg') %></p>
-</div> 
-</div>
-</div>
-
 
 </body>
