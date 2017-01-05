@@ -1,40 +1,25 @@
 <%content_for :title, "Support | Hallit"%>
 
-<div class="container getstarted">
+<div class="container sup">
   	
-  <p class="font-fam1 getstartp">Welcome! This guide will make things easier for you. To easily navigate to the web app from your mobile device, tap <span class="glyphicon glyphicon-home"></span> to enter your home and add Hallit to your homescreen.</p>
+  <p class="font-fam1 sup1">Welcome! Lets focus on getting things done.</p>
   <br />
-  
-  <p class="font-fam getstarth">Essential</p>
-  <p class="font-fam1 getstartp">Tap on the Hallit logo to find your profile amongst other things </p>
-  <p class="font-fam1 getstartp">Tap on photos to view more about Halls</p>  
-  <p class="font-fam1 getstartp">When you find friends or channels you love, tap the follow button to follow</p>
-  <br />
-  
-  <p class="font-fam getstarth">Icons</p>	
-  <p class="font-fam1 getstartp">Tap your browser <span class="glyphicon glyphicon-menu-left"></span> <span class="glyphicon glyphicon-menu-right"></span> buttons to enable you go back and forth when using the app</p>
-  <br /><br /> 	
-  
-  <p class="getcent"><span class="getcentt glyphicon glyphicon-flash"></p>
-  <p class="font-fam getstarth">Channels</p>	
-  <p class="font-fam1 getstartp">Tap flash to discover channels you're sure to like </p>
-  <br /><br />
-      
-  <p class="getcent"><span class="getcentt glyphicon glyphicon-search"></p>
-  <p class="font-fam getstarth">Search</p>	
-  <p class="font-fam1 getstartp">Tap search to view halls from all over the world, you can also find friends or discover users</p>
-  <br /><br />
 
-  <p class="getcent"><span class="getcentt glyphicon glyphicon-heart"></p>
-  <p class="font-fam getstarth">Activity</p>	
-  <p class="font-fam1 getstartp">Tap heart to view activities of channels you follow</p>
+  <p class="sup3"><span class="getcentt glyphicon glyphicon-home"></p>
+  <p class="font-fam sup2">Homescreen Optimization</p>	
+  <p class="font-fam1 sup1">To easily navigate to our app from your mobile screen, first you'll need to add Hallit to your homescreen. To do this, tap <span class="glyphicon glyphicon-home"></span> to enter your home then proceed to add to your homescreen. Super easy! </p>
   <br /><br />
-
-  <p class="font-fam1 getstartp">Thank you for using our guide. If you require any additional information, reach us on twitter @hallitservice or email and we'll be sure to reply you.</p>
-
+  
+  <p class="font-fam sup2">One thing to know about our logo</p>	
+  <p class="font-fam1 sup1">On a mobile device, you can tap the logo to find necessary information such as your profile. </p>
+  <br /><br />
+  
+  <p class="font-fam1 sup1">Thank you for using our guide.</p>
 
 </div>
 
-
 <br /><br />
-<div class="footer2"><%= render 'layouts/minfooter' %></div>
+<% if signed_in? %>
+<div><%= render 'layouts/minfooter' %></div>
+<% else %> 
+<% end %>

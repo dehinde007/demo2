@@ -4,19 +4,26 @@
     <div class="">
     <div class="navbar-header">
            
-      <span id="pagename2" class="navbar-brand font-fam"><i class="jps glyphicon glyphicon-flash"></i> Valued Channels</span>
+      <span class="navbar-brand font-fam1"><i id="pgn3" class="glyphicon glyphicon-flash"></i><%= link_to "Favorite channels", search_path, class: "hov2", id: "pgn2" %></span>
 
     </div>   
     </div><!-- /.container -->
     </nav>
 </header>
 
-<div class="container divsearch">
+<div class="container tpc">
 <% @users.each do |user| %>
 
 <span class="font-fam">
 <div class="userpartialimg"><%= image_tag user.avatar.url(:thumb), class: "img-circle" %></div>
-<ul class="ul-userinfo" style="list-style-type:none">
+<ul class="ulpartial">
+  <li>
+  <span><%= link_to user.username, user, class: "font-fam1 userpartialname" %></span>
+  <% if current_user.admin? && !current_user?(user) %>
+  | <%= link_to "delete", user, method: :delete,
+  data: { confirm: "You sure?" } %>
+  <% end %>
+  </li>
   
   <li class="font-fam"><%= user.bio %></li>
   

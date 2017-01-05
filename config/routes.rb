@@ -42,7 +42,7 @@ SampleApp::Application.routes.draw do
   match '/support', to: 'static_pages#support', via: 'get'
   match '/youth',    to: 'static_pages#youth',    via: 'get'
   match '/terms', to: 'static_pages#terms', via: 'get' 
-  match '/howtomakeahall', to: 'static_pages#howtomakeahall', via: 'get'
+  match '/createhall', to: 'static_pages#createhall', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/search', to: 'static_pages#search', via: 'get'
   match '/home', to: 'static_pages#home', via: 'get'

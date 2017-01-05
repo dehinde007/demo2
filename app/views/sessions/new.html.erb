@@ -1,31 +1,32 @@
 <% provide(:title, "Log in to Hallit") %>
-<div class="oval">
-<div class="container" style="color: #a94442;"><%= flash[:alert] %></div>
-  < <br /><br /><br /><br />
-   <div class="scarcity">
-   <div class="container session">  	
-   	
-   	  <section class="sessionform">
+
+  <br /><br /><br /><br />
+   <div class="scar">
+   <div class="container sess1">  	
+
+   	  <section class="sess1a">
       <%= form_for(:session, url: sessions_path) do |f| %>
-      <p class="">
-     
-      <%= f.text_field :email, :class =>"sessionfield font-fam1", placeholder: "Email" %>
+
+      <p>
+      <%= f.text_field :email, :class =>"font-fam1 sess1a1", placeholder: "Email" %>
       </p>
-      <p class="font-fam2">
-   
-      <%= f.password_field :password, :class =>"sessionfield font-fam1", placeholder: "Password" %>
+      
+      <p>   
+      <%= f.password_field :password, :class =>"font-fam1 sess1a1", placeholder: "Password" %>
       </p>
       </section>
-      <br /><br />
-     <p class="appbutton "> <%= f.submit "Log in", class: "sess-butt btn-primary btn-sm font-fam1" %></p>
+     
+      <br />   	
+      <div class="font-fam1 blackerror"><%= flash[:alert] %></div>
+      <br />
+      
+     <p class="appbutton"><%= f.submit "Log in", class: "font-fam1 btn btn-primary" %></p>
      
     <% end %>
 
-    <p class="sessionlink font-fam1">Want to create a better world? <%= link_to "Create Account", signup_path, :"data-no-turbolink" => true, class: "ckl3" %></p>
+    <p class="font-fam1 sess1b">Want to create a better world? <%= link_to "Create Account", signup_path, :"data-no-turbolink" => true, class: "sess1b1" %></p>
     
    </div>
    </div>
    
-   <p class="misscion sesswarn">Switch to your Iphone or Android Web Device!</p>
-   </div>
-
+   <p class="switchup font-fam1">Switch to your Iphone or Android mobile device</p>

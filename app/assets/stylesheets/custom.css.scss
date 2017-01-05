@@ -1,4 +1,4 @@
-/* application */
+//application
 html, body{
   width: 100%;
   height: 100%;
@@ -21,7 +21,7 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   box-shadow: 0 0 0 1000px #F8F8F8 inset;
 }
 
-.sr input[type]:focus {
+.src input[type]:focus {
   box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
 }
 
@@ -87,9 +87,16 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
 //ad_custom
 .carousel_ad{
   float: right;
+  margin-right: -100px;
 }
 
-.loll{
+.sponsor{
+  margin-top: -30px;
+  margin-left: 20px;
+  
+}
+
+.carouselfloat{
   float: left;
 }
 
@@ -99,23 +106,39 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   margin-top: -70px;
 }
 
+.tooltip.bottom .tooltip-arrow{
+  border-bottom-color: red;
+}
+
+.tooltip-inner{
+  background: black!important;
+  opacity: 0.3;
+  color: white!important;
+}
+
+.tooltip.bottom {
+  margin-left: 23px;
+}
+
 #slides {
   overflow:hidden;
-  /* fix ie overflow issue */
+  //fix ie overflow issue
   position:relative;
   width:100px;
   height:100px;
+  padding-top: 20px;
 }
 
 #sliders {
   overflow:hidden;
-  /* fix ie overflow issue */
+  //fix ie overflow issue
   position:relative;
   width:100px;
   height:100px;
   margin-left: -50px;
+  padding-top: 20px;
 }
-/* remove the list styles, width : item width * total items */    
+//remove the list styles, width : item width * total items   
 #slides ul {
   position:relative;
   left:0;
@@ -125,7 +148,7 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   padding:0;    
   width:750px;            
 }
-/* width of the item, in this case I put 250x250x gif */
+//width of the item, in this case I put 250x250x gif 
 #slides li {
   width:250px;
   height:250px;    
@@ -144,7 +167,7 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   padding:0;    
   width:750px;            
 }
-/* width of the item, in this case I put 250x250x gif */
+// width of the item, in this case I put 250x250x gif 
 #sliders li {
   width:250px;
   height:250px;    
@@ -153,7 +176,7 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
 #sliders li img {
   padding:5px;
 }
-/* Styling for prev and next buttons */
+// Styling for prev and next buttons 
 #buttons {
   padding:0 0 5px 0;    
   float:right;
@@ -180,30 +203,58 @@ a#next:hover {
 }
 .clear {clear:both}
 
-/*global*/
-.backheadglyph1{
-  font-size: 19px;
-  color: rgba(247, 60, 70, 0.9);
+//Global
+.font-fam{
+  font-family: ralewayregular;
 }
 
-.backheadglyph2{
-  font-size: 19px;
-  color: black;
+.font-fam1{
+  font-family: MyriadPro-Light;
 }
 
-#pagename1{
-  font-size: 19px;
+.font-fam4{
+  font-family: MyriadPro-Light;
+  font-size: 100%;
   font-weight: bold;
-  color: rgba(247, 60, 70, 0.9);
-  margin-left: -26px;
 }
 
-#pagename2{
+.errmsg{
+  text-align: center;
+}
+
+.blacklink a{
+  color: black;
+&:visited {
+  color: black;
+  background: none;
+ }  
+&:hover {
+  color: black;
+  background: none;
+}
+}
+
+.hov:hover{
+  background: none;
+}
+
+.hov2:hover{
+  background: none;
+  text-decoration: none;
+}
+
+#pgn1{
+  font-size: 19px;
+  color: black;
+  margin-left: 15px;
+}
+
+#pgn2{
   font-size: 19px;
   color: black;
 }
 
-#pagename3{
+#pgn3{
   font-size: 20px;
   color: rgba(247, 58, 65, 0.9);
 }
@@ -227,28 +278,24 @@ a#next:hover {
  border: 1px solid white!important;
 }
 
-.app_a_link a{
-  color: black;
-&:visited {
-  color: black;
-  background: none;
- }  
-&:hover {
-  color: black;
-  background: none;
-}
-  
+.ldcenter{
+  text-align: center;
 }
 
-.ckl2{
+.backheadglyph1{
+  font-size: 19px;
   color: black;
-&:hover{
-  background: none;
+  margin-left:- 10px;
+  margin-top: -1px;
+}
+
+.backheadglyph2{
+  font-size: 19px;
   color: black;
-}  
-&:visited{
-  color: black;
- } 
+}
+
+.flash{
+  margin-top: 50px;
 }
 
 .btn-primary:focus {
@@ -259,72 +306,23 @@ a#next:hover {
   outline: none;
 }
 
-.loaderd{
+.ldmsg{
   display: none;
   height: 35px;
   width: 35px;
 }
 
-.pleasewait{
-  display: none;
-}
-
-.font-fam{
-  font-family: ralewayregular;
-}
-
-.font-fam1{
-  font-family: MyriadPro-Light;
-}
-
-.font-fam2{
-  font-family: arial;
-}
-
-.font-fam3{
-  font-family: arial;
-  font-size: 100%;
-  font-weight: bold;
-}
-
-.font-fam4{
-  font-family: MyriadPro-Light;
-  font-size: 100%;
-  font-weight: bold;
-}
-
-.ul-userinfo{
-  margin-top: -35px;
-  margin-left: 5px;
-}
-
-#flashh{
-  margin-top: 50px;
-}
-
-.hov:hover{
-  background: none;
-}
-
-.minf a:hover{
-  background: none;
-}
-
-.apptrash .glyphicon{
-  color: rgba(247, 60, 70, 0.9);
-  font-size: 18px;
-}
-
-/* shared */
+//shared 
 #scrbar{
   color: black;
 }
 
-p .sr{
+p .src{
   background: #F9F9F9;
   height: 50px;
+   width: 100%;
   border-color: #D63636;
-  margin-top: 50px;
+  margin-top: 35px;
   border: 0px;
   outline: none;
   color: black;
@@ -335,39 +333,45 @@ p .sr{
  }
 }
 
+//microusrn
 .microusrn{
-  font-family: arial; 
   font-weight: bold; 
   color: black; 
-  font-size: 100%;
+  font-size: 15px;
   &:visited{
   color: black;
 }
  }
-
-.curusavi .img-circle{
+ 
+//useravi
+.usravi .img-circle{
   width: 35px;
   border: 1px solid white;
+  margin-top: -5px;
 }
 
-/* invitation */
-.invite{
+.appbutton .btn-primary {
+    font-size: 14px;
+    color: black;
+    background-color: white !important;
+    border-color: black !important;
+    &:hover {
+    background-color: rgba(228, 228, 228, 0.9)!important;
+    border-color: black!important;  
+ }     
+}
+
+//invitation 
+.inv{
   text-align: center;
   margin-top: 20px;
 }
 
-.betainvite{
-  text-align: center;
-  font-size: 18px;
-  padding-top: 20px;
-  font-weight: bold;
-}
-
-.invite-form{
+.inv1{
   margin-top: 180px;
 }
 
-.invite-fill{
+.inv1a{
   width: 90%;
   height: 35px;
   border: 1px solid black;
@@ -375,11 +379,11 @@ p .sr{
   font-size: 16px;
 }
 
-.invitebt{
+.inv1b{
   margin-top: 100px;
 }
 
-.loadbut{
+.ldbt{
   width: 90px;
   height: 90px;
   border-radius: 45px;
@@ -387,7 +391,7 @@ p .sr{
   color: black;
 }
 
-/* kit */
+//kit 
 #container{
   max-width: 100%;
   height: 650px;
@@ -418,28 +422,6 @@ label{
   display: block;
 }
 
-.appbutton .btn-primary {
-    font-size: 14px;
-    color: black;
-    background-color: white !important;
-    border-color: black !important;
-    &:hover {
-    background-color: rgba(228, 228, 228, 0.9)!important;
-    border-color: black!important;  
- }     
-}
-
-.fappbutton .btn-primary {
-    color: black;
-    background-color: white !important;
-    border-color: black !important;
-    &:hover {
-    color: black;  
-    background-color: white!important;
-    border-color: black!important;  
- }       
-}   
-
 ::-webkit-input-placeholder{
   color: black;
 }
@@ -450,9 +432,8 @@ label{
   height: 50px;
 }
 
-.navimg{
-  width: 80px; 
-  height: 50px;
+.navbar-brand{
+  position: absolute;
 }
 
 .navbar-default{
@@ -464,22 +445,22 @@ label{
   border-radius: 0px;
 }
 
-.solve{
-margin-right: 5px;
+.hdimg{
+  width: 80px; 
+  height: 50px;
 }
 
-.solve li{
-  list-style: none;
-}
-
-.midheadglyph{
+.midhdglyph{
   font-size: 23px;
-  color: rgba(247, 60, 70, 0.9);
+  color: rgba(0,0,0,0.5);
   margin-top: 13px;
+  &:hover{
+  color: rgba(247, 60, 70, 0.5);  
+  }
 }
 
 .navbar-fixed-top .navbar-collapse{
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.7);
   text-align: center;
   font-size: 18px;
   color: black;
@@ -489,53 +470,48 @@ margin-right: 5px;
 .navbar-default .navbar-nav>li>a {
   color: black;
   &:visited{
-    color: black;
+  color: black;
   }
 }
 
-/* welcome */
-#misfnt{
- font-size: 25px;
- margin-top: 70px;
-}
-
-.previewx{
-  font-size: 30px;
-  color: black;
-  opacity: 1!important;
-  text-shadow: none!important;
-}
-
-.question {   
+//welcome
+.wlc{   
+  background-image: url("Rebels.jpeg");
+  background-size: cover; 
+  position: fixed;
+  margin-top: 0px;
+  background-repeat: no-repeat;
+  background-position: -547px;
 } 
 
-.welimage{
+.wlc1{
+ font-size: 26px;
+ margin-top: 200px;
+ text-align: center;
+ line-height: 1.42857143;
+ color: white; 
+}
+
+.wlc2{
 
 }
 
-.hh{
+.wlc2a{
   width: 24%;
   height: 70px;
   cursor: pointer;
 }
 
-.welcomeinfo{
-  display: none;
-}
-
-.welcomeoption{
+.wlc3{
   text-align: center;
   margin-top: 30px;
 }
 
-.welcomeoption .btn-primary{
-  width: 100px;
-}
-
-.wappbutton .btn-primary {
+.wlc3 .btn-primary {
  font-size: 14px;
+ width: 100px;
  color: black;
- background-color: white!important;
+ background-color: rgba(228, 228, 228, 0.5)!important;
  border-color: black!important;
  &:hover {
  background-color: rgba(228, 228, 228, 0.9)!important;
@@ -543,75 +519,60 @@ margin-right: 5px;
  }   
 }
 
-.ckl:visited{
-  color: black;
+.wlcf{
+ margin-top: 20px;  
 }
 
-// Getstarted 
-.getstarted{
+.wfoot1a{
+  color: white;
+&:visited{
+  color: white;
+ } 
+&:hover{
+  color: white;
+ }
+}
+
+.wfootdate{
+  color: white;
+}
+//Getstarted 
+.sup{
   margin-top: 70px;
 }
 
-.getcent{
-  text-align: center;
-}
-
-.getcent .glyphicon{
-  font-size: 30px;
-  color: black;
-}
-
-.loaderdd{
-  width: 12px;
-}
-
-.getstarth{
-  font-size: 20px;
-  padding-top: 15px;
-}
-
-.getstartp{
+.sup1{
   color: black;
   font-size: 14px;
   line-height: 20px;
 }
 
-.getstartp .glyphicon{
+.sup1 .glyphicon{
   color: black; 
   font-size: 16px;
 } 
 
-.gtstlearnhall{
-  color: black;  
-  font-size: 13px;
-  text-decoration: underline;
-  &:visited{
-  color: black;
-  }
-  &:hover{
-   background: none; 
-  }
+.sup2{
+  font-size: 20px;
+  padding-top: 15px;
 }
 
-.imggtst{
-  width: 40px;
-  height: 40px;
+.sup3{
+  text-align: center;
+}
+
+.sup3 .glyphicon{
+  font-size: 30px;
+  color: black;
+}
+
+.ldmsg{
+  width: 12px;
 }
 
 //search
-.static-search{
-  color: black;
-}
-
-.divsearch .img-circle{
+.tpc .img-circle{
   width: 140px;
-}
-
-//youth
-.oval{
-  width: 100%;
-  height: 650px;
-  background: rgb(247,247,247);
 }
 
 //howtomakeahall
@@ -622,7 +583,7 @@ margin-right: 5px;
 
 .htsteps{
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   line-height:  30px;
 }
 
@@ -634,7 +595,7 @@ margin-right: 5px;
   color: grey;
 }
 
-//vision
+//aboutus
 .static_head{
   margin-top: -40px;
   text-align: center;
@@ -645,108 +606,20 @@ margin-right: 5px;
   color: #E8C6C2;
 }
 
-.visionhdfont{
-  font-family: ralewayregular;
-  color: #CE2424; 
-  font-size: 30px; 
-  margin-top: 30px;
-}
-
-.mission{
-  font-family: ralewayregular;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #B77575; 
-}
-
-.missciond{
+.abt2{
   text-align: center;
-  font-family: ralewayregular;
-  font-size: 18px;
-  line-height: 1.42857143;
-  color: black; 
-  font-weight: bold;
-}
-
-.missciong{
-  text-align: center;
-  padding-top: 10px;
-}
-
-.missciong .glyphicon-menu-down{
-  color: black;
-  font-size: 30px;
-}
-
-.missciong .glyphicon-flag{
-  color: rgba(247, 58, 65, 0.9);
-  font-size: 30px;
-}
-
-.misscion{
-  text-align: center;
-  font-family: MyriadPro-Light;;
-  font-size: 27px;
+  font-size: 15px;
   line-height: 1.42857143;
   color: #333; 
 }
 
-.betaprepdiv{
-  height: 400px;
-  background: rgba(247, 58, 65, 0.9);
-}
-
-.visioncen{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  margin-top: -10px;
-  width: 100px;  
-  cursor: pointer;
-}
-
-.betaprepalign{
-  text-align: center;
-}
-
-.betaprepemail{
-  color: white;
-  font-family: ralewayregular;
-}
-
-.betapreph{
-  color: white;
-  font-family: ralewayregular;
-  font-weight: bolder;
-}
-
-.betaprepp{
-  color: white;
-  font-family: ralewayregular;
-}
-
-.betaprepinput{
-  color: black;
-  width: 54%;
-  height: 30px;
-}
-
-.button{
-  color: white;
+.abt2bold{
   font-weight: bold;
-  background: #444444;
-  border-color: #444444;
-  width: 45%;
-  height: 40px;
-  font-family: ralewayregular;
 }
 
-.app_footer{
-  margin-top: 25px;
-}
+//terms
 
-/* support */
+//support
 .supportlink{
   text-align: center;
   font-size: 14px;
@@ -759,9 +632,15 @@ margin-right: 5px;
  }   
 }
 
-/* userpartial*/
+//_user
 .userpartialimg .img-circle{
   width: 35px;
+}
+
+.ulpartial{
+  margin-top: -40px;
+  margin-left: 5px;
+  list-style:none
 }
 
 .userpartialname{
@@ -776,55 +655,48 @@ margin-right: 5px;
   }
 }
 
-/* user_index */
-.allusers{
-  padding-top: 15px;
-}
-
+//user_index
 .topsrcbar{
   margin-top: -50px;
 }
 
-.usindexsearch{
+.topsrcbar1{
   margin-top: 15px;
 }
 
-/* new_micropost */
-.nhallhead{
+.usrs{
+  padding-top: 15px;
+}
+
+//new_micropost
+.nmcptip{
+  min-width:auto;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.nmcptipl{
+  padding-left: 5px;
   text-align: center;
-  color: rgba(247, 60, 70, 0.9)!important;
 }
 
-.nlearnhall{
-  color: black;  
-  font-weight: bold;
-  font-size: 17px;
-  &:visited{
-  color: black;
-}
-  &:hover{
-  background: none; 
-  text-decoration: underline;
- }
-}
-
-.micropostform{
+.nmcp{
  text-align: center;
  margin-top: 20px;
 }
 
-.micropostformcontent{
+.nmcp1{
   margin: auto;
   left: 0;
   right: 0;
 }
 
-.formphoto{
+.nmcp1a{
  margin-left: 40px;
  display: none;
 }
 
-.newhall-input{
+.nmcp1b{
  color: black;
  cursor: pointer;
  font-size: 40px;
@@ -835,7 +707,7 @@ margin-right: 5px;
  }   
 }
 
-.formcontent{
+.nmcp1c{
   width: 100%;
   height: 120px;
   border-style: solid;
@@ -846,7 +718,7 @@ margin-right: 5px;
   -webkit-appearance: none; 
 }
 
-.formauthor{
+.nmcp1d{
   width: 300px;
   height: 30px;
   border-style: solid;
@@ -855,63 +727,64 @@ margin-right: 5px;
   font-size: 15px;
 }
 
-/* activity */
-.activity{
+//activity
+.atv{
   margin-top: 20px;
 }
 
-.noactivity{
+.atv1{
   color: #BBBBBB;
+  font-size: 15px;
   text-align: center;
   margin-top: 170px;
 }
 
-/* signup */
-.signup{
+//c&fpublicactivity
+.trackable{
+  width: 30%;
+} 
+  
+//new user
+.nwuerror{
+  margin-top: 30px;
+}
+
+.nwu{
   text-align: center;
 }
 
-.signuplabel{
-  float: left;
-  color: rgb(88, 88, 88);
-  font-weight: bold;
-  font-size: 13px;
+.nwu1{
+  margin-top: 5px;
 }
 
-.signupfield{
-  height: 30px;
-  width: 100%;
-  font-size: 13px;
-}
-
-/* sessions */
-.scarcity{
-  visibility: hidden;
-}
-
-.session{
-  margin-top: 20px;
-  text-align: center;
-}
-
-.sessionlabel{
-  float: left;
-  color: rgb(88, 88, 88);
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.sessionfield{
+.nwu1a{
   height: 35px;
   width: 100%;
   font-size: 13px;
 }
 
-.sessionlink{
+//session
+.sess1{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sess1a1{
+  height: 35px;
+  width: 100%;
+  font-size: 13px;
+}
+
+.blackerror{
+  color: black;
+  list-style: none;
+}
+
+.sess1b{
   font-size: 15px;
 }
 
-.ckl3{
+.sess1b1{
   color: black;
   text-decoration: underline;
 &:hover{
@@ -923,85 +796,79 @@ margin-right: 5px;
  } 
 }
 
-.sesswarn{
-  
+.switchup{
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.42857143;
+  color: #333;
+  margin-top: 170px;
 }
 
-/* home */
-.homepag{
+//home
+.homescroll{
   font-size: 100%;
   display: none;
 }
 
-/* feed */ 
-.feedwelcomeimgg{
-  margin-top: -20px;
-}  
-
-.feedsearchlink{
-  color: #BBBBBB;  
-  text-decoration: underline;
-  &:visited{
-  color: #BBBBBB;
-  }
-  &:hover{
-   background: none; 
-  }
-}
-
-.nofeed{
-  color: #BBBBBB;
-  text-align: center;
-  margin-top: 30px;
-}
-
-/* feed_item */
-.paper{
+//feed
+.fed1{
   margin-top: 70px;
 }
 
-.feedhouse{
+.feed2a{
+  margin-top: 50px;
+}  
+
+.fed3{
+  color: #BBBBBB;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+//feed_item
+.fd{
   width: 100%;
   margin-top: -5px;
 }
 
-.puffin{
-  width: 100%;
-}
-
-.feediteminfo{
+.fdinfo1{
   background: white;
   widht: 100%;
   height: 60px; 
 }
 
-.feediteminfo2{
-  display: none;
-}
-
-.feediteminfo .img-circle{
+.fdinfo1 .img-circle{
   width: 4%;
   margin-top: 3%;
   margin-left: 2%;
+  border: 1px solid rgba(0,0,0,0.3);
 }
 
-.feedusern{
+.fdusern{
   padding-bottom: 20px;
   color: black;
   font-size: 85%;
   font-weight: bold;
-}
-
-.feedusern:visited{
+&:visited{
   color: black;
+ }
 }
 
-.feedtime{
+.fdtime{
   font-size: 90%;
-  color: black;
+  color: rgba(0,0,0,0.4);
 }
 
-.contentlength{
+.fdinfo2{
+  display: none;
+}
+
+.fdimg{
+  width: 100%;
+}
+
+.fdcontent1{
   background: white;
   font-size: 100%;
   width: 100%;
@@ -1009,75 +876,133 @@ margin-right: 5px;
   padding-bottom: 10px;
 }
 
-.contentlength2{
+.fdcontent2{
   display: none;
   font-family: ralewayregular;
 }
 
-.feedlikeicon{
-  color: black;
+.fdlikeicon{
+  color: rgba(0,0,0,0.4);
 }
 
-.feedlikeicon .glyphicon-heart{
-  color: rgba(247, 60, 70, 0.9);
+.fdlikeicon .glyphicon-heart{
+  color: rgba(0,0,0,0.2);
   font-size: 17px;
   padding-top: 4px;
 }
 
-/* micropost_show */
-.micshowheadglyph{
-  font-size: 17px;
+//micropost_show
+.apptrash .glyphicon{
   color: black;
+  font-size: 18px;
+  &:visited{
+  color: black;
+ } 
 }
 
-.micropostshow{
+.mcpshw{
   margin-top: -20px;
+  overflow: hidden;
 }
 
-.showmicrocontent{
+.mcpshw-cnt{
   font-size: 100%;
   font-family: ralewayregular;
 }
 
-.showcontentsize{
+.mcpshw-cnt1{
   font-size: 90%;
 }
 
-.postauthor{
+.hallauthor{
   color: #1381c1;
   font-size: 12px;
 }
 
-.microviews{
-  color: black;
+.mcpshw1{
+  color: rgba(51, 51, 51, 1);
   padding-top: 10px;
-  font-size: 100%;
+  font-size: 15px;
 }
 
-.microviews .glyphicon-comment{
-  color: black;
+.mcpshw1 .glyphicon{
+  color: rgba(51, 51, 51, 1);
 }
 
-.microviews .glyphicon-heart{
-  color: black; 
-}
-
-.micropostshow hr{
+.mcpshw hr{
  margin-top: -1px;
 }
 
-.micro_like_form{
-  margin-top: -34px;
+.mcpshw3{
+  margin-top: -8px;
+  margin-left: -40px;
+}
+
+.social-share-button-twitter{
+  background: url("/assets/tips.PNG");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+
+.mcpshw3a{
   float: left;
 }
 
+.mcpshw3b{
+  list-style: none;
+  margin-top: 1.8px;
+}
+
+.mcpshw3b li{
+  display: inline;
+}
+
+#likke{
+  margin-top: -44px;
+  margin-left: 20px;
+}
+
+.mcpshw3c{
+  float: left;
+  margin-left: -50px;
+}
+
 // commentform 
+.comtfmul{
+  list-style: none;
+}
+
+.comtfmul li{
+  display: inline-block;
+}
+
+.commentformbtn .btn-default{
+ margin-top: -57px;
+ color: #d1cece;
+ font-size: 22px;
+ background: none;
+ border: none;
+&:focus{
+  outline: none;
+} 
+&:active{
+  box-shadow: none;
+}
+&:hover{
+ }   
+}
+
 .commentform{
-  width: 100%;
+  width: 180px;
+  margin-left: -8px;
+  font-size: 100%;
   border-radius: 5px;
   -webkit-appearance: none;
-  border: 0;
+  border: none;
   outline: 0;
+  background: white;
   &:focus{
   outline: none;
   background: rgba(211, 211, 211, 0.1);
@@ -1115,17 +1040,12 @@ margin-right: 5px;
  color: black;
 }
 
-/* commentform */
-.commentformbtn .btn-primary{
- font-weight: bold;
- border-radius: 5px;
-}
-
-/* likeform */
+//likeform
 #likky .btn-default{
+  font-size: 25px;
   color: rgb(255, 68, 75);
-  background-color: white;
-  border-color: white;
+  background: none;
+  border: none;
 &:focus{
   outline: none;
 } 
@@ -1137,15 +1057,11 @@ margin-right: 5px;
  }   
 }
 
-#likky .glyphicon-heart{
-  font-size: 20px;
-  margin-top: -2px;
-}
-
 #likki .btn-default{
+  font-size: 25px;
   color: #d1cece;
-  background-color: white;
-  border-color: white;
+  background: none;
+  border: none;
 &:focus{
   outline: none;
 }
@@ -1157,87 +1073,98 @@ margin-right: 5px;
  }  
 }
 
-#likki .glyphicon-heart{
-  font-size: 20px;
-  margin-top: -2px;
-
-}
-
-/* like_show */
+//like_show
 .likes{
   color: black;
   font-weight: bold;
   font-size: 30px;
 }
 
-/* users_show */
-.nohall{
-  color: #BBBBBB;
-  text-align: center;
-  margin-top: 250px;
-}
-
-.carousel .item img{
-  margin: 0 auto;
-}
-
-.profile_h .img-circle{
-  width: 30px;
-}
-
-.profile_h .dropdown{
+//usershow
+.ush1 .dropdown{
   cursor: pointer;
   font-weight: bold;
   color: white;
 }
 
+.ush1 .img-circle{
+  width: 30px;
+}
+
 .caret{
-  color: rgba(247, 60, 70, 0.9);
+  color: black;
 }
 
-.verify{
-  width: 10px;
-  height: 10px;  
+.ush2{
+ margin-right: 5px;
 }
 
-.userinfo1{
+.ush2 li{
+  list-style: none;
+}
+
+.ush3{
   color: black;
   font-size: 22px;
   text-align: center;
   margin-top: -15px;
 }
 
-.userinfo2{
+.verify{
+  width: 10px;
+  height: 10px;  
+  margin-left: -2px;
+}
+
+.ush4{
   color: black;
   font-size: 14px;
   text-align: center;
   margin-top: -3px;
 }
 
-.userpost{
+.ush5{
   margin-top: -15px;
 }
 
-.subscribe-btn{
+.ush6{
   margin-top: -20px;
 }
 
-/* un/followform */
-.sub_but .fbtn{
+.ush7{
+  color: #BBBBBB;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 250px;
+}
+
+//un/followform
+.fbut .fbtn{
   width: 100%;
   height: 20px;
 }
 
-.sub_but .ufbtn{
+.fbut .ufbtn{
   width: 100%;
-  background-color: rgba(247, 60, 70, 0.2)!important;
-  border-color: rgba(247, 60, 70, 0.2)!important;
+  background-color: black!important;
+  border-color: black!important;
   &:hover{
    color: #fff;
-   background-color: rgba(247, 60, 70, 0.9)!important;
-   border-color: rgba(247, 60, 70, 0.9) !important;
+   background-color: black!important;
+   border-color: black!important;
   }
 }
+
+.fappbutton .btn-primary {
+    color: black;
+    background-color: white !important;
+    border-color: black !important;
+    &:hover {
+    color: black;  
+    background-color: white!important;
+    border-color: black!important;  
+ }       
+}   
 
 // leaderboard
 .leadercenter{
@@ -1282,121 +1209,105 @@ margin-right: 5px;
   color: #EC585E;
 }
 
-// _micropost
-.micropartial{
-}
-
-.micropostsquare{
-/* not using width: 26% now to shrink on the big screen */
+//_micropost
+.mcp{
+//not using width: 26% now to shrink on the big screen
   background: white;  
   float: left;
 }
 
-.micropostcount{
+.mcp1{
   text-align: center;
   font-size: 13px;
   color: #6B6A6A;
 }
 
-.micropostcount .glyphicon-heart{
+.mcp1 .glyphicon-heart{
   color: #EC585E;
 }
 
-.micropostcount .glyphicon-comment{
+.mcp1 .glyphicon-comment{
   color: #EC585E;
 }
 
-/* micropost_index */
-.mindxcloud{
- padding-top: 18px;
- margin-left: -13px;
-}
-
-.micropostindex{
+//micropost_index
+.mcps{
   margin-top: -21px;
   width: 100%;
 }
 
-.micropostindex2{
+.mcps1{
   background: white;  
   float: left;
   width: 33.3%;
 }
 
 //editverify
-.editverify{
+.vfy{
   height: 20px;
   width: 20px;
 }
 
-/*edituser*/
-.editusr{
-  margin-top: 20px;
+//edituser
+.edt{
+  margin-top: 25px;
   text-align: center;
 }
 
-.edit-lab{
+.edt1{
   width: 100%;
   height: 37px; 
-  border: 0;
+  border: 1px solid black;
   outline: 0;
   background: rgb(255, 255, 255);
   margin-top: 7px;
-  font-size: 15px;
+  font-size: 16px;
   &:focus{
     outline: none;
     background: rgba(211, 211, 211, 0.1);
   }
 }
 
-.editusr .glyphicon{
-  color: rgba(211, 211, 211, 0.4);
-  font-size: 20px;
+.edt .glyphicon-camera{
+  color: rgba(211, 211, 211, 0.7);
+  font-size: 35px;
+  margin-left: -13px;
 }
 
-.editusremail{
-  color: #E8C6C2;
-  font-size: 15px;
-}
-
-.editavi{
+.edt2{
   display: none;
 }
 
-.editavi-input{
+.edt3{
  margin-left: 50px;
  cursor: pointer;
 }
 
-.editusr .glyphicon-camera{
-  font-size: 50px;
-}
-
-.edit_butt{
+.edt4{
   text-align: center;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
-/* footer */
-.footer{
+//footer
+.foot{
   width: 100%;
 }
 
-.footerul{
+.foot1{
   margin-left: -35px;
-  font-size: 85%;
+  font-size: 95%;
   list-style: none;
   text-align: center;  
 }
 
-.footerul li{
+.foot1 li{
   padding: 5px; 
   display: inline-block;
   text-align: center;  
   word-wrap: break-word;
 }
 
-.footerlnk{
+.foot1a{
   color: black;
 &:visited{
   color: black;
@@ -1406,19 +1317,8 @@ margin-right: 5px;
  }
 }
 
-.copyright{
-  font-size: 10px;
-}
-
-.footdate{
-  list-style: none;
-  color: black;
-  text-align: center;
-  font-size: 10px;
-}
-
-// minfooter
-.minfooter{
+//minfooter
+.min{
   background: rgba(255,255,255,0.8);
   height: 45px;
   width: 100%;
@@ -1427,74 +1327,58 @@ margin-right: 5px;
   border-top: 1px solid white;
 }
 
-.ddffs{
+.min1{
   margin-top: -3px;
 }
 
-.minf{
+.min1a{
   padding-left: 0;
   padding-right: 13.6%;
 }
 
-.minf .glyphicon{
-  color: rgba(247, 60, 70, 0.5);
+.min1a a:hover{
+  background: none;
+}
+
+.min1a .glyphicon{
+  color: rgba(0,0,0,0.5);
   font-size: 17px;
   &:hover{
-    color: rgba(247, 60, 70, 0.9);
+    color: rgba(247, 60, 70, 0.3);
   }
 } 
 
-.minf2 .glyphicon{
-  color: rgba(247, 60, 70, 0.5);
-  font-size: 17px;
-  &:hover{
-    color: rgba(247, 60, 70, 0.9);
-  }
-} 
-
-//publicactiviy
-
-.trackable{
-  width: 30%;
-} 
-  
 @media screen and (min-width: 320px) {
 .carousel_ad{
   float: right;
-  margin-right: -100px;
-}
-
-/* header */
-#logo{
-  font-size: 1.3em;
 }
   
-.micropostsquare{
+.mcp{
   width: 32%;
   margin-left: 3.6px;
   margin-top: 3.5px;
 }
  
-.micropostcount{
+.mcp1{
  display: none;
 }
 
-.feediteminfo{
+.fdinfo1{
   height: 50px; 
 }
 
-.feediteminfo .img-circle{
+.fdinfo1 .img-circle{
   width: 7%;
   margin-top: 0.5%;
   margin-left: 3.5%;
 }
 
-.feedusern{
+.fdusern{
   font-size: 100%;
   margin-top: 3%;
 }
 
-.feedtime{
+.fdtime{
   font-size: 90%;
   margin-top: 3.5%;
 }
@@ -1503,115 +1387,126 @@ margin-right: 5px;
   font-size: 85%;
 }
 
-.feedlikeicon{
+.fdlikeicon{
   font-size: 100%;
 }
 
-.minf{
+.min1a{
   padding-left: 1.7%;
   padding-right: 12.8%;
 }
 
-.minf .glyphicon{
+.min1a .glyphicon{
   padding-top: 10px;
   font-size: 25px;
 } 
 
-.scarcity{
-  visibility: visible;
+//micropost_index
 }
 
-.sesswarn{
-  visibility: hidden;
-}
-
-/* micropost_index */
-
-
-}
 
 @media screen and (max-width: 320px) {  
-/* commentform */
+//commentform
 }
+
 
 @media screen and (min-width: 321px) {
-.scarcity{
-  visibility: hidden;
+
 }
 
-.sesswarn{
-  visibility: visible;
+
+@media screen and (min-width: 375px) { 
+.wlc{   
+  background-position: -525px;
+} 
 }
+
+@media screen and (max-width: 414px) { 
+.switchup{
+  display: none;
+}  
 }
 
 @media screen and (min-width: 414px) { 
-.micropostsquare{
+.wlc{   
+  background-position: -507px;
+}   
+  
+.mcp{
   margin-left: 4.3px;
 }  
   
 
-.welimage{
+.wlc2{
   text-align: center;
 }
 
-.hh{
+.wlc2a{
   width: 100px;
   height: 110px;
 }  
+
+.fed3{
+  font-size: 25px;
+}
    
   
-/* microshow */
+//microshow
 .profiletop .img-circle{
   width: 150px;
 }
 
-.minf{
+.min1a{
   padding-left: 3%;
   padding-right: 33%;
 }
 
-.minf .glyphicon{
+.min1a .glyphicon{
   padding-top: 10px;
-  font-size: 30px;
+  font-size: 25px;
 } 
 
-.scarcity{
-  visibility: visible;
 }
 
-.sesswarn{
-  visibility: hidden;
- }
+@media screen and (min-width: 415px) {  
+.fed2{
+  display: none;
+}  
+
+.scar{
+  display: none;
 }
 
-@media screen and (min-width: 415px) {
- .scarcity{
-  visibility: hidden;
 }
-
-.sesswarn{
-  visibility: visible;
-}
-}
-
 
 @media screen and (max-width: 480px) {      
-/* micropost_show */
-.showmicrocontent{
+//micropost_show
+.mcpshw-cnt{
   margin: auto;
   left: 0px;
   right: 0px;
 }
 
 }
+//welcome
+@media screen and (min-width: 451px) {
+.wlc{   
+  background-position: -400px;
+}   
+}
 
+//welcome
 @media screen and (min-width: 480px) {
-/* feed-item */  
-.feediteminfo{
+.wlc{   
+  background-position: -400px;
+}   
+  
+//feed_item
+.fdinfo1{
   display: none;
 }
 
-.feediteminfo2{
+.fdinfo2{
   width: 450px;
   background: white;
   display: block;
@@ -1621,17 +1516,17 @@ margin-right: 5px;
   right: 0;
 }
 
-.feediteminfo2 .img-circle{
+.fdinfo2 .img-circle{
   width: 7%;
   margin-top: 0.5%;
   margin-left: 4%;
 }     
    
-.contentlength{
+.fdcontent1{
   display: none;
 }
  
-.contentlength2{
+.fdcontent2{
   width: 450px;
   background: white;
   display: block;
@@ -1641,8 +1536,8 @@ margin-right: 5px;
   right: 0;
 }
 
-/* micropost_show */
-.showmicrocontent{
+//micropost_show
+.mcpshw-cnt{
   width: 450px;
   background: white;
   padding-left: 3px;
@@ -1651,53 +1546,50 @@ margin-right: 5px;
   right: 0px;
 }
 
-#likky .btn-default{
-  background-color: white;
-  border-color: white;
-
-&:hover{
-  background-color: white;
-  border-color: white;
- }   
-}
-
-#likky .glyphicon-heart{
-    font-size: 16.5px;
-    margin-top: -4.5px;
-    margin-right: 6px;
-}
-
-#likki .btn-default{
-  background-color: white;
-  border-color: white;
-&:hover{
-  background-color: white;
-  border-color: white;    
- }  
-}
-
-#likki .glyphicon-heart {
-    font-size: 16.5px;
-    margin-top: -4.5px;
-    margin-right: 6px;
-}
-
-.minf{
+.min1a{
   padding-left: 1%;
   padding-right: 17%;
 }
   
 }
+//welcome
+@media screen and (min-width: 556px) {
+.wlc{   
+  background-position: -350px;
+}   
+}
+
+//welcome
+@media screen and (min-width: 606px) {
+.wlc{   
+  background-position: -300px;
+}   
+}
+
+//welcome
+@media screen and (min-width: 657px) {
+.wlc{   
+  background-position: -250px;
+}   
+}
+
+//welcome
+@media screen and (min-width: 707px) {
+.wlc{   
+  background-position: -160px;
+}   
+}
 
 @media screen and (max-width: 758px) {  
-.post-img .img-responsive{
+.mcpshw-img .img-responsive{
   width: 450px;
   margin: auto;
   left: 0;
   right: 0;
+ 
 }   
  
-.puffauto .img-responsive{
+.fdimg1 .img-responsive{
   width: 450px;
   margin: auto;
   left: 0;
@@ -1707,15 +1599,11 @@ margin-right: 5px;
 }
 
 @media screen and (min-width: 758px) { 
-.question{
-
-}  
+.wlc{
   
-.feedwelcomeimg{
-  display: none;
-}  
-
-.nofeed{
+}
+ 
+.fed3{
   margin-top: 300px;
 }
 
@@ -1728,57 +1616,49 @@ margin-right: 5px;
  line-height: 50px; 
 }
  
-/* signup */
-.signup{
+//signup
+.nwu{
   border-radius: 5px;
   height: 360px!important;
   width: 380px!important;
   background: white;
-
 }  
 
-.signupform{
-
-}
-
-.signupfield{
-  height: 30px;
+.nwu1a{
+  height: 30px; 
   width: 100%;
   font-size: 13px;
 }
   
-/* session */
-.session{
+//session
+.sess1{
   margin-top: 60px;
   border-radius: 5px;
+  border-color: red;
   height: 250px!important;
   width: 350px!important;
   background: white;
 }
 
-.sessionform{
+.sess1a{
   margin-top: 30px;
 }
 
-.sessionlabel{
-  font-size: 15px;
-}
-
-.sessionfield{
+.sess1a1{
   height: 30px;
   width: 100%;
   font-size: 13px;
 }
 
 // micropost_show
-.post-img .img-responsive{
+.mcpshw-img .img-responsive{
   width: 500px;
   margin: auto;
   left: 0;
   right: 0;
 }  
 
-.showmicrocontent{
+.mcpshw-cnt{
   width: 500px;
   padding-left: 3px;
   margin: auto;
@@ -1786,57 +1666,55 @@ margin-right: 5px;
   right: 0px;
 }
   
-/* feed_item */ 
-.feediteminfo{
+//feed_item
+.fdinfo1{
   width: 500px;
   margin: auto;
   left: 0;
   right: 0;
 }
  
-.puffauto .img-responsive{
+.fdimg1 .img-responsive{
   width: 500px;
   margin: auto;
   left: 0;
   right: 0;
 }  
 
-.feediteminfo2{
+.fdinfo2{
   width: 500px;
 }  
     
-.contentlength2{
+.fdcontent2{
   width: 500px!important;
  }
 
-.feedcontent{
-  width: 500px;
-  margin: auto;
-  left: 0;
-  right: 0;
-} 
-  
-.micropostsquare{
+.mcp{
   width: 31%;
   margin-top: 10px;
   margin-left: 10px;
 }
 
-.micropostcount{
+.mcp1{
   display: block;
 }
 
-
-.minf{
+.min1a{
   padding-left: 2%;
   padding-right: 17.5%;
 }
 
 }
  
+@media screen and (min-width: 797px) {
+.wlc{   
+  background-position: 0px;
+}   
+} 
+ 
 @media screen and (min-width: 992px) {    
  
-.puffauto .img-responsive{
+.fdimg1 .img-responsive{
   width: 500px;
   margin: auto;
   left: 0;
@@ -1850,23 +1728,23 @@ margin-right: 5px;
   right: 0;
 }  
   
-.micropostsquare{
+.mcp{
   width: 31%;
   margin-top: 20px;
   margin-left: 20px;
 }
 
-.micropostcount{
+.mcp1{
   display: block;
 }
 
-.micropostindex2{
+.mcps1{
   width: 31%;
   margin-top: 20px;
   margin-left: 17px; 
 }
 
-.minf{
+.min1a{
   padding-left: 2%;
   padding-right: 18.7%;
 }
@@ -1875,7 +1753,7 @@ margin-right: 5px;
 
 @media screen and (min-width: 1200px) {
 
-.puffauto .img-responsive{
+.fdimg1 .img-responsive{
   width: 500px;
   margin: auto;
   left: 0;
@@ -1889,36 +1767,34 @@ margin-right: 5px;
   right: 0;
 }
   
-.micropostsquare{
+.mcp{
   width: 25%;
   margin-top: 40px;
   margin-left: 62.5px;
 }
 
-.micropostcount{
+.mcp1{
   display: block;
 }
 
-.micropostindex2{
+.mcps1{
   width: 25%;
   margin-top: 40px;
   margin-left: 92.5px; 
 }
 
-.minf{
+.min1a{
   padding-left: 1.2%;
   padding-right: 20.6%;
 }
+}
 
-
+@media screen and (min-width: 1350px) {
+.wlc{   
+  background-position: 0px;
+}   
 }
 
 @media screen and (max-width: 1400px) {
-/* commentform */
-.commentformbtn .btn-primary{
- width: 83.5%; 
- height: 35px;
- margin-left: 46px;
-} 
-
+  
 }

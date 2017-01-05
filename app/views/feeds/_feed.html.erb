@@ -1,15 +1,20 @@
-	<div class="">
-	<% if @feed_items.any? %>
-<div class="paper">
+<div>
+<% if @feed_items.any? %>
+
+<div class="fed1">
     <%= render partial: 'shared/feed_item', collection: @feed_items %>  
 </div>    
-    <% else %>
-    <div class="feedwelcomeimg">
-  	<%= image_tag('h6.jpg', class: "feedwelcomeimgg") %> 
-  	</div>
-    
-    <div class="nofeed font-fam1">Welcome! <%= link_to "Search", search_path, class: "feedsearchlink" %> and Follow Channels You Love</div>
-    <br /><br />
-    <% end %>
+
+<% else %>
+
+<div class="fed2">
+   <%= image_tag('Rocky.PNG', class: "feed2a") %> 
 </div>
-<span class="homepag"><%= will_paginate @feed_items %></span>
+    
+<div class="fed3 font-fam1">Tap logo to Find Your Profile</div>
+<br /><br />
+
+<% end %>
+</div>
+
+<span class="homescroll"><%= will_paginate @feed_items %></span>

@@ -1,24 +1,24 @@
 <% provide(:title, @micropost.user.name) %>
-<body class="overflowdisable">
+
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-top" role="navigation">
     <div class="">
     <div class="navbar-header">
            
-    <span class="navbar-brand font-fam">
-    	  <%= link_to :back, class: "hov" do %>	
+    <span class="font-fam">
+    	  <%= link_to :back, class: "navbar-brand hov" do %>	
           <span class="backheadglyph1 glyphicon glyphicon-menu-left"></span>
           <% end %> 
     </span>
-      <span id="pagename1" class="navbar-brand font-fam1"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
+      <span id="pgn1" class="navbar-brand font-fam1"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
            
-           <ul class="font-fam solve pull-right">
+           <ul class="font-fam ush2 pull-right">
            <li> 
              <% if current_user?(@micropost.user) %>
              <%= link_to @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
-                                     title: @micropost.content, class: "hov ckl2 apptrash" do %>
-                                     <span class="midheadglyph glyphicon glyphicon-trash"></span>             
+                                     title: @micropost.content, class: "hov apptrash" do %>
+                                     <span class="midhdglyph glyphicon glyphicon-trash"></span>             
                                      <% end %>                              
                                      <% end %>        
            </li>
@@ -28,34 +28,28 @@
     </nav>
 </header> 
 
-<div class="micropostshow">	
-
- 	<section class="post-img"><%= image_tag @micropost.photo.url(:instag), class: "img-responsive" %></section>
-   
+<div class="mcpshw">	
+<div class="fdimg">
+ 	<section class="mcpshw-img"><%= image_tag @micropost.photo.url(:instag), class: "img-responsive" %></section>
+</div>
    <div class="container">
     
-   <section class="showmicrocontent">
+   <section class="mcpshw-cnt">
    	<%= render "shared/microusrn" %>
-   <span class="showcontentsize app_a_link"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
-   <span class="postauthor">
-<i>  	
-   	<% if @micropost.author? %>
-    - <%= @micropost.author %>
-    <% else %>
-    <% end %>  
-</i> 
+   <span class="mcpshw-cnt1 blacklink"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
+   <span class="hallauthor">
+
    </span> 
 
-<br /><br />
+<br />
   
-<div class="microviews">  
-<span class="glyphicon glyphicon-heart"></span><span class="font-fam1"><%= pluralize(@micropost.likes.count, "") %> </span>	
-<span class="glyphicon glyphicon-comment"></span><span class="font-fam1"><%= pluralize(@micropost.comments.count, "") %> </span>
-
+<div class="mcpshw1">  
+   <span class="glyphicon glyphicon-heart"></span><span class="font-fam1"><%= pluralize(@micropost.likes.count, "") %> </span>
+   <span class="glyphicon glyphicon-comment"></span><span class="font-fam1"><%= pluralize(@micropost.comments.count, "") %> </span>	
 </div>
-
 <section class="carousel_ad">
-<section class="loll">
+	<p class="font-fam1 sponsor">Sponsored</p>
+<section class="carouselfloat">
 <section id="carousel">
 	
  <div id="buttons">
@@ -65,10 +59,10 @@
     
  <div id="slides"> 
   <ul>
-   <li><img src="/assets/supreme.png" width="55" height="40" alt="Slide 1"/></li>
-   <li><img src="/assets/diamond.png" width="40" height="40" alt="Slide 2"/></li>
+   <li><img src="/assets/obey.png" width="55" height="40" alt="Slide 1" data-toggle="tooltip" data-placement="bottom" title="Supreme Clothing"/></li>
+   <li><img src="/assets/mtn.JPG" width="40" height="40" alt="Slide 2"/></li>
    <li><img src="/assets/ps.png" width="40" height="40" alt="Slide 3"/></li>
-   <li><img src="/assets/h4.jpg" width="50" height="40" alt="Slide 4"/></li>
+   <li><img src="/assets/diamond.png" width="50" height="40" alt="Slide 4"/></li>
   </ul>
  </div>
     
@@ -76,7 +70,7 @@
 </section>
 
 
-<section class="loll">
+<section class="carouselfloat">
 <section id="carousel">
 	
  <div id="buttons">
@@ -86,10 +80,10 @@
     
  <div id="sliders"> 
   <ul>
-   <li><img src="/assets/obey.png" width="50" height="40" alt="Slide 1"/></li>	
-   <li><img src="/assets/gap.png" width="50" height="40" alt="Slide 2"/></li>	
+   <li><img src="/assets/Hallit.jpg" width="50" height="50" alt="Slide 1" data-toggle="tooltip" data-placement="bottom" title="Supreme Clothing"/></li>	
+   <li><img src="/assets/sony.PNG" width="60" height="60" alt="Slide 2"/></li>	
    <li><img src="/assets/visa.png" width="50" height="40" alt="Slide 3"/></li>
-   <li><img src="/assets/h8.jpg" width="40" height="40" alt="Slide 4"/></li>
+   <li><img src="/assets/pum.JPG" width="40" height="40" alt="Slide 4"/></li>
   </ul>
  </div>
  
@@ -98,20 +92,31 @@
 </section>
 
 
-<section id="">
-<section class="ddd"><%= render @comments %></section>
-<br />
-<%= render "comments/form" %> 
+<section>
+	
+<section class="mcpshw2"><%= render @comments %></section><br />
 
-<section class="micro_like_form">
+<div class="mcpshw3">
+	
+  <div class="mcpshw3a">
+  <ul class="mcpshw3b"> 
+  <li><%= social_share_button_tag(@micropost.content, :popup => "true", class: "") %></li>
+  <li><%= render "likes/likebutton" %></li>
+  </ul> 
+  </div>
 
-<%= render "likes/likebutton" %> 
-</section>  
+  <div class="mcpshw3c"><%= render "comments/form" %></div>
 
+</div>
 </section>  
 
 </div>
 </div>
 </section>
 
-</body>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()	
+})	
+</script>

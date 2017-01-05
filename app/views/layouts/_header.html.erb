@@ -1,29 +1,30 @@
 <header id="indexhead">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+      <div class="">
         <% if signed_in? %>
         <div class="navbar-header">
-       <span class="" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"><%= image_tag('Hallit.jpg', :class => "navimg") %></span>
+       <span class="" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"><%= image_tag('Hallit.jpg', :class => "hdimg") %></span>
                 	
-       <p class="font-fam solve pull-right"> 
-          <%= link_to search_path, class: "hov" do %>	
-          <span class="midheadglyph glyphicon glyphicon-flash"></span>
+       <p class="font-fam pull-right visible-xs-block"> 
+          <%= link_to search_path do %>	
+          <span class="midhdglyph glyphicon glyphicon-flash"></span>
           <% end %> 
        </p>    
       
         </div>  
                 <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="font-fam1 nav navbar-nav navbar-right">
-            	<li class="navl"><%= link_to current_user do %><%= render "shared/useravi" %><% end %></li>
-            	<li class="navl"><%= link_to "New Hall", new_hall_path, class: "hov" %></li>
-                <li class="navl"><%= link_to "Invite Someone", new_invitation_path, class: "hov" %></li>
-                <li class="navl"><a href="/support">Help</a></li>
-                <li class="navl"><%= link_to "Logout", signout_path, class: "hov", method: "delete" %></li>
+            	<li><%= link_to current_user do %><%= render "shared/useravi" %><% end %></li>
+            	<li class="hidden-xs"><%= link_to "Channels", search_path, class: "hov", :"data-no-turbolink" => true %></li>
+            	<li><%= link_to "Create hall", createhall_path, class: "hov" %></li>
+                <li><%= link_to "Share app", new_invitation_path, class: "hov" %></li>
+                <li><%= link_to "Support", support_path, class: "hov"%></li>
+                <li><%= link_to "Logout", signout_path, class: "hov", method: "delete" %></li>
             </ul>
                 </div>
           
         <% else %>       
-           <div class="navbar-header"><section class="logopad"><%= image_tag('Hallit.jpg', :class => "navimg") %></section></div>
+           <div class="navbar-header"><section><%= link_to (image_tag('Hallit.jpg', :class => "hdimg")), welcome_path %></section></div>
         <% end %>
       </div><!-- /.container -->
     </nav>

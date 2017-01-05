@@ -4,31 +4,34 @@
     <div class="">
     <div class="navbar-header">
            
-      <span id="pagename2" class="navbar-brand font-fam">Invitation</span>
+      <span class="navbar-brand font-fam1"><%= link_to "Share with friend", new_invitation_path, class: "hov2", id: "pgn2" %></span>
 
     </div>   
     </div><!-- /.container -->
     </nav>
 </header>
 <% if flash[:notice] -%>
-  <p class='container kkkkk alert alert-warning'><%=h flash[:notice] %></p>
+  <p class='container flash alert alert-warning'><%=h flash[:notice] %></p>
 <% end -%>
 
-<div class="container invite font-fam1">		
+<div class="container font-fam1 inv">		
 
-<div class="invite-form">
+<div class="inv1">
 <%= form_for @invitation, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<p class="font-fam1"><%= f.text_field :recipient_email, class: "invite-fill", placeholder: "Enter email" %></p>
+<p class="font-fam1"><%= f.text_field :recipient_email, class: "inv1a", placeholder: "Enter email" %></p>
 <br />
 
-<p class="appbutton font-fam invitebt"><%= f.submit "Send", class: "loadbut" %></p>
+<p class="font-fam1 appbutton inv1b"><%= f.submit "Send", class: "ldbt" %></p>
 
 <% end %>
 </div>
 </div>
 <br /><br />
 
-<p style="text-align:center;"><%= image_tag asset_path('assets/images/spin1.gif'), :class => "loaderd" %></p>
-<div class="footer2"><%= render 'layouts/minfooter' %></div>
+<p class="ldcenter"><%= image_tag asset_path('assets/images/spin1.gif'), :class => "ldmsg" %></p>
+
+<div><%= render 'layouts/minfooter' %></div>
+
+

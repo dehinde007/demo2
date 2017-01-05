@@ -1,4 +1,4 @@
 $ ->
-  $('.loadbut').click ->
-    $('.loaderd').show('slow');  
+  $('.ldbt').click ->
+    $('.ldmsg').show('slow');  
 

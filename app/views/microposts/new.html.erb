@@ -1,46 +1,33 @@
-<%content_for :title, "Create Hall | New Hall"%>
-<header class="indexhead">
-    <nav class="navbar navbar-default navbar-top" role="navigation">
-    <div class="">
-    <div class="navbar-header">
-           
-      <span id="pagename2" class="navbar-brand font-fam">Tap for help</span>
-
-    </div>   
-    </div><!-- /.container -->
-    </nav>
-</header>
-<link rel="stylesheet" href="/css/imglykit-night-ui.css" />
-<script src="/js/imglykit.js"></script>
-<div id="container"></div>  <!--  imgly kit container in micropost new to edit picture before upload -->
+<%content_for :title, "Create Hall | Upload Hall"%>
+<br /><br /><br /><br /><br>
 
 <%= form_for @micropost, :html => {:multipart => true, :id => "nform"} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<div class="container micropostform font-fam1">
-<div class="micropostformcontent">
+<div class="font-fam1 container nmcp">
+<div class="nmcp1">
 
-  <section class="formphoto">
+  <section class="nmcp1a">
    <section><%= f.file_field :photo, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section> 
   </section>
   
-  <p class="glyphicon glyphicon-retweet newhall-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
+  <p class="glyphicon glyphicon-cloud nmcp1b" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
 
   <p>
-   <%= f.text_area :content, :class =>"formcontent font-fam1", placeholder: "Write story" %>
+   <%= f.text_area :content, :class =>"font-fam1 nmcp1c", placeholder: "Write story" %>
   </p>
   
   <p>
-   <%= f.text_field :author, :class =>"formauthor font-fam1", placeholder: "Hall Author" %>
+   <%= f.text_field :author, :class =>"font-fam1 nmcp1d", placeholder: "Does your hall have an author" %>
   </p>
  <br /> 
- <p class="appbutton font-fam"><%= f.submit "Share Hall", class: "loadbut" %></p>
+ <p class="font-fam1 appbutton"><%= f.submit "Share Hall", class: "ldbt" %></p>
   
  <% end %>
 <br />
 
-<section style="text-align:center;">
-<p style="text-align:center;" class="loaderd">Please wait a while...</p>
+<section class="ldcenter">
+<p>Wait...</p>
 </section>
   
 <br />

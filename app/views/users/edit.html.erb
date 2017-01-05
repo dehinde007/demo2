@@ -4,7 +4,7 @@
     <div class="">
     <div class="navbar-header">
            
-      <span id="pagename2" class="navbar-brand font-fam">Account</span>
+      <span class="navbar-brand font-fam1"><%= link_to "Tweak Account", edit_user_path(current_user), class: "hov2", id: "pgn2", :"data-no-turbolink" => true %></span>
 
     </div>   
     </div><!-- /.container -->
@@ -15,47 +15,47 @@
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
- <div class="container editusr"> 
+ <div class="container edt"> 
  
     <p class="container">
-     <%= f.text_field :name, class: "edit-lab font-fam1", placeholder: "fullname" %>
+     <%= f.text_field :name, class: "edt1 font-fam1", placeholder: "fullname" %>
     </p>
    
     <p class="container">
-     <%= f.text_field :username, class: "edit-lab font-fam1", placeholder: "username" %>
+     <%= f.text_field :username, class: "edt1 font-fam1", placeholder: "username" %>
     </p>
       
-    <p class="font-fam3">
-      <section class="editavi"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section>
-      <p class="glyphicon glyphicon-camera editavi-input" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>     
+    <p class="font-fam1">
+      <section class="edt2"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section>
+      <p class="glyphicon glyphicon-camera edt3" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>     
     </p>
    
     <p class="container">
-      <%= f.text_field :email, class: "edit-lab font-fam1", placeholder: "email" %>
+      <%= f.text_field :email, class: "edt1 font-fam1", placeholder: "email" %>
     </p> 
    
     <p class="container">
-      <%= f.text_field :bio, class: "edit-lab font-fam1", placeholder: "How do you spend most of your time?" %>
+      <%= f.text_field :bio, class: "edt1 font-fam1", placeholder: "what do you do to make the world a better place?" %>
     </p>
     
     <p class="container">
-      <%= f.text_field :website, class: "edit-lab font-fam1", placeholder: "website" %>
+      <%= f.text_field :website, class: "edt1 font-fam1", placeholder: "website" %>
     </p>
     
     <p class="container font-fam">
-      <%= f.password_field :password, class: "edit-lab font-fam1", placeholder: "password" %>
+      <%= f.password_field :password, class: "edt1 font-fam1", placeholder: "password" %>
     </p>
     
     <p class="container">
-      <%= f.password_field :password_confirmation, class: "edit-lab font-fam1", placeholder: "confirm password" %>
+      <%= f.password_field :password_confirmation, class: "edt1 font-fam1", placeholder: "confirm password" %>
     </p>
    
-   <p class="appbutton edit_butt font-fam"><%= f.submit "Update", class: "loadbut" %></p>
+   <p class="appbutton edt4 font-fam1"><%= f.submit "Update", class: "ldbt" %></p>
       
     <% end %>
     
     <br />
-   <%= image_tag asset_path('assets/images/ring.gif'), class: "loaderd" %>  
+   <%= image_tag asset_path('assets/images/ring.gif'), class: "ldmsg" %>  
   </div>
   <br />
   <br />

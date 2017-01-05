@@ -1,13 +1,11 @@
 <% provide(:title, @user.name) %>
 <br />
-
-  <div class="shofollow">
- 
+  <div>
     <% if @users.any? %>
-      <div class="container users">
+      <div class="container">
         <%= render @users %>
       </div>
-      <%= will_paginate %>
+        <%= will_paginate %>
     <% end %>
   </div>
-<div class="footer2"><%= render 'layouts/minfooter' %></div>
+<div><%= render 'layouts/minfooter' %></div>

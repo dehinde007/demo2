@@ -1,5 +1,4 @@
 <% provide(:title, @user.name) %>
-
 <header class="indexhead">
     <nav class="navbar navbar-default navbar-top" role="navigation">
     <div class="">
@@ -7,18 +6,18 @@
            
   <span class="navbar-brand">
           	  
-    <section class="profile_h dropdown"><%= image_tag @user.avatar(:thumb), class: "img-circle" %>	
+    <section class="ush1 dropdown"><%= image_tag @user.avatar(:thumb), class: "img-circle" %>	
 			 
 	<span class="dropdown">
 		 
-    <span class="font-fam dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span id="pagename2"><%= @user.username %></span><span class="caret"></span>
+    <span class="font-fam1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span id="pgn2"><%= @user.username %></span><span class="caret"></span>
     </span>
     <ul class="dropdown-menu">
      
-     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, class: "font-fam1" %></li>
-     <li class="font-fam1"><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %>  </a></li>
-     <li class="font-fam1"><a href="<%= followers_user_path(@user) %>"><%= pluralize(@user.followers.count, "Follower") %></a></li>
+     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, class: "font-fam" %></li>
+     <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %></a></li>
+     <li class="font-fam"><a href="<%= followers_user_path(@user) %>"><%= pluralize(@user.followers.count, "Follower") %></a></li>
     
     </ul>
 
@@ -28,51 +27,46 @@
           	
   </span>
       
-           <ul class="font-fam solve pull-right">
-           	
+     <ul class="font-fam ush2 pull-right">          	
        <li> 
           <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>	
-          <span class="midheadglyph glyphicon glyphicon-wrench"></span>
+          <span class="midhdglyph glyphicon glyphicon-wrench"></span>
           <% end %> 
-       </li>
-
+      </li>
       </ul>
         </div>   
       </div><!-- /.container -->
     </nav>
 </header> 
 
-<p class="userinfo1 font-fam1"><%= @user.name.titleize %>
+<p class="font-fam1 ush3"><%= @user.name.titleize %>
 <% if @user.verify == true %>
 <span><%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %></span>
 <% else %>
 <% end %>	
 </p> 
-<p class="userinfo2 font-fam1"><%= @user.bio %></p>
-<p class="userinfo2 font-fam1 app_a_link"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
+<p class="font-fam ush4"><%= @user.bio %></p>
+<p class="font-fam1 ush4 blacklink"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
 
-<div class="userpost">
+<div class="ush5">
 <hr />
- <section class="font-fam subscribe-btn"><%= render 'follow_form' if signed_in? %></section>
+<section class="font-fam ush6"><%= render 'follow_form' if signed_in? %></section>
  
- <% if @user.microposts.any? %>
+<% if @user.microposts.any? %>
 
-      <%= render @microposts %>
-
-   <% elsif current_user == @user %>   
-      <div class="font-fam1 nohall">Tap Camera to Make Your First Hall
-
-   <% else %>    
- 
-   <% end %>
-      </div>
-
-
-
+<div class="boxers">
+<%= render @microposts %>
 </div>
 
-   <div class="pager">
-   <%= will_paginate @microposts, :page_links => false %>
-   </div>
+<% elsif current_user == @user %>   
+<div class="font-fam1 ush7">Tap Camera to Make Your First Hall
+<% else %>    
+<% end %>
+</div>
+</div>
 
-<div class="footer2"><%= render 'layouts/minfooter' %></div>
+<div class="pager">
+<%= will_paginate @microposts, :page_links => false %>
+</div>
+
+<div><%= render 'layouts/minfooter' %></div>

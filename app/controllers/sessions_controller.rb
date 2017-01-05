@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_back_or home_path
     else
-      flash[:alert] = 'Invalid email/password combination'
+      flash[:alert] = 'Wrong email or password!'
       render 'new'
     end
   end

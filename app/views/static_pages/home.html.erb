@@ -1,7 +1,7 @@
 <%content_for :title, "Hallit"%>
-<div class="home allsummer">
+<div class="homeinfinitediv">
 <% if flash[:notice] -%>
-  <p class='container kkkkk alert alert-info' id="flashh"><%=h flash[:notice] %></p>
+  <p class='container flash alert alert-info'><%=h flash[:notice] %></p>
 <% end -%>	
 	
    	<% if signed_in? %>
@@ -14,7 +14,7 @@
 </div>     
 
 <div class="pager">
-   <span class="homepag"><%= will_paginate @feed_items, class: "infinite-scrolling" %></span>
+<span class="homescroll"><%= will_paginate @feed_items, class: "infinite-scrolling" %></span>
 </div>
 
-  <div class="footer2"><%= render 'layouts/minfooter' %></div>
+<div><%= render 'layouts/minfooter' %></div>

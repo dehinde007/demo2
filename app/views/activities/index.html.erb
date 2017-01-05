@@ -4,13 +4,13 @@
     <div class="">
     <div class="navbar-header">
            
-      <span id="pagename2" class="navbar-brand font-fam">Following</span>
+      <span class="navbar-brand font-fam1"><%= link_to "Following", activities_path, class: "hov2", id: "pgn2" %></span>
 
     </div>   
     </div><!-- /.container -->
     </nav>
 </header>
-<div class="font-fam1 activity container">
+<div class="font-fam1 container atv">
 
 <% if @activities.any? %>
 <% @activities.each do |activity| %>
@@ -27,11 +27,11 @@
 
  <% else %>
     
-    <div class="noactivity">
+    <div class="atv1">
      <p class="font-fam1">No Activity Yet!</p>
      <p class="font-fam1">Follow a Channel To Get Activities</p>
     </div>
 
  <% end %></div>
 
-<div class="footer2"><%= render 'layouts/minfooter' %></div>
+<div><%= render 'layouts/minfooter' %></div>

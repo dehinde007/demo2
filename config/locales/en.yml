@@ -53,8 +53,8 @@ en:
         one: 1m
         other: "%{count}m"
       x_months:
-        one: 1M
-        other: "%{count}M"
+        one: 1month
+        other: "%{count}months"
       x_seconds:
         one: 1s
         other: "%{count}s"

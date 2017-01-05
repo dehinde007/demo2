@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
   end
     
   def about
-    @skip_header = true
+ 
   end 
   
   def youth
@@ -31,7 +31,6 @@ class StaticPagesController < ApplicationController
   end
   
   def terms  
-   @skip_header = true  
   end
  
   def support
@@ -42,7 +41,7 @@ class StaticPagesController < ApplicationController
    @users = User.find([1])
   end
 
-  def howtomakeahall
+  def createhall
     @skip_header = true  
   end
   

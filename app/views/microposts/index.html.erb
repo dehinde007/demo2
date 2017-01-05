@@ -1,23 +1,20 @@
 <%content_for :title, "Find friends or Channels you love"%>
 <div class="topsrcbar">
-  <div class="usindexsearch">
+  <div class="topsrcbar1">
    <% if signed_in? %> 		
    <%= render 'shared/search' %>                
    <% end %>
   </div>
 </div>
- <div class="micropostindex"> 
- 	
-  <% @microposts.each do |micropost| %>
-  
-  <div class="micropostindex2"> <%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost %></div>
-  
-  <% end %>
-  
- </div>
 
- <div class="pager">
+<div class="mcps"> 
+  <% @microposts.each do |micropost| %>
+<div class="mcps1"> <%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost %></div> 
+  <% end %>
+</div>
+
+<div class="pager">
  <%= will_paginate @microposts, :page_links => false %>
- </div>
+</div>
  
- <div class="footer2"><%= render 'layouts/minfooter' %></div>
+<div><%= render 'layouts/minfooter' %></div>
