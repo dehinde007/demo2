@@ -15,13 +15,11 @@
 //= require jquery-ui/autocomplete
 //= require autocomplete-rails
 //= require turbolinks
-//= require react
-//= require react_ujs
-//= require components
 //= require PhotoEditorSDK9
 //= require PhotoEditorReactUI9
+//= require social-share-button
 //= require_tree .
-#= require social-share-button
+
 
 $(function()  {
   window.onload = function () {
