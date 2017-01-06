@@ -18,6 +18,8 @@
 //= require react
 //= require react_ujs
 //= require components
+//= require PhotoEditorSDK9
+//= require PhotoEditorReactUI9
 //= require_tree .
 #= require social-share-button
 
@@ -27,7 +29,7 @@ $(function()  {
     var editor = new PhotoEditorSDK.UI.ReactUI({
       container: container,
       assets: {    	
-      	baseUrl: '/assets/ui/react'
+      	baseUrl: '/assets'
       }    	
     }) 
   }	
