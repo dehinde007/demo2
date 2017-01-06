@@ -15,8 +15,6 @@
 //= require jquery-ui/autocomplete
 //= require autocomplete-rails
 //= require turbolinks
-//= require PhotoEditorSDK9
-//= require PhotoEditorReactUI9
 //= require social-share-button
 //= require_tree .
 
@@ -26,6 +24,7 @@ $(function()  {
     var container = document.getElementById('container')
     var editor = new PhotoEditorSDK.UI.ReactUI({
       container: container,
+      apiKey: 'CZzSlmbKrceyvst0OC4mBw',
       assets: {    	
       	baseUrl: '/assets'
       }    	
