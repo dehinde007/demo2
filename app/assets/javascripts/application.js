@@ -27,7 +27,7 @@ $(function()  {
     var editor = new PhotoEditorSDK.UI.ReactUI({
       container: container,
       assets: {    	
-      	baseUrl: '/assets'
+      	baseUrl: '/assets/ui/react'
       }    	
     }) 
   }	
