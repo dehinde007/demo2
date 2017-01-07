@@ -16,6 +16,10 @@
 //= require autocomplete-rails
 //= require turbolinks
 //= require social-share-button
+//= require react.min
+//= require react-dom.min
+//= require PhotoEditorReactUI.min
+//= require PhotoEditorSDK.min
 //= require_tree .
 
 
