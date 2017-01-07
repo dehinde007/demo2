@@ -14148,7 +14148,9 @@ a["default"].Math=u,a["default"].Operations=f,a["default"].Filters=c,a["default"
 (function() {
   $(function() {
     return $('.ldbt').click(function() {
-      return $('.ldmsg').show('slow');
+      return $('.ldmsg').show("fast")(function() {
+        return $('.ldmsg').delay("30000").hide(0);
+      });
     });
   });
 

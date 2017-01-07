@@ -549,7 +549,7 @@ a#next:hover {
 .pagination li > a {
   border: 1px solid white !important; }
 
-.ldcenter {
+.spinner {
   text-align: center; }
 
 .backheadglyph1 {
@@ -772,9 +772,6 @@ label {
 .sup3 .glyphicon {
   font-size: 30px;
   color: black; }
-
-.ldmsg {
-  width: 12px; }
 
 .tpc .img-circle {
   width: 140px; }

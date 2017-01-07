@@ -1,4 +1,5 @@
 $ ->
   $('.ldbt').click ->
-    $('.ldmsg').show('slow');  
+    $('.ldmsg').show("fast") ->
+      $('.ldmsg').delay("30000").hide(0);  
 
