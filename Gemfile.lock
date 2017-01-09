@@ -15,14 +15,6 @@ GIT
       railties (>= 3.0.0)
 
 GIT
-  remote: git://github.com/rails/turbolinks.git
-  revision: dd31f4b2996f2300631f89339ada82c65b95f4c2
-  branch: master
-  specs:
-    turbolinks (3.0.0)
-      coffee-rails
-
-GIT
   remote: git://github.com/sporkrb/spork-rails.git
   revision: 0dd45e59d3237b4c8f9efc215b46d9c07072a95e
   specs:
@@ -301,6 +293,9 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
+    turbolinks (5.0.1)
+      turbolinks-source (~> 5)
+    turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     tzinfo-data (1.2015.7)
@@ -358,7 +353,7 @@ DEPENDENCIES
   sprockets (= 2.11.0)
   sqlite3 (= 1.3.13)
   therubyracer
-  turbolinks!
+  turbolinks (~> 5)
   tzinfo-data
   uglifier (= 2.1.1)
   will_paginate (= 3.0.4)

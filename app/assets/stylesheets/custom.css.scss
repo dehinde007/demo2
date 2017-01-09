@@ -7,9 +7,22 @@ html, body{
   background-color: white!important;
 }
 
+.modal2{  
+position: fixed;
+z-index: 1000;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background: rgba( 0, 0, 0, 0.7)
+            url('loadd.gif')
+            50% 50%
+            no-repeat;
+background-size: 20px 20px;            
+}
+
 .turbolinks-progress-bar::before {
-  background-color: white!important;
-  display: none;
+  background-color: black!important;
 }
 
 textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
@@ -427,6 +440,7 @@ label{
 }
 
 //header 
+
 .navbar{
   border-radius: 0px!important;
   height: 50px;
