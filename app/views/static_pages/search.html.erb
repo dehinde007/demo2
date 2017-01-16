@@ -18,14 +18,14 @@
 <div class="userpartialimg"><%= image_tag user.avatar.url(:thumb), class: "img-circle" %></div>
 <ul class="ulpartial">
   <li>
-  <span><%= link_to user.username, user, class: "ldbt font-fam1 userpartialname" %></span>
+  <span><%= link_to user.username, user, class: "font-fam1 userpartialname" %></span>
   <% if current_user.admin? && !current_user?(user) %>
   | <%= link_to "delete", user, method: :delete,
   data: { confirm: "You sure?" } %>
   <% end %>
   </li>
   
-  <li class="font-fam"><%= user.bio %><span class="spinner"><%= image_tag('load.gif', :class => "ldmsg") %></span>
+  <li class="font-fam"><%= user.bio %>
 </li>
   
 </ul>

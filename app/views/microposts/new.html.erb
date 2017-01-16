@@ -14,21 +14,15 @@
   <p class="glyphicon glyphicon-cloud nmcp1b" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
 
   <p>
-   <%= f.text_area :content, :class =>"font-fam1 nmcp1c", placeholder: "Write story" %>
+   <%= f.text_area :content, :class =>"font-fam1 nmcp1c", placeholder: "Write more" %>
   </p>
-  
-  <p>
-   <%= f.text_field :author, :class =>"font-fam1 nmcp1d", placeholder: "Does your hall have an author" %>
-  </p>
+
  <br /> 
  <p class="font-fam1 appbutton"><%= f.submit "Share Hall", class: "ldbt" %></p>
   
  <% end %>
 <br />
 
-<section class="ldcenter">
-<p>Wait...</p>
-</section>
   
 <br />
 <br />

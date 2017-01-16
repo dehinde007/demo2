@@ -269,7 +269,7 @@ a#next:hover {
 
 #pgn3{
   font-size: 20px;
-  color: rgba(247, 58, 65, 0.9);
+  color: rgba(0,0,0,0.6);
 }
 
 .pager{
@@ -466,8 +466,9 @@ label{
 
 .midhdglyph{
   font-size: 23px;
-  color: rgba(0,0,0,0.5);
+  color: rgba(247, 60, 70, 0.5);
   margin-top: 13px;
+  margin-right: 5px;
   &:hover{
   color: rgba(247, 60, 70, 0.5);  
   }
@@ -642,6 +643,18 @@ label{
  }   
 }
 
+//createhall
+.uploadlink{
+  text-align: center;
+}
+
+.uploadlinka{
+  color: black;
+  &:visited {
+    color: black;
+ } 
+}
+
 //_user
 .userpartialimg .img-circle{
   width: 35px;
@@ -796,8 +809,8 @@ label{
 
 .sess1b1{
   color: black;
-  text-decoration: underline;
 &:hover{
+  text-decoration: underline;
   background: none;
   color: black;
 }  
@@ -832,7 +845,7 @@ label{
 .fed3{
   color: #BBBBBB;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 20px;
 }
 
@@ -1351,10 +1364,10 @@ label{
 }
 
 .min1a .glyphicon{
-  color: rgba(0,0,0,0.5);
+  color: rgba(247, 60, 70, 0.3);
   font-size: 17px;
   &:hover{
-    color: rgba(247, 60, 70, 0.3);
+    color: rgba(0,0,0,0.5);
   }
 } 
 

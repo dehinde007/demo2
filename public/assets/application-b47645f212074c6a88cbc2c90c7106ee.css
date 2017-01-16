@@ -527,7 +527,7 @@ a#next:hover {
 
 #pgn3 {
   font-size: 20px;
-  color: rgba(247, 58, 65, 0.9); }
+  color: rgba(0, 0, 0, 0.6); }
 
 .pager {
   font-size: 100%;
@@ -681,8 +681,9 @@ label {
 
 .midhdglyph {
   font-size: 23px;
-  color: rgba(0, 0, 0, 0.5);
-  margin-top: 13px; }
+  color: rgba(247, 60, 70, 0.5);
+  margin-top: 13px;
+  margin-right: 5px; }
   .midhdglyph:hover {
     color: rgba(247, 60, 70, 0.5); }
 
@@ -820,6 +821,14 @@ label {
   .supportlink a:visited {
     color: black; }
 
+.uploadlink {
+  text-align: center; }
+
+.uploadlinka {
+  color: black; }
+  .uploadlinka:visited {
+    color: black; }
+
 .userpartialimg .img-circle {
   width: 35px; }
 
@@ -938,9 +947,9 @@ label {
   font-size: 15px; }
 
 .sess1b1 {
-  color: black;
-  text-decoration: underline; }
+  color: black; }
   .sess1b1:hover {
+    text-decoration: underline;
     background: none;
     color: black; }
   .sess1b1:visited {
@@ -966,7 +975,7 @@ label {
 .fed3 {
   color: #BBBBBB;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 20px; }
 
 .fd {
@@ -1366,10 +1375,10 @@ label {
   background: none; }
 
 .min1a .glyphicon {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(247, 60, 70, 0.3);
   font-size: 17px; }
   .min1a .glyphicon:hover {
-    color: rgba(247, 60, 70, 0.3); }
+    color: rgba(0, 0, 0, 0.5); }
 
 @media screen and (min-width: 320px) {
   .carousel_ad {
