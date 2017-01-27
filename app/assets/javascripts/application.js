@@ -16,9 +16,13 @@
 //= require jquery-ui/autocomplete
 //= require autocomplete-rails
 //= require social-share-button
+//= require react.min
+//= require react-dom.min
+//= require PhotoEditorSDK.min
+//= require_PhotoEditorReactUI.min
 //= require_tree .
 
-$(function()  {
+$(function() {
   window.onload = function () {
     var container = document.getElementById('container')
     var editor = new PhotoEditorSDK.UI.ReactUI({
@@ -30,7 +34,6 @@ $(function()  {
     }) 
   }	
 });
-
 
 // we don't use animated progress
 Turbolinks.ProgressBar.prototype.refresh = function() {}

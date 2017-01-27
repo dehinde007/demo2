@@ -16,15 +16,6 @@
 
 /* Import the fonts */
 @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: font-url('glyphicons-halflings-regular.eot');
-  src: font-url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-       font-url('glyphicons-halflings-regular.woff') format('woff'),
-       font-url('glyphicons-halflings-regular.ttf') format('truetype'),
-       font-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
-
-@font-face {
     font-family: 'bebasregular';
     src: font-url('/assets/bebas___1-webfont.eot');
     src: font-url('/assets/bebas___1-webfont.eot?#iefix') format('embedded-opentype'),
@@ -59,4 +50,17 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: font-url('/assets/Roboto-Light-webfont.eot');
+    src: font-url('/assets/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('/assets/Roboto-Light-webfont.woff2') format('woff2'),
+         font-url('/assets/Roboto-Light-webfont.woff') format('woff'),
+         font-url('/assets/Roboto-Light-webfont.ttf') format('truetype'),
+         font-url('/assets/Roboto-Light-webfont.svg#Roboto-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 

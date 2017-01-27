@@ -1,8 +1,6 @@
 <% provide(:title, "Log in to Hallit") %>
 
-  <br /><br /><br /><br />
-   <div class="scar">
-   <div class="container sess1">  	
+   <div class="container-fluid sess1">  	
 
    	  <section class="sess1a">
       <%= form_for(:session, url: sessions_path) do |f| %>
@@ -18,16 +16,11 @@
      
       <br />   	
       <div class="font-fam1 blackerror"><%= flash[:alert] %></div>
-      <br />
-      
-     <p class="appbutton"><%= f.submit "Log in", class: "font-fam1 btn btn-primary" %></p>
+
+     <p class="appbutton"><%= f.submit "SIGN IN", class: "font-fam1 btn btn-primary" %></p>
      
     <% end %>
 
-    <p class="font-fam1 sess1b">Want to create a better world? <%= link_to "Create Account", signup_path, :"data-no-turbolink" => true, class: "sess1b1" %>      <i class="fa fa-fighter-jet"></i>
-</p>
+    <p class="font-fam1 sess1b">Want to create a better world? <%= link_to "Sign Up", signup_path, class: "sess1b1" %></p>
     
    </div>
-   </div>
-   
-   <p class="switchup font-fam1">Switch to your Iphone or Android mobile device</p>

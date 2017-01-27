@@ -15,9 +15,9 @@
     </span>
     <ul class="dropdown-menu">
      
-     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, class: "font-fam" %></li>
-     <li class="font-fam"><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %></a></li>
-     <li class="font-fam"><a href="<%= followers_user_path(@user) %>"><%= pluralize(@user.followers.count, "Follower") %></a></li>
+     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, class: "font-fam2" %></li>
+     <li class="font-fam2"><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %></a></li>
+     <li class="font-fam2"><a href="<%= followers_user_path(@user) %>"><%= pluralize(@user.followers.count, "Follower") %></a></li>
     
     </ul>
 
@@ -29,8 +29,10 @@
       
      <ul class="font-fam ush2 pull-right">          	
        <li> 
+          <% if current_user?(@user) %>
           <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>	
-          <span class="midhdglyph glyphicon glyphicon-wrench"></span>
+          <span class="midhdglyph fa fa-wrench" aria-hidden="true"></span>
+          <% end %> 
           <% end %> 
       </li>
       </ul>
@@ -45,9 +47,8 @@
 <% else %>
 <% end %>	
 </p> 
+<p class="font-fam ush4"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
 <p class="font-fam ush4"><%= @user.bio %></p>
-<p class="font-fam1 ush4 blacklink"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
-
 <div class="ush5">
 <hr />
 <section class="font-fam ush6"><%= render 'follow_form' if signed_in? %></section>
@@ -59,7 +60,7 @@
 </div>
 
 <% elsif current_user == @user %>   
-<div class="font-fam1 ush7">Tap Camera to Make Your First Hall
+<div class="font-fam1 ush7">Tap Retro Camera to Make Your First Hall
 <% else %>    
 <% end %>
 </div>

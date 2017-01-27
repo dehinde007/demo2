@@ -22,27 +22,31 @@ class StaticPagesController < ApplicationController
  
   end 
   
+  def tutorial
+   @skip_header = true
+
+  end
+  
+  def createhall
+    @skip_header = true  
+  end
+
+  def support
+  end
+  
+  def terms  
+  end
+  
   def youth
-    
   end
     
   def contact
    @skip_header = true
   end
-  
-  def terms  
-  end
- 
-  def support
-  end
-  
+
   def search
    @skip_header = true  
    @users = User.find([1])
-  end
-
-  def createhall
-    @skip_header = true  
   end
   
 end

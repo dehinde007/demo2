@@ -8,7 +8,7 @@ SampleApp::Application.routes.draw do
    resources :microposts do
     resources :likes
    end
-  
+
   resources :likes
 
   resources :microposts do
@@ -42,6 +42,7 @@ SampleApp::Application.routes.draw do
   match '/support', to: 'static_pages#support', via: 'get'
   match '/youth',    to: 'static_pages#youth',    via: 'get'
   match '/terms', to: 'static_pages#terms', via: 'get' 
+  match '/tutorial', to: 'static_pages#tutorial', via: 'get' 
   match '/createhall', to: 'static_pages#createhall', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/search', to: 'static_pages#search', via: 'get'

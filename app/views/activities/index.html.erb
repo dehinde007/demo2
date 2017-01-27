@@ -3,8 +3,14 @@
     <nav class="navbar navbar-default navbar-top" role="navigation">
     <div class="">
     <div class="navbar-header">
-           
-      <span class="navbar-brand font-fam1"><%= link_to "Following", activities_path, class: "hov2", id: "pgn2" %></span>
+    <span class="font-fam">
+        <%= link_to :back, class: "navbar-brand hov" do %>	
+        <span class="backheadglyph1 glyphicon glyphicon-menu-left"></span>
+        <% end %> 
+    </span>
+      <span id="pgn1" class="navbar-brand font-fam1">
+      	<%= link_to "Following", activities_path, class: "hov2", id: "pgn2" %>
+      </span>
 
     </div>   
     </div><!-- /.container -->

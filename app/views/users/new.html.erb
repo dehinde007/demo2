@@ -4,37 +4,31 @@
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
-<div class="scar">
-
 <div class="container nwu">
      
      <section class="nwu1">
      
      <p class="font-fam">	
-      <%= f.text_field :name, :class =>"nwu1a font-fam1", placeholder: "Fullname" %>
+      <%= f.text_field :name, :class =>"nwu1a font-fam1", placeholder: "Name" %>          
      </p>
-     <br />
+      
+     <p class="font-fam">
+      <%= f.text_field :email, :class =>"nwu1a font-fam1", placeholder: "Email Address" %>
+     </p>
+     
      <p class="font-fam">
       <%= f.text_field :username, :class =>"nwu1a font-fam1", placeholder: "Username" %>
      </p>
-     <br />
-     <p class="font-fam">
-      <%= f.text_field :email, :class =>"nwu1a font-fam1", placeholder: "Email" %>
-     </p>
-     <br />
+     
      <p class="font-fam">
       <%= f.password_field :password, :class =>"nwu1a font-fam1", placeholder: "Password" %>
      </p>
 
-    <br />
-     <p class="font-fam1 appbutton"><%= f.submit "Create Account", class: "btn btn-primary" %></p>
-    <% end %>
+     <p class="font-fam1 appbutton"><%= f.submit "SIGN UP", class: "btn btn-primary" %></p>
+     
+     <% end %>
     
-    <p class="font-fam1">By signing up, you agree to help create a better world.</p>
+    <p class="font-fam1 nwu1b">By signing up, you agree with our terms.</p>
    </section>
 
 </div>
-</div>
-
-   <p class="switchup font-fam1">Switch to your Iphone or Android mobile device</p>
-

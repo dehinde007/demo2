@@ -1,27 +1,15 @@
-<header class="indexhead">
-    <nav class="navbar navbar-default navbar-top" role="navigation">
-    <div class="">
-    <div class="navbar-header">
-           
-      <span class="navbar-brand dropdown-toggle font-fam1" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Learn more</span>
-      
-      <ul class="nmcptip dropdown-menu" aria-labelledby="dropdownMenu1">
-      <li>(A)</li>
-      <li>Upload a picture and tap <span class="glyphicon glyphicon-text-size"></span> to write hall</li>
-      <li>(B)</li>
-      <li>After you write hall, leave a space at the end of your text to avoid part of your text to be cut off.</li>
-      <li>(D)</li>
-      <li>Tap the check button to finish, followed by the export button to save image on your device. For apple users, you can only save hall by holding image down after export.</li>
-      <li>(E)</li>
-      Go back to the editor and scroll down. Tap the <span class="glyphicon glyphicon-cloud"></span> to upload your saved hall to the cloud, describe your hall, include an author if hall is a quote from someone. Click hall and you've successfully made your first hall.
-      </ul>
-      
-    </div>   
-    </div><!-- /.container -->
-    </nav>
-</header>
-<link rel="stylesheet" href="/css/imglykit-night-ui4.css" />
-<script src="/js/imglykit2.js"></script>
-<div id="container"></div>  <!--  imgly kit container in micropost new to edit picture before upload -->
-<br /><br /><br />
-<p class="uploadlink"><%= link_to "Next", new_hall_path, class: "hov uploadlinka" %></p>
+<script src="/assets/react.min.js"></script>
+<script src="/assets/react-dom.min.js"></script>
+<script src="/assets/PhotoEditorSDK.min.js"></script>
+<script src="/assets/PhotoEditorReactUI.min.js"></script>
+<link rel="stylesheet" href="/assets/PhotoEditorReactUI.min.css" />
+
+<div id="container"></div>
+
+<br />
+
+<p class="uploadlink font-fam1 appbutton"><%= link_to "UPLOAD", new_hall_path,  class: "btn btn-primary" %></p>
+
+<br /> <br />
+
+<div><%= render 'layouts/minfooter' %></div>

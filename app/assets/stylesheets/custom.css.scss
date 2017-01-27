@@ -1,7 +1,6 @@
 //application
 html, body{
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   background-color: white!important;
@@ -97,124 +96,6 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   display: none;
 }
 
-//ad_custom
-.carousel_ad{
-  float: right;
-  margin-right: -100px;
-}
-
-.sponsor{
-  margin-top: -30px;
-  margin-left: 20px;
-  
-}
-
-.carouselfloat{
-  float: left;
-}
-
-#carousel {
-  width:100px;
-  height:100px;    
-  margin-top: -70px;
-}
-
-.tooltip.bottom .tooltip-arrow{
-  border-bottom-color: red;
-}
-
-.tooltip-inner{
-  background: black!important;
-  opacity: 0.3;
-  color: white!important;
-}
-
-.tooltip.bottom {
-  margin-left: 23px;
-}
-
-#slides {
-  overflow:hidden;
-  //fix ie overflow issue
-  position:relative;
-  width:100px;
-  height:100px;
-  padding-top: 20px;
-}
-
-#sliders {
-  overflow:hidden;
-  //fix ie overflow issue
-  position:relative;
-  width:100px;
-  height:100px;
-  margin-left: -50px;
-  padding-top: 20px;
-}
-//remove the list styles, width : item width * total items   
-#slides ul {
-  position:relative;
-  left:0;
-  top:0;
-  list-style:none;
-  margin:0;
-  padding:0;    
-  width:750px;            
-}
-//width of the item, in this case I put 250x250x gif 
-#slides li {
-  width:250px;
-  height:250px;    
-  float:left;
-}
-#slides li img {
-  padding:5px;
-}
-
-#sliders ul {
-  position:relative;
-  left:0;
-  top:0;
-  list-style:none;
-  margin:0;
-  padding:0;    
-  width:750px;            
-}
-// width of the item, in this case I put 250x250x gif 
-#sliders li {
-  width:250px;
-  height:250px;    
-  float:left;
-}
-#sliders li img {
-  padding:5px;
-}
-// Styling for prev and next buttons 
-#buttons {
-  padding:0 0 5px 0;    
-  float:right;
-}
-#buttons a {
-  display:block; 
-  width:31px; 
-  height:32px;
-  text-indent:-999em;
-  float:left;
-  outline:0;
-}
-a#prev {
-  background:url(arrow.gif) 0 -31px no-repeat; 
-}
-a#prev:hover {
-  background:url(arrow.gif) 0 0 no-repeat;
-}
-a#next {
-  background:url(arrow.gif) -32px -31px no-repeat; 
-}
-a#next:hover {
-  background:url(arrow.gif) -32px 0 no-repeat;
-}
-.clear {clear:both}
 
 //Global
 .font-fam{
@@ -225,30 +106,47 @@ a#next:hover {
   font-family: MyriadPro-Light;
 }
 
+.font-fam2{
+  font-family: Roboto-Light;
+}
+
 .font-fam4{
   font-family: MyriadPro-Light;
   font-size: 100%;
   font-weight: bold;
 }
 
-.errmsg{
-  text-align: center;
+.fa{
+  font-size: 23px!important;
+  color: rgba(247, 60, 70, 0.3);
 }
 
-.blacklink a{
-  color: black;
+.errmsg{
+  text-align: center;
+  color: #484848;
+}
+
+.blacklink {
+  color: #484848;
 &:visited {
-  color: black;
+  color: #484848;
   background: none;
  }  
 &:hover {
-  color: black;
+  color: #484848;
   background: none;
 }
 }
 
-.hov:hover{
-  background: none;
+.hov{
+ color: white;
+ &:visited {
+  color: white;
+ }
+ &:hover{
+ background: none;
+  color: white;
+}
 }
 
 .hov2:hover{
@@ -264,7 +162,7 @@ a#next:hover {
 
 #pgn2{
   font-size: 19px;
-  color: black;
+  color: #484848;
 }
 
 #pgn3{
@@ -331,7 +229,7 @@ a#next:hover {
 }
 
 p .src{
-  background: #F9F9F9;
+  background: rgba(249, 249, 249, 0.2);
   height: 50px;
    width: 100%;
   border-color: #D63636;
@@ -360,17 +258,21 @@ p .src{
 .usravi .img-circle{
   width: 35px;
   border: 1px solid white;
-  margin-top: -5px;
+  margin-top: -7px;
 }
 
 .appbutton .btn-primary {
-    font-size: 14px;
-    color: black;
+    font-size: 16px;
+    width: 80px;
+    font-weight: bold;
+    color: #ff5a5f;
+    border: 1px solid #ff5a5f;
+    border-radius: 64px;
     background-color: white !important;
-    border-color: black !important;
     &:hover {
-    background-color: rgba(228, 228, 228, 0.9)!important;
-    border-color: black!important;  
+    background-color: #ff5a5f!important;
+    border-color: #ff5a5f!important;  
+    color: white;
  }     
 }
 
@@ -408,7 +310,7 @@ p .src{
 #container{
   max-width: 100%;
   height: 650px;
-  margin-top: -13px;
+  margin-top: -30px;
 }
 
 img{
@@ -440,7 +342,6 @@ label{
 }
 
 //header 
-
 .navbar{
   border-radius: 0px!important;
   height: 50px;
@@ -457,6 +358,9 @@ label{
 
 .navbar-header{
   border-radius: 0px;
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
 }
 
 .hdimg{
@@ -485,72 +389,81 @@ label{
 .navbar-default .navbar-nav>li>a {
   color: black;
   &:visited{
-  color: black;
+  color: #484848;
+  }
+  &:hover{
+  color: #484848;
   }
 }
 
 //welcome
-.wlc{   
-  background-image: url("Rebels.jpeg");
-  background-size: cover; 
-  position: fixed;
-  margin-top: 0px;
-  background-repeat: no-repeat;
-  background-position: -547px;
-} 
+.manuspace1{
+  margin-top: 160px;
+}
 
-.wlc1{
- font-size: 26px;
- margin-top: 200px;
+.manuspace2{
+  display: none;
+}
+
+.manuspace3{
+  display: none;
+}
+
+.manu{
+  width: 100%;
+  max-width: 758px;
+  height: 200px;
+  background-image: url("ke.jpg");
+  background-size: 100%;
+  position: relative; 
+  background-repeat: no-repeat;
+}
+
+.manu2{
+ font-size: 22px;
+ margin-top: -80px;
  text-align: center;
  line-height: 1.42857143;
- color: white; 
-}
+ color: black; 
+} 
 
-.wlc2{
-
-}
-
-.wlc2a{
-  width: 24%;
-  height: 70px;
-  cursor: pointer;
-}
-
-.wlc3{
+.manu3{
   text-align: center;
   margin-top: 30px;
+  list-style: none;
 }
 
-.wlc3 .btn-primary {
- font-size: 14px;
- width: 100px;
+.manu3 li{
+  display: inline;
+}
+
+.manu3 .btn-primary {
+ font-size: 17px;
+ width: 70px;
  color: black;
- background-color: rgba(228, 228, 228, 0.5)!important;
+ background-color: rgba(228, 228, 228, 0.6)!important;
  border-color: black!important;
  &:hover {
  background-color: rgba(228, 228, 228, 0.9)!important;
- border-color: black!important;  
+ border-color: black!important; 
+ color: black; 
  }   
 }
 
-.wlcf{
- margin-top: 20px;  
+.manu4{
+  text-align: center;
+  margin-top: 30px;
+  list-style: none;
 }
 
-.wfoot1a{
-  color: white;
-&:visited{
-  color: white;
- } 
-&:hover{
-  color: white;
- }
+.manu4 li{
+  display: inline;
+  color: black;
+  word-wrap: break-word;
+  padding: 5px;
+  font-size: 13px;
 }
 
-.wfootdate{
-  color: white;
-}
 //Getstarted 
 .sup{
   margin-top: 70px;
@@ -596,14 +509,6 @@ label{
   color: black;
   font-size: 15px;
   line-height:  30px;
-}
-
-//tour
-.fadein { position:relative; height:332px; width:500px; }
-.fadein p { position:absolute; left:0; top:0; }
-
-.tour{
-  color: grey;
 }
 
 //aboutus
@@ -653,6 +558,21 @@ label{
   &:visited {
     color: black;
  } 
+}
+
+//tutorial
+.tut{
+  background: black;
+  height: 50px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.tuta{
+  text-align: center;
+  color: white;
+  font-size: 10px;
 }
 
 //_user
@@ -720,13 +640,11 @@ label{
 }
 
 .nmcp1b{
- color: black;
+ color: rgba(255,90,95,0.2);
  cursor: pointer;
  font-size: 40px;
- opacity: 0.1;
  &:hover {
- color: black;
- opacity: 0.9;
+ color: rgba(255,90,95,0.4);
  }   
 }
 
@@ -757,7 +675,7 @@ label{
 
 .atv1{
   color: #BBBBBB;
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
   margin-top: 170px;
 }
@@ -774,6 +692,7 @@ label{
 
 .nwu{
   text-align: center;
+  margin-top: 30px;
 }
 
 .nwu1{
@@ -781,43 +700,57 @@ label{
 }
 
 .nwu1a{
-  height: 35px;
+  height: 40px;
   width: 100%;
-  font-size: 13px;
+  font-size: 16px;
+  border: 1px solid white;
+  color: #484848;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+
+.nwu1b{
+  font-size: 14px;
 }
 
 //session
 .sess1{
-  margin-top: 20px;
+  margin-top: 80px;
   text-align: center;
 }
 
 .sess1a1{
-  height: 35px;
+  height: 40px;
   width: 100%;
-  font-size: 13px;
-}
-
-.blackerror{
-  color: black;
-  list-style: none;
+  font-size: 16px;
+  border: 1px solid white;
+  color: #484848;
+  padding-left: 10px;
+  border-radius: 4px;
 }
 
 .sess1b{
   font-size: 15px;
+  margin-top: 100px;
 }
 
 .sess1b1{
-  color: black;
+  color: #484848;
 &:hover{
-  text-decoration: underline;
   background: none;
-  color: black;
+  color: #484848;
 }  
 &:visited{
-  color: black;
+  color: #484848;
  } 
 }
+
+.blackerror{
+  color: #484848;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
 
 .switchup{
   text-align: center;
@@ -838,15 +771,30 @@ label{
   margin-top: 70px;
 }
 
-.feed2a{
+.fed2a{
   margin-top: 50px;
 }  
 
 .fed3{
-  color: #BBBBBB;
   text-align: center;
-  margin-top: 15px;
-  font-size: 20px;
+  margin-top: -200px;
+}
+
+.getbutton .btn-primary {
+    font-size: 20px;
+    width: 130px;
+    border: 1px solid white;
+    border-radius: 64px;
+    background-color: rgba(255, 90, 95, 0.1);
+    &:active:focus{
+    background-color: rgba(255, 90, 95, 0.2);
+    border-color: none; 
+}
+    &:hover{
+    background-color: none!important;
+    border-color: white!important; 
+    background-color: rgba(255, 90, 95, 0.2); 
+ }
 }
 
 //feed_item
@@ -1146,6 +1094,19 @@ label{
   margin-top: -3px;
 }
 
+.ush4 a{
+  color: #484848;
+&:visited {
+  color: #484848;
+  background: none;
+ }  
+&:hover {
+  color: #484848;
+  background: none;
+}
+}
+
+
 .ush5{
   margin-top: -15px;
 }
@@ -1156,7 +1117,7 @@ label{
 
 .ush7{
   color: #BBBBBB;
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
   margin-top: 250px;
 }
@@ -1164,7 +1125,7 @@ label{
 //un/followform
 .fbut .fbtn{
   width: 100%;
-  height: 20px;
+  height: 25px;
 }
 
 .fbut .ufbtn{
@@ -1242,7 +1203,7 @@ label{
 .mcp1{
   text-align: center;
   font-size: 13px;
-  color: #6B6A6A;
+  color: #484848;
 }
 
 .mcp1 .glyphicon-heart{
@@ -1424,55 +1385,23 @@ label{
   font-size: 25px;
 } 
 
-//micropost_index
 }
 
-
-@media screen and (max-width: 320px) {  
-//commentform
+@media screen and (min-width: 375px) {
+.manu{
+  height: 250px;
 }
 
-
-@media screen and (min-width: 321px) {
-
-}
-
-
-@media screen and (min-width: 375px) { 
-.wlc{   
-  background-position: -525px;
-} 
-}
-
-@media screen and (max-width: 414px) { 
-.switchup{
-  display: none;
 }  
-}
 
 @media screen and (min-width: 414px) { 
-.wlc{   
-  background-position: -507px;
-}   
-  
 .mcp{
   margin-left: 4.3px;
 }  
-  
-
-.wlc2{
-  text-align: center;
-}
-
-.wlc2a{
-  width: 100px;
-  height: 110px;
-}  
-
-.fed3{
-  font-size: 25px;
-}
    
+.manu{
+  height: 260px; 
+}
   
 //microshow
 .profiletop .img-circle{
@@ -1491,17 +1420,6 @@ label{
 
 }
 
-@media screen and (min-width: 415px) {  
-.fed2{
-  display: none;
-}  
-
-.scar{
-  display: none;
-}
-
-}
-
 @media screen and (max-width: 480px) {      
 //micropost_show
 .mcpshw-cnt{
@@ -1511,19 +1429,8 @@ label{
 }
 
 }
-//welcome
-@media screen and (min-width: 451px) {
-.wlc{   
-  background-position: -400px;
-}   
-}
 
-//welcome
 @media screen and (min-width: 480px) {
-.wlc{   
-  background-position: -400px;
-}   
-  
 //feed_item
 .fdinfo1{
   display: none;
@@ -1575,35 +1482,38 @@ label{
 }
   
 }
-//welcome
-@media screen and (min-width: 556px) {
-.wlc{   
-  background-position: -350px;
-}   
+
+@media screen and (min-width: 580px) {
+.manuspace1{
+  display:none;
 }
 
-//welcome
-@media screen and (min-width: 606px) {
-.wlc{   
-  background-position: -300px;
-}   
+.manuspace2{
+  display: block;
+  margin-top: 100px;
+}  
+  
+.manu{
+  height: 500px;
+  position: inherit;
+
 }
 
-//welcome
-@media screen and (min-width: 657px) {
-.wlc{   
-  background-position: -250px;
-}   
+.manu2{
+ margin-top: -40px;
+} 
+
+.manu3{
+ margin-top: -120px;
+} 
+
+.manu4{
+  margin-top: 57px;
 }
 
-//welcome
-@media screen and (min-width: 707px) {
-.wlc{   
-  background-position: -160px;
-}   
-}
+} 
 
-@media screen and (max-width: 758px) {  
+@media screen and (max-width: 758px) {   
 .mcpshw-img .img-responsive{
   width: 450px;
   margin: auto;
@@ -1622,12 +1532,32 @@ label{
 }
 
 @media screen and (min-width: 758px) { 
-.wlc{
-  
-}
- 
 .fed3{
-  margin-top: 300px;
+  margin-top: -450px;
+}
+
+.atv1{
+  font-size: 17px;
+}
+
+.ush7{
+  font-size: 17px;
+}
+
+.getbutton .btn-primary {
+  font-size: 25px;
+  width: 155px;
+}
+
+.fed2{
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.fed2a{
+  margin-top: -140px;
 }
 
   
@@ -1641,36 +1571,20 @@ label{
  
 //signup
 .nwu{
-  border-radius: 5px;
   height: 360px!important;
   width: 380px!important;
-  background: white;
+  margin-top: 60px;
 }  
 
-.nwu1a{
-  height: 30px; 
-  width: 100%;
-  font-size: 13px;
-}
-  
 //session
 .sess1{
-  margin-top: 60px;
-  border-radius: 5px;
-  border-color: red;
+  margin-top: 178px;
   height: 250px!important;
   width: 350px!important;
-  background: white;
 }
 
 .sess1a{
   margin-top: 30px;
-}
-
-.sess1a1{
-  height: 30px;
-  width: 100%;
-  font-size: 13px;
 }
 
 // micropost_show
@@ -1728,16 +1642,9 @@ label{
 }
 
 }
- 
-@media screen and (min-width: 797px) {
-.wlc{   
-  background-position: 0px;
-}   
-} 
- 
+
 @media screen and (min-width: 992px) {    
- 
-.fdimg1 .img-responsive{
+ .fdimg1 .img-responsive{
   width: 500px;
   margin: auto;
   left: 0;
@@ -1812,11 +1719,6 @@ label{
 }
 }
 
-@media screen and (min-width: 1350px) {
-.wlc{   
-  background-position: 0px;
-}   
-}
 
 @media screen and (max-width: 1400px) {
   
