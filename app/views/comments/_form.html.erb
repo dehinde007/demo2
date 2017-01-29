@@ -1,6 +1,6 @@
 <%= form_for [@micropost, @micropost.comments.build], remote: true do |f| %>
   	<ul class="comtfmul">
     <li><span class="commentformbtn"><%= button_tag "", type: 'submit', class: "btn btn-default glyphicon glyphicon-comment" %></span></li>
-    <li><%= f.text_area :body, class: "font-fam1 commentform", placeholder: "Leave comment..." %></li>
+    <li><%= f.text_area :body, class: "font-fam2 commentform", placeholder: "Leave comment..." %></li>
     </ul>
 <% end %>

@@ -96,6 +96,9 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   display: none;
 }
 
+.carousel_ad{
+  float: right;
+}
 
 //Global
 .font-fam{
@@ -896,6 +899,10 @@ label{
   font-size: 15px;
 }
 
+.mcpshw1a{
+  padding: 2px;
+}
+
 .mcpshw1 .glyphicon{
   color: rgba(51, 51, 51, 1);
 }
@@ -955,25 +962,35 @@ label{
  font-size: 22px;
  background: none;
  border: none;
-&:focus{
-  outline: none;
-} 
-&:active{
+ &:active{
   box-shadow: none;
 }
-&:hover{
+ &:focus{
+  outline: none; 
+  background: none;
+  color: #d1cece;
+}
+ &:hover{
+  background: none;
+  color: rgba(209, 206, 206, 0.7);
  }   
+}
+.commentformbtn .btn-default:active:focus{
+  outline: none; 
+  color: #d1cece;
+  background-color: white;
+  border-color: none;
 }
 
 .commentform{
   width: 180px;
   margin-left: -8px;
-  font-size: 100%;
+  font-size: 87%;
   border-radius: 5px;
   -webkit-appearance: none;
   border: none;
   outline: 0;
-  background: white;
+  background: blue;
   &:focus{
   outline: none;
   background: rgba(211, 211, 211, 0.1);
@@ -992,6 +1009,7 @@ label{
 .commentusername{
   color: black; 
   font-size: 100%;
+  font-weight: bold;
   &:visited{
   color: black;  
   }
@@ -999,7 +1017,7 @@ label{
 
 .commentbody{
   padding-left: 0px;
-  font-size: 100%;
+  font-size: 13px;
 }
 
 .commenttime{
@@ -1332,11 +1350,7 @@ label{
   }
 } 
 
-@media screen and (min-width: 320px) {
-.carousel_ad{
-  float: right;
-}
-  
+@media screen and (min-width: 320px) {  
 .mcp{
   width: 32%;
   margin-left: 3.6px;
