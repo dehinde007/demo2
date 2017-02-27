@@ -37,7 +37,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-  @skip_header = true
   end
 
   def update

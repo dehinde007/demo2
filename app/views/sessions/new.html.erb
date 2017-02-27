@@ -1,16 +1,16 @@
-<% provide(:title, "Log in to Hallit") %>
+<% provide(:title, "Sign in to Hallit") %>
 
    <div class="container-fluid sess1">  	
 
-   	  <section class="sess1a">
+   	  <section class="sess1a font-fam1">
       <%= form_for(:session, url: sessions_path) do |f| %>
 
       <p>
-      <%= f.text_field :email, :class =>"font-fam1 sess1a1", placeholder: "Email" %>
+      <%= f.text_field :email, :class =>"sess1a1", placeholder: "Email" %>
       </p>
       
       <p>   
-      <%= f.password_field :password, :class =>"font-fam1 sess1a1", placeholder: "Password" %>
+      <%= f.password_field :password, :class =>"sess1a1", placeholder: "Password" %>
       </p>
       </section>
      
@@ -20,7 +20,7 @@
      <p class="appbutton"><%= f.submit "SIGN IN", class: "font-fam1 btn btn-primary" %></p>
      
     <% end %>
-
-    <p class="font-fam1 sess1b">Want to create a better world? <%= link_to "Sign Up", signup_path, class: "sess1b1" %></p>
     
    </div>
+
+    <p class="font-fam1 signsess-word">Want to help create a better world? <%= link_to "Sign Up", signup_path, class: "sess1b1" %></p>

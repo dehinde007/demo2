@@ -1,9 +1,8 @@
 <% provide(:title, @user.name) %>
-<header class="indexhead">
-    <nav class="navbar navbar-default navbar-top" role="navigation">
-    <div class="">
-    <div class="navbar-header">
-           
+<div class="headwrap">
+<div class="headflex">
+	
+<div class="heads head1">        
   <span class="navbar-brand">
           	  
     <section class="ush1 dropdown"><%= image_tag @user.avatar(:thumb), class: "img-circle" %>	
@@ -13,11 +12,11 @@
     <span class="font-fam1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span id="pgn2"><%= @user.username %></span><span class="caret"></span>
     </span>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu font-fam">
      
-     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user, class: "font-fam2" %></li>
-     <li class="font-fam2"><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %></a></li>
-     <li class="font-fam2"><a href="<%= followers_user_path(@user) %>"><%= pluralize(@user.followers.count, "Follower") %></a></li>
+     <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user %></li>
+     <li><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %></a></li>
+     <li><a href="<%= followers_user_path(@user) %>"><%= pluralize(@user.followers.count, "Follower") %></a></li>
     
     </ul>
 
@@ -26,20 +25,19 @@
     </section>
           	
   </span>
-      
-     <ul class="font-fam ush2 pull-right">          	
-       <li> 
-          <% if current_user?(@user) %>
-          <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>	
-          <span class="midhdglyph fa fa-wrench" aria-hidden="true"></span>
-          <% end %> 
-          <% end %> 
-      </li>
-      </ul>
-        </div>   
-      </div><!-- /.container -->
-    </nav>
-</header> 
+</div>
+  
+<div class="heads head2">
+    <% if current_user?(@user) %>
+    <%= link_to edit_user_path(current_user), class: "hov", :"data-no-turbolink" => true do %>	
+    <span class="midhdglyph fa fa-steam" aria-hidden="true"></span>
+    <% end %> 
+    <% end %> 
+</div>
+	
+</div>
+</div>
+
 
 <p class="font-fam1 ush3"><%= @user.name.titleize %>
 <% if @user.verify == true %>
@@ -50,17 +48,17 @@
 <p class="font-fam ush4"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
 <p class="font-fam ush4"><%= @user.bio %></p>
 <div class="ush5">
-<hr />
+<hr class="container"/>
 <section class="font-fam ush6"><%= render 'follow_form' if signed_in? %></section>
  
 <% if @user.microposts.any? %>
 
-<div class="boxers">
+<div class="ush-micropartial">
 <%= render @microposts %>
 </div>
 
-<% elsif current_user == @user %>   
-<div class="font-fam1 ush7">Tap Retro Camera to Make Your First Hall
+<% elsif current_user == @user %>
+<div class="font-fam1 ush7">Our purpose is what defines us
 <% else %>    
 <% end %>
 </div>

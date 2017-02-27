@@ -4,31 +4,35 @@
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
-<div class="container nwu">
+<div class="container nwu  font-fam1">
      
      <section class="nwu1">
      
-     <p class="font-fam">	
-      <%= f.text_field :name, :class =>"nwu1a font-fam1", placeholder: "Name" %>          
+     <p>	
+      <%= f.text_field :name, :class =>"nwu1a", placeholder: "Name" %>          
      </p>
       
-     <p class="font-fam">
-      <%= f.text_field :email, :class =>"nwu1a font-fam1", placeholder: "Email Address" %>
+     <p>
+      <%= f.text_field :email, :class =>"nwu1a", placeholder: "Email Address" %>
      </p>
      
-     <p class="font-fam">
-      <%= f.text_field :username, :class =>"nwu1a font-fam1", placeholder: "Username" %>
+     <p>
+      <%= f.text_field :username, :class =>"nwu1a", placeholder: "Username" %>
      </p>
      
-     <p class="font-fam">
-      <%= f.password_field :password, :class =>"nwu1a font-fam1", placeholder: "Password" %>
+     <p>
+      <%= f.password_field :password, :class =>"nwu1a", placeholder: "Password" %>
      </p>
-
+     
+     <br />
+     
      <p class="font-fam1 appbutton"><%= f.submit "SIGN UP", class: "btn btn-primary" %></p>
      
      <% end %>
     
-    <p class="font-fam1 nwu1b">By signing up, you agree with our terms.</p>
    </section>
 
 </div>
+
+    <p class="font-fam1 signsess-word">By signing up, you agree with our terms.</p>
+

@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :signed_in_user,  only: [:new, :create, :index, :destroy, :show, :leaderboard]
+  before_action :signed_in_user,  only: [:new, :create, :index, :destroy, :leaderboard]
   before_action :correct_user,   only: :destroy
 
   def index

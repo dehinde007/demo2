@@ -1,13 +1,50 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-<style>
+<meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+<style type="text/css" media="screen">
+body{width: 100%; margin: 0; padding: 0; font-family: Open Sans!important;}
+.navbar-default{rgba(255,255,255,0.8); height: 50px;}
+.emailimg{width: 80px; height: 50px;}
+.notif-text{font-family: Open Sans!important; font-size: 16px; color: black; padding-left: 10px; margin-top: 30px; }
+.notif-info{font-family: Open Sans!important; font-size: 16px; color: #8c8c8c; padding-left: 10px; margin-top: 20px; }
+.foot{position:absolute; bottom:0; width: 100%;}
+.footerul{font-size: 14px; list-style: none; text-align: center; margin-left: -30px;}
+.footerul li{padding: 5px; display: inline; word-wrap: break-word; font-family: Open Sans!important;}
+.footerlnk{color: black; text-decoration: none;}
+.footdate{list-style: none; color: black;}
 </style>
-</head>
-<body>
 
-<p><%= link_to @follower.username, @follower  %> is now following you </p>
+</head>
+
+<body>
+	
+		
+<header class="indexhead">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="">
+    <div class="navbar-header">
+           
+    <span id="pagename" class="navbar-brand font-fam2"><img class="emailimg" src="https://s3-us-west-2.amazonaws.com/assistantimgs/logos.jpg" /></span>
+      
+      <ul class="font-fam solve  pull-right">
+      </ul>
+        </div>   
+      </div><!-- /.container -->
+    </nav>
+</header>	
+
+<p class="notif-text"><%= link_to @follower.username, @follower, :style=>"color:black!important; %> is now following you </p>
+
+<div class="foot">
+    <ul class="container-fluid footerul">
+      <li><%= link_to "About Us", "https://hallit.herokuapp.com/about", class: "hov footerlnk" %></li> 
+      <li class="footdate">2017 Hallit</li> 
+    </ul>
+</div>
+
 </body>
 </html>
 

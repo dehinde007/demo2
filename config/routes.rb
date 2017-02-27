@@ -1,23 +1,23 @@
 SampleApp::Application.routes.draw do
   
-  default_url_options :host => "www.hallit.co"
+  default_url_options :host => "https://hallit.herokuapp.com"
   get 'users/autocomplete_user_username'
     resources :users
    resources :invitations
 
-   resources :microposts do
+   resources :microposts, :path => 'hall' do
     resources :likes
    end
 
   resources :likes
 
-  resources :microposts do
+  resources :microposts, :path => 'hall' do
     resources :comments
    end
 
   resources :comments
   
-  resources :microposts do
+  resources :microposts, :path => 'hall' do
     resources :trends
    end
   
@@ -29,20 +29,20 @@ SampleApp::Application.routes.draw do
       get :ver, :verify
     end
   end
-  resources :activities
+  resources :activities 
   resources :sessions,      only: [:new, :create, :destroy]
-  resources :microposts,    only: [:create, :destroy, :show]
+  resources :microposts, only: [:create, :destroy, :show]
   resources :relationships, only: [:create, :destroy]
   root to: 'static_pages#welcome'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
-  match '/contact',    to: 'static_pages#contact',    via: 'get'
+  match '/privacy',    to: 'static_pages#privacy',    via: 'get'
   match '/about',    to: 'static_pages#about',    via: 'get'
   match '/support', to: 'static_pages#support', via: 'get'
   match '/youth',    to: 'static_pages#youth',    via: 'get'
   match '/terms', to: 'static_pages#terms', via: 'get' 
-  match '/tutorial', to: 'static_pages#tutorial', via: 'get' 
+  match '/guide', to: 'static_pages#guide', via: 'get' 
   match '/createhall', to: 'static_pages#createhall', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/search', to: 'static_pages#search', via: 'get'

@@ -1,4 +1,4 @@
-<%content_for :title, "Find friends or Channels you love"%>
+<%content_for :title, "Search"%>
 <div class="topsrcbar">
   <div class="topsrcbar1">
    <% if signed_in? %> 		
@@ -7,10 +7,8 @@
   </div>
 </div>
 
-<div class="mcps"> 
-  <% @microposts.each do |micropost| %>
-<div class="mcps1"> <%= link_to (image_tag micropost.photo.url(:square), class: "img-responsive"), micropost %></div> 
-  <% end %>
+<div class="outer-micropartial">
+<%= render @microposts %>
 </div>
 
 <div class="pager">

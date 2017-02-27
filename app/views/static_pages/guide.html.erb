@@ -1,0 +1,24 @@
+<%content_for :title, "Guide | Hallit"%>
+
+<p class="tuthead1 font-fam1">Guide</p>
+	
+<div class="container tut font-fam1">
+<br /><br />
+<p class="tuth2">Writing Caption on a Photo</p>	
+<p class="tuta">Navigate to camera and select a photo you would like to use to make hall. Tap the <%= image_tag('text.jpg', :class => "textimg") %> icon to write your caption. Before you begin to write your text, leave a space above your text so part of it wont be cut off. (Important step).</p>
+<br /><br />
+
+<p class="tuth2">Edit Caption</p>
+<p class="tuta">We suggest you change your font color to white. You can do this by tapping on foreground and dragging the color button to the top left corner. You can also align your text with the text box <%= image_tag('align.jpg', :class => "exportimg") %> icon or position your text by dragging around the text box.</p>
+<br /><br />
+
+<p class="tuth2">Sharing</p>	
+<p class="tuta">Once you're done editing, tap <%= image_tag('export.jpg', :class => "exportimg") %> to save your hall. (Apple users will have to save hall manually by holding image down for a few seconds after exporting. Then navigate back). Scroll down, find upload and follow the instructions to share your hall. </p>
+
+</div>
+
+<br /><br />
+<% if signed_in? %>
+<div><%= render 'layouts/minfooter' %></div>
+<% else %> 
+<% end %>

@@ -1,4 +1,4 @@
-<%content_for :title, "Create Hall | Upload Hall"%>
+<%content_for :title, "Share Hall"%>
 <br /><br /><br />
 <%= form_for @micropost, :html => {:multipart => true, :id => "nform"} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
@@ -12,14 +12,14 @@
   
   <p class="glyphicon glyphicon-cloud nmcp1b" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
     
-  <p>Tap cloud to select hall</p>
+  <p class="nmcp1ba">Tap cloud and select hall</p>
 
   <p>
    <%= f.text_area :content, :class =>"font-fam1 nmcp1c", placeholder: "Write more" %>
   </p>
 
  <br /> 
- <p class="font-fam1 appbutton"><%= f.submit "Share", class: "btn btn-primary" %></p>
+ <p class="appbutton"><%= f.submit "Share", class: "nmcp1d btn btn-primary" %></p>
   
  <% end %>
 <br />
@@ -29,4 +29,5 @@
 <br />
 </div>
 </div>
-
+ 
+<div><%= render 'layouts/minfooter' %></div

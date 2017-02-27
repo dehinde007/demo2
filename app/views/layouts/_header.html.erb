@@ -1,20 +1,20 @@
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-incr navbar-default navbar-fixed-top" role="navigation">
       <div class="">
         <% if signed_in? %>
         <div class="navbar-header">
-       <span class="" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed"><%= image_tag('Hallit.jpg', :class => "hdimg") %></span>
+       <span class="" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed"><%= image_tag('Hallit.jpg', :class => "hdimg hd-incr") %></span>
                 	
        <li class="font-fam pull-right visible-xs-block"> 
-          <%= link_to microposts_path do %>	
-          <span class="midhdglyph fa fa-search" aria-hidden="true"></span>
+          <%= link_to "https://sayian.herokuapp.com" do %>	
+          <span class="midhdglyph fa fa-camera" aria-hidden="true"></span>
           <% end %> 
        </li>    
       
         </div>  
                 <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="font-fam2 nav navbar-nav navbar-right">
+            <ul class="font-fam1 nav navbar-nav navbar-right">
             	<li><%= link_to current_user do %><%= render "shared/useravi" %><% end %></li>
-            	<li class="hidden-xs"><%= link_to "Search", microposts_path, class: "blacklink" %></li>
+            	<li class="hidden-xs"><%= link_to "Camera", "https://sayian.herokuapp.com", class: "blacklink" %></li>
                 <li><%= link_to "Support", support_path, class: "blacklink"%></li>
                 <li><%= link_to "Logout", signout_path, class: "blacklink", method: "delete" %></li>
             </ul>

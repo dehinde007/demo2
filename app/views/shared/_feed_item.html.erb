@@ -3,17 +3,25 @@
     <section class="fdinfo1">
     <%=(image_tag feed_item.user.avatar.url(:thumb), class: "img-circle") %>
     <%= link_to feed_item.user.username, feed_item.user, class: "font-fam1 hov fdusern"  %>
-    </section>
+<% if feed_item.user.verify == true %>
+<span><%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %></span>
+<% else %>
+<% end %>
+	</section>
     
     <section class="fdinfo2">
     <%=(image_tag feed_item.user.avatar.url(:thumb), class: "img-circle") %>
     <%= link_to feed_item.user.username, feed_item.user, class: "font-fam1 hov fdusern"  %>
+<% if feed_item.user.verify == true %>
+<span><%= image_tag('verify.png', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %></span>
+<% else %>
+<% end %>	
     </section>
    
   	<div class="fdimg">
     <span id="<%= feed_item.id %>"> 
 	<div class="fdimg1">
-  	<%= link_to (image_tag feed_item.photo.url(:instag), class: "img-responsive"), feed_item, :"data-no-turbolink" => true %>
+  	<%= link_to (image_tag feed_item.photo.url(:instag), class: "img-responsive"), micropost_path(feed_item), :"data-no-turbolink" => true %>
   	</div>
   	</div>
 		
@@ -34,7 +42,7 @@
     </section>
 
     <section class="container fdcontent2">
-    <p class="font-fam fdlikeicon">
+    <p class="font-fam1 fdlikeicon">
     <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "") %>
   	</p>		
     <% if feed_item.content.length > 1 %>

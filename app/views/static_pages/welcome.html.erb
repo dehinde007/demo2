@@ -1,9 +1,9 @@
-<%content_for :title, "Hallit | Welcome"%>
+<%content_for :title, "Welcome to Hallit"%>
 <div class="manuspace1"></div>
 <div class="manuspace2"></div>
 <div class="manuspace3"></div>
 <div class="container-fluid manu"> 
-	<p class="font-fam1 manu2">Share your values to create a better world.</p>
+	<p class="font-fam1 manu2"> Creating a stronger and better world through our passion and core values.</p>
 </div>
 
 <ul class="container-fluid manu3">
@@ -11,9 +11,10 @@
     <li><%= link_to "Sign up", signup_path, :class => "font-fam1 btn btn-primary", "data-turbolinks": "false" %></li>
 </ul>
 
-<ul class="container-fluid font-fam2 manu4">
-    <li><%= link_to "About Us", about_path, class: "hov manu5" %></li>	
-    <li><%= link_to "Terms", terms_path, class: "hov manu5" %></li>	
-    <li><%= link_to "Privacy", contact_path, class: "hov manu5" %></li> 
-    <li class="wfootdate font-fam2"><span class="glyphicon glyphicon-copyright-mark copyright"></span> 2017 Hallit</li> 
+<ul class="container-fluid font-fam1 manu4">
+    <li><%= link_to "About us", about_path, class: "hov manu5" %></li>	
+    <li class="font-fam1"><span class="glyphicon glyphicon-copyright-mark copyright"></span> 2017</li> 
 </ul>
+
+<div class="footer wlcfoot"><%= render 'layouts/footer' %></div>
+

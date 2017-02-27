@@ -6,7 +6,7 @@ default from: '"Hallit" <hallitservice@gmail.com>'
    @user = user
    @url = 'http://www.google.com'
    email_with_name = %("#{@user.name.titleize}" <#{@user.email}>)
-   mail(to: email_with_name, subject: 'Welcome, thanks for being part of the generation')
+   mail(to: email_with_name, subject: 'Love from Hallit')
   end
   
   def newcomment_email(comment)

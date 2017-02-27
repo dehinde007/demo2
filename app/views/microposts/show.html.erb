@@ -1,45 +1,38 @@
 <% provide(:title, @micropost.user.name) %>
-
-<header class="indexhead">
-    <nav class="navbar navbar-default navbar-top" role="navigation">
-    <div class="">
-    <div class="navbar-header">
-           
-    <span class="font-fam">
-    	  <%= link_to :back, class: "navbar-brand hov" do %>	
-          <span class="backheadglyph1 glyphicon glyphicon-menu-left"></span>
-          <% end %> 
-    </span>
-      <span id="pgn1" class="navbar-brand font-fam1"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
-           
-           <ul class="font-fam ush2 pull-right">
-           <li> 
-             <% if current_user?(@micropost.user) %>
-             <%= link_to @micropost, method: :delete,
+<div class="headwrap">
+<div class="headflex">
+	
+<div class="heads head1">        
+   <span class="font-fam">
+   <%= link_to :back, class: "navbar-brand hov" do %>	
+   <span class="backheadglyph1 glyphicon glyphicon-menu-left"></span>
+   <% end %> 
+   </span>
+   <span id="pgn1" class="navbar-brand font-fam1"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
+</div>
+  
+<div class="heads head2">
+     <% if current_user?(@micropost.user) %>
+     <%= link_to @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: @micropost.content, class: "hov apptrash" do %>
                                      <span class="midhdglyph glyphicon glyphicon-trash"></span>             
                                      <% end %>                              
                                      <% end %>        
-           </li>
-           </ul>
-        </div>   
-      </div><!-- /.container -->
-    </nav>
-</header> 
+</div>
+	
+</div>
+</div>
 
 <div class="mcpshw">	
-<div class="fdimg">
- 	<section class="mcpshw-img"><%= image_tag @micropost.photo.url(:instag), class: "img-responsive" %></section>
-</div>
-   <div class="container">
-    
-   <section class="mcpshw-cnt">
-   	<%= render "shared/microusrn" %>
-   <span class="mcpshw-cnt1 blacklink"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
-   <span class="hallauthor">
+<section class="mcpshw-img"><%= image_tag @micropost.photo.url(:instag), class: "img-responsive" %></section>
 
-   </span> 
+<div class="container mcpshw-cnt">
+	
+<%= render "shared/microusrn" %>
+<span class="mcpshw-cnt1 blacklink"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
+<span class="hallauthor">
+</span> 
 
 <br />
   
@@ -47,31 +40,32 @@
    <span class="mcpshw1a glyphicon glyphicon-heart"></span><span class="font-fam1"><%= pluralize(@micropost.likes.count, "") %> </span>
    <span class="mcpshw1a glyphicon glyphicon-comment"></span><span class="font-fam1"><%= pluralize(@micropost.comments.count, "") %> </span>	
 </div>
-<section class="carousel_ad">
-	<p class="font-fam1 sponsor"></p>
+
+<section class="mcpshw-share">
+<%= social_share_button_tag(@micropost.content, :popup => "true", class: "") %>
 </section>
 
-
-<section>
-	
-<section class="mcpshw2"><%= render @comments %></section><br />
-
-<div class="mcpshw3">
-	
-  <div class="mcpshw3a">
-  <ul class="mcpshw3b"> 
-  <li><%= social_share_button_tag(@micropost.content, :popup => "true", class: "") %></li>
-  <li><%= render "likes/likebutton" %></li>
-  </ul> 
-  </div>
-
-  <div class="mcpshw3c"><%= render "comments/form" %></div>
-
-</div>
-</section>  
-
-</div>
-</div>
+<section class="mcpshw2">
+<%= render @comments %>
 </section>
+
+</div>
+</div>
+
+<div class="mcpshw3-wrap">
+<div class="mcpshw3-flex">
+	
+<section class="mcpshw3 mcpshw3a"> 
+<% if signed_in? %>
+<%= render "likes/likebutton" %>
+<% else %>
+<% end %>
+</section>
+
+<section class="mcpshw3 mcpshw3b"><%= render "comments/form" %></section>
+
+</div>	
+</div>
+
 <br /><br />
 <div><%= render 'layouts/minfooter' %></div>

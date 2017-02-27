@@ -1,15 +1,4 @@
 <% provide(:title, @user.name) %>
-<header class="indexhead">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="">
-    <div class="navbar-header">
-           
-      <span class="navbar-brand font-fam1"><%= link_to "Tweak Account", edit_user_path(current_user), class: "hov2", id: "pgn2", :"data-no-turbolink" => true %></span>
-
-    </div>   
-    </div><!-- /.container -->
-    </nav>
-</header> 
 <div class="alert alert-error">
 <%= form_for @user, :html => { :multipart => true} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
@@ -17,40 +6,40 @@
 
  <div class="container edt"> 
  
-    <p class="container">
+    <p>
      <%= f.text_field :name, class: "edt1 font-fam1", placeholder: "fullname" %>
     </p>
    
-    <p class="container">
+    <p>
      <%= f.text_field :username, class: "edt1 font-fam1", placeholder: "username" %>
     </p>
       
-    <p class="font-fam1">
-      <section class="edt2"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section>
-      <p class="glyphicon glyphicon-camera edt3" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>     
-    </p>
+    <div class="font-fam1">
+      <i class="edt2"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></i>
+      <span class="edt3"><i class="glyphicon glyphicon-camera" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></i></span>     
+    </div>
    
-    <p class="container">
+    <p>
       <%= f.text_field :email, class: "edt1 font-fam1", placeholder: "email" %>
     </p> 
    
-    <p class="container">
+    <p>
       <%= f.text_field :bio, class: "edt1 font-fam1", placeholder: "what do you do to make the world a better place?" %>
     </p>
     
-    <p class="container">
+    <p>
       <%= f.text_field :website, class: "edt1 font-fam1", placeholder: "website" %>
     </p>
     
-    <p class="container font-fam">
+    <p class="font-fam">
       <%= f.password_field :password, class: "edt1 font-fam1", placeholder: "password" %>
     </p>
     
-    <p class="container">
+    <p class="">
       <%= f.password_field :password_confirmation, class: "edt1 font-fam1", placeholder: "confirm password" %>
     </p>
    
-   <p class="appbutton edt4 font-fam1"><%= f.submit "Update", class: "font-fam1 btn btn-primary" %></p>
+   <p class="appbutton edt4 font-fam1"><%= f.submit "UPDATE", class: "font-fam1 btn btn-primary" %></p>
       
     <% end %>
     
@@ -59,3 +48,4 @@
   </div>
   <br />
   <br />
+<div><%= render 'layouts/minfooter' %></div>

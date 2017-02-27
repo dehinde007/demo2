@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :signed_in_user, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [:show, :create, :edit, :update, :destroy]
 
 
 def new

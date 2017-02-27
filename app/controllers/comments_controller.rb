@@ -5,6 +5,11 @@ class CommentsController < ApplicationController
     def index
         @comments = @micropost.comments.order('id')
     end
+    
+    
+    def show
+      @comment = Comment.find(params[:id])
+    end
 
     def new
         @comment = @micropost.comments.new
