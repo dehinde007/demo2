@@ -1,22 +1,17 @@
 <%content_for :title, "About Us | Hallit"%>
-<p class="abthead font-fam1">About Us</p>	
 
-<div class="abtimg"><%= image_tag('about.jpg', :class => "abtimg") %></div>
+<div class="abtimg"><%= image_tag('girls.jpg', :class => "abtimg") %></div>
 
 <div class="container abt font-fam1">
 	
-<p class="abt2">Hallit is a social network creating a stronger and better world.</p>	
-<p class="abt2 abt2b">In everyone are core values that makes us different from others. These core values are ideas, beliefs or thoughts that guide us and can be shared as a hall to teach, inspire or awaken the interest in others for the creation of a better world. </p>
+<p class="abt2">To us, communication is about values.</p>	
+<p class="abt2 abt2b">Sadly it’s a very noisy and complicated world. And so we have to be really clear on what we want people to know about us. Fortunately, we mostly can remember people through their passion or core values because they are what make us different. </p>
+<p class="abt2 abt2b">Hallit is a social network that honors people that change the world, living and non-living. It’s an online community where passionate people can share their core values by using their photo as a background to write their values in order to inspire or awaken the interest in others for the creation of a stronger and better world. </p>	
 
 </div>
 
+<% if signed_in? %>
+<% else %>
 <p class="abtbtn"><%= link_to "SIGN UP", signup_path, "data-turbolinks": "false", :class => "font-fam1 btn btn-primary" %> </p>
-
-<ul class="container-fluid font-fam1 manu4">
-    <li><%= link_to "About us", about_path, class: "hov manu5" %></li>	
-    <li><%= link_to "Terms", terms_path, class: "hov manu5" %></li>	
-    <li><%= link_to "Privacy", privacy_path, class: "hov manu5" %></li> 
-    <li class="font-fam1"><span class="glyphicon glyphicon-copyright-mark copyright"></span> 2017</li> 
-</ul>
-
-<div class="footer wlcfoot"><%= render 'layouts/footer' %></div>
+<div class="abtfooter"><%= render 'layouts/footer' %></div>
+<% end %>

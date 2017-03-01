@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :signed_in_user,
                 only: [:index, :show, :edit, :update, :destroy, :following, :followers, :verify, :ver]
   before_action :correct_user,   only: [:edit, :update, :destroy, :ver, :verify]
-  before_action :admin_user,     only: [:destroy, :ver, :verify]
+  before_action :admin_user,     only: [:destroy]
   autocomplete :user, :username, :full => true
   
   def index

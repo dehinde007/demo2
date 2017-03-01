@@ -37,8 +37,8 @@ body{width: 100%; margin: 0; padding: 0; font-family: Open Sans!important;}
 </header>	
 
 <p class="notif-text">
-	<%= link_to @like.user.username, @like.user, :style=>"color:black!important;" %> liked your 
-	<%= link_to 'Hall', micropost_url(@like.micropost), :style=>"color:#ff5a5f!important;" %>
+	Hi <%=  @like.micropost.user.name.titleize %>, <%= link_to @like.user.username, @like.user, :style=>"color:black!important;" %> liked your 
+	<%= link_to 'Hall', micropost_url(@like.micropost), :style=>"color:#ff5a5f!important;" %>.
 </p>
 
 <div class="foot">

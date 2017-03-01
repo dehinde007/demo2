@@ -37,10 +37,10 @@ body{width: 100%; margin: 0; padding: 0; font-family: Open Sans!important;}
 
 
 <p class="notif-text">
-	<%= link_to @comment.user.username, @comment.user, :style=>"color:black!important;" %> commented on your 
+	Hi <%=  @comment.micropost.user.name.titleize %>, <%= link_to @comment.user.username, @comment.user, :style=>"color:black!important;" %> commented on your 
 	<%= link_to 'Hall', micropost_url(@comment.micropost), :style=>"color:#ff5a5f!important;" %>
 	<span class="container notif-info">
-    "<%= @comment.body %>"
+    "<%= @comment.body %>".
 </span>
 </p>
 
