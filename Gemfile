@@ -8,7 +8,7 @@ gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
 gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
 gem 'faker', '1.1.2'
-gem 'social-share-button'
+gem 'social-share-button', '0.1.5'
 gem 'rails_autolink'
 gem 'delayed_paperclip'
 gem "lazyload-rails"

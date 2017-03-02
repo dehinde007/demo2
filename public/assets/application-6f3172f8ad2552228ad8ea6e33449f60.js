@@ -12859,25 +12859,16 @@ return $.ui.autocomplete;
 (function(jQuery){var self=null;var options={};jQuery.fn.railsAutocomplete=function(){var handler=function(){if(!this.railsAutoCompleter){this.railsAutoCompleter=new jQuery.railsAutocomplete(this)}};options[this.selector.replace("#","")]=arguments[0];if(jQuery.fn.on!==undefined){return $(document).on("focus",this.selector,handler)}else{return this.live("focus",handler)}};jQuery.railsAutocomplete=function(e){_e=e;this.init(_e)};jQuery.railsAutocomplete.fn=jQuery.railsAutocomplete.prototype={railsAutocomplete:"0.0.1"};jQuery.railsAutocomplete.fn.extend=jQuery.railsAutocomplete.extend=jQuery.extend;jQuery.railsAutocomplete.fn.extend({init:function(e){e.delimiter=jQuery(e).attr("data-delimiter")||null;function split(val){return val.split(e.delimiter)}function extractLast(term){return split(term).pop().replace(/^\s+/,"")}jQuery(e).autocomplete($.extend({source:function(request,response){jQuery.getJSON(jQuery(e).attr("data-autocomplete"),{term:extractLast(request.term)},function(){if(arguments[0].length==0){arguments[0]=[];arguments[0][0]={id:"",label:"no existing match"}}jQuery(arguments[0]).each(function(i,el){var obj={};obj[el.id]=el;jQuery(e).data(obj)});response.apply(null,arguments)})},change:function(event,ui){if(jQuery(jQuery(this).attr("data-id-element")).val()==""){return}jQuery(jQuery(this).attr("data-id-element")).val(ui.item?ui.item.id:"");var update_elements=jQuery.parseJSON(jQuery(this).attr("data-update-elements"));var data=ui.item?jQuery(this).data(ui.item.id.toString()):{};if(update_elements&&jQuery(update_elements.id).val()==""){return}for(var key in update_elements){jQuery(update_elements[key]).val(ui.item?data[key]:"")}},search:function(){var term=extractLast(this.value);if(term.length<2){return false}},focus:function(){return false},select:function(event,ui){var terms=split(this.value);terms.pop();terms.push(ui.item.value);if(e.delimiter!=null){terms.push("");this.value=terms.join(e.delimiter)}else{this.value=terms.join("");if(jQuery(this).attr("data-id-element")){jQuery(jQuery(this).attr("data-id-element")).val(ui.item.id)}if(jQuery(this).attr("data-update-elements")){var data=jQuery(this).data(ui.item.id.toString());var update_elements=jQuery.parseJSON(jQuery(this).attr("data-update-elements"));for(var key in update_elements){jQuery(update_elements[key]).val(data[key])}}}var remember_string=this.value;jQuery(this).bind("keyup.clearId",function(){if(jQuery(this).val().trim()!=remember_string.trim()){jQuery(jQuery(this).attr("data-id-element")).val("");jQuery(this).unbind("keyup.clearId")}});jQuery(e).trigger("railsAutocomplete.select",ui);return false}},options[e.id]))}});jQuery(document).ready(function(){jQuery("input[data-autocomplete]").railsAutocomplete()})})(jQuery);
 (function() {
   window.SocialShareButton = {
-    openUrl: function(url, popup) {
-      if (popup === "true") {
-        return window.open(url, 'popup', 'height=500,width=500');
-      } else {
-        window.open(url);
-        return false;
-      }
+    openUrl: function(url) {
+      window.open(url);
+      return false;
     },
     share: function(el) {
-      var $parent, appkey, desc, get_tumblr_extra, img, popup, site, title, tumblr_params, url, via, via_str;
+      var get_tumblr_extra, img, site, title, tumblr_params, url;
       site = $(el).data('site');
-      appkey = $(el).data('appkey') || '';
-      $parent = $(el).parent();
-      title = encodeURIComponent($(el).data(site + '-title') || $parent.data('title') || '');
-      img = encodeURIComponent($parent.data("img") || '');
-      url = encodeURIComponent($parent.data("url") || '');
-      via = encodeURIComponent($parent.data("via") || '');
-      desc = encodeURIComponent($parent.data("desc") || ' ');
-      popup = encodeURIComponent($parent.data("popup") || 'false');
+      title = encodeURIComponent($(el).parent().data('title') || '');
+      img = encodeURIComponent($(el).parent().data("img") || '');
+      url = encodeURIComponent($(el).parent().data("url") || '');
       if (url.length === 0) {
         url = encodeURIComponent(location.href);
       }
@@ -12886,53 +12877,43 @@ return $.ui.autocomplete;
           location.href = "mailto:?to=&subject=" + title + "&body=" + url;
           break;
         case "weibo":
-          SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=" + url + "&type=3&pic=" + img + "&title=" + title + "&appkey=" + appkey, popup);
+          SocialShareButton.openUrl("http://service.weibo.com/share/share.php?url=" + url + "&type=3&pic=" + img + "&title=" + title);
           break;
         case "twitter":
-          via_str = '';
-          if (via.length > 0) {
-            via_str = "&via=" + via;
-          }
-          SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=" + url + "&text=" + title + via_str, popup);
+          SocialShareButton.openUrl("https://twitter.com/home?status=" + title + ": " + url);
           break;
         case "douban":
-          SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=" + url + "&name=" + title + "&image=" + img + "&sel=" + desc, popup);
+          SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=" + url + "&name=" + title + "&image=" + img);
           break;
         case "facebook":
-          SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=" + url, popup);
+          SocialShareButton.openUrl("http://www.facebook.com/sharer.php?t=" + title + "&u=" + url);
           break;
         case "qq":
-          SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "&pics=" + img + "&summary=" + desc + "&site=" + appkey, popup);
+          SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "&pics=" + img);
           break;
         case "tqq":
-          SocialShareButton.openUrl("http://share.v.t.qq.com/index.php?c=share&a=index&url=" + url + "&title=" + title + "&pic=" + img + "&appkey=" + appkey, popup);
+          SocialShareButton.openUrl("http://share.v.t.qq.com/index.php?c=share&a=index&url=" + url + "&title=" + title + "&pic=" + img);
           break;
         case "baidu":
-          SocialShareButton.openUrl("http://hi.baidu.com/pub/show/share?url=" + url + "&title=" + title + "&content=" + desc, popup);
+          SocialShareButton.openUrl("http://hi.baidu.com/pub/show/share?url=" + url + "&title=" + title + "&content=");
           break;
         case "kaixin001":
-          SocialShareButton.openUrl("http://www.kaixin001.com/rest/records.php?url=" + url + "&content=" + title + "&style=11&pic=" + img + "&aid=" + appkey, popup);
+          SocialShareButton.openUrl("http://www.kaixin001.com/rest/records.php?url=" + url + "&content=" + title + "&style=11&pic=" + img);
           break;
         case "renren":
-          SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=" + url + "&srcUrl=" + url + "&title=" + title + "&pic=" + img + "&description=" + desc, popup);
+          SocialShareButton.openUrl("http://widget.renren.com/dialog/share?resourceUrl=" + url + "&srcUrl=" + url + "&title=" + title + "&pic=" + img + "&description=");
           break;
         case "google_plus":
-          SocialShareButton.openUrl("https://plus.google.com/share?url=" + url, popup);
+          SocialShareButton.openUrl("https://plus.google.com/share?url=" + url + "&t=" + title);
           break;
         case "google_bookmark":
-          SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=" + url + "&title=" + title, popup);
+          SocialShareButton.openUrl("https://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=" + url + "&title=" + title);
           break;
         case "delicious":
-          SocialShareButton.openUrl("http://www.delicious.com/save?url=" + url + "&title=" + title + "&jump=yes&pic=" + img, popup);
+          SocialShareButton.openUrl("http://www.delicious.com/save?url=" + url + "&title=" + title + "&jump=yes&pic=" + img);
           break;
         case "plurk":
-          SocialShareButton.openUrl("http://www.plurk.com/?status=" + title + ": " + url + "&qualifier=shares", popup);
-          break;
-        case "pinterest":
-          SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=" + url + "&media=" + img + "&description=" + title, popup);
-          break;
-        case "linkedin":
-          SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?url=" + url + "&title=" + title, popup);
+          SocialShareButton.openUrl("http://www.plurk.com/?status=" + title + ": " + url + "&qualifier=shares");
           break;
         case "tumblr":
           get_tumblr_extra = function(param) {
@@ -12966,7 +12947,7 @@ return $.ui.autocomplete;
             })();
             return "/" + path + "?" + params;
           };
-          SocialShareButton.openUrl("http://www.tumblr.com/share" + (tumblr_params()), popup);
+          SocialShareButton.openUrl("http://www.tumblr.com/share" + (tumblr_params()));
       }
       return false;
     }

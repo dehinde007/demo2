@@ -1,17 +1,4 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
-
-
- */
-/*
 
         Creating a sprite from following images:
 
@@ -24,7 +11,6 @@
         app/assets/images/sprites/social-share-button/google_bookmark.png (16x16)
         app/assets/images/sprites/social-share-button/google_plus.png (16x16)
         app/assets/images/sprites/social-share-button/kaixin001.png (16x16)
-        app/assets/images/sprites/social-share-button/pinterest.png (16x16)
         app/assets/images/sprites/social-share-button/plurk.png (16x16)
         app/assets/images/sprites/social-share-button/qq.png (16x16)
         app/assets/images/sprites/social-share-button/renren.png (16x16)
@@ -32,15 +18,14 @@
         app/assets/images/sprites/social-share-button/tumblr.png (16x16)
         app/assets/images/sprites/social-share-button/twitter.png (16x16)
         app/assets/images/sprites/social-share-button/weibo.png (16x16)
-        app/assets/images/sprites/social-share-button/linkedin.png (16x16)
-
 
         Output files:
           app/assets/images/sprites/social-share-button.png
           app/assets/stylesheets/social-share-button.scss
 
         Output size:
-          80x64
+          64x64
+
 
 */
 .social-share-button-baidu {
@@ -97,59 +82,47 @@
   height: 16px;
   background: url("/assets/sprites/social-share-button.png") -32px -32px no-repeat; }
 
-.social-share-button-pinterest {
+.social-share-button-plurk {
   display: inline-block;
   width: 16px;
   height: 16px;
   background: url("/assets/sprites/social-share-button.png") -48px 0px no-repeat; }
 
-.social-share-button-plurk {
+.social-share-button-qq {
   display: inline-block;
   width: 16px;
   height: 16px;
   background: url("/assets/sprites/social-share-button.png") -48px -16px no-repeat; }
 
-.social-share-button-qq {
+.social-share-button-renren {
   display: inline-block;
   width: 16px;
   height: 16px;
   background: url("/assets/sprites/social-share-button.png") -48px -32px no-repeat; }
 
-.social-share-button-renren {
+.social-share-button-tqq {
   display: inline-block;
   width: 16px;
   height: 16px;
   background: url("/assets/sprites/social-share-button.png") 0px -48px no-repeat; }
 
-.social-share-button-tqq {
+.social-share-button-tumblr {
   display: inline-block;
   width: 16px;
   height: 16px;
   background: url("/assets/sprites/social-share-button.png") -16px -48px no-repeat; }
 
-.social-share-button-tumblr {
+.social-share-button-twitter {
   display: inline-block;
   width: 16px;
   height: 16px;
   background: url("/assets/sprites/social-share-button.png") -32px -48px no-repeat; }
 
-.social-share-button-twitter {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: url("/assets/sprites/social-share-button.png") -48px -48px no-repeat; }
-
 .social-share-button-weibo {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url("/assets/sprites/social-share-button.png") -64px 0px no-repeat; }
-
-.social-share-button-linkedin {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: url("/assets/sprites/social-share-button.png") -64px -16px no-repeat; }
+  background: url("/assets/sprites/social-share-button.png") -48px -48px no-repeat; }
 
 @media only screen and (-webkit-device-pixel-ratio: 2) {
   .social-share-button-baidu {
@@ -157,145 +130,112 @@
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") 0px 0px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-delicious {
     display: inline-block;
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") -16px 0px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-douban {
     display: inline-block;
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") 0px -16px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-email {
     display: inline-block;
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") -16px -16px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-facebook {
     display: inline-block;
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") -32px 0px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-flickr {
     display: inline-block;
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") -32px -16px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-google_bookmark {
     display: inline-block;
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") 0px -32px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-google_plus {
     display: inline-block;
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") -16px -32px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-kaixin001 {
     display: inline-block;
     width: 16px;
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") -32px -32px no-repeat;
-    background-size: 80px 64px; }
-
-  .social-share-button-pinterest {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") -48px 0px no-repeat;
-    background-size: 80px 64px; }
+    background-size: 64px 64px; }
 
   .social-share-button-plurk {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") -48px -16px no-repeat;
-    background-size: 80px 64px; }
+    background: url("/assets/sprites/social-share-button.png") -48px 0px no-repeat;
+    background-size: 64px 64px; }
 
   .social-share-button-qq {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") -48px -32px no-repeat;
-    background-size: 80px 64px; }
+    background: url("/assets/sprites/social-share-button@2x.png") -48px 16px no-repeat;
+    background-size: 64px 64px; }
 
   .social-share-button-renren {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") 0px -48px no-repeat;
-    background-size: 80px 64px; }
+    background: url("/assets/sprites/social-share-button@2x.png") -48px -32px no-repeat;
+    background-size: 64px 64px; }
 
   .social-share-button-tqq {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") -16px -48px no-repeat;
-    background-size: 80px 64px; }
+    background: url("/assets/sprites/social-share-button@2x.png") 0px -48 no-repeat;
+    background-size: 64px 64px; }
 
   .social-share-button-tumblr {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") -32px -48px no-repeat;
-    background-size: 80px 64px; }
+    background: url("/assets/sprites/social-share-button@2x.png") -16px -48px no-repeat;
+    background-size: 64px 64px; }
 
   .social-share-button-twitter {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") -48px -48px no-repeat;
-    background-size: 80px 64px; }
+    background: url("/assets/sprites/social-share-button@2x.png") -32px -48px no-repeat;
+    background-size: 64px 64px; }
 
   .social-share-button-weibo {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") -64px 0px no-repeat;
-    background-size: 80px 64px; }
-
-  .social-share-button-linkedin {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: url("/assets/sprites/social-share-button@2x.png") -64px -16px no-repeat;
-    background-size: 80px 64px; } }
-/* Import the fonts */
-@font-face {
-  font-family: 'ralewayregular';
-  src: url(/assets/raleway-regular1-webfont.eot);
-  src: url(/assets/raleway-regular1-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/raleway-regular1-webfont.woff2) format("woff2"), url(/assets/raleway-regular1-webfont.woff) format("woff"), url(/assets/raleway-regular1-webfont.ttf) format("truetype"), url(/assets/raleway-regular1-webfont.svg#ralewayregular) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'MyriadPro-Light';
-  src: url(/assets/MyriadPro-Light.eot);
-  src: url(/assets/MyriadPro-Light.eot?#iefix) format("embedded-opentype"), url(/assets/MyriadPro-Light.woff) format("woff"), url(/assets/MyriadPro-Light.ttf) format("truetype"), url(/assets/MyriadPro-Light.svg#MyriadPro-Light) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'Roboto-Light';
-  src: url(/assets/Roboto-Light-webfont.eot);
-  src: url(/assets/Roboto-Light-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Roboto-Light-webfont.woff2) format("woff2"), url(/assets/Roboto-Light-webfont.woff) format("woff"), url(/assets/Roboto-Light-webfont.ttf) format("truetype"), url(/assets/Roboto-Light-webfont.svg#Roboto-Light) format("svg");
-  font-weight: normal;
-  font-style: normal; }
+    background: url("/assets/sprites/social-share-button@2x.png") -48px -48px no-repeat;
+    background-size: 64px 64px; } }
 html, body {
   width: 100%;
   margin: 0;
@@ -1076,20 +1016,6 @@ label {
   margin-top: -28px;
   float: right; }
 
-.social-share-button-twitter {
-  display: inline-block;
-  width: 25px !important;
-  height: 25px !important;
-  background: url("/assets/social-share-button/tips.PNG") no-repeat !important;
-  background-size: contain !important; }
-
-.social-share-button-facebook {
-  display: inline-block;
-  width: 30px !important;
-  height: 30px !important;
-  background: url("/assets/social-share-button/fb.png") no-repeat !important;
-  background-size: contain !important; }
-
 .mcpshw1 {
   color: #d1cece;
   padding-top: 10px;
@@ -1681,3 +1607,36 @@ label {
     margin: auto;
     left: 0;
     right: 0; } }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+ */
+/* Import the fonts */
+@font-face {
+  font-family: 'ralewayregular';
+  src: url(/assets/raleway-regular1-webfont.eot);
+  src: url(/assets/raleway-regular1-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/raleway-regular1-webfont.woff2) format("woff2"), url(/assets/raleway-regular1-webfont.woff) format("woff"), url(/assets/raleway-regular1-webfont.ttf) format("truetype"), url(/assets/raleway-regular1-webfont.svg#ralewayregular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'MyriadPro-Light';
+  src: url(/assets/MyriadPro-Light.eot);
+  src: url(/assets/MyriadPro-Light.eot?#iefix) format("embedded-opentype"), url(/assets/MyriadPro-Light.woff) format("woff"), url(/assets/MyriadPro-Light.ttf) format("truetype"), url(/assets/MyriadPro-Light.svg#MyriadPro-Light) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url(/assets/Roboto-Light-webfont.eot);
+  src: url(/assets/Roboto-Light-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Roboto-Light-webfont.woff2) format("woff2"), url(/assets/Roboto-Light-webfont.woff) format("woff"), url(/assets/Roboto-Light-webfont.ttf) format("truetype"), url(/assets/Roboto-Light-webfont.svg#Roboto-Light) format("svg");
+  font-weight: normal;
+  font-style: normal; }
