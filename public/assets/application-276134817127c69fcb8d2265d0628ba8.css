@@ -236,6 +236,39 @@
     height: 16px;
     background: url("/assets/sprites/social-share-button@2x.png") -48px -48px no-repeat;
     background-size: 64px 64px; } }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+ */
+/* Import the fonts */
+@font-face {
+  font-family: 'ralewayregular';
+  src: url(/assets/raleway-regular1-webfont.eot);
+  src: url(/assets/raleway-regular1-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/raleway-regular1-webfont.woff2) format("woff2"), url(/assets/raleway-regular1-webfont.woff) format("woff"), url(/assets/raleway-regular1-webfont.ttf) format("truetype"), url(/assets/raleway-regular1-webfont.svg#ralewayregular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'MyriadPro-Light';
+  src: url(/assets/MyriadPro-Light.eot);
+  src: url(/assets/MyriadPro-Light.eot?#iefix) format("embedded-opentype"), url(/assets/MyriadPro-Light.woff) format("woff"), url(/assets/MyriadPro-Light.ttf) format("truetype"), url(/assets/MyriadPro-Light.svg#MyriadPro-Light) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url(/assets/Roboto-Light-webfont.eot);
+  src: url(/assets/Roboto-Light-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Roboto-Light-webfont.woff2) format("woff2"), url(/assets/Roboto-Light-webfont.woff) format("woff"), url(/assets/Roboto-Light-webfont.ttf) format("truetype"), url(/assets/Roboto-Light-webfont.svg#Roboto-Light) format("svg");
+  font-weight: normal;
+  font-style: normal; }
 html, body {
   width: 100%;
   margin: 0;
@@ -1016,6 +1049,20 @@ label {
   margin-top: -28px;
   float: right; }
 
+.social-share-button-twitter {
+  display: inline-block;
+  width: 25px !important;
+  height: 25px !important;
+  background: url("/assets/tips.PNG") no-repeat !important;
+  background-size: contain !important; }
+
+.social-share-button-facebook {
+  display: inline-block;
+  width: 30px !important;
+  height: 30px !important;
+  background: url("/assets/fb.png") no-repeat !important;
+  background-size: contain !important; }
+
 .mcpshw1 {
   color: #d1cece;
   padding-top: 10px;
@@ -1607,36 +1654,3 @@ label {
     margin: auto;
     left: 0;
     right: 0; } }
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
-
-
-
- */
-/* Import the fonts */
-@font-face {
-  font-family: 'ralewayregular';
-  src: url(/assets/raleway-regular1-webfont.eot);
-  src: url(/assets/raleway-regular1-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/raleway-regular1-webfont.woff2) format("woff2"), url(/assets/raleway-regular1-webfont.woff) format("woff"), url(/assets/raleway-regular1-webfont.ttf) format("truetype"), url(/assets/raleway-regular1-webfont.svg#ralewayregular) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'MyriadPro-Light';
-  src: url(/assets/MyriadPro-Light.eot);
-  src: url(/assets/MyriadPro-Light.eot?#iefix) format("embedded-opentype"), url(/assets/MyriadPro-Light.woff) format("woff"), url(/assets/MyriadPro-Light.ttf) format("truetype"), url(/assets/MyriadPro-Light.svg#MyriadPro-Light) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'Roboto-Light';
-  src: url(/assets/Roboto-Light-webfont.eot);
-  src: url(/assets/Roboto-Light-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Roboto-Light-webfont.woff2) format("woff2"), url(/assets/Roboto-Light-webfont.woff) format("woff"), url(/assets/Roboto-Light-webfont.ttf) format("truetype"), url(/assets/Roboto-Light-webfont.svg#Roboto-Light) format("svg");
-  font-weight: normal;
-  font-style: normal; }
