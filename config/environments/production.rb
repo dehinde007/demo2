@@ -27,7 +27,7 @@ SampleApp::Application.configure do
 
   config.serve_static_files = true
   config.action_controller.asset_host = "d22e73879l1fx.cloudfront.net"
-  config.font_assets.origin = 'https://sayian.herokuapp.com'
+  config.font_assets.origin = 'https://hallit.herokuapp.com'
   # Compress JavaScripts and CSS.
   config.assets.js_compressor  = :uglifier
   # config.assets.css_compressor = :sass

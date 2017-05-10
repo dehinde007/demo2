@@ -16,12 +16,12 @@
 /* Import the fonts */
 @font-face {
     font-family: 'ralewayregular';
-    src: font-url('/assets/raleway-regular1-webfont.eot');
-    src: font-url('/assets/raleway-regular1-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('/assets/raleway-regular1-webfont.woff2') format('woff2'),
-         font-url('/assets/raleway-regular1-webfont.woff') format('woff'),
-         font-url('/assets/raleway-regular1-webfont.ttf') format('truetype'),
-         font-url('/assets/raleway-regular1-webfont.svg#ralewayregular') format('svg');
+    src: font-url('https://d22e73879l1fx.cloudfront.net/assets/raleway-regular1-webfont.eot');
+    src: font-url('https://d22e73879l1fx.cloudfront.net/assets/raleway-regular1-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/raleway-regular1-webfont.woff2') format('woff2'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/raleway-regular1-webfont.woff') format('woff'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/raleway-regular1-webfont.ttf') format('truetype'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/raleway-regular1-webfont.svg#ralewayregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,23 +29,23 @@
 
 @font-face {
     font-family: 'MyriadPro-Light';
-    src: font-url('/assets/MyriadPro-Light.eot');
-    src: font-url('/assets/MyriadPro-Light.eot?#iefix') format('embedded-opentype'),
-         font-url('/assets/MyriadPro-Light.woff') format('woff'),
-         font-url('/assets/MyriadPro-Light.ttf') format('truetype'),
-         font-url('/assets/MyriadPro-Light.svg#MyriadPro-Light') format('svg');
+    src: font-url('https://d22e73879l1fx.cloudfront.net/assets/MyriadPro-Light.eot');
+    src: font-url('https://d22e73879l1fx.cloudfront.net/assets/MyriadPro-Light.eot?#iefix') format('embedded-opentype'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/MyriadPro-Light.woff') format('woff'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/MyriadPro-Light.ttf') format('truetype'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/MyriadPro-Light.svg#MyriadPro-Light') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto-Light';
-    src: font-url('/assets/Roboto-Light-webfont.eot');
-    src: font-url('/assets/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('/assets/Roboto-Light-webfont.woff2') format('woff2'),
-         font-url('/assets/Roboto-Light-webfont.woff') format('woff'),
-         font-url('/assets/Roboto-Light-webfont.ttf') format('truetype'),
-         font-url('/assets/Roboto-Light-webfont.svg#Roboto-Light') format('svg');
+    src: font-url('https://d22e73879l1fx.cloudfront.net/assets/Roboto-Light-webfont.eot');
+    src: font-url('https://d22e73879l1fx.cloudfront.net/assets/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/Roboto-Light-webfont.woff2') format('woff2'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/Roboto-Light-webfont.woff') format('woff'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/Roboto-Light-webfont.ttf') format('truetype'),
+         font-url('https://d22e73879l1fx.cloudfront.net/assets/Roboto-Light-webfont.svg#Roboto-Light') format('svg');
     font-weight: normal;
     font-style: normal;
 }
