@@ -1,0 +1,16 @@
+<%content_for :title, "About Us | Hallit"%>
+
+<div class="container abt font-fam1">
+<p class="abt2 abt2d">Our core values are an unwavering and unchanging guide for our lives and are the driving force behind the way we feel or act. Our passion means suffering and from suffering arise perseverance, while from perseverance arise character. And from character arises hope. And this lifts people up knowing they are not alone.</p>
+<p class="abt2 abt2d">We believe that by communicating through our passion and core values we can inspire or awaken interests in others for the creation of a stronger, safer and better world.</p>
+
+</div>
+
+<div class="abtimg"><%= image_tag('Abouthero.JPG', :class => "supimg") %></div>
+
+<p class="font-fam1 abtsignup"><%= link_to "Sign up", signup_path, :class => "btn btn-primary", "data-turbolinks": "false" %></p>
+
+<% if signed_in? %>
+<% else %>
+<div class="abtfooter"><%= render 'layouts/footer' %></div>
+<% end %>

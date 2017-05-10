@@ -38,7 +38,7 @@ SampleApp::Application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/privacy',    to: 'static_pages#privacy',    via: 'get'
-  match '/about',    to: 'static_pages#about',    via: 'get'
+  match '/about_us',    to: 'static_pages#about_us',    via: 'get'
   match '/support', to: 'static_pages#support', via: 'get'
   match '/youth',    to: 'static_pages#youth',    via: 'get'
   match '/terms', to: 'static_pages#terms', via: 'get' 

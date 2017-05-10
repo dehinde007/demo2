@@ -1,27 +1,26 @@
 <%content_for :title, "Support | Hallit"%>
-<div class="container-fluid sup-wrap">
-<div class="sup font-fam1">
-  <p class="sup1">Welcome to our Support Center </p>
-  <p class="sup2">Hallit is a social network / online community where passionate people can share their core values by using their photo as a background to write their values in order to inspire or awaken the interest in others for the creation of a stronger and better world. <span><%= link_to "Learn how to make a hall", guide_path, class: "sup1a" %></span> or <span><%= link_to "About Us", about_path, class: "sup1a" %>.</span></p>		
-  <%= image_tag('chance.jpg', :class => "supimg") %>
+<div class="sup-wrap">
+<div class="container sup font-fam1">
+  <p class="suphead">Welcome to our Support Center</p>
+  <p class="sup2">Hallit is a social network that supports sharing of our passion, stories and core values with the world by writing little messages on our photos to help inspire others. <span><%= link_to "Learn how here", guide_path, class: "sup1a" %></span></p>		 
+</div> 
+  <div class="supimgdiv"><%= image_tag('Supporthero.jpg', :class => "supimg") %></div>
   <br /><br />
-    
-  <p class="sup2"><span class="fa fa-user-o sup-usericon sup-icon-size"></span></p>	
-  <p class="sup1">Profile</p>
-  <p class="sup2">You can find your profile when you tap the Hallit logo. Only works on mobile devices.</p>
-  <br /><br />
+<div class="container sup font-fam1">  
+	  <p class="sup1">Getting to your Profile or Editor on Mobile</p>  
+  <p class="sup2">To get to your profile or camera on a mobile device, tap the Hallit logo when signed in.</p>
+  <br />
 
-  <p class="sup2"><span class="glyphicon glyphicon-home sup-icon-size"></span></p>
+  <div class="supcirc"><p class="sup2"><span class="glyphicon glyphicon-home sup-icon-size"></span></p></div>
   <p class="sup1">Homescreen Optimization</p>
-  <p class="sup2">To have a Hallit logo on your homescreen, you'll need to add Hallit to your homescreen. To do this, tap <span class="glyphicon glyphicon-home"></span> to enter your home then proceed to add to your homescreen. Super easy! </p>
+  <p class="sup2">For a quick navigation to Hallit from your homescreen. Go to your home then proceed to add to your homescreen. Super easy! </p>
   <br /><br />
   
-  <p class="sup2"><span class="fa fa-twitter sup-twitter1 sup-icon-size"></span></p>	
-  <p class="sup1">To Learn more about Hallit<span class="fa fa-copyright sup-copyright"></span></p>	
-  <p class="sup2">We are on Twitter. Follow us on <i class="fa fa-twitter sup-twitter"></i> @hallitservice.</p>
-  <br /><br /><br />
+  <p class="sup1">Tap to Learn more about Hallit<span class="fa fa-copyright sup-copyright"></span></p>	
+  <p class="sup2">Follow us on <i class="fa fa-twitter sup-twitter"></i><%= link_to "@hallitservice", "https://twitter.com/hallitservice", class: "sup1a sup1b" %>.</p>
+  <br /><br />
   
-  <p class="font-fam1 sup2">Thank you for creating a better world, hope you have a wonderful time.</p>
+  <p class="font-fam1 sup2">Thank you for  choosing to create a better world.</p>
 
 </div>
 </div>

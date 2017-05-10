@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$ ->
+$(document).on "turbolinks:load", ->
   if $('.infinite-scrolling').size() > 0
     $(window).on 'scroll', ->
       more_posts_url = $('.pagination a[rel=next]').attr('href')

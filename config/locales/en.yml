@@ -39,7 +39,7 @@ en:
       half_a_minute: 30s
       less_than_x_minutes:
         one: 30s
-        other: "-%{count}m"
+        other: "-%{count}min"
       less_than_x_seconds:
         one: now
         other: "-%{count}s"
@@ -51,10 +51,10 @@ en:
         other: "%{count}d"
       x_minutes:
         one: 1m
-        other: "%{count}m"
+        other: "%{count}min"
       x_months:
-        one: 1month
-        other: "%{count}months"
+        one: 1M
+        other: "%{count}M"
       x_seconds:
         one: 1s
         other: "%{count}s"

@@ -16,7 +16,7 @@
       
     <div class="font-fam1">
       <i class="edt2"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></i>
-      <span class="edt3"><i class="glyphicon glyphicon-camera" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></i></span>     
+      <p class="glyphicon glyphicon-camera edt3" data-toggle="tooltip" data-placement="top" title="Upload a avatar" onclick="$(this).parent().find('input[type=file]').click();"></p>     
     </div>
    
     <p>

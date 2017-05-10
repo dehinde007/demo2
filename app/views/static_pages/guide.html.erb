@@ -1,23 +1,28 @@
-<%content_for :title, "Guide | Hallit"%>
+<%content_for :title, "Personal Tour"%>
 
-<p class="tuthead1 font-fam1">Guide</p>
-	
 <div class="container tut font-fam1">
-<br /><br />
-<p class="tuth2">Writing Caption on a Photo</p>	
-<p class="tuta">Go to your home, navigate to camera and select a photo you would like to use to make hall. Tap the <%= image_tag('text.jpg', :class => "textimg") %> icon to write your caption. Before you begin to write your text, leave a space above your text so part of it wont be cut off. (Important step).</p>
+	
+<p class="tuth2">Getting Started</p>
+<p class="tuta">Our core values are the fundamental beliefs that guide us. They are an unwavering and unchanging guide for our lives and are the driving force behind the way we feel or act. They are what makes us different and standout from others. And they come from our passion.</p>
+<br />
+<p class="tuth2">Captioning</p>
+<p class="tuta">(A) Navigate to editor or camera from your home, select photo you would like to use for your hall. (B) Tap the <%= image_tag('text.jpg', :class => "textimg") %> icon to write your caption. (C) After writing caption, leave space above and below text to avoid text to be cut off.</p>
+<div class="supimgdiv"><%= image_tag('Guidehero.png', :class => "supimg") %></div>
 <br /><br />
 
-<p class="tuth2">Edit Caption</p>
-<p class="tuta">We suggest you change your font color to white. You can do this by tapping on foreground and dragging the color button to the top left corner. You can also align your text with the text box <%= image_tag('align.jpg', :class => "exportimg") %> icon or position your text by dragging around the text box.</p>
+<p class="tuth2">Editing</p>
+<p class="tuta">(D) Change font color to white by tapping foreground and dragging color button to the top left corner. (E) Align your text with the <%= image_tag('align.jpg', :class => "exportimg") %> icon or adjust text position by dragging textbox. </p>
+<div class="supimgdiv"><%= image_tag('color.png', :class => "supimg") %></div>
 <br /><br />
 
 <p class="tuth2">Sharing</p>	
-<p class="tuta">Once you're done editing, tap <%= image_tag('export.jpg', :class => "exportimg") %> to save your hall. (Apple users will have to save hall manually by holding image down for a few seconds after exporting. Then navigate back). Scroll down, find upload and follow the instructions to share your hall. </p>
+<p class="tuta">(F) After editing, find and tap <%= image_tag('export.jpg', :class => "exportimg") %> to export your hall. This will automatically save hall on your device. (Apple users will have to save hall manually after exporting by holding image down for a few seconds then saving. Afterwards navigate back). (G) Scroll down, select upload and fill out necessary fields to post your hall. </p> 
+<p class="tutbutton"><%= link_to "UPLOAD", "#", class: "btn btn-primary" %></p>
+<br /><br />
 
 </div>
 
-<br /><br />
+
 <% if signed_in? %>
 <div><%= render 'layouts/minfooter' %></div>
 <% else %> 

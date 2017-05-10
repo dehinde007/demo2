@@ -253,20 +253,20 @@
 /* Import the fonts */
 @font-face {
   font-family: 'ralewayregular';
-  src: url(/assets/raleway-regular1-webfont.eot);
-  src: url(/assets/raleway-regular1-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/raleway-regular1-webfont.woff2) format("woff2"), url(/assets/raleway-regular1-webfont.woff) format("woff"), url(/assets/raleway-regular1-webfont.ttf) format("truetype"), url(/assets/raleway-regular1-webfont.svg#ralewayregular) format("svg");
+  src: url(http://localhost:3000/assets/raleway-regular1-webfont.eot);
+  src: url(http://localhost:3000/assets/raleway-regular1-webfont.eot?#iefix) format("embedded-opentype"), url(http://localhost:3000/assets/raleway-regular1-webfont.woff2) format("woff2"), url(http://localhost:3000/assets/raleway-regular1-webfont.woff) format("woff"), url(http://localhost:3000/assets/raleway-regular1-webfont.ttf) format("truetype"), url(http://localhost:3000/assets/raleway-regular1-webfont.svg#ralewayregular) format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'MyriadPro-Light';
-  src: url(/assets/MyriadPro-Light.eot);
-  src: url(/assets/MyriadPro-Light.eot?#iefix) format("embedded-opentype"), url(/assets/MyriadPro-Light.woff) format("woff"), url(/assets/MyriadPro-Light.ttf) format("truetype"), url(/assets/MyriadPro-Light.svg#MyriadPro-Light) format("svg");
+  src: url(http://localhost:3000/assets/MyriadPro-Light.eot);
+  src: url(http://localhost:3000/assets/MyriadPro-Light.eot?#iefix) format("embedded-opentype"), url(http://localhost:3000/assets/MyriadPro-Light.woff) format("woff"), url(http://localhost:3000/assets/MyriadPro-Light.ttf) format("truetype"), url(http://localhost:3000/assets/MyriadPro-Light.svg#MyriadPro-Light) format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Roboto-Light';
-  src: url(/assets/Roboto-Light-webfont.eot);
-  src: url(/assets/Roboto-Light-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Roboto-Light-webfont.woff2) format("woff2"), url(/assets/Roboto-Light-webfont.woff) format("woff"), url(/assets/Roboto-Light-webfont.ttf) format("truetype"), url(/assets/Roboto-Light-webfont.svg#Roboto-Light) format("svg");
+  src: url(http://localhost:3000/assets/Roboto-Light-webfont.eot);
+  src: url(http://localhost:3000/assets/Roboto-Light-webfont.eot?#iefix) format("embedded-opentype"), url(http://localhost:3000/assets/Roboto-Light-webfont.woff2) format("woff2"), url(http://localhost:3000/assets/Roboto-Light-webfont.woff) format("woff"), url(http://localhost:3000/assets/Roboto-Light-webfont.ttf) format("truetype"), url(http://localhost:3000/assets/Roboto-Light-webfont.svg#Roboto-Light) format("svg");
   font-weight: normal;
   font-style: normal; }
 html, body {
@@ -461,7 +461,7 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   color: black; }
 
 p .src {
-  background: rgba(249, 249, 249, 0.2);
+  background: white;
   height: 50px;
   width: 100%;
   border-color: rgba(247, 60, 70, 0.3);
@@ -484,20 +484,19 @@ p .src {
 
 .usravi .img-circle {
   width: 35px;
-  border: 1px solid white;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   margin-top: -7px; }
 
 .appbutton .btn-primary {
   font-size: 16px;
   width: 80px;
-  font-weight: bold;
   color: #ff5a5f;
   border: 1px solid #ff5a5f;
   border-radius: 64px;
   background-color: white !important; }
   .appbutton .btn-primary:hover {
-    background-color: #ff5a5f !important;
-    border-color: #ff5a5f !important;
+    background-color: rgba(255, 90, 95, 0.2) !important;
+    border-color: rgba(255, 90, 95, 0.2) !important;
     color: white; }
 
 .inv {
@@ -578,6 +577,9 @@ label {
   .midhdglyph:hover {
     color: rgba(247, 60, 70, 0.3); }
 
+.midhdcam {
+  margin-right: 10px !important; }
+
 .navbar-fixed-top .navbar-collapse {
   background: rgba(255, 255, 255, 0.7);
   text-align: center;
@@ -618,23 +620,23 @@ label {
 
 .manu {
   width: 100%;
-  max-width: 758px;
-  height: 200px;
-  background-image: url("key.jpg");
+  max-width: 650px;
+  height: 280px;
+  background-image: url("Welcomehero.jpg");
   background-size: 100%;
-  position: relative;
+  position: inherit;
   background-repeat: no-repeat; }
 
 .manu2 {
   font-size: 22px;
-  margin-top: -80px;
+  margin-top: -90px;
   text-align: center;
   line-height: 1.42857143;
   color: black; }
 
 .manu3 {
   text-align: center;
-  margin-top: 30px;
+  margin-top: -110px;
   list-style: none; }
 
 .manu3 li {
@@ -644,27 +646,32 @@ label {
   font-size: 17px;
   width: 70px;
   color: black;
-  background-color: rgba(228, 228, 228, 0.6) !important;
+  background-color: rgba(251, 231, 231, 0.5) !important;
   border-color: black !important; }
   .manu3 .btn-primary:hover {
-    background-color: rgba(228, 228, 228, 0.9) !important;
+    background-color: rgba(251, 231, 231, 0.7) !important;
     border-color: black !important;
     color: black; }
 
-.manu4 {
-  margin-top: 30px;
-  list-style: none;
-  text-align: center; }
+.manu3b .btn-primary {
+  padding-left: 10px; }
 
-.manu4 li {
-  display: inline;
+.manufoot {
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  margin: 0px;
+  bottom: 0;
+  margin-top: 40px; }
+
+.manufoot li {
+  display: inline-block;
   color: black;
   word-wrap: break-word;
   padding: 5px;
-  font-size: 14px; }
-
-.wlcfoot {
-  display: none; }
+  font-size: 12px;
+  font-weight: bold;
+  position: relative; }
 
 .sup-wrap {
   margin-top: 10px;
@@ -677,11 +684,15 @@ label {
   text-align: center; }
 
 .supimg {
-  width: 80%; }
+  width: 100%; }
 
 .sup1 {
   font-size: 22px;
   color: black; }
+
+.suphead {
+  font-size: 22px;
+  color: rgba(247, 60, 70, 0.5); }
 
 .sup1a {
   color: black;
@@ -694,7 +705,7 @@ label {
     background: none; }
 
 .sup-icon-size {
-  font-size: 70px !important; }
+  font-size: 50px !important; }
 
 .sup-usericon {
   color: rgba(6, 6, 6, 0.84); }
@@ -704,20 +715,32 @@ label {
   font-size: 16px;
   line-height: 20px; }
 
+.supcirc {
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  height: 59px;
+  width: 58px;
+  border: 1px solid rgba(247, 60, 70, 0.4);
+  border-radius: 50%; }
+
 .sup2 .glyphicon {
-  color: rgba(247, 60, 70, 0.3);
-  font-size: 16px; }
+  color: rgba(247, 60, 70, 0.2);
+  font-size: 16px;
+  padding-right: 3px; }
 
 .sup-copyright {
   color: black;
   font-size: 13px !important; }
 
-.sup-twitter1 {
-  color: rgba(37, 123, 177, 0.93); }
-
 .sup-twitter {
-  color: #1da1f2;
+  color: rgba(27, 150, 189, 0.71);
   font-size: 17px !important; }
+
+.sup1b {
+  font-size: 16px;
+  text-decoration: none; }
 
 .tpc .img-circle {
   width: 140px; }
@@ -731,43 +754,41 @@ label {
   font-size: 15px;
   line-height: 30px; }
 
-.abtimg {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-top: -10px; }
-
 .abt {
+  margin-top: 60px;
   position: relative;
-  margin-top: -410px;
-  max-width: 500px; }
+  max-width: 700px; }
 
 .abt2 {
   text-align: center;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.42857143;
-  color: white; }
+  color: black; }
 
-.abtbtn {
-  margin-top: 20px;
+.abtimg {
   text-align: center; }
 
-.abtbtn .btn-primary {
-  border-color: white;
+.abtsignup {
+  text-align: center;
+  margin-top: 15px; }
+
+.abtsignup .btn-primary {
+  font-size: 16px;
+  width: 80px;
+  color: white;
+  border: 1px solid rgba(255, 90, 95, 0.5) !important;
   border-radius: 64px;
-  background-color: rgba(255, 90, 95, 0.5); }
-  .abtbtn .btn-primary:active:focus {
-    background-color: rgba(255, 90, 95, 0.7);
-    border-color: white; }
-  .abtbtn .btn-primary:hover {
-    border-color: white;
-    background-color: rgba(255, 90, 95, 0.7); }
+  background-color: rgba(255, 90, 95, 0.3) !important; }
+  .abtsignup .btn-primary:hover {
+    background-color: rgba(255, 90, 95, 0.2) !important;
+    border-color: rgba(255, 90, 95, 0.2) !important;
+    color: white; }
 
 .abtfooter {
   width: 100%;
   position: relative;
   bottom: 0;
-  margin-top: 15px; }
+  padding-top: 12px; }
 
 .uploadlink {
   text-align: center; }
@@ -791,8 +812,8 @@ label {
 
 .tuth2 {
   font-size: 20px;
-  font-weight: bold;
-  color: rgba(247, 60, 70, 0.4); }
+  color: black;
+  font-weight: bold; }
 
 .tuta {
   font-size: 16px; }
@@ -805,8 +826,22 @@ label {
   width: 26px;
   height: 22px; }
 
+.tutbutton .btn-primary {
+  font-size: 16px;
+  width: 80px;
+  color: #ff5a5f;
+  border: 1px solid #ff5a5f;
+  border-radius: 64px;
+  background-color: white !important; }
+  .tutbutton .btn-primary:hover {
+    background-color: white !important;
+    border: 1px solid #ff5a5f;
+    color: #ff5a5f;
+    cursor: default; }
+
 .userpartialimg .img-circle {
-  width: 35px; }
+  width: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.3); }
 
 .ulpartial {
   margin-top: -40px;
@@ -833,7 +868,6 @@ label {
 
 .nmcp {
   text-align: center;
-  margin-top: 20px;
   max-width: 700px; }
 
 .nmcp1 {
@@ -848,24 +882,25 @@ label {
 .nmcp1b {
   color: rgba(255, 90, 95, 0.2);
   cursor: pointer;
-  font-size: 70px; }
+  font-size: 50px; }
   .nmcp1b:hover {
     color: rgba(255, 90, 95, 0.4); }
 
 .nmcp1ba {
-  font-size: 34px; }
+  font-size: 17px; }
 
 .nmcp1c {
+  margin-top: 30px;
   width: 100%;
-  height: 120px;
+  height: 90px;
   border: 2px solid #eaeaea;
   border-radius: 40px;
-  padding-left: 10px;
-  font-size: 25px;
+  padding-left: 15px;
+  font-size: 17px;
   -webkit-appearance: none; }
 
-.nmcp1d {
-  font-size: 22px !important; }
+.nmplink {
+  font-size: 20px !important; }
 
 .atv {
   margin-top: 20px; }
@@ -946,11 +981,14 @@ label {
   margin-top: 70px; }
 
 .fed2a {
-  margin-top: 50px; }
+  margin-top: 50px;
+  width: 100%;
+  max-width: 965px;
+  height: auto; }
 
 .fed3 {
   text-align: center;
-  margin-top: -200px; }
+  margin-top: -130px; }
 
 .getbutton .btn-primary {
   font-size: 20px;
@@ -991,7 +1029,8 @@ label {
     color: black; }
 
 .fdtime {
-  font-size: 90%;
+  font-size: 80%;
+  font-weight: bold;
   color: rgba(0, 0, 0, 0.6); }
 
 .fdinfo2 {
@@ -1012,10 +1051,10 @@ label {
   font-family: ralewayregular; }
 
 .fdlikeicon {
-  color: rgba(0, 0, 0, 0.4); }
+  color: rgba(247, 60, 70, 0.5); }
 
 .fdlikeicon .glyphicon-heart {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(247, 60, 70, 0.3);
   font-size: 17px;
   padding-top: 4px; }
 
@@ -1064,7 +1103,7 @@ label {
   background-size: contain !important; }
 
 .mcpshw1 {
-  color: #d1cece;
+  color: rgba(0, 0, 0, 0.81);
   padding-top: 10px;
   font-size: 15px; }
 
@@ -1072,7 +1111,7 @@ label {
   padding: 2px; }
 
 .mcpshw1 .glyphicon {
-  color: #d1cece; }
+  color: rgba(0, 0, 0, 0.81); }
 
 .mcpshw hr {
   margin-top: -1px; }
@@ -1116,7 +1155,7 @@ label {
 
 .commentformbtn .btn-default {
   margin-top: 4px;
-  color: #d1cece;
+  color: rgba(209, 206, 206, 0.34);
   font-size: 22px;
   background: none;
   border: none; }
@@ -1140,7 +1179,8 @@ label {
   list-style: none; }
 
 .commentimg .img-circle {
-  width: 20px; }
+  width: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3); }
 
 .commentusername {
   color: black;
@@ -1162,7 +1202,7 @@ label {
 
 #likky .btn-default {
   font-size: 25px;
-  color: rgba(247, 60, 70, 0.5);
+  color: #EA0E0E;
   background: none;
   border: none; }
   #likky .btn-default:focus {
@@ -1170,11 +1210,11 @@ label {
   #likky .btn-default:active {
     box-shadow: none; }
   #likky .btn-default:hover {
-    color: rgba(247, 60, 70, 0.5); }
+    color: rgba(209, 206, 206, 0.34); }
 
 #likki .btn-default {
   font-size: 25px;
-  color: #d1cece;
+  color: rgba(209, 206, 206, 0.34);
   background: none;
   border: none; }
   #likki .btn-default:focus {
@@ -1182,7 +1222,7 @@ label {
   #likki .btn-default:active {
     box-shadow: none; }
   #likki .btn-default:hover {
-    color: #d1cece; }
+    color: #EA0E0E; }
 
 .likes {
   color: black;
@@ -1195,10 +1235,11 @@ label {
   color: white; }
 
 .ush1 .img-circle {
-  width: 30px; }
+  width: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3); }
 
 .caret {
-  color: rgba(247, 60, 70, 0.3); }
+  color: black; }
 
 .ush2 {
   margin-right: 5px; }
@@ -1343,7 +1384,7 @@ label {
 .edt2 {
   display: none; }
 
-.edt .glyphicon-camera {
+.edt3 {
   color: rgba(211, 211, 211, 0.7);
   font-size: 35px;
   cursor: pointer;
@@ -1351,12 +1392,6 @@ label {
 
 .edt4 {
   text-align: center;
-  margin-top: 30px; }
-
-.footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
   margin-top: 30px; }
 
 .foot {
@@ -1368,7 +1403,8 @@ label {
   color: black;
   word-wrap: break-word;
   padding: 5px;
-  font-size: 15px; }
+  font-size: 12px;
+  font-weight: bold; }
 
 .copyright {
   font-size: 12px; }
@@ -1412,6 +1448,9 @@ label {
     color: rgba(247, 60, 70, 0.1); }
 
 @media screen and (min-width: 320px) {
+  .manu {
+    height: 300px; }
+
   .fdinfo1 {
     height: 50px; }
 
@@ -1425,7 +1464,6 @@ label {
     margin-top: 3%; }
 
   .fdtime {
-    font-size: 90%;
     margin-top: 3.5%; }
 
   .feedcontent {
@@ -1434,38 +1472,17 @@ label {
   .fdlikeicon {
     font-size: 100%; } }
 @media screen and (min-width: 375px) {
-  .abt {
-    margin-top: -460px; }
-
-  .abt2 {
-    font-size: 16px; }
-
-  .abtbtn {
-    margin-top: 78px; }
-
-  .abtfooter {
-    margin-top: 30px; }
-
   .manu {
-    height: 250px; }
+    height: 350px; }
 
-  .manu4 {
-    display: none; }
-
-  .wlcfoot {
-    display: inline; } }
+  .manufoot {
+    margin-top: 92px; } }
 @media screen and (min-width: 414px) {
-  .abt {
-    margin-top: -515px; }
-
-  .abt2 {
-    font-size: 17px; }
-
-  .abtbtn {
-    margin-top: 115px; }
-
   .manu {
-    height: 260px; }
+    height: 400px; }
+
+  .manufoot {
+    margin-top: 105px; }
 
   .profiletop .img-circle {
     width: 150px; } }
@@ -1485,7 +1502,8 @@ label {
   .fdinfo2 .img-circle {
     width: 6%;
     margin-top: 0.5%;
-    margin-left: 4%; }
+    margin-left: 4%;
+    border: 1px solid rgba(0, 0, 0, 0.3); }
 
   .fdcontent1 {
     display: none; }
@@ -1498,13 +1516,14 @@ label {
     margin: auto;
     left: 0;
     right: 0; } }
-@media screen and (min-width: 501px) {
-  .abtbtn {
-    margin-top: 120px; }
-
-  .abt2 {
-    font-size: 18px; } }
 @media screen and (min-width: 580px) {
+  .supimgdiv {
+    text-align: center; }
+
+  .supimg {
+    max-width: 500px;
+    height: auto; }
+
   .manuspace1 {
     display: none; }
 
@@ -1513,7 +1532,7 @@ label {
     margin-top: 100px; }
 
   .manu {
-    height: 500px;
+    height: 520px;
     position: inherit; }
 
   .manu2 {
@@ -1528,6 +1547,9 @@ label {
     left: 0;
     right: 0; } }
 @media screen and (min-width: 758px) {
+  .abtimg {
+    margin-top: 10px; }
+
   .mindivhome {
     margin-left: 30px; }
 
@@ -1535,22 +1557,16 @@ label {
     margin-right: 30px; }
 
   .tuth2 {
-    font-size: 22px; }
-
-  .tuta {
-    font-size: 18px; }
-
-  .abt {
-    margin-top: -610px; }
-
-  .abt2b {
-    margin-top: 55px; }
+    font-size: 20px; }
 
   .fdusern {
-    font-size: 85%; }
+    font-size: 15px; }
 
-  #likke {
-    margin-left: -6px; }
+  #likki {
+    margin-left: -3px; }
+
+  #likky {
+    margin-left: -3px; }
 
   .navbar-incr {
     height: 59px; }
@@ -1562,9 +1578,6 @@ label {
   .outer-micropartial {
     margin-top: 30px; }
 
-  .fed3 {
-    margin-top: -450px; }
-
   .atv1 {
     font-size: 17px; }
 
@@ -1573,7 +1586,12 @@ label {
 
   .getbutton .btn-primary {
     font-size: 25px;
-    width: 155px; }
+    width: 155px;
+    background-color: rgba(255, 90, 95, 0.2); }
+    .getbutton .btn-primary:active:focus {
+      background-color: rgba(255, 90, 95, 0.3); }
+    .getbutton .btn-primary:hover {
+      background-color: rgba(255, 90, 95, 0.3); }
 
   .fed2 {
     text-align: center;
@@ -1582,7 +1600,10 @@ label {
     right: 0; }
 
   .fed2a {
-    margin-top: -140px; }
+    margin-top: 60px; }
+
+  .fed3 {
+    margin-top: -260px; }
 
   .yawn {
     margin-top: 490px; }
@@ -1636,7 +1657,10 @@ label {
     width: 500px;
     margin: auto;
     left: 0;
-    right: 0; } }
+    right: 0; }
+
+  .manufoot li {
+    margin-top: -2px; } }
 @media screen and (min-width: 1200px) {
   .micropartial-img {
     width: 25%;

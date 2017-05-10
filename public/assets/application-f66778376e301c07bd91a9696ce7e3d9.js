@@ -12963,7 +12963,7 @@ return $.ui.autocomplete;
 
 }).call(this);
 (function() {
-  $(function() {
+  $(document).on("turbolinks:load", function() {
     if ($('.infinite-scrolling').size() > 0) {
       $(window).on('scroll', function() {
         var more_posts_url;

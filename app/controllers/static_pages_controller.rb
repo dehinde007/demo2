@@ -18,8 +18,8 @@ class StaticPagesController < ApplicationController
     end
   end
     
-  def about
-    @skip_header = true  
+  def about_us
+    
   end 
   
   def guide
