@@ -445,7 +445,7 @@ label{
 
 .manu{
   width: 100%;
-  max-width: 650px;
+  max-width: 600px;
   height: 280px;
   background-image: url("Welcomehero.jpg");
   background-size: 100%;
@@ -550,6 +550,7 @@ label{
 
 .Hchallenge{
   font-weight: bold;
+  color: rgba(247, 60, 70, 0.5);
 }
 
 .sup-icon-size{
@@ -642,9 +643,9 @@ label{
     font-size: 16px;
     width: 80px;
     color:  white;
-    border: 1px solid rgba(255, 90, 95, 0.5)!important;
+    border: 1px solid rgba(255, 90, 95, 0.2)!important;
     border-radius: 64px;
-    background-color: rgba(255, 90, 95, 0.3)!important;
+    background-color: rgba(255, 90, 95, 0.2)!important;
     &:hover {
     background-color: rgba(255, 90, 95, 0.2)!important;
     border-color: rgba(255, 90, 95, 0.2)!important;  
@@ -1507,6 +1508,7 @@ label{
 } 
 
 @media screen and (min-width: 320px) {  
+
 .manu{
   height: 300px;
 } 
@@ -1552,7 +1554,15 @@ label{
 
 }  
 
-@media screen and (min-width: 414px) {       
+@media screen and (min-width: 414px) {    
+.abtimg{
+  margin-top: 20px;
+}  
+
+.abtsignup{
+  margin-top: 40px;
+}
+     
 .manu{
   height: 400px; 
 }
@@ -1561,7 +1571,6 @@ label{
   margin-top: 105px;
 }
 
-  
 //microshow
 .profiletop .img-circle{
   width: 150px;
@@ -1617,9 +1626,22 @@ label{
 }
 
 @media screen and (min-width: 501px) {
+.fed3{
+  margin-top: -180px;
+}
+  
 }
 
+
 @media screen and (min-width: 580px) {
+.fed2a{
+  margin-top: -50px;
+}  
+  
+.fed3{
+  margin-top: -220px;
+}  
+  
 .supimgdiv{
   text-align: center;
 } 
@@ -1734,7 +1756,7 @@ label{
 }
 
 .fed2a{
-  margin-top: 60px;
+  margin-top: -190px;
 }
 
 .fed3{
@@ -1795,6 +1817,15 @@ label{
 }
 
 @media screen and (min-width: 992px) {    
+.fed2a{
+  margin-top: -260px;
+}  
+
+.fed3{
+  margin-top: -440px;
+}  
+ 
+  
 .micropartial-img{
   width: 25%;
   margin: 4.144%;
@@ -1842,6 +1873,15 @@ label{
   left: 0;
   right: 0;
 }
+  
+.fed2a{
+  margin-top: -320px;
+}    
+  
+.fed3{
+  margin-top: -360px;
+}  
+   
   
 }
 
