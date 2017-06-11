@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
   def welcome
      if signed_in?
       redirect_to home_path
-    else     
+    else          
     end
   end
     
@@ -26,24 +26,19 @@ class StaticPagesController < ApplicationController
     @skip_header = true  
   end
   
-  def createhall
-    @skip_header = true  
+  def environment
   end
 
   def support
-    @skip_header = true  
   end
   
   def terms  
-    @skip_header = true  
   end
   
   def youth
-    @skip_header = true  
   end
     
   def privacy
-    @skip_header = true
   end
 
   def search

@@ -4,14 +4,15 @@
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
- <div class="container edt"> 
- 
+ <div class="container edt font-fam5"> 
+    <p class="edthd font-fam3">Edit your personal info</p>
+    
     <p>
-     <%= f.text_field :name, class: "edt1 font-fam1", placeholder: "fullname" %>
+     <%= f.text_field :name, class: "edt1", placeholder: "Fullname" %>
     </p>
    
     <p>
-     <%= f.text_field :username, class: "edt1 font-fam1", placeholder: "username" %>
+     <%= f.text_field :username, class: "edt1", placeholder: "Username" %>
     </p>
       
     <div class="font-fam1">
@@ -20,26 +21,26 @@
     </div>
    
     <p>
-      <%= f.text_field :email, class: "edt1 font-fam1", placeholder: "email" %>
+      <%= f.text_field :email, class: "edt1", placeholder: "Email" %>
     </p> 
    
     <p>
-      <%= f.text_field :bio, class: "edt1 font-fam1", placeholder: "what do you do to make the world a better place?" %>
+      <%= f.text_field :bio, class: "edt1", placeholder: "Bio" %>
     </p>
     
     <p>
-      <%= f.text_field :website, class: "edt1 font-fam1", placeholder: "website" %>
+      <%= f.text_field :website, class: "edt1", placeholder: "Website" %>
     </p>
     
-    <p class="font-fam">
-      <%= f.password_field :password, class: "edt1 font-fam1", placeholder: "password" %>
+    <p>
+      <%= f.password_field :password, class: "edt1", placeholder: "Password" %>
     </p>
     
-    <p class="">
-      <%= f.password_field :password_confirmation, class: "edt1 font-fam1", placeholder: "confirm password" %>
+    <p>
+      <%= f.password_field :password_confirmation, class: "edt1", placeholder: "Confirm password" %>
     </p>
    
-   <p class="appbutton edt4 font-fam1"><%= f.submit "UPDATE", class: "font-fam1 btn btn-primary" %></p>
+   <p class="appbutton edt4"><%= f.submit "Confirm", class: "font-fam3 btn btn-primary" %></p>
       
     <% end %>
     

@@ -9,10 +9,10 @@
 			 
 	<span class="dropdown">
 		 
-    <span class="font-fam1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="font-fam5 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span id="pgn2"><%= @user.username %></span><span class="caret"></span>
     </span>
-    <ul class="dropdown-menu font-fam">
+    <ul class="dropdown-menu font-fam2">
      
      <li><%= link_to pluralize(@user.microposts.length, "Hall"), @user %></li>
      <li><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %></a></li>
@@ -45,11 +45,11 @@
 <% else %>
 <% end %>	
 </p> 
-<p class="font-fam ush4"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
-<p class="font-fam ush4"><%= @user.bio %></p>
+<p class="font-fam2 ush4"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
+<p class="font-fam2 ush4"><%= @user.bio %></p>
 <div class="ush5">
 <hr class="container"/>
-<section class="font-fam ush6"><%= render 'follow_form' if signed_in? %></section>
+<section class="font-fam2 ush6"><%= render 'follow_form' if signed_in? %></section>
  
 <% if @user.microposts.any? %>
 
@@ -58,7 +58,7 @@
 </div>
 
 <% elsif current_user == @user %>
-<div class="font-fam1 ush7">Help Share With Your Set
+<div class="font-fam1 ush7">Welcome to your profile
 <% else %>    
 <% end %>
 </div>

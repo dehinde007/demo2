@@ -4,7 +4,7 @@
 <%= render 'shared/error_messages', object: f.object %>
 </div>
 
-<div class="container nwu font-fam1">
+<div class="container nwu font-fam3">
      
      <section class="nwu1">
      
@@ -23,10 +23,11 @@
      <p>
       <%= f.password_field :password, :class =>"nwu1a", placeholder: "Password" %>
      </p>
-     
+         <p class="font-fam3 signsess-word">By signing up, you agree with our terms.</p>
+
      <br />
      
-     <p class="font-fam1 appbutton"><%= f.submit "SIGN UP", class: "btn btn-primary" %></p>
+     <p class="font-fam2 appbutton"><%= f.submit "SIGN UP", class: "btn btn-primary" %></p>
      
      <% end %>
     
@@ -34,5 +35,4 @@
 
 </div>
 
-    <p class="font-fam1 signsess-word">By signing up, you agree with our terms.</p>
 

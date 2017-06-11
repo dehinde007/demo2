@@ -8,7 +8,7 @@
         <span class="backheadglyph1 glyphicon glyphicon-menu-left"></span>
         <% end %> 
     </span>
-      <span id="pgn1" class="navbar-brand font-fam1">
+      <span id="pgn1" class="navbar-brand font-fam2">
       	<%= link_to "Following", activities_path, class: "hov2", id: "pgn2" %>
       </span>
 
@@ -16,6 +16,7 @@
     </div><!-- /.container -->
     </nav>
 </header>
+
 <div class="font-fam1 container atv">
 
 <% if @activities.any? %>
@@ -34,8 +35,7 @@
  <% else %>
     
     <div class="atv1">
-     <p class="font-fam1">No Activity Yet!</p>
-     <p class="font-fam1">Follow a Channel To Get Activities</p>
+     <p class="font-fam1">Follow a channel to get activities</p>
     </div>
 
  <% end %></div>

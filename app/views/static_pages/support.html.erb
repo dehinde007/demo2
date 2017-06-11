@@ -1,38 +1,47 @@
-<%content_for :title, "Support | Hallit"%>
+<%content_for :title, "Support - Hallit"%>
+
+
 <div class="sup-wrap">
-<div class="container sup font-fam1">
-  <p class="suphead">Welcome to our Support Center</p>
-  <p class="sup2">A Hall is for sharing your passion, stories and core values with the world by writing little messages on your photos to help inspire and awaken interests in others. <span><%= link_to "Learn how here", guide_path, class: "sup1a" %></span></p>		 
-</div> 
-  <div class="supimgdiv"><%= image_tag('hope5.jpg', :class => "supimg") %></div>
-  <br /><br />
+ 
+  <div class="container sup">
+  <p class=" font-fam3 suphead">Welcome To Our Support Center</p>
+  <p class="font-fam1 sup2">A Hall is a way of bringing the world together through our passion, stories and core values in order 
+  	 to differentiate ourselves, inspire and awaken interests in others for the creation of a stronger, safer and better world.
+  	 <span class="font-fam1"><%= link_to "Learn how here", guide_path, class: "sup1a" %></span></p>  
+  </div>
   
-<div class="container sup font-fam1">  
-  <p class="sup1">Enter Our Challenge</p>	
-  <p class="sup2">Make and post a hall. Challenge two people on your other social platforms along with a link to your hall and correct hashtag <span class="Hchallenge">#HallitCoreValueChallenge</span></p> 
-  	 <p class="sup2">E.g I challenge @Dave and @Kendra to #HallitCoreValueChallenge. Here's the link to my hall http://bit.ly/2qAz2EP</p> 
-  <br />
-	
-  <p class="sup1">Profile and Editor on Mobile</p>  
-  <p class="sup2">To get to your profile or camera on a mobile device, tap the Hallit logo when signed in.</p>
-  <br />
+  <div class="supimg"><%= image_tag('hr23.png', :class => "supimga") %></div>
+  
+  <br /><br />
 
-  <div class="supcirc"><p class="sup2"><span class="glyphicon glyphicon-home sup-icon-size"></span></p></div>
-  <p class="sup1">Homescreen Optimization</p>
-  <p class="sup2">For a quick navigation to Hallit from your homescreen. Go to your home then proceed to add to your homescreen. Super easy! </p>
-  <br /><br />
-  
-  <p class="sup1">To Learn more about Hallit<span class="fa fa-copyright sup-copyright"></span></p>	
-  <p class="sup2">Follow us on <i class="fa fa-twitter sup-twitter"></i><%= link_to "@hallitservice", "https://twitter.com/hallitservice", class: "sup1a sup1b" %>.</p>
-  <br /><br />
-  
-  <p class="font-fam1 sup2">Thank you for  choosing to create a better world.</p>
+  <div class="container sup font-fam1">  
+  	
+  <%= image_tag('av.PNG', :class => "supimg2") %>
+  <p class="font-fam3 sup1">Finding your profile / editor</p>
+  <p class="sup2">To get to your profile or editor on a mobile device, tap the Hallit logo when signed in.</p>
+  <br /><br /><br />
 
+  <div class="supcirc"><p class="sup2"><span class="glyphicon glyphicon-home supcirchome"></span></p></div>
+  <p class="font-fam3 sup1">Homescreen optimization</p>
+  <p class="sup2">For quick navigation to Hallit from your homescreen, go to your home then proceed to add to your homescreen. Super easy! </p>
+  <br /><br /><br />
+  
+  <span class="fa fa-gift supgift"></span>
+  <p class="font-fam3 sup1">Core value challenge</p>	
+  <p class="sup2">Make a hall then challenge two people on your other social platforms along with a link to your hall and correct hashtag <span class="font-fam2 Hchallenge">#HallitCoreValueChallenge</span> and stand a chance to win a gift card</p> 
+  <p class="sup2">E.g I challenge @Dave and @Kendra to #HallitCoreValueChallenge. Here's the link to my hall http://bit.ly/2qAz2EP</p> 
+  <br /><br /><br />
+  
+  <i class="fa fa-twitter sup-twitter"></i>
+  <p class="font-fam3 sup1">Learn more about Hallit<span class="fa fa-copyright sup-copyright"></span></p>	
+  <p class="font-fam1 sup2">We're on twitter <%= link_to "@hallitservice", "https://twitter.com/hallitservice", class: "font-fam1 sup1a sup1b" %></p>
+  <br /><br />
+  
 </div>
 </div>
 
-<br /><br />
 <% if signed_in? %>
+<br /><br />
 <div><%= render 'layouts/minfooter' %></div>
 <% else %> 
 <% end %>

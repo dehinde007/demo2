@@ -1,15 +1,17 @@
-<%content_for :title, "About us"%>
+<%content_for :title, "About Us - Hallit"%>
+<div class="wrap">
+<div class="abtimg"><%= image_tag('ph2.jpg', :class => "") %></div>
 
-<div class="container abt font-fam1">
-<p class="abt2 abt2d">To us, creating a better world is about values. Sadly it’s a very noisy and complicated world and so there is need to communicate through the noise and stand out. Hallit is a social network that wants to create a stronger, safer and better world by allowing us share our passion, stories and core values in order to inspire and awaken the interests in others.</p>
+<div class="container abt font-fam2">
+<p class="abt2">To us, creating a better world is about values. Sadly it’s a very noisy and complicated world and so there's need to communicate through the noise and stand out. Fortunately, Hallit is a social network that wants to create a stronger, safer and better world by allowing us share our passion, stories and core values in order to differentiate ourselves, inspire and awaken the interests in others.</p>
 
+
+<p class="font-fam2 abtlrn"><%= link_to "Learn more", support_path, :class => "", "data-turbolinks": "false" %><i class="abtlrnb glyphicon glyphicon-menu-right"></i></p>
 </div>
-
-<div class="abtimg"><%= image_tag('hope10.PNG', :class => "supimg") %></div>
-
-<p class="font-fam1 abtsignup"><%= link_to "Sign up", signup_path, :class => "btn btn-primary", "data-turbolinks": "false" %></p>
+<br /><br />
 
 <% if signed_in? %>
 <% else %>
-<div class="abtfooter"><%= render 'layouts/footer' %></div>
+<div class="font-fam2 footer"><%= render 'layouts/footer' %></div>
 <% end %>
+</div>

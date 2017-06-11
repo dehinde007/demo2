@@ -8,9 +8,14 @@ class Micropost < ActiveRecord::Base
 
   #photo
   has_attached_file :photo, styles: {
-    instag: '1080x1080',
-    square: '300x300#'
-  }, :url => "/attachments/:id/:style/:basename.:extension",
+    instag: ['1080x1080', :jpg],
+    square: ['300x300#', :jpg]
+  }, 
+    :convert_options => {
+    :instag => "-interlace Plane",
+    :square => "-interlace Plane"
+  },
+    :url => "/attachments/:id/:style/:basename.:extension",
      :path => ":rails_root/public/attachments/:id/:style/:basename.:extension"
   validates_attachment_presence :photo 
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/

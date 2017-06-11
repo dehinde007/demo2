@@ -43,7 +43,7 @@ SampleApp::Application.routes.draw do
   match '/youth',    to: 'static_pages#youth',    via: 'get'
   match '/terms', to: 'static_pages#terms', via: 'get' 
   match '/guide', to: 'static_pages#guide', via: 'get' 
-  match '/createhall', to: 'static_pages#createhall', via: 'get'
+  match '/environment', to: 'static_pages#environment', via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
   match '/search', to: 'static_pages#search', via: 'get'
   match '/home', to: 'static_pages#home', via: 'get'
