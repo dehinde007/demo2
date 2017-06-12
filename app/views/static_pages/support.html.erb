@@ -5,20 +5,17 @@
  
   <div class="container sup">
   <p class=" font-fam3 suphead">Welcome To Our Support Center</p>
-  <p class="font-fam1 sup2">A Hall is a way of bringing the world together through our passion, stories and core values in order 
-  	 to differentiate ourselves, inspire and awaken interests in others for the creation of a stronger, safer and better world.
-  	 <span class="font-fam1"><%= link_to "Learn how here", guide_path, class: "sup1a" %></span></p>  
+  <p class="font-fam1 sup2">A Hall is a way of bringing the world together by sharing our passion, stories and core values through our photos.
   </div>
   
   <div class="supimg"><%= image_tag('hr23.png', :class => "supimga") %></div>
   
-  <br /><br />
+  <br /><br /><br />
 
   <div class="container sup font-fam1">  
   	
   <%= image_tag('av.PNG', :class => "supimg2") %>
-  <p class="font-fam3 sup1">Finding your profile / editor</p>
-  <p class="sup2">To get to your profile or editor on a mobile device, tap the Hallit logo when signed in.</p>
+  <p class="sup2">To get to your profile on mobile, tap the Hallit logo when signed in.</p>
   <br /><br /><br />
 
   <div class="supcirc"><p class="sup2"><span class="glyphicon glyphicon-home supcirchome"></span></p></div>
@@ -39,9 +36,3 @@
   
 </div>
 </div>
-
-<% if signed_in? %>
-<br /><br />
-<div><%= render 'layouts/minfooter' %></div>
-<% else %> 
-<% end %>
