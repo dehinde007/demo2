@@ -125,7 +125,7 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
 
 .fa{
   font-size: 23px!important;
-  color: black;
+  color: rgba(97, 96, 96, 0.3);
 }
 
 .errmsg{
@@ -457,7 +457,7 @@ label{
 }
 
 .manu2{
- font-size: 27px;
+ font-size: 23px;
  margin-top: 20px;
  text-align: center;
  color: white; 
@@ -1531,7 +1531,7 @@ label{
 }
 
 .mindiv .glyphicon{
-  color: black;
+  color: rgba(97, 96, 96, 0.3);
   font-size: 23px;
   &:hover{
     color: black;
