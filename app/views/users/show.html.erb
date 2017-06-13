@@ -9,7 +9,7 @@
 			 
 	<span class="dropdown">
 		 
-    <span class="font-fam2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="font-fam5 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span id="pgn2"><%= @user.username %></span><span class="caret"></span>
     </span>
     <ul class="dropdown-menu font-fam2">
@@ -39,14 +39,14 @@
 </div>
 
 
-<p class="font-fam2 ush3"><%= @user.name.titleize %>
+<p class="font-fam5 ush3"><%= @user.name.titleize %>
 <% if @user.verify == true %>
 <span><%= image_tag('Verification1.jpg', :class => "verify", "data-toggle"=>"modal", "data-placement"=>"top", "title"=>"Verified Account") %></span>
 <% else %>
 <% end %>	
 </p> 
-<p class="font-fam2 ush4"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
 <p class="font-fam2 ush4"><%= @user.bio %></p>
+<p class="font-fam2 ush4"><%=auto_link(@user.website, :html => { :target => '_blank' }) %></p>
 <div class="ush5">
 <hr class="container"/>
 <section class="font-fam2 ush6"><%= render 'follow_form' if signed_in? %></section>
