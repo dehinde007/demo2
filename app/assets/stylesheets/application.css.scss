@@ -16,7 +16,7 @@
 /* Import the fonts */
 @font-face {
     font-family: 'MyriadPro-Light';
-    src: font-url('https://d22e73879l1fx.cloudfront.net/assets/MyriadPro-Light.woff') format('woff');
+    src: font-url('/assets/MyriadPro-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,7 +38,7 @@
 
 @font-face {
     font-family: 'SF Pro Display';
-    src: font-url('https://d22e73879l1fx.cloudfront.net/assets/sf-pro-display_light.woff') format('woff');
+    src: font-url('/assets/sf-pro-display_light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
