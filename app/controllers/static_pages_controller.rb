@@ -24,6 +24,7 @@ class StaticPagesController < ApplicationController
   end 
   
   def guide
+   @skip_header = true  
   end
   
   def environment
