@@ -392,11 +392,11 @@ label{
 
 .midhdglyph{
   font-size: 23px;
-  color: rgba(247, 60, 70, 0.3);
+  color: black;
   margin-top: 13px;
   margin-left: 20px;
   &:hover{
-  color: rgba(247, 60, 70, 0.3);  
+  color: black;  
   }
 }
 
@@ -567,14 +567,14 @@ label{
 }
 
 .sup1b{
-  color: rgba(247, 60, 70, 0.3);
+  color: rgba(247, 60, 70, 0.5);
   text-decoration: none;
 &:visited {
-  color: rgba(247, 60, 70, 0.3);
+  color: rgba(247, 60, 70, 0.5);
   background: none;
  }  
 &:hover {
-  color: rgba(247, 60, 70, 0.3);
+  color: rgba(247, 60, 70, 0.5);
   background: none;
 }
 }
@@ -586,7 +586,7 @@ label{
 }
 
 .sup3{
-  color: rgba(247, 60, 70, 0.9);
+  color: rgba(247, 60, 70, 0.5);
   font-size: 16px;
   line-height: 20px; 
 }
