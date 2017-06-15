@@ -1,5 +1,4 @@
 class StaticPagesController < ApplicationController
-  before_action :signed_in_user,  only: :support
 
   def home
     if signed_in?
