@@ -121,7 +121,7 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
 
 .fa{
   font-size: 23px!important;
-  color: rgba(247, 60, 70, 0.3);
+  color: black;
 }
 
 .errmsg{
@@ -542,7 +542,7 @@ label{
 }
 
 .supa{
-  margin-top: -5px;
+  margin-top: -6px;
 }
 
 .sup1{
@@ -586,7 +586,7 @@ label{
 }
 
 .sup3{
-  color: rgba(247, 60, 70, 0.3);
+  color: rgba(247, 60, 70, 0.9);
   font-size: 16px;
   line-height: 20px; 
 }
@@ -1535,10 +1535,10 @@ label{
 }
 
 .mindiv .glyphicon{
-  color: rgba(247, 60, 70, 0.3);
+  color: black;
   font-size: 23px;
   &:hover{
-    color: rgba(247, 60, 70, 0.3);
+    color: black;
   }
 } 
 
