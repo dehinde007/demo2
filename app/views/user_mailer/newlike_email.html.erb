@@ -22,16 +22,12 @@
 </header>	
 
 <p class="notif-text" style="font-size: 16px; color:black; padding-left: 10px; margin-top: 30px;">
-	Hi <%=  @like.micropost.user.name.titleize %>, <%= link_to @like.user.username, @like.user, :style=>"color:#FCC8CA!important;" %> liked your 
-	<%= link_to 'Hall', micropost_url(@like.micropost), :style=>"color:#FCC8CA!important;" %>
+	Hi <%=  @like.micropost.user.name.titleize %>, 
 </p>
-<br /><br />
-<div class="foot" style="position:absolute; bottom:0; width: 100%;">
-    <ul class="container-fluid footerul" style="font-size: 12px; list-style: none; text-align: center; margin-left: -30px;">
-      <li style="padding: 3px; display: inline; word-wrap: break-word;"><%= link_to "About Us", "https://hallit.herokuapp.com/about", class: "hov footerlnk", :style=>"color: black; text-decoration: none;" %></li> 
-      <li style="padding: 3px; display: inline; word-wrap: break-word; list-style: none; color: black;" class="footdate">2017 Hallit</li> 
-    </ul>
-</div>
+
+<p class="notif-text" style="font-size: 16px; color:black; padding-left: 10px; margin-top: 30px;">
+	<%= link_to @like.user.username, @like.user, :style=>"color:black!important;" %> liked your <%= link_to 'Hall', micropost_url(@like.micropost), :style=>"color:black!important;" %>
+</p>
 
 </body>
 </html>
