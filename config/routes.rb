@@ -29,6 +29,8 @@ SampleApp::Application.routes.draw do
       get :ver, :verify
     end
   end
+  resources "contacts", only: [:new, :create]
+  resources "requests", only: [:new, :create]
   resources :activities 
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy, :show]
@@ -50,4 +52,6 @@ SampleApp::Application.routes.draw do
   match '/halls', to: 'microposts#index', via: 'get'
   match '/leaderboard', to: 'microposts#leaderboard', via: 'get'
   match '/new/hall', to: 'microposts#new', via: 'get'
+  match '/contacts', to: 'contacts#new', via: 'get'
+  match '/request_provisioning', to: 'requests#new', via: 'get'
 end

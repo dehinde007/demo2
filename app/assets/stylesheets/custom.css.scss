@@ -141,6 +141,18 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
 }
 }
 
+.greylink {
+  color:rgba(97, 96, 96, 0.3);
+&:visited {
+  color: rgba(97, 96, 96, 0.3);
+  background: none;
+ }  
+&:hover {
+  color: rgba(97, 96, 96, 0.3);
+  background: none;
+}
+}
+
 .blacklink a{
   color: #484848;
 &:visited {
@@ -400,6 +412,17 @@ label{
   }
 }
 
+.midhdglyphnil{
+  font-size: 23px;
+  color: rgba(97, 96, 96, 0.3);
+  margin-top: 13px;
+  margin-left: 20px;
+  cursor: pointer;
+  &:hover{
+  color: rgba(97, 96, 96, 0.3);  
+  }
+}
+
 .midhdcam{
   margin-right: 10px!important;
 }
@@ -632,6 +655,29 @@ label{
 .sup-twitter{
   color: rgba(27, 150, 189, 0.71);
   font-size: 37px!important;
+}
+
+//contact
+.contactfm1{
+  height: 30px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #F9F9F9;
+  background: white;
+  color: #333;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+
+.contactfm2{
+  height: 150px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #F9F9F9;
+  background: white;
+  color: #333;
+  padding-left: 10px;
+  border-radius: 4px;
 }
 
 //search

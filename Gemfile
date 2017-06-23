@@ -23,6 +23,7 @@ gem 'tzinfo-data'
 gem 'newrelic_rpm'
 gem 'public_activity', github: 'pokonski/public_activity'
 gem 'delayed_job_active_record'
+gem 'mail_form'
 group :development, :test do
   gem 'sqlite3', '1.3.13' 
   # The following optional lines are part of the advanced setup.
