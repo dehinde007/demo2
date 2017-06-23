@@ -1,2 +1,24 @@
+<h3 class="font-fam3">Report a Problem or General Feedback</h3>
 
-<%= render 'form' %>
+<%= form_for @contact do |f| %>
+    <p>
+    <%= f.text_field :name, :required => true, class: "contactfm1", placeholder: "Name" %>
+    </p>
+    
+    <p>
+    <%= f.text_field :email, :required => true, class: "contactfm1", placeholder: "Email Address" %>
+    </p>
+    
+    <p>
+    <%= f.text_area :message, :as => :text, :required => true, class: "contactfm2", placeholder: "Briefly state your complain or feedback" %>
+    </p>
+    
+    <div class= "hidden">
+    <%= f.text_field :nickname, :hint => 'Leave blank!' %>
+    </div>
+    <br />
+    <p class="sessbut appbutton">
+    <%= f.submit 'SEND', :class=> "font-fam2 btn btn-primary" %>
+    </p>
+    
+<% end %>
