@@ -1,18 +1,20 @@
+<% provide(:title, "Hallit Verification") %>
 
-<br /><br /><br />
-<div align="center">
-  <h3>Send A message to Us</h3>
+<div class=""><%= image_tag('desktop2.jpg', :class => "") %></div>
 
-  <%= form_for @request, :html => {:multipart => true} do |f| %>
-    <%= f.text_field :name, :required => true %>
-    <%= f.text_field :email, :required => true %>
-    <%= f.text_field :message, :as => :text, :required => true %>
-    <div class= "hidden">
-      <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-    </div>
-    <div>
-      </br>
-      <%= f.submit 'Send message', :class=> "btn btn-primary" %>
-    </div>
-  <% end %>
+<p class="edthd font-fam3">Request Verification</p>
+
+<div class="container sup supa font-fam1"> 
+  <p class="sup2">We approve account types maintained by users in music, acting, fashion, government, politics, religion, journalism, media, sports, business, and other key interest areas. If you believe your account is of public interest and should be verified, email us.</p>
+</div>
+
+<div class="container-fluid contact">
+<p class="fa fa-envelope-o contacticon"></p>
+<br /><br />
+<%= form_for @request do |f| %>
+    <p><%= f.text_field :email, :required => true, class: "font-fam1 sess1a1 contact2", placeholder: "Email" %></p>
+    <p><%= f.text_area :message, :as => :text, :required => true, class: "font-fam1 sess1a1 contact1", placeholder: "Briefly introduce yourself and tell us why this account should be verified." %></p><br />
+    <div class= "hidden"><%= f.text_field :nickname, :hint => 'Leave blank!' %></div>
+    <p class="smallbt appbutton"><%= f.submit 'REQUEST', :class=> "font-fam1 btn btn-primary" %></p>
+<% end %>
 </div>

@@ -52,6 +52,6 @@ SampleApp::Application.routes.draw do
   match '/halls', to: 'microposts#index', via: 'get'
   match '/leaderboard', to: 'microposts#leaderboard', via: 'get'
   match '/new/hall', to: 'microposts#new', via: 'get'
-  match '/contacts', to: 'contacts#new', via: 'get'
-  match '/request_provisioning', to: 'requests#new', via: 'get'
+  match '/contact', to: 'contacts#new', via: 'get'
+  match '/verification_request', to: 'requests#new', via: 'get'
 end

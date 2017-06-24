@@ -237,6 +237,12 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   color: black;
 }
 
+.alert-info {
+  color: rgba(127, 120, 121, 0.7)!important;
+  background: rgba(247, 60, 70, 0.1)!important;
+  border-color: white!important;
+}
+
 .flash{
   margin-top: 50px;
 }
@@ -664,26 +670,34 @@ label{
 }
 
 //contact
-.contactfm1{
-  height: 30px;
-  width: 100%;
-  font-size: 16px;
-  border: 1px solid #F9F9F9;
-  background: white;
-  color: #333;
-  padding-left: 10px;
-  border-radius: 4px;
+.contact{
+  margin-top: 20px;
+  text-align: center;
 }
 
-.contactfm2{
-  height: 150px;
-  width: 100%;
-  font-size: 16px;
-  border: 1px solid #F9F9F9;
-  background: white;
-  color: #333;
-  padding-left: 10px;
-  border-radius: 4px;
+.contacticon{
+  font-size: 50px!important;
+  color: black; 
+}
+
+.contact1{
+  height: 150px!important;
+  margin-top: 5px;
+  border: 2px solid rgba(97, 96, 96, 0.3)!important;
+  &:focus{
+  background-color: rgb(253, 253, 253); 
+  } 
+}
+
+.contact2{
+  border: 2px solid rgba(97, 96, 96, 0.3)!important;
+  &:focus{
+  background-color: rgb(253, 253, 253); 
+  } 
+}
+
+.smallbt .btn-primary{
+  border: 2px solid rgba(97, 96, 96, 0.3)!important;
 }
 
 //search
@@ -1875,6 +1889,13 @@ label{
   width: 380px!important;
   margin-top: 60px;
 }  
+
+//contact
+.contact{
+  margin-top: 20px;
+  height: 250px;
+  width: 500px;
+}
 
 //session
 .sess1{

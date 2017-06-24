@@ -4,5 +4,5 @@
 
 $ ->
   $('.midhdglyphnil').click ->
-    alert "Your account has not been provisioned to make a hall. Please verify your account."
+    alert "Your account has not been provisioned yet!. Please verify your account."
   

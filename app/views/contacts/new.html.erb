@@ -1,24 +1,21 @@
-<h3 class="font-fam3">Report a Problem or General Feedback</h3>
+<% provide(:title, "Contact") %>
 
+<div class=""><%= image_tag('desktop2.jpg', :class => "") %></div>
+
+<p class="edthd font-fam3">Feedback Loop</p>
+
+<div class="container sup supa font-fam1"> 
+  <p class="sup2">Report bugs, complains, abuse, password reset or give a general feedback.</p>
+</div>
+
+<div class="container-fluid contact font-fam1">
+<p class="fa fa-envelope-o contacticon"></p>
+<br /><br />
 <%= form_for @contact do |f| %>
-    <p>
-    <%= f.text_field :name, :required => true, class: "contactfm1", placeholder: "Name" %>
-    </p>
-    
-    <p>
-    <%= f.text_field :email, :required => true, class: "contactfm1", placeholder: "Email Address" %>
-    </p>
-    
-    <p>
-    <%= f.text_area :message, :as => :text, :required => true, class: "contactfm2", placeholder: "Briefly state your complain or feedback" %>
-    </p>
-    
-    <div class= "hidden">
-    <%= f.text_field :nickname, :hint => 'Leave blank!' %>
-    </div>
-    <br />
-    <p class="sessbut appbutton">
-    <%= f.submit 'SEND', :class=> "font-fam2 btn btn-primary" %>
-    </p>
-    
+    <p><%= f.text_field :name, :required => true, class: "sess1a1 contact2", placeholder: "Name" %></p>
+    <p><%= f.text_area :message, :as => :text, :required => true, class: "sess1a1 contact1", placeholder: "Briefly state your concern" %></p>
+    <p><%= f.text_field :email, :required => true, class: "sess1a1 contact2", placeholder: "Email Address" %></p><br />
+    <div class= "hidden"><%= f.text_field :nickname, :hint => 'Leave blank!' %></div>
+    <p class="smallbt appbutton"><%= f.submit 'DISPATCH', :class=> "font-fam1 btn btn-primary" %></p>
 <% end %>
+</div>
