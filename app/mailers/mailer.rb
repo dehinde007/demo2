@@ -1,5 +1,5 @@
 class Mailer < ActionMailer::Base
-default from: '"Hallit" <hallitservice@gmail.com>'
+default from: '"Hallit" <dehinde007@gmail.com>'
 
 def invitation(invitation)
   @invitation = invitation
