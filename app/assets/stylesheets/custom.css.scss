@@ -506,6 +506,10 @@ label{
   background: black!important;
 }
 
+#mc_embed_signup input.email{
+  font-family: MyriadPro-Light!important;
+}
+
 #mc_embed_signup .button{
   background: black!important;
   border: 1px solid white!important;
@@ -542,6 +546,16 @@ label{
 
 .lnd-icoc{
   margin-top: 5px;
+}
+
+.foot .fa-twitter{
+  color: rgb(27, 150, 189);
+  font-size: 17px!important; 
+}
+
+.foot .fa-facebook{
+  color: rgb(71, 89, 147);
+  font-size: 20px!important; 
 }
 
 .lnd-copyright{
