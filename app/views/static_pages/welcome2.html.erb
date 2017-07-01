@@ -1,0 +1,36 @@
+<head>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '396900824038629'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=396900824038629&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+</head>
+<div class="container-fluid manu"> 
+<p class="font-fam5 manu2"> Creating a Stronger, Safer and Better World through our Passion and Core Values.</p>
+</div>
+
+<p class="font-fam2 manu4">What We Do?</p>
+<p class="container font-fam2 manu3">We're interested in bringing out the best in you.</p>
+
+<ul class="container-fluid manu3 manu3a font-fam2">
+    <li><%= link_to "Sign in", signin_path, :class => "", "data-turbolinks": "false" %></li>
+    <li"><%= link_to "Sign up", signup_path, :class => "", "data-turbolinks": "false" %></li>
+</ul>
+
+<ul class="container-fluid font-fam1 manufoot">
+    <li><%= link_to "About Hallit", about_us_path, class: "hov" %></li>	
+    <li><%= link_to "Support", support_path, class: "hov" %></li>	
+    <li><%= link_to "Terms & Privacy", "#", class: "hov" %></li> 
+    <li><span class="glyphicon glyphicon-copyright-mark copyright"></span> 2017</li> 
+</ul>

@@ -46,4 +46,7 @@ class StaticPagesController < ApplicationController
     @users = User.find([1])
   end
   
+  def hi
+  end
+  
 end

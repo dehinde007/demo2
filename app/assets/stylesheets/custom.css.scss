@@ -3,7 +3,7 @@ html,body{
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: white!important;
+  background-color: black!important;
 }
 
 .modal2{  
@@ -346,13 +346,6 @@ p .src{
   color: black;
 }
 
-//kit 
-#container{
-  max-width: 100%;
-  height: 650px;
-  margin-top: -30px;
-}
-
 img{
   max-width: 100%;
   height: auto;
@@ -392,8 +385,8 @@ label{
 }
 
 .navbar-default{
-  background: rgba(255,255,255,0.8)!important;
-  border-bottom-color: white!important; 
+  background: black!important;
+  border-bottom-color: black!important; 
 }
 
 .navbar-header{
@@ -468,6 +461,91 @@ label{
 
 .head1{
   flex-grow: 1;
+}
+
+//LandingPage
+.lnd{
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lndh{
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+.lndh2{
+  color: white!important;
+}
+
+.flex-lnd{
+   width: 99.7%;
+   white-space: nowrap;
+   overflow-x: scroll;
+   overflow-y: hidden;
+   margin-left: 2px;
+}
+
+.flex-lnd scroll{
+   display: inline;
+}
+
+.lnd-img{
+  width: 350px;
+  height: 240px;
+}
+
+.lndp{
+  text-align: center;
+  color: white;
+}
+
+#mc_embed_signup form{
+  background: black!important;
+}
+
+#mc_embed_signup .button{
+  background: black!important;
+  border: 1px solid white!important;
+  &:hover{
+  background: black!important;
+  }
+}
+
+.lnd-icwrap{
+  width: 100%;
+  max-width: 1300px;
+  background: black;
+  margin: 0 auto;
+}
+
+.lnd-icflex{
+ display: flex;
+}
+
+.lnd-ico{
+  min-width: 30px;
+  height: 100px;
+  flex-grow: 1;
+}
+
+.lnd-icon{
+  width: 50px;
+  margin: 0 auto;
+}
+
+.lnd-icoa{
+  margin-top: 2px;
+}
+
+.lnd-icoc{
+  margin-top: 5px;
+}
+
+.lnd-copyright{
+  color: white!important;
 }
 
 //welcome
@@ -1609,6 +1687,14 @@ label{
 } 
 
 @media screen and (min-width: 320px) {  
+.lnd-icon{
+  width: 70px;
+}
+
+.lnd-icoc{
+  margin-top: 13px;
+}  
+  
 .fdinfo1{
   height: 50px; 
 }
@@ -1640,6 +1726,14 @@ label{
 
 
 @media screen and (min-width: 375px) {
+.lnd-icon{
+  width: 90px;
+}
+
+.lnd-icoc{
+  margin-top: 18px;
+}    
+  
 .manu4{
   margin-top: 35px;
 }
@@ -1752,6 +1846,14 @@ label{
 
 
 @media screen and (min-width: 580px) {
+.lnd-icon{
+  width: 120px;
+}
+
+.lnd-icoc{
+  margin-top: 22px;
+}    
+  
 .manu4{
   margin-top: 70px;
   font-size: 40px;
@@ -1794,6 +1896,14 @@ label{
 }
 
 @media screen and (min-width: 758px) {
+.lnd-icon{
+  width: 150px;
+}
+
+.lnd-icoc{
+  margin-top: 30px;
+}
+  
 .manu{
   margin-top: 59px;
 }  
