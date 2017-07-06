@@ -548,16 +548,6 @@ label{
   margin-top: 5px;
 }
 
-.foot .fa-twitter{
-  color: rgb(27, 150, 189);
-  font-size: 17px!important; 
-}
-
-.foot .fa-facebook{
-  color: rgb(27, 150, 189);
-  font-size: 20px!important; 
-}
-
 .lnd-copyright{
   color: white!important;
 }
@@ -1634,10 +1624,10 @@ label{
 .foot{
   text-align: center;
   list-style: none;
+  margin-top:-20px;
 }
 
 .foot li{
-  display: inline;
   color: black;
   word-wrap: break-word;
   padding: 5px;
