@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
     end
   end
   
-  def welcome
+  def welcome2
      if signed_in?
       redirect_to home_path
     else          
@@ -46,7 +46,8 @@ class StaticPagesController < ApplicationController
     @users = User.find([1])
   end
   
-  def hi
+  def welcome
+    render :layout => 'welcome'
   end
   
 end

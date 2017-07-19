@@ -1,9 +1,9 @@
 //application
-html,body{
+.defaultbody{
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: black!important;
+  background-color: white!important;
 }
 
 .modal2{  
@@ -384,9 +384,9 @@ label{
   position: absolute;
 }
 
-.navbar-default{
-  background: black!important;
-  border-bottom-color: black!important; 
+.defaultnavbar{
+  background: rgba(255,255,255,0.8)!important;
+  border-bottom-color: white!important;
 }
 
 .navbar-header{
@@ -464,10 +464,40 @@ label{
 }
 
 //LandingPage
+.splashbody{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black!important;
+}
+
+.splashnavbar{
+  background: black!important;
+  border-bottom-color: black!important; 
+}
+
+.splashfoot{
+  margin-top:-20px;
+  text-align: center;
+  list-style: none;
+}
+
+.splashfoot li{
+  color: black;
+  word-wrap: break-word;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .lnd{
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+}
+
+.standme{
+  margin-left: 10px;
 }
 
 .lndh{
@@ -523,6 +553,7 @@ label{
   max-width: 1300px;
   background: black;
   margin: 0 auto;
+  display: none;
 }
 
 .lnd-icflex{
@@ -1624,10 +1655,10 @@ label{
 .foot{
   text-align: center;
   list-style: none;
-  margin-top:-20px;
 }
 
 .foot li{
+  display: inline;
   color: black;
   word-wrap: break-word;
   padding: 5px;
