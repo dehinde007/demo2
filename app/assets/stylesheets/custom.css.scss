@@ -533,6 +533,24 @@ label{
   font-size: 12px;
 }
 
+.lndpa{
+  color: white;
+  text-decoration: underline;
+&:visited{
+  color: white;
+  background: none;
+ }  
+&:focus{
+  color: white;
+  background: none;
+} 
+&:hover{
+  color: white;
+  background: none;
+}
+}
+
+
 #mc_embed_signup form{
   background: black!important;
 }
