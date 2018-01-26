@@ -31,11 +31,11 @@ src="https://www.facebook.com/tr?id=396900824038629&ev=PageView&noscript=1"
       <%= f.password_field :password, :class =>"sess1a1", placeholder: "Password" %>
       </p>
       
-      <p class="font-fam3 signsess-word">Create Account? <%= link_to "Sign Up", signup_path, class: "sess1b1" %></p>
+      <p class="font-fam3 signsess-word">Create Account? <%= link_to "Sign Up", signup_path, class: "sess1b1", "data-turbolinks": "false" %></p>
       </section>
      
       <br />   	
-      <div class="font-fam1 blackerror"><%= flash[:alert] %></div>
+      <div role="alert" class="font-fam1 blackerror"><%= flash[:alert] %></div>
       
      <p class="sessbut appbutton"><%= f.submit "SIGN IN", class: "font-fam2 btn btn-primary" %></p>
      

@@ -5,11 +5,8 @@
        <span class="" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle collapsed"><%= image_tag('Hallit.jpg', :class => "hdimg hd-incr") %></span>
                 	
        <li class="font-fam pull-right visible-xs-block"> 
-       	 <% if current_user.verify? %> 	
           <%= link_to "https://sayian.herokuapp.com" do %> <span class="midhdglyph midhdcam fa fa-camera" aria-hidden="true"></span><% end %> 
-         <% else %>
-          <span class="midhdglyphnil midhdcam fa fa-camera" aria-hidden="true"></span>
-         <% end %>
+
        </li>    
       
         </div>  
@@ -17,11 +14,7 @@
             <ul class="font-fam1 nav navbar-nav navbar-right">
             	<li><%= link_to current_user do %><%= render "shared/useravi" %><% end %></li>
             	<li class="hidden-xs">
-            	<% if current_user.verify? %> 	
-            	<%= link_to "Editor", "https://sayian.herokuapp.com", class: "blacklink" %>
-            	<% else %>
-            	<%= link_to "Editor", "https://sayian.herokuapp.com", class: "greylink" %>
-            	<% end %>
+            	<%= link_to "Launch camera", "https://sayian.herokuapp.com", class: "blacklink" %>
             	</li>
                 <li><%= link_to "Support", support_path, class: "blacklink"%></li>
                 <li><%= link_to "Log out", signout_path, class: "blacklink", method: "delete" %></li>

@@ -2,44 +2,19 @@
 
 <div class="sup-wrap">
 <% if flash[:notice] -%>
-  <p class='container flash alert alert-info'><%=h flash[:notice] %></p>
-<% end -%> 
-  <div class="container sup">
+<p class='container flash alert alert-info'><%=h flash[:notice] %></p>
+<% end -%>
+ 
+<div class="container sup">
+	
+<div class="supheada">
+<p class=" font-fam2 supheadb">Want to talk with someone?</p>
+</div>
 
-  <p class=" font-fam3 suphead">Welcome To Our Support Center</p>
-  <p class="font-fam1 sup2">Halls are ways of communicating our passion, stories and core values with the world inorder to differentiate ourselves and help inspire others. <span class="font-fam1"><%= link_to "Learn more", guide_path, class: "sup1a" %></span></p>
-  </div>
-  
-  <div class="supimg"><%= image_tag('ph15.jpg', :class => "supimga") %></div>
-  
-  <br /> <br />
-  <div class="container sup supa font-fam1"> 
-  	 
-  <span class="fa fa-lock suplock"></span>
-  <p class="font-fam3 sup1">Request provisioning</p>
-  <p class="sup2">Introduce yourself and tell us why you want to make a hall. <span class="font-fam1"><%= link_to "Learn more", verification_request_path, class: "sup1a" %></span> </p>
-  <br /><br />
-  	  	
-  <%= image_tag('av.PNG', :class => "supimg2") %>
-  <p class="font-fam3 sup1">Profile</p>
-  <p class="sup2">To get to your profile on mobile, tap the Hallit logo when signed in.</p>
-  <br /><br />
-
-  <div class="supcirc"><p class="sup2"><span class="glyphicon glyphicon-home supcirchome"></span></p></div>
-  <p class="font-fam3 sup1">Homescreen optimization</p>
-  <p class="sup2">For quick navigation to Hallit from your homescreen, go to your home then proceed and add to your homescreen. </p>
-  <br /><br />
-  
-  <span class="fa fa-gift supgift"></span>
-  <p class="font-fam3 sup1">Core value challenge</p>	
-  <p class="sup2">Make a hall then challenge two people on your other social platforms along with a link to your hall and correct hashtag <span class="font-fam3 Hchallenge">#HallitCoreValueChallenge</span> and stand a chance to win a gift card</p> 
-  <p class="sup2">E.g I challenge @Dave and @Kendra to #HallitCoreValueChallenge. Here's the link to my hall http://bit.ly/2qAz2EP</p> 
-  <br /><br />
-
-  <i class="fa fa-twitter sup-twitter"></i>
-  <p class="font-fam3 sup1">Learn more about Hallit<span class="fa fa-copyright sup-copyright"></span></p>	
-  <p class="font-fam1 sup3">Request support on twitter <%= link_to "@hallitservice", "https://twitter.com/hallitservice", class: "font-fam1 sup1a sup1b" %></p>
-  <p><%= link_to "Send report or feedback", contact_path, class: "font-fam1 sup1a" %></p>
+<div class="suptxta">
+<p class="font-fam2 suptxtb">We're here to help you get the most from Hallit. The members of our Hallit Support Community can help answer your question. </p>
+<p class="suptxtc font-fam2"> <span class=""><%= link_to "Verification", guide_path, class: "sup1a" %></span> or <span class=""><%= link_to "Feedback", guide_path, class: "sup1a" %></span></p> 
+</div>
 
 </div>
 </div>

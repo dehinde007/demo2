@@ -671,47 +671,53 @@ label{
   font-size: 12px;
   font-weight: bold;
   position: relative;
+}
 
+//privacy
+.priv-wrap{
+  max-width: 500px;
+}
+
+.priva{
+ font-size: 25px;
+}
+
+.privb{
+  margin-top: -10px;
 }
  
 //Getstarted 
 .sup-wrap{
-  margin-top: 50px;
-  background-color: white;
-  width: 100%;
+ margin-top: 80px;
+ background-color: white;
+ width: 100%;
 }
 
-.supimg{
-  text-align: center;
-}
-
-.supimga{
-  width: 100%;
-  max-width: 600px;
-}
-
-.suphead{
-  font-size: 20px;
-  color: #333; 
-  margin-top: 10px;
-}
-
-.sup{
-  max-width: 700px;
+.supheada{
+  width: 200px;
   margin: 0 auto;
   text-align: center;
 }
 
-.supa{
-  margin-top: -6px;
+.supheadb{
+  font-size: 25px;
+  color: #333; 
+  font-weight: bold;
 }
 
-.sup1{
-  font-size: 20px;
-  color: #333; 
-  line-height: 1.1;
-  font-weight: 300;
-  letter-spacing: -0.008em;
+.suptxta{
+  text-align: center;
+}
+
+.suptxtb{
+  color: #333;
+  font-size: 16px;
+  line-height: 30px; 
+}
+
+.suptxtc{
+  font-size: 18px;
+  line-height: 30px; 
 }
 
 .sup1a{
@@ -740,66 +746,7 @@ label{
 }
 }
 
-.sup2{
-  color: #333;
-  font-size: 16px;
-  line-height: 20px; 
-}
 
-.sup3{
-  color: rgba(247, 60, 70, 0.3);
-  font-size: 16px;
-  line-height: 20px; 
-}
-
-.supimg2{
-  width: 70px;
-}
-
-.supcirc{
-  text-align: center;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  height: 59px;
-  width: 58px;
-  border: 4px solid #0e0e0e;
-  border-radius: 50%;
-}
-
-.suplock{
-  font-size: 35px!important;
-  color: #0e0e0e; 
-  padding-top: 9px;
-}
-
-.supcirchome{
-  font-size: 35px!important;
-  color: #0e0e0e; 
-  padding-right: 1px;
-  padding-top: 9px;
-}
-
-.Hchallenge{
-  font-weight: bold;
-  color: #333;
-}
-
-.supgift{
-  font-size: 60px!important;
-  color: #333; 
-}
-
-.sup-copyright{
-  color: black;
-  font-size: 13px!important;
-  padding-top: 3px;
-}
-
-.sup-twitter{
-  color: rgba(27, 150, 189, 0.71);
-  font-size: 37px!important;
-}
 
 //contact
 .contact{
@@ -841,6 +788,18 @@ label{
 .env{
   width: 100%;
   margin-top: -10px;
+}
+
+//verification
+.verifyimg{
+  margin-top: 50px;
+}
+
+.verificationbox{
+  text-align: center;
+}
+
+.verifyp{
 }
 
 //aboutus
@@ -1157,9 +1116,9 @@ label{
     border: 1px solid white;
     border-radius: 64px;
     background-color: rgba(127, 120, 121, 0.2);
-    &:active:focus{
-    background-color: rgba(127, 120, 121, 0.3);
-    border-color: none; 
+    &:focus{
+    background-color: rgba(127, 120, 121, 0.3)!important;
+    border-color: white!important; 
   }
     &:visited {
     color: white;
@@ -1912,6 +1871,15 @@ label{
   margin-top: 70px;
   font-size: 40px;
 }  
+
+.priv-wrap{
+  max-width: 1000px;
+  margin-top: -2px;
+}
+
+.verifyimg{
+  margin-top: 0px;
+}
   
 .abtimg{
   margin-top: -49px;
@@ -1925,9 +1893,6 @@ label{
   margin-top: -220px;
 }  
   
-.supimgdiv{
-  text-align: center;
-} 
 } 
 
 @media screen and (min-width: 735px) {   
