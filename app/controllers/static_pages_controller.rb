@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
     end
   end
   
-  def welcome2
+  def welcometoHallit
      if signed_in?
       redirect_to home_path
     else          

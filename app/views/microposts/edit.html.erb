@@ -6,6 +6,7 @@
 <div class="font-fam1 container nmcp">
 <div class="nmcp1">
 <%= f.file_field :ad1 %><%= f.file_field :ad2 %><%= f.file_field :ad3 %><%= f.file_field :ad4 %>
+<%= f.text_field :ad1text, class: "edt1", placeholder: "Bio" %>
   <section class="nmcp1a">
    <section><%= f.file_field :photo, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section> 
   </section>
@@ -21,7 +22,7 @@
  <br /> 
  <p class="appbutton"><%= f.submit "Share", class: "nmcp1d btn btn-primary" %></p>
   
- <% end %>
+ <% end %> 
 <br /><br />
  <p>Share on twitter or facebook by selecting hall from your profile and using the preferred social share button.</p>
 <br />

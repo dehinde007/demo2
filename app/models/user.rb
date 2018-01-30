@@ -21,6 +21,12 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 #photo
 has_attached_file :photo
+#Ads
+has_attached_file :ad1
+has_attached_file :ad2
+has_attached_file :ad3
+has_attached_file :ad4
+
     
   has_many :microposts, dependent: :destroy
    has_many :comments, dependent: :destroy

@@ -1,6 +1,6 @@
 class MicropostsController < ApplicationController
-  before_action :signed_in_user,  only: [:new, :create, :index, :destroy, :leaderboard]
-  before_action :correct_user,   only: :destroy
+  before_action :signed_in_user,  only: [:new, :create, :edit, :update, :index, :destroy, :leaderboard]
+  before_action :correct_user,   only:  [:edit, :update, :destroy]
 
   def index
     @skip_header = true
@@ -38,6 +38,21 @@ class MicropostsController < ApplicationController
       
     end
   end
+  
+ def edit
+   @skip_header = true
+ end
+
+  def update
+    @skip_header = true
+    if @micropost.update_attributes(micropost_params)
+    @micropost.create_activity :create, owner: current_user
+      flash[:success] = "Hall updated"
+      redirect_to @micropost
+    else
+      render 'edit'
+    end
+  end
 
   def destroy
     @user = User.find_by_username(params[:id])
@@ -48,13 +63,13 @@ class MicropostsController < ApplicationController
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content, :photo, :author)
+      params.require(:micropost).permit(:content, :photo, :author, :ad1, :ad2, :ad3, :ad4, :ad1text, :ad2text, :ad3text, :ad4text )
     end
 
     def correct_user
       @micropost = current_user.microposts.find_by(id: params[:id])
       redirect_to root_url if @micropost.nil?
     end
-    
+
     
 end

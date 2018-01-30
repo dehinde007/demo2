@@ -28,8 +28,8 @@
 </div>
   
 <div class="heads head2">
-    <% if current_user?(@user) %>
-    <%= link_to edit_user_path(current_user), class: "hov", "data-turbolinks": "false" do %>	
+<% if current_user.admin? && !current_user?(@user) %>
+<%= link_to edit_user_path(current_user), class: "hov", "data-turbolinks": "false" do %>	
     <span class="midhdglyph fa fa-steam" aria-hidden="true"></span>
     <% end %> 
     <% end %> 

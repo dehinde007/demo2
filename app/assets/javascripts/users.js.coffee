@@ -6,3 +6,6 @@ $ ->
   $('.midhdglyphnil').click ->
     alert "Your account has not been provisioned yet!. Please verify your account."
   
+  
+$ ->
+  $('[data-toggle="popover"]').popover()

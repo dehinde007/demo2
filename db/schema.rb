@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325210010) do
+ActiveRecord::Schema.define(version: 20180128210011) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -81,6 +81,26 @@ ActiveRecord::Schema.define(version: 20160325210010) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.string   "author"
+    t.string   "ad1_file_name"
+    t.string   "ad1_content_type"
+    t.integer  "ad1_file_size"
+    t.datetime "ad1_updated_at"
+    t.string   "ad2_file_name"
+    t.string   "ad2_content_type"
+    t.integer  "ad2_file_size"
+    t.datetime "ad2_updated_at"
+    t.string   "ad3_file_name"
+    t.string   "ad3_content_type"
+    t.integer  "ad3_file_size"
+    t.datetime "ad3_updated_at"
+    t.string   "ad4_file_name"
+    t.string   "ad4_content_type"
+    t.integer  "ad4_file_size"
+    t.datetime "ad4_updated_at"
+    t.text     "ad1text"
+    t.text     "ad2text"
+    t.text     "ad3text"
+    t.text     "ad4text"
   end
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
