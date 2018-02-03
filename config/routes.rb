@@ -33,7 +33,7 @@ SampleApp::Application.routes.draw do
   resources "requests", only: [:new, :create]
   resources :activities 
   resources :sessions,      only: [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy, :show]
+  resources :microposts, only: [:create, :destroy, :show, :edit, :update]
   resources :relationships, only: [:create, :destroy]
   root to: 'static_pages#welcome'
   match '/signup',  to: 'users#new',            via: 'get'

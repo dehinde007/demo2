@@ -1,30 +1,46 @@
-<%content_for :title, "Share Your Hall"%>
+<%content_for :title, "Edit Hall"%>
 <br /><br />
 <%= form_for @micropost, :html => {:multipart => true, :id => "nform"} do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<div class="font-fam1 container nmcp">
+<div class="font-fam2 container nmcp">
 <div class="nmcp1">
-<%= f.file_field :ad1 %><%= f.file_field :ad2 %><%= f.file_field :ad3 %><%= f.file_field :ad4 %>
-<%= f.text_field :ad1text, class: "edt1", placeholder: "Bio" %>
+<p>Advert one</p>	
+<%= f.file_field :ad1, class: "font-fam2" %>
+<%= f.text_field :ad1text, class: "edt1", placeholder: "..." %>
+<br /><br /><br />
+
+<p>Advert Two</p>	
+<%= f.file_field :ad2, class: "" %>
+<%= f.text_field :ad2text, class: "edt1", placeholder: "..." %>
+<br /><br /><br />
+
+<p>Advert Three</p>	
+<%= f.file_field :ad3, class: "" %>
+<%= f.text_field :ad3text, class: "edt1", placeholder: "..." %>
+<br /><br /><br />
+
+<p>Advert Four</p>	
+<%= f.file_field :ad4, class: "" %>
+<%= f.text_field :ad4text, class: "edt1", placeholder: "..." %>
+<br /><br /><br />
+
   <section class="nmcp1a">
    <section><%= f.file_field :photo, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section> 
   </section>
   
   <p class="glyphicon glyphicon-cloud nmcp1b" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
     
-  <p class="nmcp1ba">Tap cloud to upload hall</p>
+  <p class="nmcp1ba">Upload Hall</p>
 
   <p>
-   <%= f.text_area :content, :class =>"font-fam1 nmcp1c", placeholder: "Write more" %>
+   <%= f.text_area :content, :class =>"font-fam2 nmcp1c", placeholder: "Write more" %>
   </p>
 
  <br /> 
  <p class="appbutton"><%= f.submit "Share", class: "nmcp1d btn btn-primary" %></p>
   
  <% end %> 
-<br /><br />
- <p>Share on twitter or facebook by selecting hall from your profile and using the preferred social share button.</p>
 <br />
 <br />
 </div>

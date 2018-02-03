@@ -5,25 +5,24 @@
 
 <div class="font-fam1 container nmcp">
 <div class="nmcp1">
-<%= f.file_field :ad1 %><%= f.file_field :ad2 %><%= f.file_field :ad3 %><%= f.file_field :ad4 %>
   <section class="nmcp1a">
    <section><%= f.file_field :photo, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></section> 
   </section>
   
-  <p class="glyphicon glyphicon-cloud nmcp1b" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
+  <p class="glyphicon glyphicon-facetime-video nmcp1b" data-toggle="tooltip" data-placement="top" title="Upload a Hall" onclick="$(this).parent().find('input[type=file]').click();"></p>
     
-  <p class="nmcp1ba">Tap cloud to upload hall</p>
+  <p class="nmcp1ba">Tap to cloud</p>
 
   <p>
    <%= f.text_area :content, :class =>"font-fam1 nmcp1c", placeholder: "Write more" %>
   </p>
 
  <br /> 
- <p class="appbutton"><%= f.submit "Share", class: "nmcp1d btn btn-primary" %></p>
+ <p class="appbutton"><%= f.submit "Send", class: "nmcp1d btn btn-primary" %></p>
   
  <% end %>
 <br /><br />
- <p>Share on twitter or facebook by selecting hall from your profile and using the preferred social share button.</p>
+ <p>Do you know that our mission here on Earth is to subdue it?</p>
 <br />
 <br />
 </div>

@@ -25,7 +25,11 @@
 </div>
 
 <div class="mcpshw">	
-<section class="mcpshw-img"><%= image_tag @micropost.photo.url(:instag), class: "img-responsive" %></section>
+<section class="mcpshw-img">
+<%= image_tag @micropost.photo.url(:instag), class: "img-responsive" %>
+<%= image_tag @micropost.ad1.url(:thumb), class: "", "data-toggle"=>"popover", "title"=> "#{@micropost.ad1text}", "data-placement"=> "top" %>
+<%= image_tag @micropost.ad2.url(:thumb), class: "" %>	
+</section>
 
 <div class="container mcpshw-cnt">
 	
@@ -41,9 +45,7 @@
 </div>
 <section class="mcpshw-share">
 <%= social_share_button_tag(@micropost.content, :popup => "true", class: "") %> 
-
-<%= image_tag @micropost.ad1.url(:thumb), class: "", "data-toggle"=>"popover", "title"=> "#{@micropost.ad1text}", "data-placement"=> "top" %>
-</section><%= image_tag @micropost.ad2.url(:thumb), class: "" %>
+</section>
 
 
 <section class="mcpshw2">
