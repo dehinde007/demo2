@@ -338,7 +338,7 @@ DEPENDENCIES
   mail_form
   newrelic_rpm
   paperclip (~> 4.2)
-  pg
+  pg (~> 0.18)
   public_activity!
   puma
   rails (= 4.2.4)
