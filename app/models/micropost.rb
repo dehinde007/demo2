@@ -11,28 +11,24 @@ include PublicActivity::Common
 has_attached_file :ad1, styles: { 
     thumb: '100x100>'
   }, :url => "/Ad1/:id/:style/:basename.:extension",
-     :default_url => '/assets/av.PNG',
      :path => ":rails_root/public/Ad1/:id/:style/:basename.:extension"
 validates_attachment_content_type :ad1, :content_type => /\Aimage\/.*\Z/ 
 
 has_attached_file :ad2, styles: { 
     thumb: '80x80>'
   }, :url => "/Ad2/:id/:style/:basename.:extension",
-     :default_url => '/assets/av.PNG',
      :path => ":rails_root/public/Ad2/:id/:style/:basename.:extension"
 validates_attachment_content_type :ad2, :content_type => /\Aimage\/.*\Z/
 
 has_attached_file :ad3, styles: { 
     thumb: '100x100#'
   }, :url => "/Ad3/:id/:style/:basename.:extension",
-     :default_url => '/assets/av.PNG',
      :path => ":rails_root/public/Ad3/:id/:style/:basename.:extension"
 validates_attachment_content_type :ad3, :content_type => /\Aimage\/.*\Z/
 
 has_attached_file :ad4, styles: { 
     thumb: '100x100#'
   }, :url => "/Ad4/:id/:style/:basename.:extension",
-     :default_url => '/assets/av.PNG',
      :path => ":rails_root/public/Ad4/:id/:style/:basename.:extension"
 validates_attachment_content_type :ad4, :content_type => /\Aimage\/.*\Z/
 
