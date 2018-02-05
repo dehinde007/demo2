@@ -15,7 +15,7 @@ has_attached_file :ad1, styles: {
 validates_attachment_content_type :ad1, :content_type => /\Aimage\/.*\Z/ 
 
 has_attached_file :ad2, styles: { 
-    thumb: '80x80>'
+    thumb: '100x100>'
   }, :url => "/Ad2/:id/:style/:basename.:extension",
      :path => ":rails_root/public/Ad2/:id/:style/:basename.:extension"
 validates_attachment_content_type :ad2, :content_type => /\Aimage\/.*\Z/

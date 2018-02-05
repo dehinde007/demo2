@@ -17,7 +17,7 @@
       
     <div class="font-fam1">
       <i class="edt2"><%= f.file_field :avatar, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());" %></i>
-      <p class="glyphicon glyphicon-camera edt3" data-toggle="tooltip" data-placement="top" title="Upload a avatar" onclick="$(this).parent().find('input[type=file]').click();"></p>     
+      <p class="fab fa-instagram edt3" data-toggle="tooltip" data-placement="top" title="Upload a avatar" onclick="$(this).parent().find('input[type=file]').click();"></p>     
     </div>
    
     <p>
@@ -25,7 +25,7 @@
     </p> 
    
     <p>
-      <%= f.text_field :bio, class: "edt1", placeholder: "Bio" %>
+      <%= f.text_field :bio, class: "edt1", placeholder: "Activities" %>
     </p>
     
     <p>

@@ -16,7 +16,19 @@
   	<%= link_to (image_tag feed_item.photo.url(:instag), class: "img-responsive"), micropost_path(feed_item), :"data-no-turbolink" => true %>
   	</div>
   	</div>
-		
+  	
+	<div class="fdadvert1">
+	<% if feed_item.ad1.present? %>
+    <%= image_tag feed_item.ad1.url(:thumb), class: "fdadvert", "data-toggle"=>"popover", "title"=> "#{feed_item.ad1text}", "data-placement"=> "top" %>
+	<% else %>
+    <% end %>
+    
+	<% if feed_item.ad1.present? %>
+	<%= image_tag feed_item.ad2.url(:thumb), class: "fdadvertn", "data-toggle"=>"popover", "title"=> "#{feed_item.ad2text}", "data-placement"=> "top" %>
+    <% else %>
+    <% end %>
+	</div>
+    
     </div>
     
     <section class="container fdcontent1">
@@ -28,9 +40,7 @@
   	<% else %>
   	<span class="blacklink font-fam2"><%= auto_link(feed_item.content, :html => { :target => '_blank' }) %></span>
   	<% end %>
-        <span class="font-fam5 fdtime"><%= time_ago_in_words(feed_item.created_at) %> ago
-          	<%= link_to (image_tag feed_item.ad1.url(:thumb)), micropost_path(feed_item), class: "advert", :"data-no-turbolink" => true %>	
-        </span>
+        <span class="font-fam5 fdtime"><%= time_ago_in_words(feed_item.created_at) %> ago</span>
 
 <div><hr /></div>   	
     </section>
@@ -38,15 +48,24 @@
     <section class="container fdcontent2">
     <p class="font-fam1 fdlikeicon">
     <span class="glyphicon glyphicon-heart"></span> <%= pluralize(feed_item.likes.count, "") %>
+    
+    <div class="fdadvert">
+    <% if feed_item.ad1.present? %>
+    <%= image_tag feed_item.ad1.url(:thumb), class: "fdadvert", "data-toggle"=>"popover", "title"=> "#{feed_item.ad1text}", "data-placement"=> "top" %>
+    <% else %>
+    <% end %>
+    	
+    <% if feed_item.ad1.present? %>
+    <%= image_tag feed_item.ad2.url(:thumb), class: "fdadvertn", "data-toggle"=>"popover", "title"=> "#{feed_item.ad2text}", "data-placement"=> "top" %>
+    <% else %>
+    <% end %>
+    </div>
   	</p>		
     <% if feed_item.content.length > 1 %>
   	<span class="blacklink font-fam2"><%= auto_link(truncate(feed_item.content, length: 65), :html => { :target => '_blank' }) %></span>
   	<% else %>
   	<span class="blacklink font-fam2"><%= auto_link(feed_item.content, :html => { :target => '_blank' }) %>        
   	<% end %>
-  <span class="font-fam5 fdtime"><%= time_ago_in_words(feed_item.created_at) %> ago
-  	 <div class="advert"><%= link_to (image_tag feed_item.ad1.url(:thumb)), micropost_path(feed_item), class: "advert", :"data-no-turbolink" => true %></div>
-  </span>      
   	
 <section><hr /></section> 
 </section>

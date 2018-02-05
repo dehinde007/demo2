@@ -5,7 +5,7 @@
 <div class="heads head1">        
    <span class="font-fam">
    <%= link_to :back, class: "navbar-brand hov" do %>	
-   <span class="backheadglyph1 glyphicon glyphicon-menu-left"></span>
+   <span class="backheadglyph1 fas fa-angle-left"></span>
    <% end %> 
    </span>
    <span id="pgn1" class="navbar-brand font-fam1"><%= time_ago_in_words(@micropost.created_at)%> ago</span>
@@ -16,7 +16,7 @@
      <%= link_to @micropost, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: @micropost.content, class: "hov apptrash" do %>
-                                     <span class="midhdglyph glyphicon glyphicon-trash"></span>             
+                                     <span class="midhdglyph far fa-trash-alt"></span>             
                                      <% end %>                              
                                      <% end %>        
 </div>
@@ -27,21 +27,30 @@
 <div class="mcpshw">	
 <section class="mcpshw-img">
 <%= image_tag @micropost.photo.url(:instag), class: "img-responsive" %>
-<div><%= image_tag @micropost.ad1.url(:thumb), class: "", "data-toggle"=>"popover", "title"=> "#{@micropost.ad1text}", "data-placement"=> "top" %></div>
-<%= image_tag @micropost.ad2.url(:thumb), class: "" %>	
+<div class="advert">
+  <% if @micropost.ad1.present? %>	
+  <%= image_tag @micropost.ad1.url(:thumb), class: "advert", "data-toggle"=>"popover", "title"=> "#{@micropost.ad1text}", "data-placement"=> "top" %>
+  <% else %>
+  <% end %>
+  
+  <% if @micropost.ad2.present? %>
+  <%= image_tag @micropost.ad2.url(:thumb), class: "advert" %>
+  <% else %>
+  <% end %>
+</div>
 </section>
 
 <div class="container mcpshw-cnt">
 	
-<%= render "shared/microusrn" %>
+<span class="mcpshw-cnt"><%= render "shared/microusrn" %></span>
 <span class="mcpshw-cnt1 blacklink font-fam2"><%= auto_link(@micropost.content, :html => { :target => '_blank' }) %></span>
 <span class="hallauthor">
 </span> 
 <br />
   
-<div class="mcpshw1">  
-   <span class="mcpshw1a glyphicon glyphicon-heart"></span><span class="font-fam1"><%= pluralize(@micropost.likes.count, "") %> </span>
-   <span class="mcpshw1a glyphicon glyphicon-comment"></span><span class="font-fam1"><%= pluralize(@micropost.comments.count, "") %> </span>	
+<div class="mcpshw1 font-fam5">  
+   <span class="mcpshw1a fas fa-heart"></span><span><%= pluralize(@micropost.likes.count, "") %> </span>
+   <i class="mcpshw1a far fa-comment-alt"></i><span><%= pluralize(@micropost.comments.count, "") %> </span>	
 </div>
 <section class="mcpshw-share">
 <%= social_share_button_tag(@micropost.content, :popup => "true", class: "") %> 
