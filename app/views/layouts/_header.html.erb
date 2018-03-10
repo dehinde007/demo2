@@ -6,7 +6,6 @@
                 	
        <li class="font-fam pull-right visible-xs-block"> 
           <%= link_to "https://sayian.herokuapp.com" do %> <span class="midhdglyph midhdcam fab fa-instagram" aria-hidden="true"></span><% end %> 
-
        </li>    
       
         </div>  
@@ -14,10 +13,9 @@
             <ul class="font-fam1 nav navbar-nav navbar-right">
             	<li><%= link_to current_user do %><%= render "shared/useravi" %><% end %></li>
             	<li class="hidden-xs">
-            	<%= link_to "Launch camera", "https://sayian.herokuapp.com", class: "blacklink" %>
-            	</li>
-                <li><%= link_to "Support", support_path, class: "blacklink"%></li>
-                <li><%= link_to "Log out", signout_path, class: "blacklink", method: "delete" %></li>
+                <%= link_to "https://sayian.herokuapp.com" do %> <span class="midhdglyph2 midhdcam2 fab fa-instagram" aria-hidden="true"></span> <% end %> </li>
+                <li class="hdfas"><%= link_to support_path do %> <span class="midhdglyph2 midhdcam2 fas fa-plug" aria-hidden="true"></span> <% end %> </li>
+                <li class="hdfas"><%= link_to signout_path, method: "delete" do %> <span class="midhdglyph2 midhdcam2 fas fa-power-off" aria-hidden="true"></span> <% end %> </li>
             </ul>
                 </div>
           

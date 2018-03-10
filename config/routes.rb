@@ -41,7 +41,7 @@ SampleApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/terms&privacy',    to: 'static_pages#terms&privacy',    via: 'get'
   match '/about_us',    to: 'static_pages#about_us',    via: 'get'
-  match '/verification_request.',    to: 'static_pages#verification_request1',    via: 'get'
+  match '/feedback',    to: 'static_pages#feedback',    via: 'get'
   match '/support', to: 'static_pages#support', via: 'get'
   match '/youth',    to: 'static_pages#youth',    via: 'get'
   match '/terms', to: 'static_pages#terms', via: 'get' 

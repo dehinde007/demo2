@@ -55,7 +55,7 @@
     <% else %>
     <% end %>
     	
-    <% if feed_item.ad1.present? %>
+    <% if feed_item.ad2.present? %>
     <%= image_tag feed_item.ad2.url(:thumb), class: "fdadvertn", "data-toggle"=>"popover", "title"=> "#{feed_item.ad2text}", "data-placement"=> "top" %>
     <% else %>
     <% end %>

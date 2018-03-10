@@ -30,11 +30,12 @@ class StaticPagesController < ApplicationController
   end
 
   def support
+     
   end
   
   def terms  
   end
-  
+
   def youth
   end
     

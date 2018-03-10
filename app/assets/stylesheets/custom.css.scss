@@ -297,9 +297,9 @@ p .src{
  
 //useravi
 .usravi .img-circle{
-  width: 35px;
+  width: 30px;
   border: 1px solid rgba(0,0,0,0.3);
-  margin-top: -7px;
+  margin-top: -4px;
 }
 
 .appbutton .btn-primary {
@@ -385,7 +385,7 @@ label{
 }
 
 .defaultnavbar{
-  background: rgba(255,255,255,0.8)!important;
+  background: rgba(255,255,255,0.5)!important;
   border-bottom-color: white!important;
 }
 
@@ -424,6 +424,10 @@ label{
 
 .midhdcam{
   margin-right: 10px!important;
+}
+
+.hdfas .fas{
+  margin-top: 2px;
 }
 
 .navbar-fixed-top .navbar-collapse{
@@ -692,31 +696,37 @@ label{
  
 //Getstarted 
 .sup-wrap{
- margin-top: 80px;
- background-color: white;
- width: 100%;
+  background-image: url("support.jpg");
+  background-size: 900px auto;
+  background-position: center 30%;
+  min-height: 540px;
+  position: relative;
+  background-repeat: no-repeat;
+  margin-top: -11px;
+}
+
+.sup-cnt{
+  margin-top: -220px;
+  position: relative;
+  color: black;
 }
 
 .supheada{
-  width: 200px;
+  font-weight: bold;
+  width: 300px;
   margin: 0 auto;
   text-align: center;
-}
-
-.supheadb{
-  font-size: 25px;
-  color: #333; 
-  font-weight: bold;
+  line-height: 1.42857143;
+  font-size: 20px;
+  margin-top: 100px;
 }
 
 .suptxta{
   text-align: center;
-}
-
-.suptxtb{
-  color: #333;
-  font-size: 16px;
-  line-height: 30px; 
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
 }
 
 .suptxtc{
@@ -738,18 +748,61 @@ label{
 }
 
 .sup1b{
-  color: rgba(247, 60, 70, 0.4);
-  text-decoration: none;
+  color: rgba(247, 60, 70, 0.8);
+  text-decoration: underline;
 &:visited {
-  color: rgba(247, 60, 70, 0.4);
+  color: rgba(247, 60, 70, 0.8);
   background: none;
  }  
 &:hover {
-  color: rgba(247, 60, 70, 0.4);
+  color: rgba(247, 60, 70, 0.8);
   background: none;
 }
 }
 
+.supwrap{
+  width: 100%;
+  height: 100px;
+  background: white;
+  margin-top: 35px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.supflexs{
+  height: 300px;
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  line-height: 1.42857143;
+}
+
+.supf1{
+  background: white;
+}
+
+.supfa{
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.supfP{
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+.supf1b{
+  margin-top: 10px;
+}
+
+.supf2{
+  background: white;
+}
+
+.supf3{
+  background: white;
+}
 
 //contact
 .contact{
@@ -1240,7 +1293,7 @@ label{
 }
 
 .advert .advert{
-  width: 40px!important;
+  width: 30px!important;
   margin-left: 6px;
 }
 
@@ -1916,9 +1969,8 @@ label{
 .manu2{
   margin-top: 59px;
 } 
-  
-}
 
+}
 
 @media screen and (min-width: 580px) {
 .lnd-icon{
@@ -1957,7 +2009,21 @@ label{
   
 } 
 
-@media screen and (min-width: 735px) {   
+@media screen and (min-width: 735px) { 
+.sup-wrap{
+  margin-top: 0px;
+}  
+  
+.supflexs{
+  height: 150px;
+  width: 50px;
+  flex-grow: 1;
+}    
+
+.supf2{
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+}
 
 .manu{
   background-size: 1068px 456px;

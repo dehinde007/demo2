@@ -4,18 +4,45 @@
 <% if flash[:notice] -%>
 <p class='container flash alert alert-info'><%=h flash[:notice] %></p>
 <% end -%>
- 
-<div class="container sup">
-	
-<div class="supheada">
-<p class=" font-fam2 supheadb">Want to talk with someone?</p>
 </div>
 
-<div class="suptxta">
-<p class="font-fam2 suptxtb">We're here to help you get the most from Hallit. The members of our Hallit Support Community can help answer your question. </p>
-<p class="suptxtc font-fam2"> <span class=""><%= link_to "Verification", guide_path, class: "sup1a" %></span> or <span class=""><%= link_to "Password reset or Feedback", guide_path, class: "sup1a" %></span></p> 
+<div class="container sup-cnt">
+<div class="supheada"><p class="font-fam2 supheadb">Hallit Support</p></div>
+<div class="suptxta"><p class="font-fam2 suptxtb">All the topics, resources, and contact options you need for Hallit. </p></div>
 </div>
 
+<div class="container supwrap font-fam2">
+
+   <div class="supflexs">
+   <div class="supf1">
+    <p class="supfa font-fam4">Introduction</p>
+    <p class="supfP">What are Halls? Halls are a resource that allows us shape our world through our core values with others to make the world a better place. It involves the use of writing stories or text on your photos to use as halls.</p>	
+    <div><i class="fab fa-instagram"></i></div>
+    <p class="supf1b"> <%= link_to "Getting Started", support_path, class: "sup1b" %> </p>	
+    <br />
+   </div>
+   </div>
+		
+  <div class="supflexs">	
+  <div class="supf2">
+    <p class="supfa font-fam4">Sponsorship</p>	
+	<p class="supfP">Make great halls to engage companies who are ready to invest in you by sponsoring your hall. Banks, Hospitals, corporations e.t.c </p>	
+    <p></p>	
+    <br />
+  </div>
+  </div>
+		
+  <div class="supflexs">	
+  <div class="supf3">
+    <p class="supfa font-fam4">Contact</p>	
+    <p>Want to talk to someone? Chat us up.</p>
+	<p><%= link_to "Account Verification", support_path, class: "sup1a" %></p>
+    <p><%= link_to "Take our Survey", support_path, class: "sup1a" %></p>	
+	<p><%= link_to "Password reset", support_path, class: "sup1a" %></p>	
+	<p><%= link_to "Feedback", support_path, class: "sup1a" %></p>	
+
+    <br />
+  </div>
+  </div>
+		
 </div>
-</div>
-.
