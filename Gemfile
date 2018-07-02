@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
 gem 'aws-sdk', '< 2.0'
 gem 'rails', '4.2.4'
 gem 'font_assets'
