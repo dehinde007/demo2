@@ -1,15 +1,15 @@
-<% provide(:title, "Contact") %>
+<% provide(:title, "Q&A") %>
 
 <div class=""><%= image_tag('desktop2.jpg', :class => "") %></div>
 
-<p class="edthd font-fam3">Feedback Loop</p>
+<p class="edthd font-fam3">Feedback</p>
 
-<div class="container sup supa font-fam1"> 
-  <p class="sup2">Report bugs, complains, abuse, password reset or give a general feedback.</p>
+<div class="container ver vera font-fam1"> 
+  <p class="ver2">Report bugs, complains, abuse, password reset or give a general feedback.</p>
 </div>
 
 <div class="container-fluid contact font-fam1">
-<p class="fa fa-envelope-o contacticon"></p>
+<p class="far fa-envelope contacticon"></p>
 <br /><br />
 <%= form_for @contact do |f| %>
     <p><%= f.text_field :name, :required => true, class: "sess1a1 contact2", placeholder: "Name" %></p>

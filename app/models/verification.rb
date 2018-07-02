@@ -1,4 +1,4 @@
-class Request < MailForm::Base
+class Verification < MailForm::Base
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message,   :validate => true
   attribute :nickname,  :captcha  => true

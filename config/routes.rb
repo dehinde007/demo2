@@ -30,7 +30,7 @@ SampleApp::Application.routes.draw do
     end
   end
   resources "contacts", only: [:new, :create]
-  resources "requests", only: [:new, :create]
+  resources "verifications", only: [:new, :create]
   resources :activities 
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy, :show, :edit, :update]
@@ -41,7 +41,6 @@ SampleApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/terms&privacy',    to: 'static_pages#terms&privacy',    via: 'get'
   match '/about_us',    to: 'static_pages#about_us',    via: 'get'
-  match '/feedback',    to: 'static_pages#feedback',    via: 'get'
   match '/support', to: 'static_pages#support', via: 'get'
   match '/youth',    to: 'static_pages#youth',    via: 'get'
   match '/terms', to: 'static_pages#terms', via: 'get' 
@@ -53,7 +52,7 @@ SampleApp::Application.routes.draw do
   match '/halls', to: 'microposts#index', via: 'get'
   match '/leaderboard', to: 'microposts#leaderboard', via: 'get'
   match '/new/hall', to: 'microposts#new', via: 'get'
-  match '/contact', to: 'contacts#new', via: 'get'
-  match '/verification_request', to: 'requests#new', via: 'get'
+  match '/report',    to: 'contacts#new',    via: 'get'
+  match '/verification_request',   to: 'verifications#new',    via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'
 end

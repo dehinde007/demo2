@@ -11,10 +11,10 @@
 <div class="container-fluid contact">
 <p class="far fa-envelope contacticon"></p>
 <br /><br />
-<%= form_for @request do |f| %>
+<%= form_for @verification do |f| %>
     <p><%= f.text_field :email, :required => true, class: "font-fam1 sess1a1 contact2", placeholder: "Email" %></p>
     <p><%= f.text_area :message, :as => :text, :required => true, class: "font-fam1 sess1a1 contact1", placeholder: "Briefly introduce yourself and tell us why this account should be verified." %></p><br />
     <div class= "hidden"><%= f.text_field :nickname, :hint => 'Leave blank!' %></div>
-    <p class="smallbt appbutton"><%= f.submit 'REQUEST', :class=> "font-fam1 btn btn-primary" %></p>
+    <p class="smallbt appbutton"><%= f.submit 'submit', :class=> "font-fam1 btn btn-primary" %></p>
 <% end %>
 </div>

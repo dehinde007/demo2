@@ -18,9 +18,9 @@
      <li><a href="<%= following_user_path(@user) %>"><%= pluralize(@user.followed_users.count, "Following") %></a></li>
      <li><a href="<%= followers_user_path(@user) %>"><%= pluralize(@user.followers.count, "Follower") %></a></li>
      <li>
-     <% if @user.verify == true %>
-     <% else %>
+     <% if current_user == @user && @user.verify == false %>
      <%= link_to "Verification", verification_request_path, class: "sup1a" %>
+     <% else %>
      <% end %>
      </li>
     </ul>
@@ -62,11 +62,15 @@
 <%= render @microposts %>
 </div>
 
-<% elsif current_user == @user %>
-<div class="font-fam5 ush7">Please make a hall 
-<% else %>    
-<% end %>
+<% elsif current_user == @user && @user.verify == true  %>
+<div class="font-fam5 ush7">
+<i>Verified Account</i>
 </div>
+<% else @user.verify == false %>    
+<div class="font-fam5 ush7">
+<i>Not Verified</i>
+</div>
+<% end %>
 </div>
 
 <div class="pager">

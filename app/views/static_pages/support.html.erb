@@ -16,18 +16,22 @@
    <div class="supflexs">
    <div class="supf1">
     <p class="supfa font-fam4">Introduction</p>
-    <p class="supfP">What are Halls? Halls are a resource that allows us shape our world through our core values with others to make the world a better place. It involves the use of writing stories or text on your photos to use as halls.</p>	
+    <p class="supfP">Halls act as guides for us to shapen our values in order to influence our lifestyle which is needed in creating a better and more sustainable earth. This next gen mobile app is based on promoting positivity, inspiring others and ultimatly making ourselves remembered through our stories and core values.</p>	
     <div><i class="fab fa-instagram"></i></div>
-    <p class="supf1b"> <%= link_to "Getting Started", support_path, class: "sup1b" %> </p>	
+    <p class="supf1b"> <%= link_to "Try your first Hall!", "https://halleditor.herokuapp.com", class: "sup1b" %> </p>	
     <br />
    </div>
    </div>
 		
   <div class="supflexs">	
   <div class="supf2">
-    <p class="supfa font-fam4">Sponsorship</p>	
-	<p class="supfP">Make great halls to engage companies who are ready to invest in you by sponsoring your hall. Banks, Hospitals, corporations e.t.c </p>	
-    <p></p>	
+    <p class="supfa font-fam4">Sponsors</p>	
+	<p class="supfP">Impressing and inspiring halls would attract sponsorships from brands, corporations who think share similar values with you. Hedge funds, Banks, Hospitals, corporations e.t.c </p>	
+    <p>
+    	<div class=""><%= image_tag('conoco.png', :class => "supbrand") %> <%= image_tag('hublot.jpg', :class => "supbrand1") %> <%= image_tag('adidas.png', :class => "supbrand1") %></div>
+    	<div class="supbran"><%= image_tag('un.png', :class => "supbrand1") %> <%= image_tag('Benetton.png', :class => "supbrand") %> <%= image_tag('chanel.png', :class => "supbrand") %></div>
+        <div class="supbran"><%= image_tag('nike.png', :class => "supbrand") %> </div>
+    </p>	
     <br />
   </div>
   </div>
@@ -36,11 +40,10 @@
   <div class="supf3">
     <p class="supfa font-fam4">Contact</p>	
     <p>Want to talk to someone? Chat us up.</p>
-	<p><%= link_to "Account Verification", support_path, class: "sup1a" %></p>
-    <p><%= link_to "Take our Survey", support_path, class: "sup1a" %></p>	
-	<p><%= link_to "Password reset", support_path, class: "sup1a" %></p>	
-	<p><%= link_to "Feedback", support_path, class: "sup1a" %></p>	
-
+	<p><%= link_to "Account Verification", verification_request_path, class: "sup1a" %></p>
+    <p><%= link_to "Password reset", report_path, class: "sup1a" %></p>	
+	<p><%= link_to "Ask question", report_path, class: "sup1a" %></p>	
+	<p><%= link_to "Fill our survey", support_path, class: "sup1a" %></p>	
     <br />
   </div>
   </div>
