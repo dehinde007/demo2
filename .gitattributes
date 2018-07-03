@@ -21,4 +21,5 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-static/* linguist-vendored
+* linguist-vendored
+*.rb linguist-vendored=false
