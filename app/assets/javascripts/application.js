@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
- //= require jquery-ui/autocomplete
+//= require jquery-ui/effect-shake
+//= require jquery-ui/autocomplete
 //= require autocomplete-rails
 //= require social-share-button
 //= require_tree .

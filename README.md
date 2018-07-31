@@ -1,4 +1,4 @@
-Hallit Social Network
+Property of Hallitservice
 
 ImageMagick Installation: Download ImageMagick 6.7.9.9 dll and static exe. Install and select C headers plus SourceCode. Change path to C:/ImageMagick; as the first path. Use gem install rmagick --platform=ruby -- "--with-opt-dir=C:/ImageMagick
 

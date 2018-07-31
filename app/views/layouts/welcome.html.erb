@@ -38,9 +38,7 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '396900824038629'); // Insert your pixel ID here.
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=396900824038629&ev=PageView&noscript=1"
-/></noscript>
+<noscript><img height="1" width="1" style="display:none"src="https://www.facebook.com/tr?id=396900824038629&ev=PageView&noscript=1"/></noscript>
 <!-- DO NOT MODIFY -->
 <!-- End Facebook Pixel Code -->
 
@@ -66,13 +64,13 @@ src="https://www.facebook.com/tr?id=396900824038629&ev=PageView&noscript=1"
 <nav class="navbar navbar-incr navbar-default navbar-fixed-top splashnavbar" role="navigation">
 <div class="">   
     <div class="navbar-header"><section><%= link_to (image_tag('Hallit.jpg', :class => "hdimg hd-incr")), welcome_path %></section></div>
-    </div><!-- /.container -->
+    </div>
 </nav>
 
 <br /><br /><br />
 
 <div class="container lnd font-fam1">
-<p class="lndh"> Hallit is a social network that allows you share captions, stories and core values on photos in order to inspire and awaken the interests in others for the creation of a stronger, safer and better world. </p>
+<p class="lndh"> Hallit is a social network that allows you share stories and core values on photos in order to inspire and awaken interests in others for the creation of a stronger, safer and better world. </p>
 </div>
 
 <br />
@@ -84,11 +82,11 @@ src="https://www.facebook.com/tr?id=396900824038629&ev=PageView&noscript=1"
 	<%= image_tag('v115.png', :class => "lnd-img") %>
 </div>	
 
-<br /><br /><
-<p class="lndh lndh2 font-fam1"><%= link_to "Complete Survey to Sign Up", "https://hallit.herokuapp.com/welcometohallit", class: "lndpa" %></p>
-
-<br /><br />
-<p class="lndh lndh2 font-fam1"><%= link_to "Sign In", "https://hallit.herokuapp.com/welcometohallit", class: "lndpa" %></p>
+<br /><br /><br /><br /><br /><br />
+<ul class="lndu">
+	<li><span class="lndh font-fam1"><%= link_to "Goto App", "https://hallit.herokuapp.com/welcometohallit", :target => '_blank', class: "lndpa uop" %></span></li>
+    <li><span id="" class="lndh font-fam1"><%= link_to "Fill Survey", "https://hallit.herokuapp.com/welcometohallit", class: "lndpa" %></span></li>
+</ul>
 
 </body>
 </html>

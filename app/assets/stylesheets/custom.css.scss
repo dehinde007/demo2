@@ -266,6 +266,10 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   color: black;
 }
 
+.ui-effects-wrapper {
+  display: inline;
+}
+
 p .src{
   background: white;
   height: 40px;
@@ -500,6 +504,14 @@ label{
   color: white!important;
 }
 
+.lndu{
+  text-align: center;
+  li{
+  display: inline;
+  padding: 7px;
+  }
+}
+
 .flex-lnd{
    width: 99.7%;
    white-space: nowrap;
@@ -533,6 +545,7 @@ label{
 &:focus{
   color: white;
   background: none;
+  outline: none;
 } 
 &:hover{
   color: white;

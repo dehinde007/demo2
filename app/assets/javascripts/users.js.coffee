@@ -9,3 +9,13 @@ $ ->
   
 $(document).on "turbolinks:load", ->
   $('[data-toggle="popover"]').popover()
+ 
+
+$(document).click ->
+  $('.uop').effect 'shake', {
+    direction: 'up'
+    times: 1
+    distance: 3
+  }, 300
+  return 
+  
