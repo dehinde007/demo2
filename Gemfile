@@ -18,7 +18,7 @@ gem 'paperclip' , '~> 4.2'
 gem 'rmagick', '2.16.0'
 gem 'therubyracer', platforms: :ruby
 gem 'coffee-script-source', '1.8.0'
-gem 'puma'
+gem 'puma', '>= 4.3.9'
 gem 'tzinfo-data'
 gem 'newrelic_rpm'
 gem 'public_activity', github: 'pokonski/public_activity'
