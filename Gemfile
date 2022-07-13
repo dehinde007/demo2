@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'aws-sdk', '< 2.0'
-gem 'rails', '4.2.4'
+gem 'rails', '5.2.8.1'
 gem 'font_assets'
 gem 'responders', '~> 2.0'
 gem 'sprockets', '~>2.12.5'
