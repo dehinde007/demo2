@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery-ui/effect-shake
-//= require jquery-ui/autocomplete
-//= require autocomplete-rails
-//= require social-share-button
+
+ //= require jquery-ui/widgets/autocomplete
+
 //= require_tree .
 
 // we don't use animated progress
