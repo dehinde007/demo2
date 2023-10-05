@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
-gem 'aws-sdk', '< 2.0'
-gem 'rails', '4.2.4'
+gem 'aws-sdk', '~> 2.0', '>= 2.0.22'
+gem 'rails', '7.1.0'
 gem 'font_assets'
-gem 'responders', '~> 2.0'
+gem 'responders', '~> 3.0', '>= 3.0.0'
 gem 'sprockets', '~>2.12.5'
 gem 'rails4-autocomplete'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '>= 6.0.0'
 gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
 gem 'faker', '1.1.2'
 gem 'social-share-button', '0.1.5'
-gem 'rails_autolink'
+gem 'rails_autolink', '>= 1.1.7'
 gem 'delayed_paperclip'
 gem "lazyload-rails"
 gem 'will_paginate', '3.0.4'
@@ -23,12 +23,12 @@ gem 'tzinfo-data'
 gem 'newrelic_rpm'
 gem 'public_activity', github: 'pokonski/public_activity'
 gem 'delayed_job_active_record'
-gem 'mail_form'
+gem 'mail_form', '>= 1.8.0'
 group :development, :test do
   gem 'sqlite3', '1.3.13' 
   # The following optional lines are part of the advanced setup.
   gem 'spork', :github => 'sporkrb/spork'
-  gem 'rspec-rails', '3.3.2'
+  gem 'rspec-rails', '3.5.0'
   gem 'spork-rails', :github => 'sporkrb/spork-rails'
   gem 'guard-rails', '0.7.2', require: false
   gem 'guard-rspec', require: false
@@ -39,7 +39,7 @@ end
 group :test do
  
   gem 'capybara', '2.1.0'
-  gem 'factory_girl_rails', '4.2.0'
+  gem 'factory_girl_rails', '4.2.1'
   gem 'cucumber-rails', '1.3.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 
@@ -55,10 +55,10 @@ group :test do
   # gem 'wdm', '0.1.0'
 end
 gem 'i18n', '~> 0.7.0'
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails', '5.0.8'
 gem 'uglifier', '2.1.1'
-gem 'coffee-rails', '4.0.1'
-gem 'jquery-rails', '3.0.4'
+gem 'coffee-rails', '4.2.2'
+gem 'jquery-rails', '4.0.1'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '1.0.2'
 
