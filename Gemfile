@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-gem 'aws-sdk', '< 2.0'
-gem 'rails', '4.2.4'
+gem 'aws-sdk', '~> 2.0', '>= 2.0.22'
+gem 'rails', '7.0.0'
 gem 'font_assets'
 gem 'responders', '~> 2.0'
 gem 'sprockets', '~>2.12.5'
@@ -9,7 +9,7 @@ gem 'jquery-ui-rails'
 gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
 gem 'faker', '1.1.2'
 gem 'social-share-button', '0.1.5'
-gem 'rails_autolink'
+gem 'rails_autolink', '>= 1.1.8'
 gem 'delayed_paperclip'
 gem "lazyload-rails"
 gem 'will_paginate', '3.0.4'
@@ -40,7 +40,7 @@ group :test do
  
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.0'
-  gem 'cucumber-rails', '1.3.0', :require => false
+  gem 'cucumber-rails', '3.0.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 
   # Uncomment this line on OS X.
@@ -55,7 +55,7 @@ group :test do
   # gem 'wdm', '0.1.0'
 end
 gem 'i18n', '~> 0.7.0'
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails', '6.0.0'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
